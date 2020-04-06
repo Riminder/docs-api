@@ -1,0 +1,59 @@
+# Table of contents
+
+* [Home](README.md)
+* [Why use HrFlow?](why-use-hrflow.md)
+* [GDPR](gdpr.md)
+* [Security](security.md)
+* [Updates](updates.md)
+* [F.A.Q](f.a.q.md)
+
+## Products
+
+* [Profile & Job API](products/introduction.md)
+* [Parsing](products/parsing.md)
+* [Embedding](products/embedding.md)
+* [Revealing](products/revealing-1.md)
+* [Searching](products/searching.md)
+* [Scoring](products/scoring.md)
+* [Reasoning](products/reasoning.md)
+
+## Getting Started
+
+* [Installation](getting-started/installation/README.md)
+  * [Python](getting-started/installation/python.md)
+  * [PHP](getting-started/installation/php.md)
+  * [Node.js](getting-started/installation/node.js.md)
+  * [Ruby](getting-started/installation/ruby.md)
+  * [Java](getting-started/installation/java.md)
+  * [.NET](getting-started/installation/.net.md)
+  * [Go](getting-started/installation/go.md)
+* [Authentication](getting-started/authentication.md)
+* [Errors](getting-started/errors.md)
+* [Source API](getting-started/source-api/README.md)
+  * [GET /source](getting-started/source-api/get-source.md)
+  * [GET /sources](getting-started/source-api/get-sources.md)
+* [Profile API](getting-started/profile-api/README.md)
+  * [POST  /profile](getting-started/profile-api/post-profile.md)
+  * [GET /profiles/searching](getting-started/profile-api/get-profiles-searching.md)
+  * [GET /profiles/scoring](getting-started/profile-api/get-profiles-scoring.md)
+  * [GET /profile/parsing](getting-started/profile-api/get-profile-parsing.md)
+  * [GET /profile/attachments](getting-started/profile-api/get-profile-attachments.md)
+  * [GET /profile/revealing](getting-started/profile-api/get-profile-revealing.md)
+  * [GET /profile/reasoning](getting-started/profile-api/get-profile-reasoning.md)
+  * [PATCH /profile/feedback](getting-started/profile-api/patch-profile-feedback.md)
+* [Job API](getting-started/job-api/README.md)
+  * [POST /job](getting-started/job-api/post-job.md)
+  * [GET /job/parsing](getting-started/job-api/get-job-parsing.md)
+  * [GET /jobs/searching](getting-started/job-api/get-job-searching.md)
+  * [GET /jobs/scoring](getting-started/job-api/get-jobs-scoring.md)
+  * [GET /jobs/reasoning](getting-started/job-api/get-jobs-reasoning.md)
+* [Webhooks](getting-started/events/README.md)
+  * [Authentification](getting-started/events/authentification.md)
+  * [Configuration](getting-started/events/configuration.md)
+  * [Events](getting-started/events/events.md)
+
+## Integrations
+
+* [Sources](integrations/sources.md)
+* [Destinations](integrations/destinations.md)
+
