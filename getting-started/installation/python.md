@@ -4,7 +4,7 @@ description: HrFlow SDK for Python
 
 # Python
 
-Hrflow is tested basically on 64-bit systems and runs on Unix/Linux, macOS and Windows.  
+Hrflow is tested on 64-bit systems and runs on Unix/Linux, macOS and Windows.  
 The latest hrflow package release are available over pip and conda.
 
 ## Installation instructions
