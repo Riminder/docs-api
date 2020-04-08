@@ -51,9 +51,11 @@
   * [GET /jobs/scoring](getting-started/job-api/get-jobs-scoring.md)
   * [GET /jobs/reasoning](getting-started/job-api/get-jobs-reasoning.md)
 * [Webhooks](getting-started/events/README.md)
-  * [Authentification](getting-started/events/authentification.md)
+  * [Authentication](getting-started/events/authentification.md)
   * [Configuration](getting-started/events/configuration.md)
-  * [Events](getting-started/events/events.md)
+  * [Events](getting-started/events/events/README.md)
+    * [profile.parsing](getting-started/events/events/profile.parsing.md)
+    * [job.parsing](getting-started/events/events/job.parsing.md)
 
 ## Integrations
 
