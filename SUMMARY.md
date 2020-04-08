@@ -19,6 +19,7 @@
 
 ## Getting Started
 
+* [Use case of the API](getting-started/use-case-of-the-api.md)
 * [Installation](getting-started/installation/README.md)
   * [Python](getting-started/installation/python.md)
   * [PHP](getting-started/installation/php.md)
@@ -56,7 +57,7 @@
   * [Events](getting-started/events/events/README.md)
     * [profile.parsing](getting-started/events/events/profile.parsing.md)
     * [job.parsing](getting-started/events/events/job.parsing.md)
-* [Postman collection](getting-started/postman-collection.md)
+* [Example](getting-started/postman-collection.md)
 
 ## Integrations
 

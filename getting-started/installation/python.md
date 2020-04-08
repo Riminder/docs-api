@@ -4,27 +4,44 @@ description: HrFlow SDK for Python
 
 # Python
 
-Hrflow is tested on 64-bit systems and runs on Unix/Linux, macOS and Windows.  
-The latest hrflow package release are available over pip and conda.
+## Introduction
 
-## Installation instructions
+3 packages have been developed to help using our Riminder API with the Python language:
 
-### pip
+* [python-hrflow-api](https://github.com/Riminder/python-hrflow-api): our main python wrapper to access our API features
 
-```python
-$ pip install hrflow
-```
+## Installation
 
-It is fairly recommanded to install packages in separate virtual environment to avoid modifying system state.
+To use the API, you need Python 3 \(version **&gt;= 3.5**\) and **pip** which is a dependency manager.  
+Installing the HrFlow package is as simple as writing this in the terminal :
 
 ```bash
-$ pipenv install hrflow
-$ pipenv shell 
+pip3 install hrflow
 ```
 
-### conda
+You can now start to use the API.
 
-```text
-$ conda install -c conda-forge hrflow
+## Usage
+
+### Authentification
+
+To authenticate against the api, get your API SECRET KEY from your HrFlow dashboard!
+
+Then create a new Client`Hrflow` object with this key:
+
+```python
+import hrflow as hf
+client = hf.Client(api_secret="YOUR_API_KEY")
 ```
+
+### Overview
+
+```python
+import hrflow as hf
+client = hf.Client(api_secret="YOUR_API_KEY")
+result = client.source.search()
+print(result)
+```
+
+
 

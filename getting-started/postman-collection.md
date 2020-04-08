@@ -1,4 +1,6 @@
-# Postman collection
+# Example
 
-{% file src="../.gitbook/assets/hrflow-api.postman\_collection.json" caption="HrFlow Enfpoints" %}
+{% file src="../.gitbook/assets/hrflow-api.postman\_collection.json" caption="HrFlow Endpoints" %}
+
+
 
