@@ -56,6 +56,7 @@
   * [Events](getting-started/events/events/README.md)
     * [profile.parsing](getting-started/events/events/profile.parsing.md)
     * [job.parsing](getting-started/events/events/job.parsing.md)
+* [Postman collection](getting-started/postman-collection.md)
 
 ## Integrations
 

@@ -1,0 +1,1052 @@
+{
+	"info": {
+		"_postman_id": "25d6c9cd-0a5c-491e-89d5-bc26d07d3d4e",
+		"name": "hrflow api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Profile API",
+			"item": [
+				{
+					"name": "POST Profile (File)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/home/alaeddine/Documents/cvs/Rouquier_CV.pdf"
+								},
+								{
+									"key": "source_id",
+									"value": "6ff9bd85f602639b298dc1296284c55c31949827",
+									"type": "text"
+								},
+								{
+									"key": "profile_type",
+									"value": "file",
+									"type": "text"
+								},
+								{
+									"key": "profile_content_type",
+									"value": "application/pdf",
+									"type": "text"
+								},
+								{
+									"key": "sync_parsing",
+									"value": "0",
+									"description": "it is used whenever we want to use sync parsing",
+									"type": "text"
+								},
+								{
+									"key": "profile_reference",
+									"value": "ref1",
+									"type": "text"
+								},
+								{
+									"key": "profile_labels",
+									"value": "[{\"job_id\": \"5f9f853a87463b52ca7a387f69fc8eef9803a056\", \"job_reference\": \"test\", \"stage\": \"yes\", \"stage_timestamp\":1585662186, \"rating\":None, \"stage_timestamp\":None}]",
+									"type": "text"
+								},
+								{
+									"key": "profile_tags",
+									"value": "[{\"name\" : \"information\", \"value\": \"test_value\"}, {\"name\" : \"blacklist\", \"value\": True}]",
+									"type": "text"
+								},
+								{
+									"key": "profile_metadatas",
+									"value": "[{\"name\" : \"email\", \"value\": \"test@hrflow.ai\"}, {\"name\" : \"blacklist\", \"value\": True}]",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profile",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile's attachments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "source_id",
+									"value": "6cdd83258e3713fa91e349697b0229040e604cac",
+									"type": "text"
+								},
+								{
+									"key": "profile_id",
+									"value": "2eaab66923bf221d9cc3d51800e5b6a4b5f2f112",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profile/attachments?profile_id=8f1c04ddb3aa1c00b1b0f406724cf7d260cddaa1&source_id=2be272f86ae21c311a4e0ee9401092026de063fc",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"attachments"
+							],
+							"query": [
+								{
+									"key": "profile_id",
+									"value": "8f1c04ddb3aa1c00b1b0f406724cf7d260cddaa1"
+								},
+								{
+									"key": "source_id",
+									"value": "2be272f86ae21c311a4e0ee9401092026de063fc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile (tags)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profile/tags?profile_id=8f1c04ddb3aa1c00b1b0f406724cf7d260cddaa1&source_id=2be272f86ae21c311a4e0ee9401092026de063fc",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"tags"
+							],
+							"query": [
+								{
+									"key": "profile_id",
+									"value": "8f1c04ddb3aa1c00b1b0f406724cf7d260cddaa1"
+								},
+								{
+									"key": "source_id",
+									"value": "2be272f86ae21c311a4e0ee9401092026de063fc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile (metadatas)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profile/metadatas?profile_id={{profile_id}}&source_id={{source_id}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"metadatas"
+							],
+							"query": [
+								{
+									"key": "profile_id",
+									"value": "{{profile_id}}"
+								},
+								{
+									"key": "source_id",
+									"value": "{{source_id}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile (parsing)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profile/parsing?profile_id=c9579e96622e96ced35c2198895edaa144bd605c&source_id=a2fbda0fab242f7510de7a98be4f445d66dfe101",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"parsing"
+							],
+							"query": [
+								{
+									"key": "profile_id",
+									"value": "c9579e96622e96ced35c2198895edaa144bd605c"
+								},
+								{
+									"key": "limit",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "source_id",
+									"value": "a2fbda0fab242f7510de7a98be4f445d66dfe101"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile (embedding)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profile/embedding?profile_id=c9579e96622e96ced35c2198895edaa144bd605c&source_id=a2fbda0fab242f7510de7a98be4f445d66dfe101&fields={\"profile\":1}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"embedding"
+							],
+							"query": [
+								{
+									"key": "profile_id",
+									"value": "c9579e96622e96ced35c2198895edaa144bd605c"
+								},
+								{
+									"key": "source_id",
+									"value": "a2fbda0fab242f7510de7a98be4f445d66dfe101"
+								},
+								{
+									"key": "fields",
+									"value": "{\"profile\":1}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile List (searching)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profiles/searching?source_ids={{source_ids}}&stage=new&limit=10&page&order_by=desc&sort_by=date_reception&timestamp_start&timestamp_end&name&email&location_geopoint&location_distance&summary_keywords&text_keywords&experience_keywords&experience_location_geopoint&experience_location_distance&experiences_duration_min&experiences_duration_max&education_keywords&education_location_geopoint&education_location_distance&educations_duration_min&educations_duration_max&skills_dict&languages_dict&interests_dict",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profiles",
+								"searching"
+							],
+							"query": [
+								{
+									"key": "source_ids",
+									"value": "{{source_ids}}"
+								},
+								{
+									"key": "stage",
+									"value": "new"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "order_by",
+									"value": "desc",
+									"description": "desc (default value) or asc"
+								},
+								{
+									"key": "sort_by",
+									"value": "date_reception",
+									"description": "possible value : \"date_reception\", \"date_creation\", \"location\",\n \"location_experience\", \"location_education\", \"score_semantic\", \"score_predictive\""
+								},
+								{
+									"key": "timestamp_start",
+									"value": null
+								},
+								{
+									"key": "timestamp_end",
+									"value": null
+								},
+								{
+									"key": "name",
+									"value": null
+								},
+								{
+									"key": "email",
+									"value": null
+								},
+								{
+									"key": "location_geopoint",
+									"value": null
+								},
+								{
+									"key": "location_distance",
+									"value": null
+								},
+								{
+									"key": "summary_keywords",
+									"value": null
+								},
+								{
+									"key": "text_keywords",
+									"value": null
+								},
+								{
+									"key": "experience_keywords",
+									"value": null
+								},
+								{
+									"key": "experience_location_geopoint",
+									"value": null
+								},
+								{
+									"key": "experience_location_distance",
+									"value": null
+								},
+								{
+									"key": "experiences_duration_min",
+									"value": null
+								},
+								{
+									"key": "experiences_duration_max",
+									"value": null
+								},
+								{
+									"key": "education_keywords",
+									"value": null
+								},
+								{
+									"key": "education_location_geopoint",
+									"value": null
+								},
+								{
+									"key": "education_location_distance",
+									"value": null
+								},
+								{
+									"key": "educations_duration_min",
+									"value": null
+								},
+								{
+									"key": "educations_duration_max",
+									"value": null
+								},
+								{
+									"key": "skills_dict",
+									"value": null
+								},
+								{
+									"key": "languages_dict",
+									"value": null
+								},
+								{
+									"key": "interests_dict",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Profile List (scoring)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "ask_d6774338ad024297a8ac5431614513c1"
+							}
+						],
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profiles/scoring?source_ids=[\"6cdd83258e3713fa91e349697b0229040e604cac\"]&use_agent=1&job_id=09e2e17d06266e6d299d7783bb61565e12d250ed&stage=new&limit=10&page&order_by=desc&sort_by=date_reception&timestamp_start=1585778399&timestamp_end=1586383199&name&email&location_geopoint&location_distance&summary_keywords&text_keywords&experience_keywords&experience_location_geopoint&experience_location_distance&experiences_duration_min=-1&experiences_duration_max=5&education_keywords&education_location_geopoint&education_location_distance&educations_duration_min=-1&educations_duration_max=5&skills_dict=[\"python\"]&languages_dict=[\"english\"]&interests_dict=[\"riding\"]",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profiles",
+								"scoring"
+							],
+							"query": [
+								{
+									"key": "source_ids",
+									"value": "[\"6cdd83258e3713fa91e349697b0229040e604cac\"]"
+								},
+								{
+									"key": "use_agent",
+									"value": "1"
+								},
+								{
+									"key": "job_id",
+									"value": "09e2e17d06266e6d299d7783bb61565e12d250ed"
+								},
+								{
+									"key": "stage",
+									"value": "new"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "order_by",
+									"value": "desc"
+								},
+								{
+									"key": "sort_by",
+									"value": "date_reception"
+								},
+								{
+									"key": "timestamp_start",
+									"value": "1585778399"
+								},
+								{
+									"key": "timestamp_end",
+									"value": "1586383199"
+								},
+								{
+									"key": "name",
+									"value": null
+								},
+								{
+									"key": "email",
+									"value": null
+								},
+								{
+									"key": "location_geopoint",
+									"value": null
+								},
+								{
+									"key": "location_distance",
+									"value": null
+								},
+								{
+									"key": "summary_keywords",
+									"value": null
+								},
+								{
+									"key": "text_keywords",
+									"value": null
+								},
+								{
+									"key": "experience_keywords",
+									"value": null
+								},
+								{
+									"key": "experience_location_geopoint",
+									"value": null
+								},
+								{
+									"key": "experience_location_distance",
+									"value": null
+								},
+								{
+									"key": "experiences_duration_min",
+									"value": "-1"
+								},
+								{
+									"key": "experiences_duration_max",
+									"value": "5"
+								},
+								{
+									"key": "education_keywords",
+									"value": null
+								},
+								{
+									"key": "education_location_geopoint",
+									"value": null
+								},
+								{
+									"key": "education_location_distance",
+									"value": null
+								},
+								{
+									"key": "educations_duration_min",
+									"value": "-1"
+								},
+								{
+									"key": "educations_duration_max",
+									"value": "5"
+								},
+								{
+									"key": "skills_dict",
+									"value": "[\"python\"]"
+								},
+								{
+									"key": "languages_dict",
+									"value": "[\"english\"]"
+								},
+								{
+									"key": "interests_dict",
+									"value": "[\"riding\"]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Profile (Json)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "ask_d6774338ad024297a8ac5431614513c1"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "source_id",
+									"value": "{{source_id}}",
+									"type": "text"
+								},
+								{
+									"key": "profile_type",
+									"value": "json",
+									"type": "text"
+								},
+								{
+									"key": "profile_json",
+									"value": "{\n            \"name\": \"Hari Seldon\",\n            \"email\": \"harisledon@trantor.trt\",\n            \"address\": \"1 rue streeling\",\n            \"info\" : {\"name\":\"name info\", \"email\":\"tata\",\"phone\":\"0202\",\"location\":\"somewhere\",\"urls\": {\"from_resume\": [], \"linkedin\":\"\",\"twitter\":\"\",\"facebook\":\"\",\"github\":\"\",\"picture\":\"\"},\"location\":{\"text\":\"\"}},\n            \"summary\": \"test summary\",\n            \"experiences\": [\n              {\n                \"start\": \"15/02/12600\",\n                \"end\": \"\",\n                \"title\": \"Lead\",\n                \"company\": \"Departement de la psychohistoire\",\n                \"location\": {\"text\":\"Trator\"},\n                \"description\": \"Developping psychohistoire.\"\n              }\n            ],\n            \"educations\": [\n              {\n                \"start\": \"12540\",\n                \"end\": \"12550\",\n                \"title\": \"Diplome d'ingénieur mathematicien\",\n                \"school\": \"Université de Hélicon\",\n                \"description\": \"Etude des mathematique\",\n                \"location\": {\"text\":\"Hélicon\"}\n              }\n            ],\n            \"skills\": [\n              \"manual skill\",\n              \"Creative spirit\",\n              \"Writing skills\",\n              \"Communication\",\n              \"Project management\",\n              \"French\",\n              \"German\",\n              \"Korean\",\n              \"English\",\n              \"Esquive\",\n              \"Research\",\n              \"Mathematique\"\n            ],\n           \"languages\" : [\"arab\"],\n           \"interests\": [\"football\"],\n          \"tags\":[],\n          \"metadatas\":[],\n          \"labels\":[]\n          }",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profile",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Job API",
+			"item": [
+				{
+					"name": "POST Job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "big data developer",
+									"type": "text"
+								},
+								{
+									"key": "agent_id",
+									"value": "a5dde54d7aa9a2ce6d3b11250aaa139cda3c9add",
+									"type": "text"
+								},
+								{
+									"key": "job_reference",
+									"value": "1b2234567891123",
+									"type": "text"
+								},
+								{
+									"key": "job_labels",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "job_tags",
+									"value": "[{\"name\": \"relocation\", \"value\":true}]",
+									"type": "text"
+								},
+								{
+									"key": "job_metadatas",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "\"This job is made for you\"",
+									"type": "text"
+								},
+								{
+									"key": "title",
+									"value": "toto",
+									"type": "text"
+								},
+								{
+									"key": "skills",
+									"value": "['python']",
+									"type": "text"
+								},
+								{
+									"key": "experiencesDurationMin",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "experiencesDurationMax",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "educationsDurationMin",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "educationsDurationMax",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "isGeoLoc",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "isExpGeoLoc",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "isEduGeoLoc",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "locationText",
+									"value": "Paris",
+									"type": "text"
+								},
+								{
+									"key": "locationLat",
+									"value": "48.8534",
+									"type": "text"
+								},
+								{
+									"key": "locationLng",
+									"value": "2.3488",
+									"type": "text"
+								},
+								{
+									"key": "radius",
+									"value": "500",
+									"type": "text"
+								}
+							],
+							"options": {
+								"formdata": {}
+							}
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/job",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"job"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Job (parsing)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/job/parsing?job_id={{job_id}}&job_reference",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"job",
+								"parsing"
+							],
+							"query": [
+								{
+									"key": "job_id",
+									"value": "{{job_id}}"
+								},
+								{
+									"key": "job_reference",
+									"value": null,
+									"description": "job_id or job_reference is needed"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Job List (searching)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/jobs/searching",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"jobs",
+								"searching"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Job (embedding)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/job/embedding?job_id={{job_id}}&job_reference",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"job",
+								"embedding"
+							],
+							"query": [
+								{
+									"key": "job_id",
+									"value": "{{job_id}}"
+								},
+								{
+									"key": "job_reference",
+									"value": null,
+									"description": "job_id or job_reference is needed"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Source API",
+			"item": [
+				{
+					"name": "Get Source List",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/sources?name=folder&page=1&limit=1&sort_by=date&order_by=asc",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"sources"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "folder"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "sort_by",
+									"value": "date"
+								},
+								{
+									"key": "order_by",
+									"value": "asc",
+									"description": "desc (default value) or asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Source (info)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}"
+							}
+						],
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/source?source_id=6cdd83258e3713fa91e349697b0229040e604cac",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"source"
+							],
+							"query": [
+								{
+									"key": "source_id",
+									"value": "6cdd83258e3713fa91e349697b0229040e604cac"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Webbhook API",
+			"item": [
+				{
+					"name": "POST Webhook (check)",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"url\": \"https://webhook.site/79f29230-9346-44e9-997f-035365443a64\",\n\t\"type\": \"profile.parsing.success\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/webhook/check ",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"webhook",
+								"check "
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
