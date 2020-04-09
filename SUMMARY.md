@@ -64,8 +64,9 @@
 
 * [Sources](integrations/sources/README.md)
   * [Email](integrations/sources/email/README.md)
-    * [Gmail](integrations/sources/email/gmail.md)
     * [Office 365](integrations/sources/email/office-365.md)
+    * [Gmail](integrations/sources/email/gmail.md)
+    * [Forward](integrations/sources/email/forward.md)
     * [Imap](integrations/sources/email/imap.md)
 * [Destinations](integrations/destinations.md)
 
