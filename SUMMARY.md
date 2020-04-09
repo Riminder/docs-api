@@ -34,7 +34,7 @@
   * [.NET](getting-started/installation/.net.md)
   * [Go](getting-started/installation/go.md)
 * [Quick start](getting-started/quick-start/README.md)
-  * [Tutorials](getting-started/quick-start/quick_start.md)
+  * [Tutorials](getting-started/quick-start/tutorials.md)
   * [Case studies: Flows](getting-started/quick-start/flows.md)
 * [Errors](getting-started/errors.md)
 * [Source Endpoints](getting-started/source-api/README.md)
