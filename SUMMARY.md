@@ -86,4 +86,7 @@
   * [Communication](integrations/destinations/communication/README.md)
     * [Slack](integrations/destinations/communication/slack.md)
 * [Security](https://security.hrflow.ai)
+* [GDPR & Privacy](https://gdpr.hrflow.ai)
+* [Help center](https://support.hrflow.ai)
+* [Service status](https://status.hrflow.ai)
 
