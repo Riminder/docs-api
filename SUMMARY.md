@@ -20,6 +20,7 @@
 ## Getting Started
 
 * [Use case of the API](getting-started/use-case-of-the-api.md)
+* [API Architecture](getting-started/api-architecture.md)
 * [Installation](getting-started/installation/README.md)
   * [Python](getting-started/installation/python.md)
   * [PHP](getting-started/installation/php.md)
