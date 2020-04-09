@@ -13,14 +13,14 @@
 * [JOB API](products-1/job-api.md)
 * [Analytics API](products-1/analytics-api.md)
 
-## Products
+## AI Layers
 
-* [Parsing](products/parsing.md)
-* [Embedding](products/embedding.md)
-* [Revealing](products/revealing-1.md)
-* [Searching](products/searching.md)
-* [Scoring](products/scoring.md)
-* [Reasoning](products/reasoning.md)
+* [Parsing](ai-layers/parsing.md)
+* [Embedding](ai-layers/embedding.md)
+* [Revealing](ai-layers/revealing-1.md)
+* [Searching](ai-layers/searching.md)
+* [Scoring](ai-layers/scoring.md)
+* [Reasoning](ai-layers/reasoning.md)
 
 ## Getting Started
 
