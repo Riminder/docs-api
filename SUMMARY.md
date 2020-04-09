@@ -1,7 +1,7 @@
 # Table of contents
 
 * [Home](README.md)
-* [Why use HrFlow.ai?](why-use-hrflow.md)
+* [What is HrFlow.ai?](why-use-hrflow.md)
 * [Profile API](introduction.md)
 * [JOB API](job-api.md)
 * [GDPR](https://gdpr.hrflow.ai)
