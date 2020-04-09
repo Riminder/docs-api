@@ -1,4 +1,4 @@
-# Why use HrFlow?
+# Why use HrFlow.ai?
 
 ## **WHAT WE DO?**
 
