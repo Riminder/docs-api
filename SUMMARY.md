@@ -2,12 +2,16 @@
 
 * [Home](README.md)
 * [What is HrFlow.ai?](why-use-hrflow.md)
-* [Profile API](introduction.md)
-* [JOB API](job-api.md)
 * [GDPR](https://gdpr.hrflow.ai)
 * [Security](https://security.hrflow.ai)
 * [Updates & Roadmap](https://updates.hrflow.ai)
 * [F.A.Q](f.a.q.md)
+
+## PRODUCTS <a id="products-1"></a>
+
+* [Profile API](products-1/introduction.md)
+* [JOB API](products-1/job-api.md)
+* [Analytics API](products-1/analytics-api.md)
 
 ## Products
 
