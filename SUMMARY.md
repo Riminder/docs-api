@@ -4,7 +4,7 @@
 * [Why use HrFlow?](why-use-hrflow.md)
 * [GDPR](gdpr.md)
 * [Security](security.md)
-* [Updates](updates.md)
+* [Updates & Roadmap](https://updates.hrflow.ai)
 * [F.A.Q](f.a.q.md)
 
 ## Products
