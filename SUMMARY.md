@@ -63,6 +63,9 @@
 ## Integrations
 
 * [Sources](integrations/sources/README.md)
+  * [Widget](integrations/sources/widget/README.md)
+    * [Dropzone](integrations/sources/widget/dropzone.md)
+    * [Cvbot](integrations/sources/widget/cvbot.md)
   * [Email](integrations/sources/email/README.md)
     * [Office 365](integrations/sources/email/office-365.md)
     * [Gmail](integrations/sources/email/gmail.md)
