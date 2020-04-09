@@ -2,7 +2,8 @@
 
 * [Home](README.md)
 * [What is HrFlow.ai?](why-use-hrflow.md)
-* [F.A.Q](f.a.q.md)
+* [Use case of the API](use-case-of-the-api.md)
+* [API Architecture](api-architecture.md)
 
 ## DEVELOPERS PRODUCTS <a id="products-1"></a>
 
@@ -21,8 +22,6 @@
 
 ## Getting Started
 
-* [Use case of the API](getting-started/use-case-of-the-api.md)
-* [API Architecture](getting-started/api-architecture.md)
 * [Authentication](getting-started/authentication.md)
 * [Installation](getting-started/installation/README.md)
   * [Python](getting-started/installation/python.md)
@@ -65,6 +64,7 @@
   * [Events](getting-started/events/events/README.md)
     * [profile.parsing](getting-started/events/events/profile.parsing.md)
     * [job.parsing](getting-started/events/events/job.parsing.md)
+* [F.A.Q](f.a.q.md)
 
 ## Integrations
 
