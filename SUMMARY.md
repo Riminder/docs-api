@@ -23,6 +23,7 @@
 ## Getting Started
 
 * [Authentication](getting-started/authentication.md)
+* [Errors](getting-started/errors.md)
 * [Installation](getting-started/installation-1.md)
 * [Packages](getting-started/installation/README.md)
   * [Python](getting-started/installation/python.md)
@@ -32,7 +33,6 @@
   * [Java](getting-started/installation/java.md)
   * [.NET](getting-started/installation/.net.md)
   * [Go](getting-started/installation/go.md)
-* [Errors](getting-started/errors.md)
 * [Quick start](getting-started/quick-start/README.md)
   * [Tutorials](getting-started/quick-start/tutorials/README.md)
     * [Google Colab Tutorial](getting-started/quick-start/tutorials/google-colab-tutorial.md)
