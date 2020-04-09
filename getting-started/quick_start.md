@@ -2,7 +2,7 @@
 
 ## Postman Collection
 
-You can explore our Postman collection for all HrFlow endpoints.
+You can explore our Postman Collection to find all the endpoints for the Profile API as well as the Job API.
 
 {% file src="../.gitbook/assets/hrflow-api.postman\_collection.json" caption="HrFlow Endpoints" %}
 
