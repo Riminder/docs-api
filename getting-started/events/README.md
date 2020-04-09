@@ -4,5 +4,5 @@ description: >-
   (X-PI-KEY)
 ---
 
-# Webhooks
+# Webhook Endpoints
 

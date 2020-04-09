@@ -53,7 +53,7 @@
   * [GET /jobs/searching](getting-started/job-api/get-job-searching.md)
   * [GET /jobs/scoring](getting-started/job-api/get-jobs-scoring.md)
   * [GET /jobs/reasoning](getting-started/job-api/get-jobs-reasoning.md)
-* [Webhooks](getting-started/events/README.md)
+* [Webhook Endpoints](getting-started/events/README.md)
   * [Authentication](getting-started/events/authentification.md)
   * [Configuration](getting-started/events/configuration.md)
   * [Events](getting-started/events/events/README.md)
