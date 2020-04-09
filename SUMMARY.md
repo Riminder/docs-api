@@ -22,6 +22,7 @@
 
 * [Use case of the API](getting-started/use-case-of-the-api.md)
 * [API Architecture](getting-started/api-architecture.md)
+* [Authentication](getting-started/authentication.md)
 * [Installation](getting-started/installation/README.md)
   * [Python](getting-started/installation/python.md)
   * [PHP](getting-started/installation/php.md)
@@ -31,7 +32,6 @@
   * [.NET](getting-started/installation/.net.md)
   * [Go](getting-started/installation/go.md)
 * [Quick Start](getting-started/quick_start.md)
-* [Authentication](getting-started/authentication.md)
 * [Errors](getting-started/errors.md)
 * [Source Endpoints](getting-started/source-api/README.md)
   * [GET /source](getting-started/source-api/get-source.md)
