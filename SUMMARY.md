@@ -2,7 +2,6 @@
 
 * [Home](README.md)
 * [What is HrFlow.ai?](why-use-hrflow.md)
-* [Public Roadmap](https://updates.hrflow.ai)
 * [F.A.Q](f.a.q.md)
 
 ## DEVELOPERS PRODUCTS <a id="products-1"></a>
@@ -91,4 +90,5 @@
 * [GDPR & Privacy](https://gdpr.hrflow.ai)
 * [Help center](https://support.hrflow.ai)
 * [Service status](https://status.hrflow.ai)
+* [Public Roadmap](https://updates.hrflow.ai)
 
