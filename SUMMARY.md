@@ -23,7 +23,8 @@
 ## Getting Started
 
 * [Authentication](getting-started/authentication.md)
-* [Installation](getting-started/installation/README.md)
+* [Installation](getting-started/installation-1.md)
+* [Packages](getting-started/installation/README.md)
   * [Python](getting-started/installation/python.md)
   * [PHP](getting-started/installation/php.md)
   * [Node.js](getting-started/installation/node.js.md)

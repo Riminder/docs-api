@@ -1,4 +1,4 @@
-# Packages
+# Installation
 
 ## Getting Super Powers
 
