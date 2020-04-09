@@ -29,6 +29,7 @@
   * [Java](getting-started/installation/java.md)
   * [.NET](getting-started/installation/.net.md)
   * [Go](getting-started/installation/go.md)
+* [Quick Start](getting-started/quick_start.md)
 * [Authentication](getting-started/authentication.md)
 * [Errors](getting-started/errors.md)
 * [Source API](getting-started/source-api/README.md)
@@ -58,7 +59,6 @@
   * [Events](getting-started/events/events/README.md)
     * [profile.parsing](getting-started/events/events/profile.parsing.md)
     * [job.parsing](getting-started/events/events/job.parsing.md)
-* [Example](getting-started/example.md)
 
 ## Integrations
 
