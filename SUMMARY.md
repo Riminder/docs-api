@@ -63,6 +63,8 @@
 ## Integrations
 
 * [Sources](integrations/sources/README.md)
+  * [ATS & HRIS](integrations/sources/ats-and-hris/README.md)
+    * [Talentsoft](integrations/sources/ats-and-hris/talentsoft.md)
   * [Widget](integrations/sources/widget/README.md)
     * [Dropzone](integrations/sources/widget/dropzone.md)
     * [Cvbot](integrations/sources/widget/cvbot.md)
