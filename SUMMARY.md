@@ -75,6 +75,7 @@
     * [Imap](integrations/sources/email/imap.md)
 * [Destinations](integrations/destinations/README.md)
   * [Webhook](integrations/destinations/webhook.md)
+  * [Zapier](integrations/destinations/zapier.md)
   * [Process Management](integrations/destinations/process-management/README.md)
     * [Trello](integrations/destinations/process-management/trello.md)
   * [Communication](integrations/destinations/communication/README.md)
