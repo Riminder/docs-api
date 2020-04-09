@@ -64,7 +64,7 @@
   * [Events](getting-started/events/events/README.md)
     * [profile.parsing](getting-started/events/events/profile.parsing.md)
     * [job.parsing](getting-started/events/events/job.parsing.md)
-* [F.A.Q](f.a.q.md)
+* [F.A.Q](getting-started/f.a.q.md)
 
 ## Integrations
 
