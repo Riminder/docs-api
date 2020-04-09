@@ -2,8 +2,8 @@
 
 * [Home](README.md)
 * [Why use HrFlow?](why-use-hrflow.md)
-* [GDPR](gdpr.md)
-* [Security](security.md)
+* [GDPR](https://gdpr.hrflow.ai)
+* [Security](https://security.hrflow.ai)
 * [Updates & Roadmap](https://updates.hrflow.ai)
 * [F.A.Q](f.a.q.md)
 
