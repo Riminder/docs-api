@@ -1,6 +1,6 @@
-# Home
+# What is HrFlow.ai?
 
-## Who we are?
+## Quick introduction
 
 ![](https://lh4.googleusercontent.com/yUykuToiIJ39KfFM__pHadnwYJ4QVTENcfxxSoH5rWtfSEetRHJS3f_BAL0zWGEIU6U0xZzJObU91YsdMg_06nvDVRCkF4y862Xxih_KcgBqiLCXIOQvFBlQfgDUbNtNxfKZdvJmhPg)
 

@@ -1,7 +1,7 @@
 # Table of contents
 
-* [Home](README.md)
-* [What is HrFlow.ai?](why-use-hrflow.md)
+* [What is HrFlow.ai?](README.md)
+* [What does HrFlow.ai?](why-use-hrflow.md)
 * [Use case of the API](use-case-of-the-api.md)
 * [API Architecture](api-architecture.md)
 
