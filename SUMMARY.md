@@ -4,7 +4,7 @@
 * [What is HrFlow.ai?](why-use-hrflow.md)
 * [GDPR](https://gdpr.hrflow.ai)
 * [Security](https://security.hrflow.ai)
-* [Updates & Roadmap](https://updates.hrflow.ai)
+* [Public Roadmap](https://updates.hrflow.ai)
 * [F.A.Q](f.a.q.md)
 
 ## PRODUCTS <a id="products-1"></a>
@@ -85,4 +85,5 @@
     * [Trello](integrations/destinations/process-management/trello.md)
   * [Communication](integrations/destinations/communication/README.md)
     * [Slack](integrations/destinations/communication/slack.md)
+* [Security](https://security.hrflow.ai)
 
