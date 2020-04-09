@@ -2,6 +2,7 @@
 
 * [Home](README.md)
 * [Why use HrFlow?](why-use-hrflow.md)
+* [Profile API](introduction.md)
 * [GDPR](https://gdpr.hrflow.ai)
 * [Security](https://security.hrflow.ai)
 * [Updates & Roadmap](https://updates.hrflow.ai)
@@ -9,7 +10,6 @@
 
 ## Products
 
-* [Profile & Job API](products/introduction.md)
 * [Parsing](products/parsing.md)
 * [Embedding](products/embedding.md)
 * [Revealing](products/revealing-1.md)
