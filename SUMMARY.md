@@ -73,5 +73,10 @@
     * [Gmail](integrations/sources/email/gmail.md)
     * [Forward](integrations/sources/email/forward.md)
     * [Imap](integrations/sources/email/imap.md)
-* [Destinations](integrations/destinations.md)
+* [Destinations](integrations/destinations/README.md)
+  * [Webhook](integrations/destinations/webhook.md)
+  * [Process Management](integrations/destinations/process-management/README.md)
+    * [Trello](integrations/destinations/process-management/trello.md)
+  * [Communication](integrations/destinations/communication/README.md)
+    * [Slack](integrations/destinations/communication/slack.md)
 
