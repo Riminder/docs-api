@@ -5,7 +5,7 @@
 * [Public Roadmap](https://updates.hrflow.ai)
 * [F.A.Q](f.a.q.md)
 
-## PRODUCTS <a id="products-1"></a>
+## DEVELOPERS PRODUCTS <a id="products-1"></a>
 
 * [Profile API](products-1/introduction.md)
 * [JOB API](products-1/job-api.md)
@@ -33,7 +33,9 @@
   * [Java](getting-started/installation/java.md)
   * [.NET](getting-started/installation/.net.md)
   * [Go](getting-started/installation/go.md)
-* [Quick Start](getting-started/quick_start.md)
+* [Quick start](getting-started/quick-start/README.md)
+  * [Case study](getting-started/quick-start/case-study.md)
+  * [Tutorials](getting-started/quick-start/quick_start.md)
 * [Errors](getting-started/errors.md)
 * [Source Endpoints](getting-started/source-api/README.md)
   * [GET /source](getting-started/source-api/get-source.md)
