@@ -1,2 +1,12 @@
 # Reasoning
 
+## Why you should choose our Parsing?
+
+### Features workflow
+
+![](../.gitbook/assets/image%20%282%29.png)
+
+### **HrFlow.ai Vs Alternative**
+
+![](../.gitbook/assets/screenshot-from-2020-04-10-02-23-38.png)
+
