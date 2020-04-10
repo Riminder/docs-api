@@ -33,7 +33,7 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 | Interests | Interests List |
 | Languages | Languages List |
 
-## Profile API
+### Profile API
 
 ![Example of Augmented Profile:Parsing attributes plotted on the original resume.](https://lh4.googleusercontent.com/LpKFFRl8MbJ561Q-fxFy88VB23ZK5I749ZW8Yzkl-WIqTPTkgY8espVLiKdxnimZcCydcB9XgQev4KSsee9RcyPw3dcTh7NqT6Xk8oNdExuPltvH92Y7jV-bdspZFbU7dYfOD5noeFw)
 
@@ -41,7 +41,7 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 Generate your own augmented resume by trying: [https://labs.riminder.net/profile/augmented](https://labs.riminder.net/profile/augmented)
 {% endhint %}
 
-## Job API
+### Job API
 
 ![Example of Augmented Job:Parsing attributes plotted on the original job offer.](../.gitbook/assets/screenshot-from-2020-03-01-20-12-05.png)
 
@@ -49,5 +49,13 @@ Generate your own augmented resume by trying: [https://labs.riminder.net/profile
 Try our job offer parser:[ https://labs.riminder.net/profile/augmented](https://labs.riminder.net/jobs/semantic-analyzer/)
 {% endhint %}
 
+## Why you should choose our Parsing?
 
+### Features workflow
+
+![](../.gitbook/assets/image%20%282%29.png)
+
+### **HrFlow.ai Vs Alternatives**
+
+![](../.gitbook/assets/screenshot-from-2020-04-10-02-21-36.png)
 
