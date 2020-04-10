@@ -2,7 +2,6 @@
 
 * [What is HrFlow.ai?](README.md)
 * [What does HrFlow.ai?](why-use-hrflow.md)
-* [Using HrFlow.ai](use-case-of-the-api.md)
 
 ## DEVELOPERS PRODUCTS <a id="products-1"></a>
 
