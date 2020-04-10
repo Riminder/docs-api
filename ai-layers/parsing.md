@@ -53,7 +53,7 @@ Try our job offer parser:[ https://labs.riminder.net/profile/augmented](https://
 
 ### Features workflow
 
-![](../.gitbook/assets/image%20%282%29.png)
+![Document Parsing Workflow](../.gitbook/assets/untitled-diagram-4.png)
 
 ### **HrFlow.ai Vs Alternatives**
 
