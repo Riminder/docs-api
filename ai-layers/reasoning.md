@@ -10,7 +10,7 @@ Understand the reasons lying behind the matching based on specific attributes ma
 
 ### Features workflow
 
-![](../.gitbook/assets/image%20%283%29.png)
+![](../.gitbook/assets/image%20%284%29.png)
 
 ### **HrFlow.ai Vs Alternative**
 

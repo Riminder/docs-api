@@ -6,11 +6,11 @@ We developed a fair-by-design technology that leverages external benchmark, mark
 
 ## 
 
-## Why you should choose our Parsing?
+## Why you should choose our Scoring?
 
 ### Features workflow
 
-![](../.gitbook/assets/image%20%283%29.png)
+![Scoring Workflow](../.gitbook/assets/image%20%283%29.png)
 
 ### **HrFlow.ai Vs Alternatives**
 
