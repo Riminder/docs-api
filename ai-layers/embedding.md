@@ -24,6 +24,12 @@ Now on, your AI experts Developers can focus on building great models instead of
 
 ![Experience2vec example](https://lh4.googleusercontent.com/cLvklbMDn7YyRNAZjZJ7KeYGnam3XoZTGeV6ERvwkRM2VDerwCmBkoUZpj36MMXXHSHICpSZZH0zS4iygt0X_hJ-nhaxud0F3ZWUEhNLiO7IX7U1o_MZN2Ouy_QEnY2P6ytxZOZZAAk)
 
+## **Why choose our Embedding ?**
+
+### Features Workflow
+
+![Embedding Workflow](../.gitbook/assets/image%20%282%29.png)
+
 ### **HrFlow.ai Vs Alternatives**
 
 | **Embedding** | _Bag-of-words_ | **Topic modelling** | n-gram embeddings | **Encoder-decoder** | HrFlow |

@@ -10,7 +10,7 @@ We developed a fair-by-design technology that leverages external benchmark, mark
 
 ### Features workflow
 
-![](../.gitbook/assets/image%20%282%29.png)
+![](../.gitbook/assets/image%20%283%29.png)
 
 ### **HrFlow.ai Vs Alternatives**
 
