@@ -39,10 +39,8 @@ Now on, your AI experts Developers can focus on building great models instead of
 
 | **Embedding** | _Bag-of-words_ | **Topic modelling** | n-gram embeddings | **Encoder-decoder** | HrFlow |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-|  |  |  |  |  |  |
 | Multilingual |        x  |        x  |        x  | Can be trained in a cross-lingual approach | Use multilingual Word Embeddings  |
-|  |  |  |  |  |  |
-|  |  |  |  |  | Sub-word information |
-|  |  |  |  |  |  |
+| Sub-word information |        x  |        x  |       yes | Depends on the embedding |       yes |
+| HR Context Awareness |        x  |        x  |        x  |        x  |       yes |
 |  |  |  |  |  |  |
 
