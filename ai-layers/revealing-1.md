@@ -12,11 +12,11 @@ Based on our analysis of millions of profiles, our state of the art Natural Lang
 
 ![Soft Skills analysis](https://lh3.googleusercontent.com/zOgEXSD79Q4rX337_5fbmybc3Gx43ZULU20NkFmuqgz5SZL31jteM4HJISPWupktveKrE4rX6zy4nTN3SyqLHnheft4p-FA3TaOxsYnb7DJ4nV6Cjq2nl7IlCaHMYGbySS3JOowxe0I)
 
-Why you should choose our Parsing?
+## Why you should choose our Revealing?
 
 ### Features workflow
 
-![](../.gitbook/assets/image%20%282%29.png)
+![Revealing Workflow](../.gitbook/assets/untitled-diagram-5.png)
 
 ### **HrFlow.ai Vs Alternative** 
 
