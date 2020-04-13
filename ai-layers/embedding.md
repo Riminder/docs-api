@@ -28,7 +28,12 @@ Now on, your AI experts Developers can focus on building great models instead of
 
 ### Features Workflow
 
-![Embedding Workflow](../.gitbook/assets/image%20%282%29.png)
+![Embedding Workflow](../.gitbook/assets/image%20%281%29.png)
+
+* **Tokenization :** Our method of tokenization gives our models additional advantages in terms of making them less prone or prone to typing errors by leveraging  information on _subwords_ and _multigrams._
+* **Vectorization** : 
+
+
 
 ### **HrFlow.ai Vs Alternatives**
 

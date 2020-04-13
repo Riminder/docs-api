@@ -16,7 +16,7 @@ First of all, the following diagram explains the basic use case of the API : upl
 
 Building with Hrflow.ai is very simple. The following diagram give details about our architecture and how you can get the best possible experience.
 
-![](.gitbook/assets/image%20%281%29.png)
+![](.gitbook/assets/image%20%282%29.png)
 
 
 
