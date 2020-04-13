@@ -1,5 +1,9 @@
 # Reasoning
 
+Meet the world’s first white-box matching technology. Get deep analytics and insights about every recommendation so that you make your decision. 
+
+Understand the reasons lying behind the matching based on specific attributes making the profile stands out \(transitions, experiences, education, skills, etc.\) or external facts \(industry, job market, best practices\).
+
 ## Why you should choose our Parsing?
 
 ### Features workflow
