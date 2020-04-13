@@ -30,8 +30,8 @@ Now on, your AI experts Developers can focus on building great models instead of
 
 ![Embedding Workflow](../.gitbook/assets/image%20%281%29.png)
 
-* **Tokenization :** Our method of tokenization gives our models additional advantages in terms of making them less prone or prone to typing errors by leveraging  information on _subwords_ and _multigrams._
-* **Vectorization** : 
+* **Tokenization :** Our method of tokenization gives our models additional advantages in terms of making them less prone or prone to typing errors by leveraging  information on _**subwords**_ and _**multigrams**._
+* **Vectorization** : Our vectorization method consists of a hierarchy of levels, a first one at the word level by using our in-house pre-trained _**word embeddings**_ on the world largest HR entities dataset, then a second one for _**encoding paragraphs**_ \(sections in documents\) based on Natural Language Processing state of the art models.
 
 
 
