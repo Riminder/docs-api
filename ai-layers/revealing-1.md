@@ -18,7 +18,7 @@ Based on our analysis of millions of profiles, our state of the art Natural Lang
 
 ![Revealing Workflow](../.gitbook/assets/untitled-diagram-5.png)
 
-### **HrFlow.ai Vs Alternative** 
+### **HrFlow.ai Vs Alternative**
 
-![](../.gitbook/assets/screenshot-from-2020-04-10-02-23-07.png)
+![](../.gitbook/assets/screenshot-2020-04-13-at-15.49.22.png)
 
