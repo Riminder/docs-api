@@ -12,11 +12,7 @@ We developed a fair-by-design technology that leverages external benchmark, mark
 
 ### Features workflow
 
-
-
-![Scoring Workflow](../.gitbook/assets/untitled-diagram-6.png)
-
-
+![Scoring Workflow](../.gitbook/assets/scoring.png)
 
 ### **HrFlow.ai Vs Alternatives**
 
