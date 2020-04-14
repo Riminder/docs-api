@@ -6,7 +6,7 @@ Understand the reasons lying behind the matching based on specific attributes ma
 
 ![Example of Highlighted Profile: Key indicators highlighted on the original resume.](../.gitbook/assets/screenshot-2020-04-13-at-13.04.42.png)
 
-## Why you should choose our Parsing?
+## Why you should choose our Reasoning?
 
 ### Features workflow
 
