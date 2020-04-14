@@ -37,10 +37,12 @@ Now on, your AI experts Developers can focus on building great models instead of
 
 ### **HrFlow.ai Vs Alternatives**
 
+Document embedding is the operation that consists of representing a document by a dense fixed length vector.
+
 | **Embedding** | _Bag-of-words_ | **Topic modelling** | n-gram embeddings | **Encoder-decoder** | HrFlow |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Multilingual |        x  |        x  |        x  | Can be trained in a cross-lingual approach | Use multilingual Word Embeddings  |
-| Sub-word information |        x  |        x  |       yes | Depends on the embedding |       yes |
+| Sub-word information |        x  |        x  |       x | Depends on the world-level embedding used |       yes |
 | HR Context Awareness |        x  |        x  |        x  |        x  |       yes |
 |  |  |  |  |  |  |
 
