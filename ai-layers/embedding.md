@@ -44,3 +44,5 @@ Now on, your AI experts Developers can focus on building great models instead of
 | HR Context Awareness |        x  |        x  |        x  |        x  |       yes |
 |  |  |  |  |  |  |
 
+![](../.gitbook/assets/screenshot-2020-04-14-at-13.00.28.png)
+
