@@ -20,5 +20,5 @@ Based on our analysis of millions of profiles, our state of the art Natural Lang
 
 ### **HrFlow.ai Vs Alternative**
 
-![](../.gitbook/assets/screenshot-2020-04-13-at-15.49.22.png)
+![](../.gitbook/assets/screenshot-2020-04-15-at-08.25.15.png)
 

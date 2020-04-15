@@ -14,5 +14,5 @@ Understand the reasons lying behind the matching based on specific attributes ma
 
 ### **HrFlow.ai Vs Alternative**
 
-![](../.gitbook/assets/screenshot-2020-04-13-at-15.48.57.png)
+![](../.gitbook/assets/screenshot-2020-04-15-at-08.32.46.png)
 

@@ -57,5 +57,5 @@ Try our job offer parser:[ https://labs.riminder.net/profile/augmented](https://
 
 ### **HrFlow.ai Vs Alternatives**
 
-![](../.gitbook/assets/screenshot-from-2020-04-10-02-21-36.png)
+![](../.gitbook/assets/screenshot-2020-04-15-at-08.20.34.png)
 

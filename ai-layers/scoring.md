@@ -21,5 +21,5 @@ We developed a fair-by-design technology that leverages external benchmark, mark
 
 ### **HrFlow.ai Vs Alternatives**
 
-![](../.gitbook/assets/screenshot-from-2020-04-10-02-24-01.png)
+![](../.gitbook/assets/screenshot-2020-04-15-at-08.28.43.png)
 
