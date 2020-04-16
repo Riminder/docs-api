@@ -48,5 +48,5 @@ Document embedding is the operation that consists of representing a document by 
 | HR Context Awareness |        x  |        x  |        x  |        x  |       yes |
 |  |  |  |  |  |  |
 
-![](../.gitbook/assets/screenshot-2020-04-14-at-13.00.28.png)
+![](../.gitbook/assets/screenshot-2020-04-16-at-08.17.00.png)
 
