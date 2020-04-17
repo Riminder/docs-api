@@ -1,6 +1,8 @@
 # Analytics API
 
-The Analytics API provide deep qualitative insights about career moves, academic and professional skills gap, market landscape and more, based on the analysis of external and internal profile and job data. 
+The Analytics API provide deep qualitative insights about career moves, academic and professional skills gap, market landscape and more, based on the analysis of external and internal profile and job data.
+
+![](../.gitbook/assets/screenshot-2020-04-17-at-18.40.15.png)
 
 You can connect Analytics API to other external tools, like Tableau, Kibana, Plotly, etc. and generate comprehensive insights about your data.
 
