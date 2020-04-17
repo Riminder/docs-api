@@ -13,7 +13,7 @@
 
 * [Parsing](ai-layers/parsing.md)
 * [Embedding](ai-layers/embedding.md)
-* [Revealing](ai-layers/revealing-1.md)
+* [Revealing](ai-layers/revealing.md)
 * [Searching](ai-layers/searching.md)
 * [Scoring](ai-layers/scoring.md)
 * [Reasoning](ai-layers/reasoning.md)
