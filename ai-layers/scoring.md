@@ -1,6 +1,6 @@
 # Scoring
 
-Predict success and detect hidden gems. Score your profiles & jobs by relevance across all your pools. 
+Scoring technology helps you predict success and detect hidden gems. It allows you to score your profiles & jobs by relevance across all your pools. 
 
 We developed a fair-by-design technology that leverages external benchmark, market best practices and internal knowledge about your company to help you build tailor-made and bias-free prediction models across all your jobs in any industry. These models are also getting smarter with every interaction and feedback.
 
