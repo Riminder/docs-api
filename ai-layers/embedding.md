@@ -41,12 +41,11 @@ Our Embedding API offers several different encoding levels, particularly when it
 
 Document embedding is the operation that consists of representing a document by a dense fixed length vector.
 
+![](../.gitbook/assets/screenshot-2020-04-16-at-08.17.00.png)
+
 | **Embedding** | _Bag-of-words_ | **Topic modelling** | n-gram embeddings | **Encoder-decoder** | HrFlow |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Multilingual |        x  |        x  |        x  | Can be trained in a cross-lingual approach | Use multilingual Word Embeddings  |
 | Sub-word information |        x  |        x  |       x | Depends on the world-level embedding used |       yes |
 | HR Context Awareness |        x  |        x  |        x  |        x  |       yes |
-|  |  |  |  |  |  |
-
-![](../.gitbook/assets/screenshot-2020-04-16-at-08.17.00.png)
 
