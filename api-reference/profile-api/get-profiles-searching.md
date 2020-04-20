@@ -267,5 +267,55 @@ Invalid secret key.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
 
+
+
+{% tabs %}
+{% tab title="PHP" %}
+```php
+$client->profile->searching->get(array $source_ids, $name=null, $email=null,
+                                 $location_geopoint=[], $location_distance=null,
+                                 $summary_keywords=[], $text_keywords=[],
+                                 $experience_keywords=[],
+                                 $experience_location_geopoint=[],
+                                 $experience_location_distance=null, 
+                                 $experiences_duration_min=null,
+                                 $experiences_duration_max=null,
+                                 $education_keywords=[],
+                                 $education_location_geopoint=[],
+                                 $education_location_distance=null, 
+                                 $educations_duration_min=null, 
+                                 $educations_duration_max=null,
+                                 $skills_dict=[], $languages_dict=[], 
+                                 $interests_dict=null, $labels_dict=null,
+                                 $date_start="1494539999", $date_end=null, 
+                                 $page=1, $limit=30, $sort_by='date_reception', 
+                                 $order_by='asc');
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+client.profile.searching.get(source_ids=["source_id"], name=None, email=None,
+                             location_geopoint=[], location_distance=None, 
+                             summary_keywords=[], text_keywords=[],
+                             experience_keywords=[],
+                             experience_location_geopoint=[], 
+                             experience_location_distance=None, 
+                             experiences_duration_min=None, 
+                             experiences_duration_max=None,
+                             education_keywords=[], 
+                             education_location_geopoint=[], 
+                             education_location_distance=None,
+                             educations_duration_min=None, 
+                             educations_duration_max=None,
+                             skills_dict=[], languages_dict=[], 
+                             interests_dict=None, labels_dict=None,
+                             date_start="1494539999", date_end=None, 
+                             page=1, limit=30, sort_by='date_reception', 
+                             order_by='asc')
+```
+{% endtab %}
+{% endtabs %}
 

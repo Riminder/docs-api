@@ -185,6 +185,26 @@ Invalid secret key.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
+{% tabs %}
+{% tab title="PHP" %}
+```php
+$client->profile->add_json($source_id, $profile_d, $profile_reference, 
+                           $timestamp_reception, $profile_labels, 
+                           $profile_tags, $profile_metadatas);
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+client.profile.add_json(source_id="source_id", 
+                        profile_json=profile_json,
+                        profile_tags =[{"name": "email", "value":"test@test.com"}])
+```
+{% endtab %}
+{% endtabs %}
+
 #### 2\) File profile :
 
 All possible extensions of a valid profile's resume are accepted \(.ie pdf, png, jpeg, docx, ppt, rtbf, html ...\)
@@ -320,7 +340,37 @@ Invalid secret key.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
 
+{% tabs %}
+{% tab title="PHP" %}
+```php
+$profile_file = fopen('/path/to/file.pdf','rb');
+
+$client->profile->add_file($source_id, $profile_file, $profile_content_type, 
+                           $profile_reference, $timestamp_reception, 
+                           $profile_labels, $profile_tags, $profile_metadatas,
+                           $sync_parsing);
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+with open('/path/to/file.pdf','rb') as file:
+    profile_file = file.read()
+    
+client.profile.add_file(source_id="source_id",
+                        profile_file=profile_binary,
+                        profile_content_type='application/pdf',
+                        profile_labels=[]
+                        profile_tags=[{"name" : "email", "value": "test@hrflow.ai"},
+                                      {"name" : "blacklist", "value": True}],
+                        profile_metadata=[],
+                        timestamp_reception=1587398379
+                        sync_parsing=0)
+```
+{% endtab %}
+{% endtabs %}
 
 
 

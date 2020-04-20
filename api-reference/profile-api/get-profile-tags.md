@@ -97,5 +97,20 @@ Invalid secret token.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
 
+{% tabs %}
+{% tab title="PHP" %}
+```php
+client->profile->tag->list($source_id, new ProfileID('profile_id'))
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+client.profile.tag.list(source_id="source_id",
+                        profile_id="profile_id")
+```
+{% endtab %}
+{% endtabs %}
 

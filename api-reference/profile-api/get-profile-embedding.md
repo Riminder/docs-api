@@ -98,3 +98,22 @@ Invalid secret key
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
+{% tabs %}
+{% tab title="PHP" %}
+```php
+$client->profile->embedding->get($source_id, new ProfileId("profile_id"), 
+                                ['skills'=>1, 'profile'=>1, 'educations'=>[0]]);
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+client.profile.embedding.get(source_id='source_id',
+                             profile_id='profile_id',
+                             fields={'profile': 1, 'skills':1, 'educations':[0]})
+```
+{% endtab %}
+{% endtabs %}
+

@@ -102,9 +102,25 @@ Invalid secret key
 
 ## Example
 
+{% tabs %}
+{% tab title="Bash" %}
 ```bash
 $curl --url "https://api.hrflow.ai/sources?name=python&page=2&limit=5&sort_by=date&order_by=asc" --header "X-API-KEY: api_key"
 ```
+{% endtab %}
+
+{% tab title="PHP" %}
+```php
+$client->source->list('python', 1, 1, 'date', 'asc');
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+client.source.list(name='python', page=1, limit=1, sort_by='date', order_by'asc')
+```
+{% endtab %}
+{% endtabs %}
 
 
 
