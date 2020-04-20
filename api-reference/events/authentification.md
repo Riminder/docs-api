@@ -68,3 +68,19 @@ Invalid secret token.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
+{% tabs %}
+{% tab title="PHP" %}
+```php
+$client->webhooks->check();
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+  client.webhooks.check()
+```
+{% endtab %}
+{% endtabs %}
+

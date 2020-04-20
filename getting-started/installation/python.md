@@ -4,44 +4,72 @@ description: HrFlow SDK for Python
 
 # Python
 
-## Introduction
+Our Python library is an open source,  production-ready and a Python Wrapper API. It is an easy way to access HrFlow API features  .
 
-3 packages have been developed to help using our Riminder API with the Python language:
+This library is open-source, so you can [check it out on GitHub](https://github.com/Riminder/python-hrflow-api).
 
-* [python-hrflow-api](https://github.com/Riminder/python-hrflow-api): our main python wrapper to access our API features
+## Install
 
-## Installation
+ Install`hrflow`client using [pip](https://pypi.org/project/pip/):
 
-To use the API, you need Python 3 \(version **&gt;= 3.5**\) and **pip** which is a dependency manager.  
-Installing the HrFlow package is as simple as writing this in the terminal :
-
-```bash
+```text
 pip3 install hrflow
 ```
 
-You can now start to use the API.
+{% hint style="info" %}
+You can keep the API client up to date by checking [GitHub release page](https://github.com/Riminder/php-hrflow-api/releases).
+{% endhint %}
 
-## Usage
+## Initialize the client
 
-### Authentification
+To authenticate against the API, get your API SECRET KEY from your HrFlow dashboard!
 
-To authenticate against the api, get your API SECRET KEY from your HrFlow dashboard!
-
-Then create a new Client`Hrflow` object with this key:
-
-```python
-import hrflow as hf
-client = hf.Client(api_secret="YOUR_API_KEY")
-```
-
-### Overview
+To begin you adventure with HrFlow,  you will need to initialize the client. In order to do this you will need your **API SECRET KEY**. You can retrieve it from [HrFlow Dashboard](https://developers.hrflow.ai/getting-started/authentication)
 
 ```python
 import hrflow as hf
-client = hf.Client(api_secret="YOUR_API_KEY")
-result = client.source.search()
-print(result)
+
+client = hf.Client(api_secret=api_secret)
 ```
 
+## Methods
 
+### Profile
+
+| List of Methods |  |
+| :--- | :--- |
+| [Upload Profile](https://developers.hrflow.ai/api-reference/profile-api/post-profile) | You can upload either json or binary \(file\) Profile |
+| [Get Profile's searching](https://developers.hrflow.ai/api-reference/profile-api/get-profiles-searching) | Profile search engine |
+| [Get Profile's scoring](https://developers.hrflow.ai/api-reference/profile-api/get-profiles-scoring) | Retrieve Profile's scoring |
+| [Get Profile's parsing](https://developers.hrflow.ai/api-reference/profile-api/get-profile-parsing) | Retrieve Profile's parsing |
+| [Get Profile's embedding](https://developers.hrflow.ai/api-reference/profile-api/get-profile-embedding) | Retrieve Profile's embedding |
+| [Get Profile's attachment](https://developers.hrflow.ai/api-reference/profile-api/get-profile-attachments) | Retrieve Profile's document |
+| [Get Profile's tag](https://developers.hrflow.ai/api-reference/profile-api/get-profile-tags) | Retrieve Profile's tag |
+| [Get Profile's metadata](https://developers.hrflow.ai/api-reference/profile-api/get-profile-metadatas) | Retrieve Profile's metadata |
+| [Get Profile's revealing](https://developers.hrflow.ai/api-reference/profile-api/get-profile-revealing) | Retrieve Profile's revealing |
+| [Get Profile's reasoning](https://developers.hrflow.ai/api-reference/profile-api/get-profile-reasoning) | Retrieve Profile's reasoning |
+
+### Job
+
+| List of methods |  |
+| :--- | :--- |
+| [Upload Job](https://developers.hrflow.ai/api-reference/job-api/post-job) | Uploading a job by specifying some information. |
+| [Get job's parsing](https://developers.hrflow.ai/api-reference/job-api/get-job-parsing) | Retrieve Job's parsing |
+| [Get job's embedding](https://developers.hrflow.ai/api-reference/job-api/get-job-embedding) | Retrieve Job's embedding for advanced analysis |
+| [Job searching](https://developers.hrflow.ai/api-reference/job-api/get-job-searching) | Job search engine |
+| [Job Scoring](https://developers.hrflow.ai/api-reference/job-api/get-jobs-scoring) | Retrieve scoring for list of jobs |
+| [Job Reasoning](https://developers.hrflow.ai/api-reference/job-api/get-jobs-reasoning) | Retrieve Job's reasoning |
+
+### Source
+
+| List of methods |  |
+| :--- | :--- |
+| [List all sources](https://developers.hrflow.ai/api-reference/source-api/get-sources) | Method used for finding list of sources by the given condition |
+| [Get a source](https://developers.hrflow.ai/api-reference/source-api/get-source) | Retrieve source's information for a given source\_id |
+
+### Webhook
+
+| List of methods |  |
+| :--- | :--- |
+| Check webhook | Send a webhook notification test |
 
