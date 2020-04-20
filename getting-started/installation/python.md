@@ -17,7 +17,7 @@ pip3 install hrflow
 ```
 
 {% hint style="info" %}
-You can keep the API client up to date by checking [GitHub release page](https://github.com/Riminder/php-hrflow-api/releases).
+You can keep the API client up to date by checking [GitHub release page](https://github.com/Riminder/python-hrflow-api/releases).
 {% endhint %}
 
 ## Initialize the client
