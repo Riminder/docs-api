@@ -71,5 +71,5 @@ client = hf.Client(api_secret=api_secret)
 
 | List of methods |  |
 | :--- | :--- |
-| Check webhook | Send a webhook notification test |
+| [Check webhook](https://developers.hrflow.ai/api-reference/events/authentification) | Send a webhook notification test |
 

@@ -70,12 +70,12 @@ $client = new Client('yourShinyKey');
 
 | List of methods |  |
 | :--- | :--- |
-| Upload Job | Uploading a job by specifying some information. |
-| Get job's parsing | Retrieve Job's parsing |
-| Get job's embedding | Retrieve Job's embedding for advanced analysis |
-| Job searching | Job search engine |
-| Job Scoring | Retrieve scoring for list of jobs |
-| Job Reasoning | Retrieve Job's reasoning |
+| [Upload Job](https://developers.hrflow.ai/api-reference/job-api/post-job) | Uploading a job by specifying some information. |
+| [Get job's parsing](https://developers.hrflow.ai/api-reference/job-api/get-job-parsing) | Retrieve Job's parsing |
+| [Get job's embedding](https://developers.hrflow.ai/api-reference/job-api/get-job-embedding) | Retrieve Job's embedding for advanced analysis |
+| [Job searching](https://developers.hrflow.ai/api-reference/job-api/get-job-searching) | Job search engine |
+| [Job Scoring](https://developers.hrflow.ai/api-reference/job-api/get-jobs-scoring) | Retrieve scoring for list of jobs |
+| [Job Reasoning](https://developers.hrflow.ai/api-reference/job-api/get-jobs-reasoning) | Retrieve Job's reasoning |
 
 ### Source
 
@@ -83,4 +83,10 @@ $client = new Client('yourShinyKey');
 | :--- | :--- |
 | [List all sources](https://developers.hrflow.ai/api-reference/source-api/get-sources) | Method used for finding list of sources by the given condition |
 | [Get a source](https://developers.hrflow.ai/api-reference/source-api/get-source) | Retrieve source's information for a given source\_id |
+
+### Webhook
+
+| List of methods |  |
+| :--- | :--- |
+| [Check webhook](https://developers.hrflow.ai/api-reference/events/authentification) | Send a webhook notification test |
 
