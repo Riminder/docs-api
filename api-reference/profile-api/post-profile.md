@@ -361,7 +361,9 @@ For synchronous parsing , you will receive profile parsing in the response body.
 So as to Use Sync Parsing, you need to:
 
 * Create an API source \(HTTP / Python / PHP ...\),
-* Enable SyncParsing for a given Source by sending a request to HrFlow support team in order to enable this feature for you.
+* Enable SyncParsing for a given Source :
+  * Your admin must activate SyncParsing  in source's configuration,
+  * Send a request to HrFlow support team in order to enable this feature for you.
 * Set sync\_parsing to 1 in your request
 
 ### Example
