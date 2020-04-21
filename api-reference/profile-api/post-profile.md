@@ -345,7 +345,7 @@ While uploading a profile file you can use either **synchronous** or **asynchron
 
 **Asynchronous parsing:**
 
-As explained in the below graph, the parsing **** will be done **asynchronously** as soon as it is available. Then you will receive a webhook notification for success or failure of profile parsing.
+As explained in this diagram, parsing **** will be done **asynchronously** as soon as it is available. Then you will receive a webhook notification for success or failure of profile parsing.
 
 ![](../../.gitbook/assets/asyncparsing-diagram.png)
 
