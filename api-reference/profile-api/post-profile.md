@@ -304,8 +304,7 @@ Profile successfully Created using sync parsing.
     "code": 202,
     "message": "Profile file added",
     "data": {
-        "item_id": "item_id",
-        "item_type": "file"
+        "profile": {...}
      }
 }
 ```
@@ -339,6 +338,31 @@ Invalid secret key.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+
+
+While uploading a profile file you can use either **synchronous** or **asynchronous** parsing:
+
+**Asynchronous parsing:**
+
+As explained in the below graph, the parsing **** will be done **asynchronously** as soon as it is available. Then you will receive a webhook notification for success or failure of profile parsing.
+
+![](../../.gitbook/assets/asyncparsing-diagram.png)
+
+**Synchronous parsing:**
+
+For synchronous parsing , you will receive profile parsing in the response body.
+
+![](../../.gitbook/assets/syncparsing-diagram.png)
+
+**sync\_parsing** is an optional request parameter , you can set its value to 1 to use sync parsing or set its value to 0 to use async parsing.  
+ The default behavior uses asynchronous parsing.  
+  
+So as to Use Sync Parsing, you need to:
+
+* Create an API source \(HTTP / Python / PHP ...\),
+* Enable SyncParsing for a given Source by sending a request to HrFlow support team in order to enable this feature for you.
+* Set sync\_parsing to 1 in your request
 
 ### Example
 

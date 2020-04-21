@@ -73,3 +73,27 @@ client = hf.Client(api_secret=api_secret)
 | :--- | :--- |
 | [Check webhook](https://developers.hrflow.ai/api-reference/events/authentification) | Send a webhook notification test |
 
+## Advanced Tools
+
+### Upload by Batch
+
+Upload by batch to HRFlow's platform. The resumes are selected using the target argument it could be a directory or just a file.   
+If the upload fails, a folder named failed-resumes will be created in the current directory with a copy of the failed files.
+
+```python
+client.profile.importer.upload(source_id='source_id', target='path/to/cvs/',
+                               timestamp_reception=1587473958, is_recurcive=True, 
+                               silent=False, verbose=True, sleep=1, n_worker=3,
+                               logfile=None)
+```
+
+### Download by Batch
+
+Download profile's document of candidates and profile parsing from the sources that you selected.   
+These documents are dumped in a target directory : taget\_path/source\_name\_source\_id/profile\_id/\*
+
+```python
+client.profile.exporter.download(source_ids=['source_id'], target='path/to/cvs/', 
+                                 v_level=None, n_worker=3, logfile=None)
+```
+
