@@ -22,7 +22,7 @@
 
 * [Authentication](getting-started/authentication.md)
 * [Errors](getting-started/errors.md)
-* [Packages](getting-started/installation/README.md)
+* [Installation](getting-started/installation/README.md)
   * [Python](getting-started/installation/python.md)
   * [PHP](getting-started/installation/php.md)
 * [Quick start](getting-started/quick-start/README.md)
