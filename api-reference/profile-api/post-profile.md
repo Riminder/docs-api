@@ -343,7 +343,7 @@ Invalid secret key.
 
 While uploading a profile file you can use either **synchronous** or **asynchronous** parsing:
 
-**Asynchronous parsing:**
+### **Asynchronous parsing:**
 
 As explained in this diagram, parsing **** will be done **asynchronously** as soon as it is available. Then you will receive a webhook notification for success or failure of profile parsing.
 
@@ -365,6 +365,18 @@ So as to Use Sync Parsing, you need to:
   * Your admin must activate SyncParsing  in source's configuration,
   * Send a request to HrFlow support team in order to enable this feature for you.
 * Set sync\_parsing to 1 in your request
+
+### What's a **profile\_id and how to retreive it ?**
+
+A profile ID is a unique identifier for a **HrFlow Profile**. This information is mandatory, **profile\_id guarantees the processing** of your profile \(parsing, revealing, embedding, etc\).
+
+**How to get a profile id**
+
+If you are using SyncParsing you will receive profile\_id in response's body  and if you are using the AsyncParsing you have 3 possible ways that help you retrieve this information.
+
+* Upload your document with a profile\_reference, thus you can get profile's parsing from [this endpoint](https://developers.hrflow.ai/api-reference/profile-api/get-profile-parsing) using source\_id and profile\_reference,
+* Set up a webhook that listens to all incoming notifications from HrFlow. As soon as your document is well parsed you will receive a success event including  the profile id,
+* Use HrFlow's Profile Search Engine, in order to find profile's details, then you can fetch for profile\_id.
 
 ### Example
 
