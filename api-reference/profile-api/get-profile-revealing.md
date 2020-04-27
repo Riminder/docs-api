@@ -1,8 +1,10 @@
 ---
-description: Reveal profile's justification and assessment for a given job.
+description: Retrieve profile's revealing endpoint.
 ---
 
 # GET /profile/revealing
 
-![](../../.gitbook/assets/under_construction_png34.png)
+```
+$ Under construction...
+```
 
