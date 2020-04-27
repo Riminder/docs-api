@@ -441,7 +441,7 @@ So as to Use Sync Parsing, you need to:
   * Send a request to HrFlow support team in order to enable this feature for you.
 * Set sync\_parsing to 1 in your request
 
-### What's a **profile\_id and how to retreive it ?**
+### What's a **profile\_id and how to retrieve it ?**
 
 A profile ID is a unique identifier for a **HrFlow Profile**. This information is mandatory, **profile\_id guarantees the processing** of your profile \(parsing, revealing, embedding, etc\).
 
