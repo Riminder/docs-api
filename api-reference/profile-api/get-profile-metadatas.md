@@ -1,4 +1,4 @@
-# GET /profile/metadatas
+# \[GET\] /profile/metadatas
 
 {% hint style="info" %}
 This endpoint requires either profile\_id or profile\_reference or profile\_email.

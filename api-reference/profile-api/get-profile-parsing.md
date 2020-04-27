@@ -2,7 +2,7 @@
 description: Retrieve profile's parsing given profile id and source_id.
 ---
 
-# GET /profile/parsing
+# \[GET\] /profile/parsing
 
 {% hint style="info" %}
 This endpoint requires either profile\_id or profile\_reference or profile\_email.

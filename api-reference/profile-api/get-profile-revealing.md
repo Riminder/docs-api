@@ -2,7 +2,7 @@
 description: Retrieve profile's revealing endpoint.
 ---
 
-# GET /profile/revealing
+# \[GET\] /profile/revealing
 
 ```
 $ Under construction...

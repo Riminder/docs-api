@@ -2,7 +2,7 @@
 description: Retrieve profile's scoring given profile id and source_id.
 ---
 
-# GET /profiles/scoring
+# \[GET\] /profiles/scoring
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/profiles/scoring" %}
 {% api-method-summary %}

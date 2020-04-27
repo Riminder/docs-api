@@ -2,7 +2,7 @@
 description: Retrieve a list of profiles based on given filters
 ---
 
-# GET /profiles/searching
+# \[GET\] /profiles/searching
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/searching" %}
 {% api-method-summary %}

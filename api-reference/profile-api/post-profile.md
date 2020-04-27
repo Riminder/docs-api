@@ -2,7 +2,7 @@
 description: This endpoint allows you to add new profile to a given source.
 ---
 
-# POST  /profile
+# \[POST\]  /profile
 
 {% hint style="info" %}
 This endpoint requires at least source\_id

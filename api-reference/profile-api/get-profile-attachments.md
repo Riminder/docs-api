@@ -2,7 +2,7 @@
 description: Retrieve profile's attachments given profile id and source id.
 ---
 
-# GET /profile/attachments
+# \[GET\] /profile/attachments
 
 {% hint style="info" %}
 This endpoint requires either profile\_id or profile\_reference or profile\_email.
