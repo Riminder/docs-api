@@ -2,7 +2,7 @@
 description: Retrieve job's scoring.
 ---
 
-# GET /jobs/scoring
+# \[GET\] /jobs/scoring
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/jobs/scoring" %}
 {% api-method-summary %}

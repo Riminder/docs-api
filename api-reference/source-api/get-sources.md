@@ -2,7 +2,7 @@
 description: Retrieve all sources created by a team
 ---
 
-# GET /sources
+# \[GET\] /sources
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/sources" %}
 {% api-method-summary %}

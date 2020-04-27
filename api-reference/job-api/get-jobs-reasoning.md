@@ -2,7 +2,7 @@
 description: Retrieve job's reasoning.
 ---
 
-# GET /jobs/reasoning
+# \[GET\] /jobs/reasoning
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/jobs/reasoning" %}
 {% api-method-summary %}

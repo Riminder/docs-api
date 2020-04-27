@@ -2,7 +2,7 @@
 description: Retrieve job's parsing given job id or job reference.
 ---
 
-# GET /job/parsing
+# \[GET\] /job/parsing
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/job/parsing" %}
 {% api-method-summary %}

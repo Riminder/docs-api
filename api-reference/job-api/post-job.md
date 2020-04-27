@@ -2,7 +2,7 @@
 description: Add job
 ---
 
-# POST /job
+# \[POST\] /job
 
 {% hint style="info" %}
 This endpoint requires at least name, agent\_id and job\_reference.
