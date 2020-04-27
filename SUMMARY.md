@@ -39,7 +39,7 @@
   * [GET /sources](api-reference/source-api/get-sources.md)
 * [Profile Endpoints](api-reference/profile-api/README.md)
   * [POST  /profile](api-reference/profile-api/post-profile.md)
-  * [GET /profile/tags](api-reference/profile-api/get-profile-tags.md)
+  * [\[GET\] /profile/tags](api-reference/profile-api/get-profile-tags.md)
   * [GET /profile/metadatas](api-reference/profile-api/get-profile-metadatas.md)
   * [GET /profile/attachments](api-reference/profile-api/get-profile-attachments.md)
   * [GET /profile/parsing](api-reference/profile-api/get-profile-parsing.md)

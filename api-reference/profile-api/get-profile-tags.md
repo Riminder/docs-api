@@ -2,7 +2,7 @@
 description: Retrieve profile's tags given profile id and source id.
 ---
 
-# GET /profile/tags
+# \[GET\] /profile/tags
 
 {% hint style="info" %}
 This endpoint requires either profile\_id or profile\_reference or profile\_email.
