@@ -372,16 +372,17 @@ client.profile.parsing.get(source_id="source_id",
 
 
 import Hrflow from 'hrflow';
-const hrflow = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({API_Key: "Your API Key"});
 
-const data = {
+const params = {
     source_id: "source_id",
     profile_id: "id",
     // Or
-    profile_reference: "reference"
+    profile_reference: "reference",
+    profile_email: 'example@example',
 }
 
-hrflow.profile.parsing.get(data);
+client.profile.parsing.get(params);
 ```
 {% endtab %}
 {% endtabs %}

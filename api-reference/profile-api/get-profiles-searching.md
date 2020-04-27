@@ -323,9 +323,9 @@ client.profile.searching.get(source_ids=["source_id"], name=None, email=None,
 // npm install --save hrflow
 
 import Hrflow from 'hrflow';
-const hrflow = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({API_Key: "Your API Key"});
 
-const data =  {
+const params =  {
   source_ids: ['source_id1', 'source_id2',..], // Required, list of sources ids
   limit: 10, //  Total profiles to search
   page: 1, //  Page number
@@ -359,7 +359,7 @@ const data =  {
 }
 
 
-hrflow.profile.searching.get(data);
+client.profile.searching.get(params);
 ```
 {% endtab %}
 {% endtabs %}

@@ -125,10 +125,18 @@ client.source.list(name='python', page=1, limit=1, sort_by='date', order_by'asc'
 ```javascript
 
 import Hrflow from 'hrflow';
-const hrflow = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({API_Key: "Your API Key"});
 
-hrflow.source.list().then(data => {
-  // Your treatment here
+const params = {
+  name: 'cvbot',
+  page: 1,
+  limit: 10,
+  sort_by: 'date',
+  order_by: 'asc',
+};
+client.source.list(params).then(response => {
+    console.log(response);
+    // ...
 });
 ```
 {% endtab %}

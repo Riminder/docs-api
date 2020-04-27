@@ -123,18 +123,17 @@ Invalid secret key.
 
 
 import Hrflow from 'hrflow';
-const hrflow = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({API_Key: "Your API Key"});
 
-const data = {
+const params = {
     page: 1,
     limit: 10,
     order_by: "asc",
     sort_by: "reception_date"
-
 }
 
-hrflow.job.searching.get(data).then(resp => {
-    // your treatement here 
+client.job.searching.get(params).then(response => {
+    console.log(response);
 });
 ```
 {% endtab %}

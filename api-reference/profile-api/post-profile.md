@@ -209,7 +209,7 @@ client.profile.add_json(source_id="source_id",
 // npm install --save hrflow
 
 import Hrflow from 'hrflow';
-const hrflow = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({API_Key: "Your API Key"});
 
 const profleJson = {
   "name": "Harry Potter",
@@ -275,7 +275,7 @@ const data = {
   sync_parsing: true, // enable/disable real time parsing
 }
 
-hrflow.profile.addJson(data));
+client.profile.addJson(data));
 ```
 {% endtab %}
 {% endtabs %}

@@ -118,16 +118,17 @@ client.profile.tag.list(source_id="source_id",
 // npm install --save hrflow
 
 import Hrflow from 'hrflow';
-const hrflow = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({API_Key: "Your API Key"});
 
-const data = {
+const params = {
     source_id: "source_id",
     profile_id: "id",
     // Or
-    profile_reference: "reference"
+    profile_reference: "reference",
+    profile_email: 'example@example',
 }
 
-hrflow.profile.tags.list(data);
+client.profile.tags.list(params);
 ```
 {% endtab %}
 {% endtabs %}

@@ -338,9 +338,9 @@ client.profile.searching.get(source_ids=["source_id"], job_id, stage,
 // npm install --save hrflow
 
 import Hrflow from 'hrflow';
-const hrflow = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({API_Key: "Your API Key"});
 
-const data = {
+const params = {
   source_ids: ['source_id1', 'source_id2',..], // Required, list of sources ids
   job_id: 'job_id', // Required, job id
   use_agent: 1, // Use agent or not (ie. 0 or 1)
@@ -376,7 +376,7 @@ const data = {
   tags_dict: ['tag1', 'tag2', ...], // List of tags
 }
 
-hrflow.profile.scoring.list(data);
+hrflow.profile.scoring.list(params);
 ```
 {% endtab %}
 {% endtabs %}

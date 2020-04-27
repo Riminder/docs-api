@@ -108,16 +108,17 @@ Invalid secret key.
 
 
 import Hrflow from 'hrflow';
-const hrflow = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({API_Key: "Your API Key"});
 
-const data = {
+const params = {
     job_id: "job_id",
     // Or
     job_reference: "job_reference"
 }
 
-hrflow.job.parsing.get(data).then(resp => {
-    // your treatement here 
+client.job.parsing.get(params).then(response => {
+    console.log(response);
+    // ...
 });
 ```
 {% endtab %}

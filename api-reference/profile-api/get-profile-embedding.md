@@ -122,16 +122,18 @@ client.profile.embedding.get(source_id='source_id',
 
 
 import Hrflow from 'hrflow';
-const hrflow = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({API_Key: "Your API Key"});
 
-const data = {
+const params = {
     source_id: "source_id",
     profile_id: "id",
     // Or
-    profile_reference: "reference"
+    profile_reference: "reference",
+    profile_email: 'example@example',
+    fields: {'profile': 1, 'skills':1, 'educations':[0]},
 }
 
-hrflow.profile.embedding.get(data);
+client.profile.embedding.get(params);
 ```
 {% endtab %}
 {% endtabs %}
