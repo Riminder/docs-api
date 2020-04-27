@@ -103,7 +103,7 @@ Invalid secret key
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-$client->profile->embedding->get($source_id, new ProfileId("profile_id"), 
+$client->profile->embedding->get($source_id, new ProfileID("profile_id"), 
                                 ['skills'=>1, 'profile'=>1, 'educations'=>[0]]);
 ```
 {% endtab %}

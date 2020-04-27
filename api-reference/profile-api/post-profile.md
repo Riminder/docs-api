@@ -190,7 +190,7 @@ Invalid secret key.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-$client->profile->add_json($source_id, $profile_d, $profile_reference, 
+$client->profile->add_json($source_id, $profile_json, $profile_reference, 
                            $timestamp_reception, $profile_labels, 
                            $profile_tags, $profile_metadatas);
 ```
