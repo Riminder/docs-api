@@ -115,5 +115,24 @@ client.profile.embedding.get(source_id='source_id',
                              fields={'profile': 1, 'skills':1, 'educations':[0]})
 ```
 {% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+// npm install --save hrflow
+
+
+import Hrflow from 'hrflow';
+const hrflow = new Hrflow({API_Key: "Your API Key"});
+
+const data = {
+    source_id: "source_id",
+    profile_id: "id",
+    // Or
+    profile_reference: "reference"
+}
+
+hrflow.profile.embedding.get(data);
+```
+{% endtab %}
 {% endtabs %}
 

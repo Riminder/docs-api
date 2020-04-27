@@ -99,5 +99,27 @@ Invalid secret key.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+## Exemple
 
+{% tabs %}
+{% tab title="Javascript" %}
+```javascript
+// npm install --save hrflow
+
+
+import Hrflow from 'hrflow';
+const hrflow = new Hrflow({API_Key: "Your API Key"});
+
+const data = {
+    job_id: "job_id",
+    // Or
+    job_reference: "job_reference"
+}
+
+hrflow.job.parsing.get(data).then(resp => {
+    // your treatement here 
+});
+```
+{% endtab %}
+{% endtabs %}
 

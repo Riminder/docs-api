@@ -102,7 +102,7 @@ Invalid secret token.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-client->profile->tag->list($source_id, new ProfileId('profile_id'))
+client->profile->tag->list($source_id, new ProfileID('profile_id'))
 ```
 {% endtab %}
 
@@ -110,6 +110,24 @@ client->profile->tag->list($source_id, new ProfileId('profile_id'))
 ```python
 client.profile.tag.list(source_id="source_id",
                         profile_id="profile_id")
+```
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+// npm install --save hrflow
+
+import Hrflow from 'hrflow';
+const hrflow = new Hrflow({API_Key: "Your API Key"});
+
+const data = {
+    source_id: "source_id",
+    profile_id: "id",
+    // Or
+    profile_reference: "reference"
+}
+
+hrflow.profile.tags.list(data);
 ```
 {% endtab %}
 {% endtabs %}

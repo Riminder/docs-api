@@ -317,5 +317,50 @@ client.profile.searching.get(source_ids=["source_id"], name=None, email=None,
                              order_by='asc')
 ```
 {% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+// npm install --save hrflow
+
+import Hrflow from 'hrflow';
+const hrflow = new Hrflow({API_Key: "Your API Key"});
+
+const data =  {
+  source_ids: ['source_id1', 'source_id2',..], // Required, list of sources ids
+  limit: 10, //  Total profiles to search
+  page: 1, //  Page number
+  order_by: 'asc', // Order by 'asc' or 'desc'
+  sort_by: 'date_reception', // Sort by 'date_reception', 'date_creation', 'location', 'location_experience', 'location_education', 'score_semantic'  or 'score_predictive'
+  timestamp_start: 1569320033, // 'Start date'
+  timestamp_end: 1586945633,  // 'Start date'
+  name: 'name', // Profile's name  
+  email: 'exemple@exemple.com', // Profile's email
+  location_geopoint: {
+    // Filter by location's latitude and longitude
+    lat: '357516600',
+    lon: '10.7110900',
+  },
+  location_distance: 40, // Filter by location distance in km
+  summary_keywords: ['keyword1', 'keyword2',...], // Filter by summary keywords
+  text_keywords: ['keyword1', 'keyword2',...], // Filter by text keywords,
+  experience_keywords: ['keyword1', 'keyword2',...], // Filter by experience keywords
+  experience_location_geopoint: {
+  // Filter by experience's latitude and longitude
+    lat: '357516600',
+    lon: '10.7110900',
+  },
+  experience_location_distance:  40, // Filter by experience location distance in km
+  experiences_duration_min: 3, // Min total years of experience
+  experiences_duration_max: 7, // Max total years of experience
+  skills_dict: ['skill1', 'skill2', ...], // List of skills
+  languages_dict: ['lang1',..], // List of language
+  interests_dict: ['interest1', 'interest2',...], // List of interests 
+  tags_dict: ['tag1', 'tag2', ...], // List of tags
+}
+
+
+hrflow.profile.searching.get(data);
+```
+{% endtab %}
 {% endtabs %}
 

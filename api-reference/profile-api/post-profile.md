@@ -190,7 +190,7 @@ Invalid secret key.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-$client->profile->add_json($source_id, $profile_json, $profile_reference, 
+$client->profile->add_json($source_id, $profile_d, $profile_reference, 
                            $timestamp_reception, $profile_labels, 
                            $profile_tags, $profile_metadatas);
 ```
@@ -201,6 +201,81 @@ $client->profile->add_json($source_id, $profile_json, $profile_reference,
 client.profile.add_json(source_id="source_id", 
                         profile_json=profile_json,
                         profile_tags =[{"name": "email", "value":"test@test.com"}])
+```
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+// npm install --save hrflow
+
+import Hrflow from 'hrflow';
+const hrflow = new Hrflow({API_Key: "Your API Key"});
+
+const profleJson = {
+  "name": "Harry Potter",
+  "email": "harry.potter@gmail.com",
+  "address": "1 rue streeling",
+  "info" : {
+      "name":"Harry Potter",
+      "email":"harry.potter@gmail.com",
+      "phone":"0202",
+      "location":"somewhere",
+      "urls": {
+          "from_resume": [],
+          "linkedin":"",
+          "twitter":"",
+          "facebook":"",
+          "github":"",
+          "picture":""},
+      "location":{"text":""}},
+  "summary": "test summary",
+  "experiences": [{
+      "start": "15/02/1900",
+      "end": "",
+      "title": "Lead",
+      "company": "Mathematic Departement",
+      "location": {"text":"Paris"},
+      "description": "Developping."
+      }],
+  "educations": [{
+      "start": "12540",
+      "end": "12550",
+      "title": "Mathematicien",
+      "school": "University",
+      "description": "Description",
+      "location": {"text":"Scotland"}
+  }],
+  "skills": ["manual skill", "Creative spirit", "Writing skills", "Communication"],
+  "languages" : ["english"],
+  "interests": ["football"],
+  "tags":[],
+  "metadatas":[],
+  "labels":["stage":"yes","job_id":"job_id"]
+}
+
+const data = {
+  source_id: "source_id", // Required, list of sources ids
+  file: profleJson, // Required, Profile's json
+  timestamp_reception: 1569320033,  // Reception date
+  training_metadata?: [{"name":"mail","value":"test@test.com"}, ...], // Profile's metadatas
+  profile_content_type: 'application/pdf', // Document content type
+  profile_reference: 'profile_reference', // Profile's reference
+  profile_labels:  [ // Profile's label
+    {
+      "job_id": "job_id",
+      "job_reference": "test",
+      "stage": "yes",
+      "stage_timestamp":1585662186,
+      "rating":0.5,
+      "stage_timestamp":1585662186
+    }, 
+    ...
+  ],
+  profile_tags:  [{"name":"blacklist","value":True}, ...], // Profile's tags
+  sync_parsing: true, // enable/disable real time parsing
+}
+
+hrflow.profile.addJson(data));
 ```
 {% endtab %}
 {% endtabs %}
@@ -406,6 +481,40 @@ client.profile.add_file(source_id="source_id",
                         profile_metadata=[],
                         timestamp_reception=1587398379
                         sync_parsing=0)
+```
+{% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+// npm install --save hrflow
+
+import * as fs from "fs";
+import Hrflow from 'hrflow';
+const hrflow = new Hrflow({API_Key: "Your API Key"});
+
+const data = {
+  source_id: "source_id", // Required, list of sources ids
+  file: fs.createReadStream("path to your file"), // Required, profile's document
+  timestamp_reception: 1569320033,  // Reception date
+  training_metadata?: [{"name":"mail","value":"test@test.com"}, ...], // Profile's metadatas
+  profile_content_type: 'application/pdf', // Document content type
+  profile_reference: 'profile_reference', // Profile's reference
+  profile_labels:  [ // Profile's label
+    {
+      "job_id": "job_id",
+      "job_reference": "test",
+      "stage": "yes",
+      "stage_timestamp":1585662186,
+      "rating":0.5,
+      "stage_timestamp":1585662186
+    }, 
+    ...
+  ],
+  profile_tags:  [{"name":"blacklist","value":True}, ...], // Profile's tags
+  sync_parsing: true, // enable/disable real time parsing
+}
+
+hrflow.profile.addFile(data);
 ```
 {% endtab %}
 {% endtabs %}

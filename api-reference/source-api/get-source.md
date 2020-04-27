@@ -105,5 +105,19 @@ $client->source->get('source_id');
 client.source.get(source_id="source_id")
 ```
 {% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+// npm install --save hrflow
+
+import Hrflow from 'hrflow';
+const hrflow = new Hrflow({API_Key: "Your API Key"});
+
+hrflow.source.get("source_id_here").then(data => {
+  // Your treatment here
+});
+
+```
+{% endtab %}
 {% endtabs %}
 
