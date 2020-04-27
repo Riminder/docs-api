@@ -355,7 +355,7 @@ Invalid secret key.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-client->profile->parsing->list($source_id, new ProfileID('profile_id'))
+client->profile->parsing->list($source_id, new ProfileId('profile_id'))
 ```
 {% endtab %}
 

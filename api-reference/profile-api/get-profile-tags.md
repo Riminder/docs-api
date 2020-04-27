@@ -102,7 +102,7 @@ Invalid secret token.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-client->profile->tag->list($source_id, new ProfileID('profile_id'))
+client->profile->tag->list($source_id, new ProfileId('profile_id'))
 ```
 {% endtab %}
 

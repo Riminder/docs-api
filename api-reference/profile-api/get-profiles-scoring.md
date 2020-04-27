@@ -308,7 +308,7 @@ $client->profile->searching->get(array $source_ids, $job_id, $stage,
 ```
 {% endtab %}
 
-{% tab title="" %}
+{% tab title="Python" %}
 ```python
 client.profile.searching.get(source_ids=["source_id"], job_id, stage, 
                              use_agent,

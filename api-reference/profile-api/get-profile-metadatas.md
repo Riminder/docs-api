@@ -94,7 +94,7 @@ Invalid secret token.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-client->profile->metadata->list($source_id, new ProfileID('profile_id'))
+client->profile->metadata->list($source_id, new ProfileId('profile_id'))
 ```
 {% endtab %}
 

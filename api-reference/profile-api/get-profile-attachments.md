@@ -114,7 +114,7 @@ Invalid secret key.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-client->profile->attachment->list($source_id, new ProfileID('profile_id'))
+client->profile->attachment->list($source_id, new ProfileId('profile_id'))
 ```
 {% endtab %}
 
