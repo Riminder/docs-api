@@ -4,7 +4,7 @@ description: Retrieve a list of profiles based on given filters
 
 # \[GET\] /profiles/searching
 
-{% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/searching" %}
+{% api-method method="get" host="https://api.hrflow.ai/v1" path="/profiles/searching" %}
 {% api-method-summary %}
 Get /profiles/searching
 {% endapi-method-summary %}
