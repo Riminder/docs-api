@@ -34,7 +34,9 @@ A Profile ID \[profile\_id\] is a unique identifier for a **HrFlow Profile.**
 Profile Id and Source Id represent in a unique way HrFlow Profile
 {% endhint %}
 
+## Profile unicity ?
 
+An  HrFlow profile is unique by its **profile\_id** and **source\_id**.
 
-
+The couple \(source\_id, profile\_id\) is mandotory to retreive Profile's parsing / embedding / metadata ...
 
