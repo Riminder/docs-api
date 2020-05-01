@@ -30,5 +30,7 @@ This endpoint allows you to get job's reasoning.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-
+```text
+$ Under construction...
+```
 
