@@ -22,6 +22,10 @@ Authentication token.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
+{% api-method-parameter name="name" type="string" required=false %}
+query string parameter
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="page" type="string" required=false %}
 API page offset
 {% endapi-method-parameter %}
@@ -35,8 +39,7 @@ order by \(ie. asc, desc\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-sort by \(ie. reception date, location, location\_experience,  
-location\_education, semantic score, predictive score\)
+sort by \(ie. date\)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -126,10 +129,11 @@ import Hrflow from 'hrflow';
 const client = new Hrflow({API_Key: "Your API Key"});
 
 const params = {
+    name: "data scientist",
     page: 1,
     limit: 10,
     order_by: "asc",
-    sort_by: "reception_date"
+    sort_by: "date"
 }
 
 client.job.searching.get(params).then(response => {
