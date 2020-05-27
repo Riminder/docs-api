@@ -5,7 +5,7 @@ description: Retrieve Job
 # \[GET\] /job/indexing
 
 {% hint style="info" %}
-This endpoint requires at least job\_key and board\_key.
+This endpoint requires at least key and board\_key.
 {% endhint %}
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/job/indexing" %}
