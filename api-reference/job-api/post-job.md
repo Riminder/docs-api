@@ -2,7 +2,7 @@
 description: Add job
 ---
 
-# \[POST\] /job
+# \[POST\] /job/indexing
 
 {% hint style="info" %}
 This endpoint requires at least name and board\_key.
@@ -112,9 +112,9 @@ You can include complementary information such as :
 * job's tags,
 * job's metadata.
 
-{% api-method method="post" host="https://api.hrflow.ai/v1" path="/job" %}
+{% api-method method="post" host="https://api.hrflow.ai/v1" path="/job/indexing" %}
 {% api-method-summary %}
-Post /job
+Post /job/indexing
 {% endapi-method-summary %}
 
 {% api-method-description %}

@@ -53,7 +53,7 @@
 * [Job Endpoints](api-reference/job-api/README.md)
   * [\[GET\] /jobs/searching](api-reference/job-api/get-job-searching.md)
   * [\[GET\] /jobs/scoring](api-reference/job-api/get-jobs-scoring.md)
-  * [\[POST\] /job](api-reference/job-api/post-job.md)
+  * [\[POST\] /job/indexing](api-reference/job-api/post-job.md)
   * [\[PUT\] /job](api-reference/job-api/put-job.md)
   * [\[GET\] /job](api-reference/job-api/get-job.md)
   * [\[GET\] /job/parsing](api-reference/job-api/get-job-parsing.md)
