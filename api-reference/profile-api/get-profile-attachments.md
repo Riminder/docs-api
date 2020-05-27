@@ -114,14 +114,29 @@ Invalid secret key.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-client->profile->attachment->list($source_id, new ProfileID('profile_id'))
+require_once('vendor/autoload.php');
+
+$client = new Hrflow\Client('your secret key');
+
+$source_id         = 'source_id' ;
+$profile_id        = 'profile_id';
+$profile_reference = 'profile_reference'; // optional
+$profile_email     = 'profile_email'; // optional
+
+$client->profile->attachment->list($source_id, $profile_id, $profile_reference, $profile_email);
 ```
 {% endtab %}
 
 {% tab title="Python" %}
 ```python
+import hrflow as hf
+
+client = hf.client(api_secret='your api secret')
+
 client.profile.attachment.list(source_id="source_id",
-                               profile_id="profile_id")
+                               profile_id="profile_id",
+                               profile_reference='profile ref',
+                               profile_email='profile@email.ai'))
 ```
 {% endtab %}
 

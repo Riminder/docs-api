@@ -29,7 +29,7 @@ To begin you adventure with HrFlow,  you will need to initialize the client. In 
 ```python
 import hrflow as hf
 
-client = hf.Client(api_secret=api_secret)
+client = hf.Client(api_secret="your api key")
 ```
 
 ## Methods

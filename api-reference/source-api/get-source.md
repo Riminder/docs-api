@@ -96,12 +96,23 @@ $curl --url "https://api.hrflow.ai/source?source_id=source_id" --header "X-API-K
 
 {% tab title="PHP" %}
 ```php
-$client->source->get('source_id');
+require_once('vendor/autoload.php');
+
+$client = new Hrflow\Client('your secert key');
+
+$source_id = 'source_id' ;
+
+$client->source->get($source_id) ;
+
 ```
 {% endtab %}
 
 {% tab title="Python" %}
 ```python
+import hrflow as hf
+
+client = hf.client(api_secret='your secret key')
+
 client.source.get(source_id="source_id")
 ```
 {% endtab %}

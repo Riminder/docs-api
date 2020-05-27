@@ -23,23 +23,27 @@ Authentication token.
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="name" type="string" required=false %}
-query string parameter
+Job's name
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="string" required=false %}
 API page offset
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="limit" type="integer" required=false %}
+{% api-method-parameter name="limit" type="string" required=false %}
 Max job to return
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="integer" required=false %}
-order by \(ie. asc, desc\)
+Order by \(ie. asc, desc\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="sort\_by" type="string" required=false %}
+{% api-method-parameter name="sort\_by" type="integer" required=false %}
 sort by \(ie. date\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="stage" type="string" required=false %}
+stage
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}

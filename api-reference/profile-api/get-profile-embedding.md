@@ -103,8 +103,18 @@ Invalid secret key
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-$client->profile->embedding->get($source_id, new ProfileId("profile_id"), 
-                                ['skills'=>1, 'profile'=>1, 'educations'=>[0]]);
+require_once('vendor/autoload.php');
+
+$client = new Hrflow\Client('your secret key');
+
+$source_id         = 'source_id' ;
+$profile_id        = 'profile_id';
+$profile_reference = 'profile_reference'; // optional
+$profile_email     = 'profile_email'; // optional
+$fields            = [ 'skills' => 1, 'profile' => 1, 'educations' => ['education_id']]
+
+
+$client->profile->embedding->get($source_id, $profile_id, $fields, $profile_reference, $profile_email);
 ```
 {% endtab %}
 

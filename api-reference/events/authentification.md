@@ -73,7 +73,16 @@ Invalid secret token.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-$client->webhooks->check();
+require_once('vendor/autoload.php');
+
+$client = new Hrflow\Client('your secret key');
+
+$data = [
+    'url'  => 'webhook url',
+    'type' => 'profile.parsing.success'
+];
+
+$client->webhooks->check($data) ;
 ```
 {% endtab %}
 

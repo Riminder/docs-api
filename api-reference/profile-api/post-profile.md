@@ -190,14 +190,79 @@ Invalid secret key.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-$client->profile->add_json($source_id, $profile_d, $profile_reference, 
-                           $timestamp_reception, $profile_labels, 
-                           $profile_tags, $profile_metadatas);
+$client = new Hrflow\Client('your secret key');
+
+$data = [
+  'timestamp_reception'   => 1569320033,  
+  'profile_content_type'  => 'application/pdf', 
+  'profile_reference'     => 'profile_reference', 
+  'profile_labels'        =>  [
+    [
+      'job_id'           => 'job_id',
+      'stage'            => 'yes',
+      'stage_timestamp'  => 1585662186,
+      'rating'           => 0.5,
+      'stage_timestamp'  => 1585662186
+    ], 
+    ...
+  ],
+  'profile_metadatas' => [["name" => "mail", "value" => "test@test.com"], ...],
+]
+
+$profile_json =
+
+$client->profile::addJson($source_id, $profile_json, $data);
 ```
 {% endtab %}
 
 {% tab title="Python" %}
 ```python
+import hrflow as hf
+
+client = hf.client(api_secret='your api secret')
+
+profle_json = {
+  "name": "Harry Potter",
+  "email": "harry.potter@gmail.com",
+  "address": "1 rue streeling",
+  "info" : {
+      "name":"Harry Potter",
+      "email":"harry.potter@gmail.com",
+      "phone":"0202",
+      "location":"somewhere",
+      "urls": {
+          "from_resume": [],
+          "linkedin":"",
+          "twitter":"",
+          "facebook":"",
+          "github":"",
+          "picture":""},
+      "location":{"text":""}},
+  "summary": "test summary",
+  "experiences": [{
+      "start": "15/02/1900",
+      "end": "",
+      "title": "Lead",
+      "company": "Mathematic Departement",
+      "location": {"text":"Paris"},
+      "description": "Developping."
+      }],
+  "educations": [{
+      "start": "12540",
+      "end": "12550",
+      "title": "Mathematicien",
+      "school": "University",
+      "description": "Description",
+      "location": {"text":"Scotland"}
+  }],
+  "skills": ["manual skill", "Creative spirit", "Writing skills", "Communication"],
+  "languages" : ["english"],
+  "interests": ["football"],
+  "tags":[],
+  "metadatas":[],
+  "labels":["stage":"yes","job_id":"job_id"]
+}
+
 client.profile.add_json(source_id="source_id", 
                         profile_json=profile_json,
                         profile_tags =[{"name": "email", "value":"test@test.com"}])
@@ -458,17 +523,36 @@ If you are using SyncParsing you will receive profile\_id in response's body  an
 {% tabs %}
 {% tab title="PHP" %}
 ```php
+$client = new Hrflow\Client('your api key');
+
+$data = [
+  'timestamp_reception'   => 1569320033,  
+  'profile_content_type'  => 'application/pdf', 
+  'profile_reference'     => 'profile_reference', 
+  'profile_labels'        =>  [
+    [
+      'job_id'           => 'job_id',
+      'stage'            => 'yes',
+      'stage_timestamp'  => 1585662186,
+      'rating'           => 0.5,
+      'stage_timestamp'  => 1585662186
+    ], 
+    ...
+  ],
+  'profile_metadatas' => [["name" => "mail", "value" => "test@test.com"], ...],
+]
 $profile_file = fopen('/path/to/file.pdf','rb');
 
-$client->profile->add_file($source_id, $profile_file, $profile_content_type, 
-                           $profile_reference, $timestamp_reception, 
-                           $profile_labels, $profile_tags, $profile_metadatas,
-                           $sync_parsing);
+$client->profile::addFile($source_id, $profile_file, $data);
 ```
 {% endtab %}
 
 {% tab title="Python" %}
 ```python
+import hrflow as hf
+
+client = hf.client(api_secret='your api secret')
+
 with open('/path/to/file.pdf','rb') as file:
     profile_file = file.read()
     

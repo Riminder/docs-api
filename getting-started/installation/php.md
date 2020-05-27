@@ -29,7 +29,7 @@ git clone https://github.com/Riminder/php-hrflow-api.git /folder/path
 2\) Then you must add the following code to your PHP script to actually load the HrFlow:
 
 ```php
-require_once("/path/to/php-hrflow-api/ressources/Client.php");
+require_once("/path/to/php-hrflow-api/init.php");
 ```
 
 {% hint style="info" %}
@@ -46,7 +46,7 @@ To begin you adventure with HrFlow,  you will need to initialize the client. In 
 require __DIR__ . '/vendor/autoload.php';
 
 // Authentication to api
-$client = new Client('yourShinyKey');
+$client = new Hrflow\Client('your api key');
 ```
 
 ## Methods

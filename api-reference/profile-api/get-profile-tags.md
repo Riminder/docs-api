@@ -102,7 +102,9 @@ Invalid secret token.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-client->profile->tag->list($source_id, new ProfileID('profile_id'))
+$client = new Hrflow\Client('your secret key');
+
+client->profile->tag->list($source_id, $profile_id, $profile_reference, $profile_email)
 ```
 {% endtab %}
 

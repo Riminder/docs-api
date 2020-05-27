@@ -61,7 +61,7 @@ Profile's email
 
 {% api-method-parameter name="location\_geopoint" type="object" required=false %}
 Filter by location's latitude and longitude  
-\(ie. {"lat":357516600, "lon":10.7110900}\)
+\(ie. {"lat":357516600, "lng":10.7110900}\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="integer" required=false %}
@@ -274,29 +274,48 @@ Invalid secret key.
 {% tabs %}
 {% tab title="PHP" %}
 ```php
-$client->profile->searching->get(array $source_ids, $name=null, $email=null,
-                                 $location_geopoint=[], $location_distance=null,
-                                 $summary_keywords=[], $text_keywords=[],
-                                 $experience_keywords=[],
-                                 $experience_location_geopoint=[],
-                                 $experience_location_distance=null, 
-                                 $experiences_duration_min=null,
-                                 $experiences_duration_max=null,
-                                 $education_keywords=[],
-                                 $education_location_geopoint=[],
-                                 $education_location_distance=null, 
-                                 $educations_duration_min=null, 
-                                 $educations_duration_max=null,
-                                 $skills_dict=[], $languages_dict=[], 
-                                 $interests_dict=null, $labels_dict=null,
-                                 $date_start="1494539999", $date_end=null, 
-                                 $page=1, $limit=30, $sort_by='date_reception', 
-                                 $order_by='asc');
+$client = new Hrflow\Client('your secret key');
+
+$params = [
+  'limit'             => 10,
+  'page'              => 1,
+  'order_by'          => 'asc',
+  'sort_by'           => 'date_reception',
+  'timestamp_start'   => 1569320033,
+  'timestamp_end'     => 1586945633,
+  'name'              => 'name',
+  'email'             => 'exemple@exemple.com',
+  'location_geopoint' => [
+    'lat' => '357516600',
+    'lng' => '10.7110900',
+  ],
+  'location_distance'            => 40,
+  'summary_keywords'             => ['keyword1', 'keyword2',...],
+  'text_keywords'                => ['keyword1', 'keyword2',...],
+  'experience_keywords'          => ['keyword1', 'keyword2',...],
+  'experience_location_geopoint' => [
+    'lat' => '357516600',
+    'lon' => '10.7110900',
+  ],
+  'experience_location_distance' => 40,
+  'experiences_duration_min'     => 3,
+  'experiences_duration_max'     => 7,
+  'skills_dict'                  => ['skill1', 'skill2', ...],
+  'languages_dict'               => ['lang1',..],
+  'interests_dict'               => ['interest1', 'interest2',...],
+  'tags_dict'                    => ['tag1', 'tag2', ...],
+]
+
+$client->profile->searching->get($source_ids, $params);
 ```
 {% endtab %}
 
 {% tab title="Python" %}
 ```python
+import hrflow as hf
+
+client = hf.client(api_secret='your api secret')
+
 client.profile.searching.get(source_ids=["source_id"], name=None, email=None,
                              location_geopoint=[], location_distance=None, 
                              summary_keywords=[], text_keywords=[],
@@ -338,7 +357,7 @@ const params =  {
   location_geopoint: {
     // Filter by location's latitude and longitude
     lat: '357516600',
-    lon: '10.7110900',
+    lng: '10.7110900',
   },
   location_distance: 40, // Filter by location distance in km
   summary_keywords: ['keyword1', 'keyword2',...], // Filter by summary keywords

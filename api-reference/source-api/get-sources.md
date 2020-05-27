@@ -111,12 +111,28 @@ $curl --url "https://api.hrflow.ai/sources?name=python&page=2&limit=5&sort_by=da
 
 {% tab title="PHP" %}
 ```php
-$client->source->list('python', 1, 1, 'date', 'asc');
+require_once('vendor/autoload.php');
+
+$client = new Hrflow\Client('your secret key');
+
+$params = [
+    'name'     => 'cvbot',
+    'page'     => 1,
+    'limit'    => 10,
+    'sort_by'  => 'date',
+    'order_by' => 'asc',
+];
+
+$resp = $client->source->list($params) ;
 ```
 {% endtab %}
 
 {% tab title="Python" %}
 ```python
+imoort hrflow as hf
+
+client = hf.client(api_secret ='your secret key')
+
 client.source.list(name='python', page=1, limit=1, sort_by='date', order_by'asc')
 ```
 {% endtab %}

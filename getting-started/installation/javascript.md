@@ -4,7 +4,7 @@ description: Hrflow SDK for Javascript
 
 # Javascript
 
-Our Javascript library is an open source, producrion-ready and a Javascript wrapper API. It is an easy way to access Hrflow API features from a node js server or from the browser.
+Our Javascript library is an open source, production-ready and a Javascript wrapper API. It is an easy way to access Hrflow API features from a node js server or from the browser.
 
 This library is open-source, so you can [check it out on Github](https://github.com/Riminder/javascript-hrflow-api).
 

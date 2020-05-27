@@ -1,124 +1,20 @@
 ---
-description: Add job
+description: Put Job
 ---
 
-# \[POST\] /job
+# \[PUT\] /job
 
 {% hint style="info" %}
-This endpoint requires at least name and board\_key.
+This endpoint requires at least job\_key and board\_key.
 {% endhint %}
 
-Job post accepts json files.
-
-Please find below an example of json job that you can upload.
-
-```bash
-{
-    "board_key": "board_key",
-    "name": "Data Engineer",
-    "agent_key": "agent_key",
-    "reference": "Job's reference abc",
-    "url": "https://www.pole-emploi.ai/jobs/data_engineer",
-    "summary": "As an engineer for the Data Engineering Infrastructure team,
-                you will design, build, scale, and evolve our data engineering
-                platform, services and tooling. Your work will have a critical 
-                impact on all areas of business: powering core data pipelines,
-                supporting detailed internal analytics, calculating customer
-                usage, securing our platform, and much more.",
-    "location": {
-                  "text": "Dampierre en Burly (45)",
-                  "geopoint": {
-                      "lat": 47.7667,
-                      "lon": 2.5167
-                  }
-                 },
-    "sections": [{
-                    "name": "profile",
-                    "title": "Searched Profile",
-                    "description": "Bac+5"
-                  },
-                  .
-                  .
-                  .
-                  ],
-    "skills": [{
-                  "name": "python",
-                  "value": None
-               },
-               {
-                  "name": "spark",
-                  "value": 0.9
-               },
-               .
-               .
-               .
-               ],
-    "languages": [{
-                     "name": "english",
-                     "value": 1
-                  },
-                 {  
-                     "name": "french",
-                     "value": 1
-                  },
-                  .
-                  .
-                  .
-                  ],
-    "tags": [{
-                "name": "archive",
-                "value": True
-             },
-             {  
-                "name": "tag example",
-                "value": "tag"
-              },
-              .
-              .
-              .
-              ],
-    "ranges_date": [{
-                       "name": "Dates",
-                       "value_min": "2020-05-18T21:59",
-                       "value_max": "2020-09-15T21:59"
-                    },
-                    .
-                    .
-                    .
-                    ],
-    "ranges_float": [{
-                       "name": "salary",
-                       "value_min": 30,
-                       "value_max": 40,
-                       "unit": "eur"
-                    },
-                    .
-                    .
-                    .
-                    ],
-    "metadatas": [{
-                     "name": "metadata example",
-                     "value": "metadata"
-                  },
-                  .
-                  .
-                  .
-                  ],
-}
-```
-
-You can include complementary information such as :
-
-* job's tags,
-* job's metadata.
-
-{% api-method method="post" host="https://api.hrflow.ai/v1" path="/job" %}
+{% api-method method="put" host="https://api.hrflow.ai/v1" path="/job" %}
 {% api-method-summary %}
-Post /job
+Put Job
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to post free cakes.
+This endpoint allows you to update an existing job.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -130,11 +26,15 @@ Authentication token.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
+{% api-method-parameter name="job\_key" type="string" required=true %}
+Job key
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="board\_key" type="string" required=true %}
 Board key
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="name" type="string" required=true %}
+{% api-method-parameter name="name" type="string" required=false %}
 Job's name
 {% endapi-method-parameter %}
 
@@ -142,51 +42,51 @@ Job's name
 Agent key
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="reference" type="string" required=true %}
-Job reference
+{% api-method-parameter name="reference" type="string" required=false %}
+Job's reference
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="created\_at" type="string" required=true %}
-Creation date as iso Format
+{% api-method-parameter name="created\_at" type="string" required=false %}
+Creation date as iso format
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="url" type="string" required=true %}
+{% api-method-parameter name="url" type="string" required=false %}
 Job's url
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="summary" type="string" required=true %}
+{% api-method-parameter name="summary" type="string" required=false %}
 Job's summary
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="sections" type="array" required=true %}
+{% api-method-parameter name="sections" type="array" required=false %}
 Job's sections
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="location" type="object" required=true %}
+{% api-method-parameter name="location" type="array" required=false %}
 Job's location
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="skills" type="array" required=true %}
+{% api-method-parameter name="skills" type="array" required=false %}
 Job's skills
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="languages" type="array" required=true %}
+{% api-method-parameter name="languages" type="array" required=false %}
 Job's languages
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="tags" type="array" required=true %}
+{% api-method-parameter name="tags" type="array" required=false %}
 Job's tags
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="metadatas" type="array" required=true %}
+{% api-method-parameter name="metadatas" type="array" required=false %}
 Job's metadatas
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="ranges\_float" type="array" required=true %}
+{% api-method-parameter name="ranges\_float" type="array" required=false %}
 Job's ranges float
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="ranges\_date" type="array" required=true %}
+{% api-method-parameter name="ranges\_date" type="array" required=false %}
 Job's ranges date
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -195,10 +95,10 @@ Job's ranges date
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Job successfully added.
+Job successfully updated
 {% endapi-method-response-example-description %}
 
-```scheme
+```python
 {
     "code": 201,
     "message": "Job created",
@@ -314,10 +214,10 @@ Job successfully added.
 
 {% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
-Invalid secret key.
+Invalid secret key
 {% endapi-method-response-example-description %}
 
-```bash
+```python
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxxx "
@@ -327,6 +227,4 @@ Invalid secret key.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
