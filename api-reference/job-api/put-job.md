@@ -26,7 +26,7 @@ Authentication token.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="job\_key" type="string" required=true %}
+{% api-method-parameter name="key" type="string" required=true %}
 Job key
 {% endapi-method-parameter %}
 
