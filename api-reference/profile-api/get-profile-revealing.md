@@ -2,9 +2,11 @@
 description: Retrieve profile's revealing endpoint.
 ---
 
-# \[GET\] /profile/revealing
+# \[GET\] /profile/revealing \(soon\)
 
 ```
-$ Under construction...
+$ Coming soon...
 ```
+
+
 
