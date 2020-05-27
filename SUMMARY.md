@@ -55,6 +55,7 @@
   * [\[PUT\] /job/indexing](api-reference/job-api/put-job.md)
   * [\[GET\] /job/indexing](api-reference/job-api/get-job.md)
   * [\[GET\] /job/parsing](api-reference/job-api/get-job-parsing.md)
+  * [\[GET\] /job/revealing](api-reference/job-api/get-job-revealing.md)
   * [\[GET\] /job/embedding](api-reference/job-api/get-job-embedding.md)
   * [\[GET\] /jobs/searching](api-reference/job-api/get-job-searching.md)
   * [\[GET\] /jobs/scoring](api-reference/job-api/get-jobs-scoring.md)

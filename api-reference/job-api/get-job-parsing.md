@@ -1,10 +1,10 @@
 ---
-description: Retrieve job's parsing given job id or job reference.
+description: Retrieve job's parsing given job key or job reference.
 ---
 
 # \[GET\] /job/parsing
 
 ```text
-$ Under construction...
+$ Coming soon...
 ```
 
