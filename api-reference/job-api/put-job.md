@@ -5,8 +5,10 @@ description: Put Job
 # \[PUT\] /job/indexing
 
 {% hint style="info" %}
-This endpoint requires at least key and board\_key.
+This endpoint requires at least a job key and board\_key.
 {% endhint %}
+
+
 
 {% api-method method="put" host="https://api.hrflow.ai/v1" path="/job/indexing" %}
 {% api-method-summary %}

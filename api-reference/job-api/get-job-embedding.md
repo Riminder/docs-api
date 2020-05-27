@@ -1,4 +1,12 @@
+---
+description: Retrieve job's embedding given job key or job reference.
+---
+
 # \[GET\] /job/embedding
+
+{% hint style="info" %}
+This endpoint requires at least a job key and board\_key.
+{% endhint %}
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/job/embedding" %}
 {% api-method-summary %}
@@ -6,7 +14,7 @@ Get Job Embedding
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get free cakes.
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -18,7 +26,7 @@ Authentication token.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="job\_key" type="string" required=true %}
+{% api-method-parameter name="key" type="string" required=true %}
 Job key
 {% endapi-method-parameter %}
 
