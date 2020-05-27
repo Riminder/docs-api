@@ -1,5 +1,5 @@
 ---
-description: Retrieve list of job with their scores.
+description: Retrieve list of job with their scores regarding a profile
 ---
 
 # \[GET\] /jobs/scoring
