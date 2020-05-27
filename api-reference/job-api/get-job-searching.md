@@ -10,7 +10,7 @@ Get /jobs/searching
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to search jobs for given filters.
+This endpoint allows you to search jobs for given query parameters.
 {% endapi-method-description %}
 
 {% api-method-spec %}
