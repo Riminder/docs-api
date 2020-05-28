@@ -16,34 +16,79 @@ This endpoint allows you to search jobs for given query parameters.
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-headers %}
-{% api-method-parameter name="Authentication" type="string" required=true %}
+{% api-method-parameter name="X-API-KEY" type="string" required=true %}
 Authentication token.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="name" type="string" required=false %}
-Job's name
+{% api-method-parameter name="board\_keys" type="string" required=false %}
+List of board keys
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="limit" type="string" required=false %}
+Total job to retrieve
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="string" required=false %}
 API page offset
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="limit" type="string" required=false %}
-Max job to return
+{% api-method-parameter name="order\_by" type="string" required=false %}
+Order by \(ie. desc, asc\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="order\_by" type="integer" required=false %}
-Order by \(ie. asc, desc\)
+{% api-method-parameter name="sort\_by" type="string" required=false %}
+Sort by \(ie. created\_at\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="sort\_by" type="integer" required=false %}
-sort by \(ie. date\)
+{% api-method-parameter name="date\_range\_min" type="string" required=false %}
+Start date as iso format
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="stage" type="string" required=false %}
-stage
+{% api-method-parameter name="date\_range\_max" type="string" required=false %}
+End date as iso format
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="name" type="string" required=false %}
+Filter by job's name
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="location\_geopoint" type="string" required=false %}
+Filter by location's lattitude and longitude  
+\(ie. {"lat"35.7516600: , "lon":10.7110900}\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="location\_distance" type="string" required=false %}
+Max raduis
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="summary\_keywords" type="string" required=false %}
+Filter by summary keywords
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="text\_keywords" type="string" required=false %}
+Filter by text keywords
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="skills" type="string" required=false %}
+Filter by skills
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="languages" type="string" required=false %}
+Filter by languages
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="tags" type="string" required=false %}
+Filter by tags
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="ranges\_float" type="string" required=false %}
+Filter by ranges float
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="ranges\_date" type="string" required=false %}
+Filter by ranges date
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -120,30 +165,4 @@ Invalid secret key.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-## Exemple
-
-{% tabs %}
-{% tab title="Javascipt" %}
-```javascript
-// npm install --save hrflow
-
-
-import Hrflow from 'hrflow';
-const client = new Hrflow({API_Key: "Your API Key"});
-
-const params = {
-    name: "data scientist",
-    page: 1,
-    limit: 10,
-    order_by: "asc",
-    sort_by: "date"
-}
-
-client.job.searching.get(params).then(response => {
-    console.log(response);
-});
-```
-{% endtab %}
-{% endtabs %}
 
