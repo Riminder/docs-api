@@ -22,7 +22,7 @@ Authentication token.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="board\_keys" type="string" required=false %}
+{% api-method-parameter name="board\_keys" type="string" required=true %}
 List of board keys
 {% endapi-method-parameter %}
 
