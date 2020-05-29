@@ -47,7 +47,6 @@
   * [\[GET\] /profiles/scoring](api-reference/profile-api/get-profiles-scoring.md)
   * [\[GET\] /profiles/searching](api-reference/profile-api/get-profiles-searching.md)
   * [\[GET\] /profile/reasoning \(soon\)](api-reference/profile-api/get-profile-reasoning.md)
-  * [\[PATCH\] /profile/feedback](api-reference/profile-api/patch-profile-feedback.md)
 * [Job Endpoints](api-reference/job-api/README.md)
   * [\[POST\] /job/indexing](api-reference/job-api/post-job.md)
   * [\[PUT\] /job/indexing](api-reference/job-api/put-job.md)
