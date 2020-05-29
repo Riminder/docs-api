@@ -2,7 +2,7 @@
 description: Retrieve job's reasoning.
 ---
 
-# \[GET\] /jobs/reasoning \(soon\)
+# \[GET\] /jobs/reasoning \(alpha\)
 
 ```text
 $ Coming soon...
