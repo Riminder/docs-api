@@ -6,12 +6,12 @@
 ## DEVELOPERS PRODUCTS <a id="products-1"></a>
 
 * [Profile API](products-1/introduction.md)
-* [JOB API](products-1/job-api.md)
+* [JOB API](products-1/job-api/README.md)
+  * [Parsing](products-1/job-api/parsing.md)
 * [Analytics API](products-1/analytics-api.md)
 
 ## AI Layers
 
-* [Parsing](ai-layers/parsing.md)
 * [Embedding](ai-layers/embedding.md)
 * [Revealing](ai-layers/revealing.md)
 * [Searching](ai-layers/searching.md)
@@ -57,12 +57,12 @@
   * [\[GET\] /jobs/searching](api-reference/job-api/get-job-searching.md)
   * [\[GET\] /jobs/scoring](api-reference/job-api/get-jobs-scoring.md)
   * [\[GET\] /jobs/reasoning \(alpha\)](api-reference/job-api/get-jobs-reasoning.md)
-* [Webhook Endpoints](api-reference/events/README.md)
-  * [Authentication](api-reference/events/authentification.md)
-  * [Configuration](api-reference/events/configuration.md)
-  * [Events](api-reference/events/events/README.md)
-    * [profile.parsing](api-reference/events/events/profile.parsing.md)
-    * [job.parsing](api-reference/events/events/job.parsing.md)
+* [Webhooks](api-reference/webhooks/README.md)
+  * [Authentication](api-reference/webhooks/authentification.md)
+  * [Configuration](api-reference/webhooks/configuration.md)
+  * [Events](api-reference/webhooks/events/README.md)
+    * [profile.parsing](api-reference/webhooks/events/profile.parsing.md)
+    * [job.parsing](api-reference/webhooks/events/job.parsing.md)
 
 ## Integrations
 
@@ -84,6 +84,9 @@
     * [Trello](integrations/destinations/process-management/trello.md)
   * [Communication](integrations/destinations/communication/README.md)
     * [Slack](integrations/destinations/communication/slack.md)
+
+---
+
 * [Security](https://security.hrflow.ai)
 * [GDPR & Privacy](https://gdpr.hrflow.ai)
 * [Help center](https://support.hrflow.ai)

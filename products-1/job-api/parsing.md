@@ -8,7 +8,7 @@ description: Structure profile & job data across all media formats.
 
 We combined cutting edge Deep Computer Vision and Deep Natural Language Processing algorithms to allow you automatically extract semantic entities from raw and complex layout documents \(PDF, DOCX, IMAGES and more\) to get a structured json format.
 
-![Parsing attributes](../.gitbook/assets/screenshot-from-2020-03-01-19-32-31.png)
+![Parsing attributes](../../.gitbook/assets/screenshot-from-2020-03-01-19-32-31.png)
 
 | **Sections** | Attributes |
 | :--- | :--- |
@@ -43,7 +43,7 @@ Generate your own augmented resume by trying: [https://labs.riminder.net/profile
 
 ### Job API
 
-![Example of Augmented Job:Parsing attributes plotted on the original job offer.](../.gitbook/assets/screenshot-from-2020-03-01-20-12-05.png)
+![Example of Augmented Job:Parsing attributes plotted on the original job offer.](../../.gitbook/assets/screenshot-from-2020-03-01-20-12-05.png)
 
 {% hint style="info" %}
 Try our job offer parser:[ https://labs.riminder.net/profile/augmented](https://labs.riminder.net/jobs/semantic-analyzer/)
@@ -53,9 +53,9 @@ Try our job offer parser:[ https://labs.riminder.net/profile/augmented](https://
 
 ### Features workflow
 
-![Document Parsing Workflow](../.gitbook/assets/untitled-diagram-4.png)
+![Document Parsing Workflow](../../.gitbook/assets/untitled-diagram-4.png)
 
 ### **HrFlow.ai Vs Alternatives**
 
-![](../.gitbook/assets/screenshot-2020-04-15-at-08.20.34.png)
+![](../../.gitbook/assets/screenshot-2020-04-15-at-08.20.34.png)
 
