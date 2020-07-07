@@ -31,6 +31,7 @@
     * [Google Colab Tutorial](getting-started/quick-start/tutorials/google-colab-tutorial.md)
     * [Postman Collection](getting-started/quick-start/tutorials/postman-collection.md)
   * [Case studies: Flows](getting-started/quick-start/flows.md)
+* [Metadatas support](getting-started/metadatas.md)
 * [F.A.Q](getting-started/f.a.q.md)
 
 ## API REFERENCE
