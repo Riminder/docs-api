@@ -6,12 +6,12 @@
 ## DEVELOPERS PRODUCTS <a id="products-1"></a>
 
 * [Profile API](products-1/introduction.md)
-* [JOB API](products-1/job-api/README.md)
-  * [Parsing](products-1/job-api/parsing.md)
+* [JOB API](products-1/job-api.md)
 * [Analytics API](products-1/analytics-api.md)
 
 ## AI Layers
 
+* [Parsing](ai-layers/parsing.md)
 * [Embedding](ai-layers/embedding.md)
 * [Revealing](ai-layers/revealing.md)
 * [Searching](ai-layers/searching.md)
