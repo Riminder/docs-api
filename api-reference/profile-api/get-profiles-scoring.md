@@ -59,16 +59,15 @@ order by \(ie. asc, desc\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-sort by \(ie. reception date, location, location\_experience,  
-location\_education, semantic score, predictive score\)
+sort by \(ie. scoring, searching, date\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="timestamp\_start" type="integer" required=false %}
-start date
+{% api-method-parameter name="timestamp\_start" type="string" required=false %}
+start date as  iso string date
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="timestamp\_end" type="integer" required=false %}
-end date
+{% api-method-parameter name="created\_at\_max" type="string" required=false %}
+end date as iso string date 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=false %}
@@ -80,72 +79,72 @@ Profile"s email
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_geopoint" type="object" required=false %}
-Filter by location's latitude and longitude   
-\(ie. {"lat":35.7516600, "lng":10.7110900}\)
+Location's latitude and longitude   
+\(ie. {"lat":35.7516600, "lng":10.7110900} \)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="integer" required=false %}
-max radius
+Max radius
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="summary\_keywords" type="object" required=false %}
-Filter by keywords in a summary
+{% api-method-parameter name="summary\_keywords" type="array" required=false %}
+Keywords in a summary
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="text\_keywords" type="string" required=false %}
-Filter by keyword in a text
+{% api-method-parameter name="text\_keywords" type="array" required=false %}
+Keyword in a text
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="experience\_keywords" type="string" required=false %}
-Filter by experience keywords
+{% api-method-parameter name="experience\_keywords" type="array" required=false %}
+Experience keywords
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="experience\_location\_geopoint" type="string" required=false %}
-Filter by experience location's latitude and longitude
+{% api-method-parameter name="experience\_location\_geopoint" type="object" required=false %}
+Experience location's latitude and longitude
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="experiences\_duration\_min" type="string" required=false %}
-Filter by experience duration min
+{% api-method-parameter name="experiences\_duration\_min" type="integer" required=false %}
+Experience duration min
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="experiences\_duration\_max" type="string" required=false %}
-Filter by experience duration max
+{% api-method-parameter name="experiences\_duration\_max" type="integer" required=false %}
+Experience duration max
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="education\_keywords" type="string" required=false %}
-Filter by education keywords
+{% api-method-parameter name="education\_keywords" type="array" required=false %}
+Education keywords
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="education\_location\_geopoint" type="string" required=false %}
-Filter by education's latitude and longitude
+{% api-method-parameter name="education\_location\_geopoint" type="object" required=false %}
+Education's latitude and longitude
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="education\_location\_distance" type="string" required=false %}
-Filter by education's location raduis 
+{% api-method-parameter name="education\_location\_distance" type="number" required=false %}
+Education's location raduis 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="educations\_duration\_min" type="string" required=false %}
-Filter by education duration min
+{% api-method-parameter name="educations\_duration\_min" type="number" required=false %}
+Education duration min
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="educations\_duration\_max" type="string" required=false %}
-Filter by education duration max
+{% api-method-parameter name="educations\_duration\_max" type="number" required=false %}
+Education duration max
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="skills\_dict" type="object" required=false %}
-Filter by skills.
+{% api-method-parameter name="skills" type="array" required=false %}
+List of skills \( ie. \[{ name: 'python', value: 0.9 }\] \)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="languages\_dict" type="object" required=false %}
-Filter by languages.
+{% api-method-parameter name="languages" type="array" required=false %}
+List of languages \( ie. \[{ name: 'english', value: 'fluent' }\] \) 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="tags\_dict" type="object" required=false %}
-Filter by tags
+{% api-method-parameter name="tags" type="array" required=false %}
+List of tags \(ie. \[{ name: 'active', value: true }\] \)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="interests\_dict" type="object" required=false %}
-Filter by interests
+{% api-method-parameter name="interests" type="array" required=false %}
+List of interests \(ie. \[{ name: 'football', value: null }\] \)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -362,45 +361,45 @@ client.profile.searching.get(source_ids=["source_id"], job_id, stage,
 
 {% tab title="Javascript" %}
 ```javascript
-// npm install --save hrflow
-
 import Hrflow from 'hrflow';
-const client = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({ 
+    api_secret: "Your API Key",
+    api_user: "Your API user email" 
+});
 
 const params = {
-  source_ids: ['source_id1', 'source_id2',..], // Required, list of sources ids
-  job_id: 'job_id', // Required, job id
-  use_agent: 1, // Use agent or not (ie. 0 or 1)
-  stage: 'yes', // stage (ie. 'new', 'yes', 'later', 'no')
-  limit: 10, //  Total profiles to search
-  page: 1, //  Page number
-  order_by: 'asc', // Order by 'asc' or 'desc'
-  sort_by: 'date_reception', // Sort by 'date_reception', 'date_creation', 'location', 'location_experience', 'location_education', 'score_semantic'  or 'score_predictive'
-  timestamp_start: 1569320033, // 'Start date'
-  timestamp_end: 1586945633,  // 'Start date'
-  name: 'name', // Profile's name  
-  email: 'exemple@exemple.com', // Profile's email
+  source_keys: ['source_key1', 'source_key2'],
+  job_key: 'job_key',
+  board_key: 'board_key',
+  use_agent: 1,
+  stage: 'new,
+  limit: 10,
+  page: 1,
+  order_by: 'asc',
+  sort_by: 'date',
+  created_at_min: '2020-05-15T23:59:59.999Z',
+  created_at_max: '2020-07-15T23:59:59.999Z',
+  name: 'name',
+  email: 'exemple@exemple.com',
   location_geopoint: {
-    // Filter by location's latitude and longitude
     lat: '357516600',
-    lng: '10.7110900',
+    lon: '10.7110900',
   },
-  location_distance: 40, // Filter by location distance in km
-  summary_keywords: ['keyword1', 'keyword2',...], // Filter by summary keywords
-  text_keywords: ['keyword1', 'keyword2',...], // Filter by text keywords,
-  experience_keywords: ['keyword1', 'keyword2',...], // Filter by experience keywords
+  location_distance: 40,
+  summary_keywords: ['keyword1', 'keyword2'],
+  text_keywords: ['keyword1', 'keyword2'],
+  experience_keywords: ['keyword1', 'keyword2'],
   experience_location_geopoint: {
-  // Filter by experience's latitude and longitude
     lat: '357516600',
-    lng: '10.7110900',
+    lon: '10.7110900',
   },
-  experience_location_distance:  40, // Filter by experience location distance in km
-  experiences_duration_min: 3, // Min total years of experience
-  experiences_duration_max: 7, // Max total years of experience
-  skills_dict: ['skill1', 'skill2', ...], // List of skills
-  languages_dict: ['lang1',..], // List of language
-  interests_dict: ['interest1', 'interest2',...], // List of interests 
-  tags_dict: ['tag1', 'tag2', ...], // List of tags
+  experience_location_distance:  40,
+  experiences_duration_min: 3,
+  experiences_duration_max: 7,
+  skills: [{name: 'python', value: 0.9}],
+  languages: [{name: 'english', value: 'fluent'}],
+  interests: [{name: 'design', value: 1}],
+  tags: [{name: 'active', value: true}],
 }
 
 hrflow.profile.scoring.list(params);

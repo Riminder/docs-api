@@ -271,5 +271,51 @@ Invalid secret key.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="Javascript" %}
+```javascript
+import Hrflow from 'hrflow';
+const client = new Hrflow({ 
+    api_secret: "Your API Key",
+    api_user: "Your API user email" 
+});
 
+const params = {
+  source_keys: ['source_key1', 'source_key2'],
+  job_key: 'job_key',
+  board_key: 'board_key',
+  stage: 'new,
+  limit: 10,
+  page: 1,
+  order_by: 'asc',
+  sort_by: 'date',
+  created_at_min: '2020-05-15T23:59:59.999Z',
+  created_at_max: '2020-07-15T23:59:59.999Z',
+  name: 'name',
+  email: 'exemple@exemple.com',
+  location_geopoint: {
+    lat: '357516600',
+    lon: '10.7110900',
+  },
+  location_distance: 40,
+  summary_keywords: ['keyword1', 'keyword2'],
+  text_keywords: ['keyword1', 'keyword2'],
+  experience_keywords: ['keyword1', 'keyword2'],
+  experience_location_geopoint: {
+    lat: '357516600',
+    lon: '10.7110900',
+  },
+  experience_location_distance:  40,
+  experiences_duration_min: 3,
+  experiences_duration_max: 7,
+  skills: [{name: 'python', value: 0.9}],
+  languages: [{name: 'english', value: 'fluent'}],
+  interests: [{name: 'design', value: 1}],
+  tags: [{name: 'active', value: true}],
+}
+
+hrflow.profile.scoring.list(params);
+```
+{% endtab %}
+{% endtabs %}
 

@@ -132,18 +132,17 @@ client.profile.embedding.get(source_id='source_id',
 
 {% tab title="Javascript" %}
 ```javascript
-// npm install --save hrflow
-
-
 import Hrflow from 'hrflow';
-const client = new Hrflow({API_Key: "Your API Key"});
-
+const client = new Hrflow({ 
+    api_secret: "Your API Key",
+    api_user: "Your API user email" 
+});
 const params = {
-    source_id: "source_id",
-    profile_id: "id",
+    source_key: "source_key",
+    key: "profile_key",
     // Or
-    profile_reference: "reference",
-    profile_email: 'example@example',
+    reference: "reference",
+    email: 'example@example.com'
     fields: {'profile': 1, 'skills':1, 'educations':[0]},
 }
 

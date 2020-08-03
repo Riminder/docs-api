@@ -140,24 +140,25 @@ client = hf.client(api_secret='your api secret')
 client.profile.attachment.list(source_id="source_id",
                                profile_id="profile_id",
                                profile_reference='profile ref',
-                               profile_email='profile@email.ai'))
+                               profile_email='profile@email.ai'))import Hrflow from 'hrflow';
 ```
 {% endtab %}
 
 {% tab title="Javascript" %}
 ```javascript
-// npm install --save hrflow
-
-
 import Hrflow from 'hrflow';
-const client = new Hrflow({API_Key: "Your API Key"});
+
+const client = new Hrflow({ 
+    api_secret: "Your API Key",
+    api_user: "Your API user email" 
+});
 
 const params = {
-    source_id: "source_id",
-    profile_id: "id",
+    source_key: "source_key",
+    key: "profile_key",
     // Or
-    profile_reference: "reference"
-    profile_email: 'example@example',
+    reference: "reference"
+    email: 'example@example.com',
 }
 
 client.profile.attachments.list(params);

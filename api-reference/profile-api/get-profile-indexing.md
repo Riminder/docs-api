@@ -202,3 +202,26 @@ Profile object is successfully retrieved
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="Javascript" %}
+```javascript
+import Hrflow from 'hrflow';
+
+const client = new Hrflow({ 
+    api_secret: "Your API Key",
+    api_user: "Your API user email" 
+});
+
+const data = {
+    source_key: "source_key",
+    key: "profile_key",
+    // Or
+    reference: "reference",
+    email: "exemple@exemple.com"
+}
+
+client.profile.indexing.get(data);
+```
+{% endtab %}
+{% endtabs %}
+

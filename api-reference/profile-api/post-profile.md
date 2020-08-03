@@ -1,5 +1,5 @@
 ---
-description: This endpoint allows you to add new profile to a given source.
+description: This endpoint allows you to add new profile using resume to a given source.
 ---
 
 # \[POST\]  /profile/parsing/file
@@ -8,7 +8,7 @@ All possible extensions of a valid profile's resume are accepted \(.ie pdf, png,
 
 {% api-method method="post" host="https://api.hrflow.ai" path="/v1/profile/parsing/file" %}
 {% api-method-summary %}
-Post /profile/parsing/fil
+Post /profile/parsing/file
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -28,6 +28,14 @@ User's email
 {% endapi-method-headers %}
 
 {% api-method-form-data-parameters %}
+{% api-method-parameter name="source\_key" type="string" required=true %}
+Source key
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="file" type="object" required=true %}
+Profile's file resume
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="sync\_parsing" type="integer" required=false %}
 Use sync parsing \(ie. 0 or 1\)
 {% endapi-method-parameter %}
@@ -41,14 +49,6 @@ Receive webhook parsing success notification
 \(ie. 0 or 1\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="source\_key" type="string" required=true %}
-Source key
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="file" type="object" required=true %}
-Profile's document
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="profile\_content\_type" type="string" required=false %}
 Document content type \(ie application/pdf\)
 {% endapi-method-parameter %}
@@ -59,12 +59,12 @@ Profile's reference
 
 {% api-method-parameter name="labels" type="array" required=false %}
 Profile's label  
-\(ie \[{"job\_id": "job\_id", "job\_reference": "test", "stage": "yes", "stage\_timestamp":1585662186, "rating":0.5, "stage\_timestamp":1585662186}, ...\]\)
+\(ie \[{"job\_key": "job\_key", "job\_reference": "test", "stage": "yes", "stage\_timestamp":1585662186, "rating":0.5, "stage\_timestamp":1585662186}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags" type="array" required=false %}
 Profile's tags  
-\(ie \[{"name":"blacklist","value":True}, ...\]\)
+\(ie \[{"name":"blacklist","value":true}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="metadatas" type="array" required=false %}
@@ -230,22 +230,23 @@ client.profile.add_file(source_id="source_id",
 
 {% tab title="Javascript" %}
 ```javascript
-// npm install --save hrflow
-
 import * as fs from "fs";
 import Hrflow from 'hrflow';
-const hrflow = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({
+    api_secret: "Your API Key",
+    api_user: "Your API user email",
+});
 
 const data = {
-  source_id: "source_id", // Required, list of sources ids
-  file: fs.createReadStream("path to your file"), // Required, profile's document
-  timestamp_reception: 1569320033,  // Reception date
-  training_metadata?: [{"name":"mail","value":"test@test.com"}, ...], // Profile's metadatas
-  profile_content_type: 'application/pdf', // Document content type
-  profile_reference: 'profile_reference', // Profile's reference
-  profile_labels:  [ // Profile's label
+  source_key: "source_key",
+  file: fs.createReadStream("path to your file"),
+  created_at: 1569320033,
+  metadatas: [{"name":"mail","value":"test@test.com"}, ...],
+  profile_content_type: 'application/pdf', 
+  profile_reference: 'profile_reference',
+  labels:  [
     {
-      "job_id": "job_id",
+      "job_key": "job_key",
       "job_reference": "test",
       "stage": "yes",
       "stage_timestamp":1585662186,
@@ -254,11 +255,11 @@ const data = {
     }, 
     ...
   ],
-  profile_tags:  [{"name":"blacklist","value":True}, ...], // Profile's tags
-  sync_parsing: true, // enable/disable real time parsing
+  tags:  [{"name":"blacklist","value":true}],
+  sync_parsing: 1,
 }
 
-hrflow.profile.addFile(data);
+client.profile.addFile(data);
 ```
 {% endtab %}
 {% endtabs %}
