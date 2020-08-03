@@ -232,3 +232,83 @@ Invalid secret key
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% tabs %}
+{% tab title="Javascript" %}
+```javascript
+import Hrflow from 'hrflow';
+const client = new Hrflow({ 
+    api_secret: "Your API Key",
+    api_user: "Your API user email" 
+});
+
+const data = {
+    "key": "job_key",
+    "board_key": "board_key",
+    "name": "Data Engineer",
+    "agent_key": "agent_key",
+    "reference": "Job's reference abc",
+    "url": "https://www.pole-emploi.ai/jobs/data_engineer",
+    "summary": "As an engineer for the Data Engineering Infrastructure team,
+                you will design, build, scale, and evolve our data engineering
+                platform, services and tooling. Your work will have a critical 
+                impact on all areas of business: powering core data pipelines,
+                supporting detailed internal analytics, calculating customer
+                usage, securing our platform, and much more.",
+    "location": {
+                  "text": "Dampierre en Burly (45)",
+                  "geopoint": {
+                      "lat": 47.7667,
+                      "lon": 2.5167
+                  }
+                 },
+    "sections": [{
+                    "name": "profile",
+                    "title": "Searched Profile",
+                    "description": "Bac+5"
+                  }],
+    "skills": [{
+                  "name": "python",
+                  "value": null
+               },
+               {
+                  "name": "spark",
+                  "value": 0.9
+               }],
+    "languages": [{
+                     "name": "english",
+                     "value": 1
+                  },
+                 {  
+                     "name": "french",
+                     "value": 1
+                  }],
+    "tags": [{
+                "name": "archive",
+                "value": true
+             },
+             {  
+                "name": "tag example",
+                "value": "tag"
+              }],
+    "ranges_date": [{
+                       "name": "Dates",
+                       "value_min": "2020-05-18T21:59",
+                       "value_max": "2020-09-15T21:59"
+                    }],
+    "ranges_float": [{
+                       "name": "salary",
+                       "value_min": 30,
+                       "value_max": 40,
+                       "unit": "eur"
+                    }],
+    "metadatas": [{
+                     "name": "metadata example",
+                     "value": "metadata"
+                  }],
+}
+
+hrflow.job.edit(params);
+```
+{% endtab %}
+{% endtabs %}
+

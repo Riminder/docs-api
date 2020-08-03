@@ -129,3 +129,24 @@ Invalid secret key
 
 
 
+{% tabs %}
+{% tab title="Javascript" %}
+```javascript
+import Hrflow from 'hrflow';
+const client = new Hrflow({ 
+    api_secret: "Your API Key",
+    api_user: "Your API user email" 
+});
+
+const data = {
+    board_key: "board_key"
+    key: "job_key",
+    // Or
+    job_reference: "job_reference"
+}
+
+client.job.indexing.get(data);
+```
+{% endtab %}
+{% endtabs %}
+
