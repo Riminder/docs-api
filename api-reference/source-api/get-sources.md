@@ -21,7 +21,7 @@ Authentication token.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
-User's email.
+User's email
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -57,48 +57,33 @@ Source list successfully retrieved.
 ```javascript
 {
     "code": 200,
+    "page": 1,
+    "maxPage": 10,
+    "count": 30,
+    "total": 273,
     "message": "Source list",
-    "meta": {
-        "page": 1,
-        "maxPage": 22,
-        "count": 1,
-        "total": 22
-    },
     "data": [
         {
-            "id": "id",
-            "key": "source_key",
-            "name": "folder",
-            "description": null,
-            "type": "folder",
-            "subtype": "folder",
-            "private": false,
-            "status": true,
-            "archive": null,
-            "members": [
-                "harry.potter@hrflow.ai"
-            ],
-            "notification": false,
-            "consent": false,
-            "consent_url": null,
-            "user": {
-                "id": 1,
-                "email": "harry.potter@hrflow.ai",
-                "pseudo": "harryp",
-                "firstName": "harry",
-                "lastName": "POTTER",
-                "avatarUrl": "/images/user.png",
-                "locale": "english",
-                "position": null,
-                "phone": null
+            "source_id": "source_exemple_id",
+            "name": "python",
+            "type": "api",
+            "sub_type": "api",
+            "archive": false,
+            "date_creation": {
+                "date": "2020-03-03 23:18:16.000000",
+                "timezone_type": 3,
+                "timezone": "UTC"
             },
-            "updated_at": "2020-05-26T01:47:03+0000",
-            "created_at": "2020-05-26T01:47:03+0000",
             "stats": {
-                "size": "0"
+                "total_profiles": "n"
             }
-        }
-    ]
+        },
+        .
+        .
+        .
+        .
+        ]
+    }
 }
 ```
 {% endapi-method-response-example %}
