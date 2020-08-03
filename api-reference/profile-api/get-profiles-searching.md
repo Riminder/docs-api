@@ -43,16 +43,15 @@ order by \(ie. asc, desc\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-sort by \(ie. created\_at, updated\_at, location, location\_experience,  
-location\_education, searching, scoring\)
+sort by \(ie. scoring, searching, date \)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="created\_at\_min" type="integer" required=false %}
-start date
+{% api-method-parameter name="created\_at\_min" type="string" required=false %}
+Start date as iso string date
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="created\_at\_max" type="integer" required=false %}
-end date
+{% api-method-parameter name="created\_at\_max" type="string" required=false %}
+End date as iso string date
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=false %}
@@ -68,35 +67,35 @@ Filter by location's latitude and longitude
 \(ie. {"lat":35.7516600, "lng":10.7110900}\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="location\_distance" type="integer" required=false %}
+{% api-method-parameter name="location\_distance" type="number" required=false %}
 Filter by raduis
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="summary\_keywords" type="string" required=false %}
-Filter by summary keywords
+{% api-method-parameter name="summary\_keywords" type="array" required=false %}
+Keywords in a summary
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="text\_keywords" type="array" required=false %}
-Filter by text keyword
+Keywords in a summary
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="experience\_keywords" type="array" required=false %}
 Filter by experience keywords
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="experience\_location\_geopoint" type="object" required=false %}
+{% api-method-parameter name="experience\_location\_geopoint" type="array" required=false %}
 Filter by experience location's latitude and longitude
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="experience\_location\_distance" type="integer" required=false %}
+{% api-method-parameter name="experience\_location\_distance" type="array" required=false %}
 Filter by experience location radius
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="experiences\_duration\_min" type="integer" required=false %}
+{% api-method-parameter name="experiences\_duration\_min" type="number" required=false %}
 Filter by experience duration min
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="experiences\_duration\_max" type="integer" required=false %}
+{% api-method-parameter name="experiences\_duration\_max" type="number" required=false %}
 Filter by experience duration max
 {% endapi-method-parameter %}
 
@@ -108,32 +107,32 @@ Filter by education keywords
 Filter by education location's latitude and longitude
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="education\_location\_distance" type="integer" required=false %}
+{% api-method-parameter name="education\_location\_distance" type="number" required=false %}
 Filter by education location radius
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="educations\_duration\_min" type="integer" required=false %}
+{% api-method-parameter name="educations\_duration\_min" type="number" required=false %}
 Filter by education duration min
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="educations\_duration\_max" type="integer" required=false %}
+{% api-method-parameter name="educations\_duration\_max" type="number" required=false %}
 Filter by education duration max
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="skills" type="array" required=false %}
-Filter by skills
+List of skills \( ie. \[{ name: 'python', value: 0.9 }\] \)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="languages" type="array" required=false %}
-Filter by languages
+List of languages \( ie. \[{ name: 'english', value: 'fluent' }\] \)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="interests" type="array" required=false %}
-Filter by interests  
+ List of interests \( ie. \[{ name: 'football', value: null }\]  
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags" type="array" required=false %}
-Filter by tags
+List of tags \(ie. \[{ name: 'active', value: true }\] \)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -282,8 +281,6 @@ const client = new Hrflow({
 
 const params = {
   source_keys: ['source_key1', 'source_key2'],
-  job_key: 'job_key',
-  board_key: 'board_key',
   stage: 'new,
   limit: 10,
   page: 1,
@@ -314,7 +311,7 @@ const params = {
   tags: [{name: 'active', value: true}],
 }
 
-hrflow.profile.scoring.list(params);
+hrflow.profile.searching.list(params);
 ```
 {% endtab %}
 {% endtabs %}
