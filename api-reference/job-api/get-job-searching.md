@@ -26,15 +26,15 @@ User's email.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="board\_keys" type="string" required=true %}
+{% api-method-parameter name="board\_keys" type="array" required=true %}
 List of board keys
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="limit" type="string" required=false %}
+{% api-method-parameter name="limit" type="integer" required=false %}
 Total job to retrieve
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="page" type="string" required=false %}
+{% api-method-parameter name="page" type="integer" required=false %}
 API page offset
 {% endapi-method-parameter %}
 
@@ -43,7 +43,7 @@ Order by \(ie. desc, asc\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-Sort by \(ie. created\_at\)
+Sort by \(ie. created\_at, searching, scoring\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_min" type="string" required=false %}
@@ -58,40 +58,40 @@ End date as iso format
 Filter by job's name
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="location\_geopoint" type="string" required=false %}
+{% api-method-parameter name="location\_geopoint" type="object" required=false %}
 Filter by location's lattitude and longitude  
 \(ie. {"lat"35.7516600: , "lon":10.7110900}\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="location\_distance" type="string" required=false %}
+{% api-method-parameter name="location\_distance" type="number" required=false %}
 Max radius
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="summary\_keywords" type="string" required=false %}
+{% api-method-parameter name="summary\_keywords" type="array" required=false %}
 Filter by summary keywords
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="text\_keywords" type="string" required=false %}
+{% api-method-parameter name="text\_keywords" type="array" required=false %}
 Filter by text keywords
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="skills" type="string" required=false %}
+{% api-method-parameter name="skills" type="array" required=false %}
 Filter by skills
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="languages" type="string" required=false %}
+{% api-method-parameter name="languages" type="array" required=false %}
 Filter by languages
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="tags" type="string" required=false %}
+{% api-method-parameter name="tags\_included" type="array" required=false %}
 Filter by tags
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="ranges\_float" type="string" required=false %}
+{% api-method-parameter name="ranges\_float" type="array" required=false %}
 Filter by ranges float
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="ranges\_date" type="string" required=false %}
+{% api-method-parameter name="ranges\_date" type="array" required=false %}
 Filter by ranges date
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -159,4 +159,33 @@ Invalid secret key.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+{% tabs %}
+{% tab title="Javascript" %}
+```javascript
+import Hrflow from 'hrflow';
+const client = new Hrflow({ 
+    api_secret: "Your API Key",
+    api_user: "Your API user email" 
+});
+
+const params = {
+    board_key: 'board_key',
+    name: "data scientist",
+    page: 1,
+    limit: 10,
+    order_by: "asc",
+    sort_by: "date",
+    text_keywords: ["engineer", "python"],
+    tags_included: [[{name: "active", value: true}]],
+    location_distance: 30,
+    location_geopoint: {"lat":33.59662,"lng":-7.61889}
+}
+
+
+client.job.searching.list(params);
+
+```
+{% endtab %}
+{% endtabs %}
 

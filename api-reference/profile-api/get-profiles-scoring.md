@@ -62,7 +62,7 @@ order by \(ie. asc, desc\)
 sort by \(ie. scoring, searching, date\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="created\_at\_max" type="string" required=false %}
+{% api-method-parameter name="created\_at\_min" type="string" required=false %}
 start date as  iso string date
 {% endapi-method-parameter %}
 
