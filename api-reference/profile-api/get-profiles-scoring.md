@@ -19,23 +19,31 @@ This endpoint allows you to score list of profiles for a given job.
 {% api-method-parameter name="X-API-KEY" type="string" required=true %}
 Authentication token.
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+User's email.
+{% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="source\_ids" type="array" required=true %}
-List of source id
+{% api-method-parameter name="source\_keys" type="array" required=true %}
+List of source keys
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="use\_agent" type="integer" required=false %}
+{% api-method-parameter name="use\_agent" type="array" required=false %}
 Use agent or not \(ie. 0 or 1\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="job\_id" type="string" required=true %}
-job id
+{% api-method-parameter name="board\_key" type="integer" required=false %}
+Board key
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="job\_key" type="string" required=true %}
+Job key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="stage" type="string" required=false %}
-stage \(ie. 'new', 'yes', 'later', 'no'\)
+Stage \(ie. 'new', 'yes', 'later', 'no'\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}

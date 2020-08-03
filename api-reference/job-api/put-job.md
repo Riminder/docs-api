@@ -5,7 +5,7 @@ description: Put Job
 # \[PUT\] /job/indexing
 
 {% hint style="info" %}
-This endpoint requires at least a job key and board\_key.
+XThis endpoint requires at least a job key and board\_key.
 {% endhint %}
 
 {% api-method method="put" host="https://api.hrflow.ai/v1" path="/job/indexing" %}
@@ -23,18 +23,26 @@ This endpoint allows you to update an existing job.
 {% api-method-parameter name="X-API-KEY" type="string" required=true %}
 Authentication token.
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+User's email.
+{% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="key" type="string" required=true %}
-Job key
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="board\_key" type="string" required=true %}
-Board key
+Board's key
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="name" type="string" required=false %}
+{% api-method-parameter name="key" type="string" required=true %}
+Job's key
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="reference" type="string" required=false %}
+Job's reference
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="name" type="string" required=true %}
 Job's name
 {% endapi-method-parameter %}
 
@@ -42,51 +50,47 @@ Job's name
 Agent key
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="reference" type="string" required=false %}
-Job's reference
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="created\_at" type="string" required=false %}
+{% api-method-parameter name="created\_at" type="string" required=true %}
 Creation date as iso format
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="url" type="string" required=false %}
+{% api-method-parameter name="url" type="string" required=true %}
 Job's url
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="summary" type="string" required=false %}
+{% api-method-parameter name="summary" type="string" required=true %}
 Job's summary
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="sections" type="array" required=false %}
+{% api-method-parameter name="sections" type="array" required=true %}
 Job's sections
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="location" type="array" required=false %}
+{% api-method-parameter name="location" type="array" required=true %}
 Job's location
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="skills" type="array" required=false %}
+{% api-method-parameter name="skills" type="array" required=true %}
 Job's skills
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="languages" type="array" required=false %}
+{% api-method-parameter name="languages" type="array" required=true %}
 Job's languages
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="tags" type="array" required=false %}
+{% api-method-parameter name="tags" type="array" required=true %}
 Job's tags
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="metadatas" type="array" required=false %}
+{% api-method-parameter name="metadatas" type="array" required=true %}
 Job's metadatas
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="ranges\_float" type="array" required=false %}
+{% api-method-parameter name="ranges\_float" type="array" required=true %}
 Job's ranges float
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="ranges\_date" type="array" required=false %}
+{% api-method-parameter name="ranges\_date" type="array" required=true %}
 Job's ranges date
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}

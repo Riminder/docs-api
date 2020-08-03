@@ -22,8 +22,8 @@ Authentication token.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="source\_id" type="string" required=true %}
-Source id
+{% api-method-parameter name="source\_key" type="string" required=true %}
+Source key
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -39,16 +39,12 @@ Source's info successfully retrieved.
     "code": 200,
     "message": "Source info",
     "data": {
-        "source_id": "source_id",
-        "name": "test",
+        "key": "source_key",
+        "name": "source_name",
         "type": "folder",
         "sub_type": "folder",
-        "archive": false,
-        "date_creation": {
-            "date": "2020-01-21 12:59:38.000000",
-            "timezone_type": 3,
-            "timezone": "UTC"
-        }
+        "archive": null,
+        "date_creation": "2020-05-26T01:47:03+0000"
     }
 }
 ```
@@ -62,7 +58,7 @@ Could not find a source matching this query.
 ```javascript
 {
     "code": 400,
-    "message": "Bad Request. Invalid source_id: xxxxx"
+    "message": "Bad Request. Invalid source_key: xxxxx"
 }
 ```
 {% endapi-method-response-example %}

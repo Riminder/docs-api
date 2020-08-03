@@ -21,24 +21,28 @@ Get /profile/embedding
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="X-API-KEY" type="string" required=true %}
-Authentication token
+Authentication token.
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+User's email.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="source\_id" type="string" required=true %}
-Source id
+{% api-method-parameter name="source\_key" type="string" required=true %}
+Source key.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="profile\_id" type="string" required=true %}
-Profile id
+{% api-method-parameter name="key" type="string" required=true %}
+Profile key
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="profile\_reference" type="string" required=false %}
+{% api-method-parameter name="reference" type="string" required=false %}
 Profile's reference
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="profile\_email" type="string" required=false %}
+{% api-method-parameter name="email" type="string" required=false %}
 Profile's email
 {% endapi-method-parameter %}
 

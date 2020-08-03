@@ -19,15 +19,19 @@ This endpoint allows you to search profiles based on filters.
 {% api-method-parameter name="X-API-KEY" type="string" required=true %}
 Authentication token.
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+User's email.
+{% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="source\_ids" type="string" required=true %}
-List of source id
+{% api-method-parameter name="source\_keys" type="string" required=true %}
+List of source key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Total profiles to search
+Total profiles to search per page
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
@@ -39,15 +43,15 @@ order by \(ie. asc, desc\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-sort by \(ie. reception date, location, location\_experience,  
-location\_education, semantic score, predictive score\)
+sort by \(ie. created\_at, updated\_at, location, location\_experience,  
+location\_education, searching, scoring\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="timestamp\_start" type="integer" required=false %}
+{% api-method-parameter name="created\_at\_min" type="integer" required=false %}
 start date
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="timestamp\_end" type="integer" required=false %}
+{% api-method-parameter name="created\_at\_max" type="integer" required=false %}
 end date
 {% endapi-method-parameter %}
 
@@ -61,7 +65,7 @@ Profile's email
 
 {% api-method-parameter name="location\_geopoint" type="object" required=false %}
 Filter by location's latitude and longitude  
-\(ie. {"lat":357516600, "lng":10.7110900}\)
+\(ie. {"lat":35.7516600, "lng":10.7110900}\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="integer" required=false %}
@@ -116,19 +120,19 @@ Filter by education duration min
 Filter by education duration max
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="skills\_dict" type="array" required=false %}
+{% api-method-parameter name="skills" type="array" required=false %}
 Filter by skills
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="languages\_dict" type="array" required=false %}
+{% api-method-parameter name="languages" type="array" required=false %}
 Filter by languages
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="interests\_dict" type="array" required=false %}
-Filter by interests
+{% api-method-parameter name="interests" type="array" required=false %}
+Filter by interests  
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="tags\_dict" type="array" required=false %}
+{% api-method-parameter name="tags" type="array" required=false %}
 Filter by tags
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -267,119 +271,5 @@ Invalid secret key.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example
 
-
-
-{% tabs %}
-{% tab title="PHP" %}
-```php
-$client = new Hrflow\Client('your secret key');
-
-$params = [
-  'limit'             => 10,
-  'page'              => 1,
-  'order_by'          => 'asc',
-  'sort_by'           => 'date_reception',
-  'timestamp_start'   => 1569320033,
-  'timestamp_end'     => 1586945633,
-  'name'              => 'name',
-  'email'             => 'exemple@exemple.com',
-  'location_geopoint' => [
-    'lat' => '357516600',
-    'lng' => '10.7110900',
-  ],
-  'location_distance'            => 40,
-  'summary_keywords'             => ['keyword1', 'keyword2',...],
-  'text_keywords'                => ['keyword1', 'keyword2',...],
-  'experience_keywords'          => ['keyword1', 'keyword2',...],
-  'experience_location_geopoint' => [
-    'lat' => '357516600',
-    'lon' => '10.7110900',
-  ],
-  'experience_location_distance' => 40,
-  'experiences_duration_min'     => 3,
-  'experiences_duration_max'     => 7,
-  'skills_dict'                  => ['skill1', 'skill2', ...],
-  'languages_dict'               => ['lang1',..],
-  'interests_dict'               => ['interest1', 'interest2',...],
-  'tags_dict'                    => ['tag1', 'tag2', ...],
-]
-
-$client->profile->searching->get($source_ids, $params);
-```
-{% endtab %}
-
-{% tab title="Python" %}
-```python
-import hrflow as hf
-
-client = hf.client(api_secret='your api secret')
-
-client.profile.searching.get(source_ids=["source_id"], name=None, email=None,
-                             location_geopoint=[], location_distance=None, 
-                             summary_keywords=[], text_keywords=[],
-                             experience_keywords=[],
-                             experience_location_geopoint=[], 
-                             experience_location_distance=None, 
-                             experiences_duration_min=None, 
-                             experiences_duration_max=None,
-                             education_keywords=[], 
-                             education_location_geopoint=[], 
-                             education_location_distance=None,
-                             educations_duration_min=None, 
-                             educations_duration_max=None,
-                             skills_dict=[], languages_dict=[], 
-                             interests_dict=None, labels_dict=None,
-                             date_start="1494539999", date_end=None, 
-                             page=1, limit=30, sort_by='date_reception', 
-                             order_by='asc')
-```
-{% endtab %}
-
-{% tab title="Javascript" %}
-```javascript
-// npm install --save hrflow
-
-import Hrflow from 'hrflow';
-const client = new Hrflow({API_Key: "Your API Key"});
-
-const params =  {
-  source_ids: ['source_id1', 'source_id2',..], // Required, list of sources ids
-  limit: 10, //  Total profiles to search
-  page: 1, //  Page number
-  order_by: 'asc', // Order by 'asc' or 'desc'
-  sort_by: 'date_reception', // Sort by 'date_reception', 'date_creation', 'location', 'location_experience', 'location_education', 'score_semantic'  or 'score_predictive'
-  timestamp_start: 1569320033, // 'Start date'
-  timestamp_end: 1586945633,  // 'Start date'
-  name: 'name', // Profile's name  
-  email: 'exemple@exemple.com', // Profile's email
-  location_geopoint: {
-    // Filter by location's latitude and longitude
-    lat: '357516600',
-    lng: '10.7110900',
-  },
-  location_distance: 40, // Filter by location distance in km
-  summary_keywords: ['keyword1', 'keyword2',...], // Filter by summary keywords
-  text_keywords: ['keyword1', 'keyword2',...], // Filter by text keywords,
-  experience_keywords: ['keyword1', 'keyword2',...], // Filter by experience keywords
-  experience_location_geopoint: {
-  // Filter by experience's latitude and longitude
-    lat: '357516600',
-    lon: '10.7110900',
-  },
-  experience_location_distance:  40, // Filter by experience location distance in km
-  experiences_duration_min: 3, // Min total years of experience
-  experiences_duration_max: 7, // Max total years of experience
-  skills_dict: ['skill1', 'skill2', ...], // List of skills
-  languages_dict: ['lang1',..], // List of language
-  interests_dict: ['interest1', 'interest2',...], // List of interests 
-  tags_dict: ['tag1', 'tag2', ...], // List of tags
-}
-
-
-client.profile.searching.get(params);
-```
-{% endtab %}
-{% endtabs %}
 

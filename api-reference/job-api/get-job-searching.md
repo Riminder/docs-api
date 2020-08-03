@@ -19,6 +19,10 @@ This endpoint allows you to search jobs for given query parameters.
 {% api-method-parameter name="X-API-KEY" type="string" required=true %}
 Authentication token.
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+User's email.
+{% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
@@ -60,7 +64,7 @@ Filter by location's lattitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="string" required=false %}
-Max raduis
+Max radius
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="summary\_keywords" type="string" required=false %}
@@ -102,50 +106,40 @@ Jobs successfully retrieved.
 ```scheme
 {
     "code": 200,
-    "page": 1,
-    "maxPage": 1,
-    "count": 6,
-    "total": 6,
-    "message": "Job list",
-    "data": [
-        {
-            "job_id": "job_id",
-            "job_reference": null,
-            "name": "Previsioniste economiste",
-            "description": null,
-            "query": {
-                "skills": [
-                    "data science"
-                ],
-                "experiences_duration_min": 8,
-                "experiences_duration_max": 100000000000,
-                "educations_duration_min": -100000000000,
-                "educations_duration_max": 8,
-                "is_geo_loc": false,
-                "is_exp_geo_loc": false,
-                "is_edu_geo_loc": false,
-                "location_lat": 48.856614,
-                "location_lng": 2.3522219,
-                "radius": 10000
-            },
-            "agent": [],
-            "notification": false,
-            "archive": false,
-            "date_creation": {
-                "date": "2018-12-06 15:48:15.000000",
-                "timezone_type": 3,
-                "timezone": "UTC"
-            },
-            "stats": {
-                "total_yes": "2",
-                "total_later": "1",
-                "total_no": "0"
+    "message": "Job searching results",
+    "meta": {
+        "page": 1,
+        "maxPage": 73,
+        "count": 1,
+        "total": 73
+    },
+    "data": {
+        "jobs": [
+            {
+                "id": 4706,
+                "key": "d224a0e830605ca7dddab20956624a1ca38d7e45",
+                "reference": "STO00002082",
+                "name": "ALTERNANT(E) MASTER ACHATS – SUPPLY CHAIN (F/H)",
+                "url": null,
+                "summary": null,
+                "sections": [...],
+                "location": {
+                    "text": "France Île-de-France Bois-Colombes",
+                    "lat": 48.913539999999998,
+                    "lng": 2.2673299999999998,
+                    "gmaps": null,
+                    "fields": []
+                },
+                "skills": [],
+                "languages": [],
+                "tags": [...],
+                "ranges_float": [],
+                "ranges_date": [],
+                "updated_at": "2020-06-09T12:39:57+0000",
+                "created_at": "2020-04-07T17:39:52+0000"
             }
-        },
-        .
-        .
-        .
-    ]
+        ]
+    }
 }
 ```
 {% endapi-method-response-example %}

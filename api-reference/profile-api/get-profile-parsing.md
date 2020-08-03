@@ -5,7 +5,7 @@ description: Retrieve profile's parsing given profile id and source_id.
 # \[GET\] /profile/parsing
 
 {% hint style="info" %}
-This endpoint requires either profile\_id or profile\_reference or profile\_email.
+This endpoint requires source\_key and either profile\_key or profile\_reference or profile\_email.
 {% endhint %}
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/parsing" %}
@@ -23,22 +23,26 @@ This endpoint allows you to get parsing's result of a given profile.
 {% api-method-parameter name="X-API-KEY" type="string" required=true %}
 Authentication token.
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+User's email.
+{% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="source\_id" type="string" required=true %}
-source id.
+{% api-method-parameter name="source\_key" type="string" required=true %}
+source key.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="profile\_id" type="string" required=true %}
-profile id.
+{% api-method-parameter name="key" type="string" required=true %}
+profile key.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="profile\_reference" type="string" required=false %}
+{% api-method-parameter name="reference" type="string" required=false %}
 profile reference.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="profile\_email" type="string" required=false %}
+{% api-method-parameter name="email" type="string" required=false %}
 profile email.
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -359,12 +363,12 @@ require_once('vendor/autoload.php');
 
 $client = new Hrflow\Client('your secret key');
 
-$source_id         = 'source_id' ;
-$profile_id        = 'profile_id';
-$profile_reference = 'profile_reference'; // optional
-$profile_email     = 'profile_email'; // optional
+$source_key         = 'source_key' ;
+$key                = 'key';
+$reference          = 'profile_reference'; // optional
+$email              = 'profile_email'; // optional
 
-$client->profile->parsing->list($source_id, $profile_id, $profile_reference, $profile_email);
+$client->profile->parsing->list($source_key, $key, $reference, $email);
 ```
 {% endtab %}
 

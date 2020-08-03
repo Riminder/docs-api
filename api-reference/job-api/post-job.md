@@ -4,11 +4,7 @@ description: Add job
 
 # \[POST\] /job/indexing
 
-{% hint style="info" %}
-This endpoint requires at least name and board\_key.
-{% endhint %}
-
-Job post accepts json files.
+This endpoint accepts json files.
 
 Please find below an example of json job that you can upload.
 
@@ -43,7 +39,7 @@ Please find below an example of json job that you can upload.
                   ],
     "skills": [{
                   "name": "python",
-                  "value": None
+                  "value": null
                },
                {
                   "name": "spark",
@@ -67,7 +63,7 @@ Please find below an example of json job that you can upload.
                   ],
     "tags": [{
                 "name": "archive",
-                "value": True
+                "value": true
              },
              {  
                 "name": "tag example",
@@ -125,7 +121,11 @@ This endpoint allows you to post free cakes.
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="X-API-KEY" type="string" required=true %}
-Authentication token.
+Authentication token
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+User's email.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -159,27 +159,39 @@ Job's summary
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sections" type="array" required=true %}
-Job's sections
+Job's sections  
+\(ie. \[{"name": "section\_name", "title": "section\_title", ""
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location" type="object" required=true %}
-Job's location
+Job's location  
+\(ie. {  
+        "text": "xx rue XXXX" ,  
+        "geopoint": {  
+                              "lat":38.299637 ,  
+                              "lng": -122.657535  
+                             }  
+        }\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="skills" type="array" required=true %}
-Job's skills
+Job's skills  
+\(ie. \[{"name": "skill", "type":"hard or soft", "value":0.8}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="languages" type="array" required=true %}
-Job's languages
+Job's languages  
+\(ie. \[{"name": "language", "value": 0.7}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags" type="array" required=true %}
-Job's tags
+Job's tags  
+\(ie. \[{"name": "tag", "value":"tag\_value"}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="metadatas" type="array" required=true %}
-Job's metadatas
+Job's metadatas   
+\(ie. \[{"name": "meta", "value":"meta\_value"}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ranges\_float" type="array" required=true %}
@@ -195,7 +207,7 @@ Job's ranges date
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Job successfully added.
+Job successfully created.
 {% endapi-method-response-example-description %}
 
 ```scheme
@@ -203,12 +215,12 @@ Job successfully added.
     "code": 201,
     "message": "Job created",
     "data": {
-        "id": 2954,
+        "id": id,
         "key": "job_key",
-        "reference": "Job's reference abcd",
+        "reference": "Job's reference 12",
         "name": "Data Engineer",
         "url": "https://www.pole-emploi.ai/jobs/data_engineer",
-        "summary": "As an engineer for the Data Engineering Infrastructure team, you will design, build, scale, and evolve our data engineering platform, services and tooling. Your work will have a critical  impact on all areas of business: powering core data pipelines, supporting detailed internal analytics, calculating customer usage, securing our platform, and much more.",
+        "summary": "As an engineer for the Data Engineering Infrastructure team, you will design, build, scale, and evolve our data engineering platform, services and tooling. Your work will have a critical  impact on all areas of business: powering core data pipelines,  supporting detailed internal analytics, calculating customer  usage, securing our platform, and much more.",
         "sections": [
             {
                 "name": "profile",
@@ -217,7 +229,7 @@ Job successfully added.
             }
         ],
         "location": {
-            "text": null,
+            "text": "Dampierre en Burly (45)",
             "lat": null,
             "lng": null,
             "gmaps": null,
@@ -268,45 +280,8 @@ Job successfully added.
                 "value_max": "2020-09-15T21:59"
             }
         ],
-        "status": true,
-        "archive": false,
-        "members": [],
-        "notification": false,
-        "threshold": null,
-        "updated_at": "2020-05-27T16:21:23+0000",
-        "created_at": "2020-05-27T16:21:23+0000",
-        "agent": {
-            "id": "id",
-            "key": "agent_key",
-            "name": "test",
-            "description": "description",
-            "classifierVersion": "1584961482.484944",
-            "classifier": {
-                "id": "id",
-                "key": "a2e8f27d9a3fc6aeb4e61fa390ecfd2b7564f8d8",
-                "name": "General Model",
-                "description": "Trained with our custom datasets of resumes, the General Model computes matching scores between a given job and a given profile. This model reaches an AUC (Area Under the Curve) up to 92.7% and handles both many (profiles) to one (job) and one (profile) to many (jobs) scoring.",
-                "version": "1584961482.484944",
-                "metric": 0.93700000000000006,
-                "updated_at": null,
-                "created_at": "2020-03-23T15:56:05+0000"
-            },
-            "user": {
-                "id": 6,
-                "email": "user@mail.com",
-                "pseudo": "user",
-                "firstName": "User",
-                "lastName": "USER",
-                "avatarUrl": "../uploads/user/avatar/bbeffd9082fc796feee52b15c42bec5215e3313c.png",
-                "locale": "english",
-                "position": "Lead Software Engineer",
-                "phone": null
-            },
-            "archive": false,
-            "updated_at": "2020-05-14T17:43:22+0000",
-            "created_at": "2020-05-14T17:43:22+0000"
-        },
-        "query": []
+        "updated_at": "2020-06-11T14:43:29+0000",
+        "created_at": "2020-06-11T14:43:29+0000"
     }
 }
 ```

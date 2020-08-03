@@ -2,7 +2,7 @@
 description: Retrieve profile's attachments given profile id and source id.
 ---
 
-# \[GET\] /profile/attachments
+# \[GET\] /profile/indexing/attachments
 
 {% hint style="info" %}
 This endpoint requires either profile\_id or profile\_reference or profile\_email.
@@ -23,22 +23,26 @@ This endpoint allows you to get profile's attachments.
 {% api-method-parameter name="X-API-KEY" type="string" required=true %}
 Authentication token.
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+User's email
+{% endapi-method-parameter %}
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="source\_id" type="string" required=true %}
-Source id.
+{% api-method-parameter name="source\_key" type="string" required=true %}
+Source key.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="profile\_id" type="string" required=true %}
-Profile id.
+{% api-method-parameter name="key" type="string" required=true %}
+Profile key.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="profile\_reference" type="string" %}
+{% api-method-parameter name="reference" type="string" %}
 Profile's reference.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="profile\_email" type="string" %}
+{% api-method-parameter name="email" type="string" %}
 Profile's email.
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
