@@ -114,7 +114,7 @@ Post /job/indexing
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to post free cakes.
+This endpoint allows you to post job json.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -377,7 +377,7 @@ const data = {
                   }],
 }
 
-hrflow.job.add(params);
+client.job.add(params);
 ```
 {% endtab %}
 {% endtabs %}
