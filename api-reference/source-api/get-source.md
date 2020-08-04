@@ -17,7 +17,11 @@ This endpoint allows you to retrieve given source's information.
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="X-API-KEY" type="string" required=true %}
-Authentication token.
+ Authentication token
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+ User's email
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -118,7 +122,10 @@ client.source.get(source_id="source_id")
 // npm install --save hrflow
 
 import Hrflow from 'hrflow';
-const client = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({ 
+    api_secret: "Your API Key",
+    api_user: "Your API user email" 
+});
 
 client.source.get("source_id_here").then(response => {
     console.log(response);

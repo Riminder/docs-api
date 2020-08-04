@@ -145,7 +145,10 @@ client.source.list(name='python', page=1, limit=1, sort_by='date', order_by'asc'
 ```javascript
 
 import Hrflow from 'hrflow';
-const client = new Hrflow({API_Key: "Your API Key"});
+const client = new Hrflow({ 
+    api_secret: "Your API Key",
+    api_user: "Your API user email" 
+});
 
 const params = {
   name: 'cvbot',
