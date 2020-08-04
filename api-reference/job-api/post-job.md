@@ -377,7 +377,7 @@ const data = {
                   }],
 }
 
-client.job.add(params);
+client.job.add(data);
 ```
 {% endtab %}
 {% endtabs %}
