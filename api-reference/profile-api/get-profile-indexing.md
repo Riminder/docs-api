@@ -1,5 +1,5 @@
 ---
-description: This endpoint allows to retrieve  Profile object
+description: This endpoint allows to retrieve  the profile indexing
 ---
 
 # \[GET\] /profile/indexing
@@ -10,7 +10,7 @@ description: This endpoint allows to retrieve  Profile object
 {% endapi-method-summary %}
 
 {% api-method-description %}
- endpoint allows you to get Profile object.
+ endpoint allows you to get the profile indexing.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -27,19 +27,19 @@ User's email
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="source\_key" type="string" required=true %}
-source key.
+source key
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="key" type="string" required=true %}
-profile key.
+{% api-method-parameter name="key" type="string" required=false %}
+profile key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="reference" type="string" required=false %}
-profile reference.
+profile reference
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="email" type="string" required=false %}
-profile email.
+profile email
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -212,16 +212,17 @@ const client = new Hrflow({
     api_user: "Your API user email" 
 });
 
-const data = {
-    source_key: "source_key",
+client.profile.indexing.get("source_key", {
     key: "profile_key",
     // Or
     reference: "reference",
     email: "exemple@exemple.com"
-}
-
-client.profile.indexing.get(data);
+});
 ```
 {% endtab %}
 {% endtabs %}
+
+{% hint style="info" %}
+At least the "key"  or the "reference" must be provided in the second parameter of the get method.
+{% endhint %}
 

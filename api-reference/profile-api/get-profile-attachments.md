@@ -1,11 +1,11 @@
 ---
-description: Retrieve profile's attachments given profile id and source id.
+description: Retrieve profile's attachments given profile key and source key.
 ---
 
 # \[GET\] /profile/indexing/attachments
 
 {% hint style="info" %}
-This endpoint requires either profile\_id or profile\_reference or profile\_email.
+This endpoint requires either profile key or profile reference or profile email.
 {% endhint %}
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/attachments" %}

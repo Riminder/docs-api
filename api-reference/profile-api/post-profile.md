@@ -37,16 +37,19 @@ Profile's file resume
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sync\_parsing" type="integer" required=false %}
-Use sync parsing \(ie. 0 or 1\)
+Use sync parsing \(ie. 0 or 1\)  
+Default is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sync\_parsing\_indexing" type="integer" required=false %}
-Index sync parsing results \(ie. 0 or 1\)
+Index sync parsing results \(ie. 0 or 1\)  
+Default is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="webhook\_parsing\_sending" type="integer" required=false %}
 Receive webhook parsing success notification  
-\(ie. 0 or 1\)
+\(ie. 0 or 1\)  
+Default is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="profile\_content\_type" type="string" required=false %}
@@ -237,29 +240,25 @@ const client = new Hrflow({
     api_user: "Your API user email",
 });
 
-const data = {
-  source_key: "source_key",
-  file: fs.createReadStream("path to your file"),
-  created_at: 1569320033,
-  metadatas: [{"name":"mail","value":"test@test.com"}, ...],
-  profile_content_type: 'application/pdf', 
-  profile_reference: 'profile_reference',
-  labels:  [
-    {
-      "job_key": "job_key",
-      "job_reference": "test",
-      "stage": "yes",
-      "stage_timestamp":1585662186,
-      "rating":0.5,
-      "stage_timestamp":1585662186
-    }, 
-    ...
-  ],
-  tags:  [{"name":"blacklist","value":true}],
-  sync_parsing: 1,
-}
-
-client.profile.addFile(data);
+client.profile.parsing.addFile("source_key",
+  fs.createReadStream("path to your file"), {
+    sync_parsing: 1,
+    created_at: "2016-01-01T00:00:00",
+    metadatas: [{"name":"mail","value":"test@test.com"}, ...],
+    profile_content_type: 'application/pdf', 
+    profile_reference: 'profile_reference',
+    labels:  [
+      {
+        "job_key": "job_key",
+        "job_reference": "test",
+        "stage": "yes",
+        "stage_timestamp":1585662186,
+        "rating":0.5,
+        "stage_timestamp":1585662186
+      }, 
+    ],
+    tags:  [{"name":"blacklist","value":true}],
+});
 ```
 {% endtab %}
 {% endtabs %}

@@ -127,7 +127,7 @@ const client = new Hrflow({
     api_user: "Your API user email" 
 });
 
-client.source.get("source_id_here").then(response => {
+client.source.get("source_key").then(response => {
     console.log(response);
     // ...
 });

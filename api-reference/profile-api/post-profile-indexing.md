@@ -46,7 +46,7 @@ Please find below an example of Json profile that could be submitted.
   	  "summary": "Brief summary"
   },
   "experiences": [{
-      "date_start":  {"iso8601": "2018-01-01T00:00:00"},
+      "date_start":  2016-01-01T00:00:00,
       "date_end": {"iso8601": "2018-07-01T00:00:00"},
       "title": "Lead",
       "company": "Mathematic Departement",

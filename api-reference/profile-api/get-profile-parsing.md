@@ -1,11 +1,11 @@
 ---
-description: Retrieve profile's parsing given profile id and source_id.
+description: Retrieve profile's parsing given a profile key and a source key.
 ---
 
 # \[GET\] /profile/parsing
 
 {% hint style="info" %}
-This endpoint requires source\_key and either profile\_key or profile\_reference or profile\_email.
+This endpoint requires source\_key and either profile key or profile reference or profile email.
 {% endhint %}
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/parsing" %}
