@@ -30,32 +30,36 @@ User's email.
 List of board keys
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="source\_key" type="string" required=false %}
+{% api-method-parameter name="agent\_key" type="string" required=true %}
+Agent key
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="source\_key" type="string" required=true %}
 Source key
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="profile\_key" type="string" required=false %}
+{% api-method-parameter name="profile\_key" type="string" required=true %}
 Profile key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="use\_agent" type="integer" required=false %}
-Use agent \(ie 0 or 1\)
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="agent\_key" type="integer" required=false %}
-Agent key
+Use agent \(ie 0 or 1\)  
+Default is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Total job to score
+Total job to score  
+Default is 30
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
-API page offset
+API page offset  
+Default is 30
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}
-Order by \(ie. desc or asc\)
+Order by \(ie. desc or asc\)  
+Default is "desc"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
@@ -165,24 +169,19 @@ const client = new Hrflow({
     api_user: "Your API user email" 
 });
 
-const params = {
-    board_keys: ['board_key'],
-    agent_key: 'agent_key',
-    profile_key: 'profile_key',
-    source_key: 'source_key',
-    name: "data scientist",
-    page: 1,
-    limit: 10,
-    order_by: "asc",
-    sort_by: "date",
-    text_keywords: ["engineer", "python"],
-    tags_included: [[{name: "active", value: true}]],
-    location_distance: 30,
-    location_geopoint: {"lat":33.59662,"lng":-7.61889}
-}
-
-
-client.job.scoring.list(params);
+client.job.scoring.list(["board_key1", "board_key2"], "agent_key",
+    "source_key", "profile_key", {
+        name: "data scientist",
+        page: 1,
+        limit: 10,
+        order_by: "asc",
+        sort_by: "date",
+        text_keywords: ["engineer", "python"],
+        tags_included: [[{name: "active", value: true}]],
+        location_distance: 30,
+        location_geopoint: {"lat":33.59662,"lng":-7.61889}
+    }
+);
 ```
 {% endtab %}
 {% endtabs %}

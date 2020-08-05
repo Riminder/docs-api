@@ -31,19 +31,23 @@ List of board keys
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Total job to retrieve
+Total job to retrieve  
+Default is 10
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
-API page offset
+API page offset  
+Default is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}
-Order by \(ie. desc, asc\)
+Order by \(ie. desc, asc\)  
+Default is "desc"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-Sort by \(ie. created\_at, searching, scoring\)
+Sort by \(ie. created\_at, searching, scoring\)  
+Default is "created\_at"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_min" type="string" required=false %}
@@ -169,8 +173,7 @@ const client = new Hrflow({
     api_user: "Your API user email" 
 });
 
-const params = {
-    board_key: 'board_key',
+client.job.searching.list(["board_key1", "board_key2"],  {
     name: "data scientist",
     page: 1,
     limit: 10,
@@ -180,10 +183,7 @@ const params = {
     tags_included: [[{name: "active", value: true}]],
     location_distance: 30,
     location_geopoint: {"lat":33.59662,"lng":-7.61889}
-}
-
-
-client.job.searching.list(params);
+});
 
 ```
 {% endtab %}
