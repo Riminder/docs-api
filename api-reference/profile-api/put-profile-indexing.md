@@ -404,7 +404,7 @@ Could not find a cake matching this query.
 
 {% tabs %}
 {% tab title="Javascript" %}
-```bash
+```javascript
 import Hrflow from 'hrflow';
 const client = new Hrflow({
     api_secret: "Your API Key",
@@ -412,7 +412,6 @@ const client = new Hrflow({
 });
 
 const data = {
-  "source_key": "source_key",
   "consent_algorithmic": {
             "owner": {
                 "parsing": true,
@@ -479,7 +478,14 @@ const data = {
   "attachments": []
 };
 
-client.profile.edit(data);
+client.profile.indexing.edit(
+    "source_key", 
+    "profile_key", 
+    data
+).then(response => {
+    console.log(respone);
+    // ...
+});
 ```
 {% endtab %}
 {% endtabs %}

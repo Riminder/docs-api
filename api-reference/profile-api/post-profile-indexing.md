@@ -407,7 +407,6 @@ const client = new Hrflow({
 });
 
 const data = {
-  "source_key": "source_key",
   "consent_algorithmic": {
             "owner": {
                 "parsing": true,
@@ -474,7 +473,7 @@ const data = {
   "attachments": []
 };
 
-client.profile.indexing.addJson(data).then(response => {
+client.profile.indexing.addJson("source_key", data).then(response => {
     console.log(respone);
     // ...
 });
