@@ -258,7 +258,10 @@ client.profile.parsing.addFile("source_key",
       }, 
     ],
     tags:  [{"name":"blacklist","value":true}],
-});
+}).then(response => {
+    console.log(response);
+    // ...
+});;
 ```
 {% endtab %}
 {% endtabs %}
