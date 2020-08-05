@@ -214,9 +214,10 @@ const client = new Hrflow({
 
 client.profile.indexing.get("source_key", {
     key: "profile_key", // or reference: "profile_reference"
-    // Or
-    reference: "reference",
-    email: "exemple@exemple.com"
+    email: 'example@example.com',   
+}).then(response => {
+    console.log(response);
+    // ...
 });
 ```
 {% endtab %}
