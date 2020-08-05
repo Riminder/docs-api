@@ -279,8 +279,7 @@ const client = new Hrflow({
     api_user: "Your API user email" 
 });
 
-const params = {
-  source_keys: ['source_key1', 'source_key2'],
+client.profile.searching.list(['source_key1', 'source_key2'], {
   stage: 'new,
   limit: 10,
   page: 1,
@@ -309,9 +308,8 @@ const params = {
   languages: [{name: 'english', value: 'fluent'}],
   interests: [{name: 'design', value: 1}],
   tags: [{name: 'active', value: true}],
-}
+});
 
-hrflow.profile.searching.list(params);
 ```
 {% endtab %}
 {% endtabs %}
