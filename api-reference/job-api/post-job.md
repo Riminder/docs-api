@@ -312,8 +312,7 @@ const client = new Hrflow({
     api_user: "Your API user email" 
 });
 
-const data = {
-    "board_key": "board_key",
+client.job.indexing.add("board_key", {
     "name": "Data Engineer",
     "agent_key": "agent_key",
     "reference": "Job's reference abc",
@@ -375,9 +374,7 @@ const data = {
                      "name": "metadata example",
                      "value": "metadata"
                   }],
-}
-
-client.job.add(data);
+});
 ```
 {% endtab %}
 {% endtabs %}
