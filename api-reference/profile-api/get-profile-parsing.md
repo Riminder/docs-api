@@ -34,7 +34,7 @@ User's email.
 source key.
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="key" type="string" required=true %}
+{% api-method-parameter name="key" type="string" required=false %}
 profile key.
 {% endapi-method-parameter %}
 
@@ -394,7 +394,10 @@ const client = new Hrflow({
 });
 
 client.profile.parsing.get("source_key", {
-    key: "profile_key", // or reference: "profile_reference"
+    key: "profile_key",
+    // or
+    reference: "profile_reference"
+    // or
     email: 'example@example.com',   
 }).then(response => {
     console.log(response);
@@ -406,7 +409,7 @@ client.profile.parsing.get("source_key", {
 {% endtabs %}
 
 {% hint style="info" %}
- At least the "key"  or the "reference" must be provided in the second parameter of the get method.
+ At least the "key"  or the "reference" or the "email" must be provided in the second parameter of the get method.
 {% endhint %}
 
 

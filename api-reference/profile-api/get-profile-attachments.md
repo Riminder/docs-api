@@ -153,15 +153,17 @@ const client = new Hrflow({
     api_user: "Your API user email" 
 });
 
-const params = {
-    source_key: "source_key",
-    key: "profile_key",
-    // Or
-    reference: "reference"
-    email: 'example@example.com',
-}
 
-client.profile.attachments.list(params);
+client.profile.attachments.list("source_key", {
+    key: "profile_key",
+    // or
+    reference: "profile_reference"
+    // or
+    email: 'example@example.com',     
+}).then(response => {
+    console.log(response);
+    // ...
+});
 ```
 {% endtab %}
 {% endtabs %}

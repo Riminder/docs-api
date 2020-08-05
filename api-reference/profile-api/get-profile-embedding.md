@@ -137,16 +137,18 @@ const client = new Hrflow({
     api_secret: "Your API Key",
     api_user: "Your API user email" 
 });
-const params = {
-    source_key: "source_key",
-    key: "profile_key",
-    // Or
-    reference: "reference",
-    email: 'example@example.com'
-    fields: {'profile': 1, 'skills':1, 'educations':[0]},
-}
 
-client.profile.embedding.get(params);
+client.profile.embedding.get("source_key", {
+    key: "profile_key",
+    // or
+    reference: "profile_reference"
+    // or
+    email: 'example@example.com',
+    fields: {'profile': 1, 'skills':1, 'educations':[0]}, 
+}).then(response => {
+    console.log(response);
+    // ...
+});
 ```
 {% endtab %}
 {% endtabs %}
