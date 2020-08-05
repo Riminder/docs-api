@@ -30,16 +30,16 @@ User's email.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="key" type="string" required=true %}
-Job's key.
+{% api-method-parameter name="board\_key" type="string" required=true %}
+Board key
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="board\_key" type="string" required=true %}
-Board's key.
+{% api-method-parameter name="key" type="string" required=false %}
+Job key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="reference" type="string" required=false %}
-Job's reference
+Job reference
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -138,14 +138,11 @@ const client = new Hrflow({
     api_user: "Your API user email" 
 });
 
-const data = {
-    board_key: "board_key"
+client.job.indexing.get("board_key", {
     key: "job_key",
     // Or
-    job_reference: "job_reference"
-}
-
-client.job.indexing.get(data);
+    reference: "job_reference"
+});
 ```
 {% endtab %}
 {% endtabs %}
