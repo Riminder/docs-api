@@ -474,7 +474,10 @@ const data = {
   "attachments": []
 };
 
-client.profile.addJson(data);
+client.profile.indexing.addJson(data).then(response => {
+    console.log(respone);
+    // ...
+});
 ```
 {% endtab %}
 {% endtabs %}
