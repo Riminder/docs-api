@@ -26,15 +26,7 @@ User's email.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="source\_keys" type="array" required=true %}
-List of source keys
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="use\_agent" type="array" required=false %}
-Use agent or not \(ie. 0 or 1\)
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="board\_key" type="integer" required=false %}
+{% api-method-parameter name="board\_key" type="string" required=true %}
 Board key
 {% endapi-method-parameter %}
 
@@ -42,24 +34,38 @@ Board key
 Job key
 {% endapi-method-parameter %}
 
+{% api-method-parameter name="source\_keys" type="array" required=true %}
+List of source keys
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="use\_agent" type="array" required=false %}
+Use agent or not \(ie. 0 or 1\)  
+default is 1
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="stage" type="string" required=false %}
-Stage \(ie. 'new', 'yes', 'later', 'no'\)
+Stage \(ie. 'new', 'yes', 'later', 'no'\)  
+Default is 'new'
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Total profiles to score
+Total profiles to score  
+Default is 12
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
-API page offset
+API page offset  
+Default is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}
-order by \(ie. asc, desc\)
+order by \(ie. asc, desc\)  
+Default is "desc"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-sort by \(ie. scoring, searching, date\)
+sort by \(ie. scoring, searching, date\)  
+Default is "date"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at\_min" type="string" required=false %}
@@ -367,10 +373,8 @@ const client = new Hrflow({
     api_user: "Your API user email" 
 });
 
-const params = {
-  source_keys: ['source_key1', 'source_key2'],
-  job_key: 'job_key',
-  board_key: 'board_key',
+client.profile.scoring.list(['source_key1', 'source_key2'], "board_key", 
+  "job_key", {
   use_agent: 1,
   stage: 'new,
   limit: 10,
@@ -400,9 +404,7 @@ const params = {
   languages: [{name: 'english', value: 'fluent'}],
   interests: [{name: 'design', value: 1}],
   tags: [{name: 'active', value: true}],
-}
-
-hrflow.profile.scoring.list(params);
+});
 ```
 {% endtab %}
 {% endtabs %}
