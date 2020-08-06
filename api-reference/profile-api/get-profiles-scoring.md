@@ -340,28 +340,34 @@ $client->profile->searching->get($source_ids, $job_id, $params);
 ```python
 import hrflow as hf
 
-client = hf.client(api_secret='your secret key')
+client = hf.client(api_secret="Your API Key", api_user="Your API user email")
 
-client.profile.searching.get(source_ids=["source_id"], job_id, stage, 
-                             use_agent,
-                             name=None, email=None,
-                             location_geopoint=[], location_distance=None, 
-                             summary_keywords=[], text_keywords=[],
-                             experience_keywords=[],
-                             experience_location_geopoint=[], 
-                             experience_location_distance=None, 
-                             experiences_duration_min=None, 
-                             experiences_duration_max=None,
-                             education_keywords=[], 
-                             education_location_geopoint=[], 
-                             education_location_distance=None,
-                             educations_duration_min=None, 
-                             educations_duration_max=None,
-                             skills_dict=[], languages_dict=[], 
-                             interests_dict=None, labels_dict=None,
-                             date_start="1494539999", date_end=None, 
-                             page=1, limit=30, sort_by='date_reception', 
-                             order_by='asc')
+client.profile.scoring.list(source_keys=["source_key1", "source_key2"],
+                            board_key="board_key", job_key="job_key", use_agent= 1,
+                            stage="new", limit: 10, page: 1, order_by: 'asc',
+                            sort_by='date', created_at_min='2020-05-15T23:59:59.999Z',
+                            created_at_max='2020-07-15T23:59:59.999Z', name='name',
+                            email='exemple@exemple.com',
+                            location_geopoint={
+                              lat:'357516600',
+                              lon:'10.7110900',
+                            },
+                            location_distance=40,
+                            summary_keywords=["keyword1", "keyword2"],
+                            text_keywords=["keyword1", "keyword2"],
+                            experience_keywords=["keyword1", "keyword2"],
+                            experience_location_geopoint={
+                              lat: 35.7516600,
+                              lon: 10.7110900',
+                            },
+                            experience_location_distance=40,
+                            experiences_duration_min=3,
+                            experiences_duration_max=7,
+                            skills=[{"name": "python", "value": 0.9}],
+                            languages=[{"name": "english", "value": "fluent"}],
+                            interests=[{"name": "design", "value": 1}],
+                            tags_included=[{"name": "active", "value":True}]
+                            )
 ```
 {% endtab %}
 

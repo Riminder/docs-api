@@ -12,8 +12,6 @@ Please find below an example of Profile json to update.
 
 ```bash
 {
-  "source_key": "source_key",
-  "key": "profile_key",
   "consent_algorithmic": {
             "owner": {
                 "parsing": true,
@@ -105,6 +103,10 @@ User's email
 {% api-method-body-parameters %}
 {% api-method-parameter name="source\_key" type="string" required=true %}
 Source key
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="key" type="string" required=true %}
+Profile key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="consent\_algorithmic" type="object" required=true %}
@@ -403,6 +405,83 @@ Could not find a cake matching this query.
 {% endapi-method %}
 
 {% tabs %}
+{% tab title="Python" %}
+```python
+import hrflow as hf
+
+client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+
+data = {
+  "consent_algorithmic": {
+            "owner": {
+                "parsing": True,
+                "revealing": True,
+                "embedding": True,
+                "searching": True,
+                "scoring": True,
+                "reasoning": True
+            },
+            "controller": {
+                "parsing": True,
+                "revealing": False,
+                "embedding": True,
+                "searching": False,
+                "scoring": True,
+                "reasoning": False
+            }
+        },
+  "info" : {
+      "full_name":"Harry Potter",
+      "first_name": "Harry",
+      "last_name": "Potter",
+      "email":"harry.potter@gmail.com",
+      "phone":"0202",
+      "gender": None,
+      "urls": {
+          "from_resume": [],
+          "linkedin":"",
+          "twitter":"",
+          "facebook":"",
+          "github":"",
+          "picture":""},
+      "picture":None,
+  	  "location":{"text": None},
+  	  "summary": "Brief summary"
+  },
+  "experiences": [{
+      "date_start":  {"iso8601": "2018-01-01T00:00:00"},
+      "date_end": {"iso8601": "2018-07-01T00:00:00"},
+      "title": "Lead",
+      "company": "Mathematic Departement",
+      "location": {"text":"Paris"},
+      "description": "Developping."
+      }],
+  "experiences_duration":5,
+  "educations": [{
+      "date_start": {"iso8601": "2016-01-01T00:00:00"},
+      "date_end": {"iso8601": "2018-01-01T00:00:00"},
+      "title": "Mathematicien",
+      "school": "University",
+      "description": "Description",
+      "location": {"text":"Scotland", "lat":"lat", "lng": "lng"}
+  }],
+  "educations_duration":4,
+  "skills": [{"name":"manual skill", "type": "hard", "value": None},
+               {"name":"Creative spirit", "type": "soft","value": None}, 
+               {"name":"Writing skills", "type": "hard","value": None}, 
+               {"name":"Communication", "type": "soft","value": None}],
+  "languages" : [{"name":"english", "value": None}],
+  "interests": [{"name":"football", "value": None}],
+  "tags":[{"name":"archive", "value": False}],
+  "metadatas":[],
+  "labels":[{"stage":"yes", "job_key":"job_key"}],
+  "attachments": []
+};
+
+client.profile.indexing.edit(source_key="source_key", key="profile_key", profile_json=data)
+```
+{% endtab %}
+
 {% tab title="Javascript" %}
 ```javascript
 import Hrflow from 'hrflow';

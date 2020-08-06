@@ -130,6 +130,19 @@ Invalid secret key
 
 
 {% tabs %}
+{% tab title="Python" %}
+```python
+import hrflow as hf
+
+client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+
+client.job.indexing.get(board_key="board_key",
+                        key="job_key",
+                        # OR
+                        reference='job_reference')
+```
+{% endtab %}
+
 {% tab title="Javascript" %}
 ```javascript
 import Hrflow from 'hrflow';

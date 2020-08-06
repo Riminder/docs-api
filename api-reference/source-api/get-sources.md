@@ -135,9 +135,9 @@ $resp = $client->source->list($params) ;
 ```python
 imoort hrflow as hf
 
-client = hf.client(api_secret ='your secret key')
+client = hf.client(api_secret: "Your API Key", api_user: "Your API user email")
 
-client.source.list(name='python', page=1, limit=1, sort_by='date', order_by'asc')
+client.source.list(name='cvbot', page=1, limit=1, sort_by='date', order_by'asc')
 ```
 {% endtab %}
 

@@ -161,6 +161,24 @@ Invalid secret key
 {% endapi-method %}
 
 {% tabs %}
+{% tab title="Python" %}
+```python
+import hrflow as hf
+
+client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+
+client.job.searching.list(board_keys=["board_key1", "board_key2"],
+                          source_key="source_key", profile_key="profile_key", 
+                          agent_key="agent_key", use_agent=1
+                          name="data scientist", page=1, limit=10, 
+                          order_by="asc", sort_by="created_at",
+                          text_keywords=["engineer", "python"],
+                          tags_included=[[{"name": "active", "value": True}]],
+                          location_distance=30,
+                          location_geopoint={"lat":33.59662,"lng":-7.61889})
+```
+{% endtab %}
+
 {% tab title="Javascript" %}
 ```javascript
 import Hrflow from 'hrflow';

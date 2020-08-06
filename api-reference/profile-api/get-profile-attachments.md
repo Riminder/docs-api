@@ -135,12 +135,14 @@ $client->profile->attachment->list($source_id, $profile_id, $profile_reference, 
 ```python
 import hrflow as hf
 
-client = hf.client(api_secret='your api secret')
+client = hf.client(api_secret="Your API Key", api_user="Your API user email")
 
-client.profile.attachment.list(source_id="source_id",
-                               profile_id="profile_id",
-                               profile_reference='profile ref',
-                               profile_email='profile@email.ai'))import Hrflow from 'hrflow';
+client.profile.attachment.list(source_key="source_key",
+                              key="profile_key",
+                              # OR
+                              reference='profile_reference',
+                              # OR
+                              email='example@example.com')
 ```
 {% endtab %}
 

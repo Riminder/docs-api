@@ -203,6 +203,21 @@ Profile object is successfully retrieved
 {% endapi-method %}
 
 {% tabs %}
+{% tab title="Python" %}
+```python
+import hrflow as hf
+
+client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+
+client.profile.indexing.get(source_key="source_key",
+                            key="profile_key",
+                            # OR
+                            reference='profile_reference',
+                            # OR
+                            email='example@example.com')
+```
+{% endtab %}
+
 {% tab title="Javascript" %}
 ```javascript
 import Hrflow from 'hrflow';

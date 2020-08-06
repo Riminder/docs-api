@@ -271,6 +271,40 @@ Invalid secret key.
 {% endapi-method %}
 
 {% tabs %}
+{% tab title="Python" %}
+```python
+import hrflow as hf
+
+client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+
+client.profile.searching.list(source_keys=["source_key1", "source_key2"],
+                            limit: 10, page: 1, order_by: 'asc',
+                            sort_by='date', created_at_min='2020-05-15T23:59:59.999Z',
+                            created_at_max='2020-07-15T23:59:59.999Z', name='name',
+                            email='exemple@exemple.com',
+                            location_geopoint={
+                              lat:'357516600',
+                              lon:'10.7110900',
+                            },
+                            location_distance=40,
+                            summary_keywords=["keyword1", "keyword2"],
+                            text_keywords=["keyword1", "keyword2"],
+                            experience_keywords=["keyword1", "keyword2"],
+                            experience_location_geopoint={
+                              lat: 35.7516600,
+                              lon: 10.7110900',
+                            },
+                            experience_location_distance=40,
+                            experiences_duration_min=3,
+                            experiences_duration_max=7,
+                            skills=[{"name": "python", "value": 0.9}],
+                            languages=[{"name": "english", "value": "fluent"}],
+                            interests=[{"name": "design", "value": 1}],
+                            tags_included=[{"name": "active", "value":True}]
+                            )
+```
+{% endtab %}
+
 {% tab title="Javascript" %}
 ```javascript
 import Hrflow from 'hrflow';

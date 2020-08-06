@@ -214,20 +214,31 @@ $client->profile::addFile($source_id, $profile_file, $data);
 ```python
 import hrflow as hf
 
-client = hf.client(api_secret='your api secret')
+client = hf.client(api_secret="Your API Key", api_user="Your API user email",=)
 
 with open('/path/to/file.pdf','rb') as file:
     profile_file = file.read()
     
-client.profile.add_file(source_id="source_id",
-                        profile_file=profile_binary,
+client.profile.parsing.add_file(source_key="source_key",
+                        profile_file=profile_file,
                         profile_content_type='application/pdf',
-                        profile_labels=[]
-                        profile_tags=[{"name" : "email", "value": "test@hrflow.ai"},
-                                      {"name" : "blacklist", "value": True}],
-                        profile_metadata=[],
-                        timestamp_reception=1587398379
-                        sync_parsing=0)
+                        reference='profile_reference',
+                        labels=[
+                          {
+                            "job_key": "job_key",
+                            "job_reference": "test",
+                            "stage": "yes",
+                            "stage_timestamp":1585662186,
+                            "rating":0.5,
+                            "stage_timestamp":1585662186
+                          }, 
+                        ]
+                        tags=[{"name":"blacklist","value":true}]
+                        metadatas=[{"name":"mail","value":"test@test.com"}, ...],
+                        created_at: "2016-01-01T00:00:00",
+                        sync_parsing=0,
+                        sync_parsing_indexing=1,
+                        webhook_parsing_sending=0)
 ```
 {% endtab %}
 

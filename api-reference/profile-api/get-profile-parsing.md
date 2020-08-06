@@ -4,10 +4,6 @@ description: Retrieve profile's parsing given a profile key and a source key.
 
 # \[GET\] /profile/parsing
 
-{% hint style="info" %}
-This endpoint requires source\_key and either profile key or profile reference or profile email.
-{% endhint %}
-
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/parsing" %}
 {% api-method-summary %}
 Get /profile/parsing
@@ -376,12 +372,14 @@ $client->profile->parsing->list($source_key, $key, $reference, $email);
 ```python
 import hrflow as hf
 
-client = hf.client(api_secret='your secret key')
+client = hf.client(api_secret="Your API Key", api_user="Your API user email")
 
-client.profile.parsing.get(source_id="source_id",
-                           profile_id="profile_id",
-                           profile_reference='profile ref',
-                           profile_email='profile@email.ai')
+client.profile.parsing.get(source_key="source_key",
+                           key="profile_key",
+                           # OR
+                           reference='profile_reference',
+                           # OR
+                           email='example@example.com')
 ```
 {% endtab %}
 

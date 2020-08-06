@@ -111,9 +111,9 @@ $client->source->get($source_id) ;
 ```python
 import hrflow as hf
 
-client = hf.client(api_secret='your secret key')
+client = hf.client(api_secret: "Your API Key", api_user: "Your API user email")
 
-client.source.get(source_id="source_id")
+client.source.get(key="source_key")
 ```
 {% endtab %}
 
