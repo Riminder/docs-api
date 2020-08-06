@@ -312,7 +312,7 @@ const client = new Hrflow({
     api_user: "Your API user email" 
 });
 
-client.job.indexing.add("board_key", {
+client.job.indexing.addJosn("board_key", {
     "name": "Data Engineer",
     "agent_key": "agent_key",
     "reference": "Job's reference abc",
