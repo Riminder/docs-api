@@ -232,8 +232,8 @@ client.profile.parsing.add_file(source_key="source_key",
                             "rating":0.5,
                             "stage_timestamp":1585662186
                           }, 
-                        ]
-                        tags=[{"name":"blacklist","value":true}]
+                        ],
+                        tags=[{"name":"blacklist","value":true}],
                         metadatas=[{"name":"mail","value":"test@test.com"}, ...],
                         created_at: "2016-01-01T00:00:00",
                         sync_parsing=0,
