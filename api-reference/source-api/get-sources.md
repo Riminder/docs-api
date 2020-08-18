@@ -31,19 +31,23 @@ Filter by source's name.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
-API  page offset.
+API  page offset.  
+Deafult is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Max response size.
+Max response size.  
+Default  is 30
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-Sort by \(ie. date\)
+Sort by \(ie. date, profile\)  
+Default is Date
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}
-Order by \(.ie asc, desc\)
+Order by \(.ie asc, desc\)  
+Default is desc
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -146,8 +150,8 @@ client.source.list(name='cvbot', page=1, limit=1, sort_by='date', order_by'asc')
 
 import Hrflow from 'hrflow';
 const client = new Hrflow({ 
-    api_secret: "Your API Key",
-    api_user: "Your API user email" 
+    api_secret: 'Your API Key',
+    api_user: 'Your API user email' 
 });
 
 const params = {

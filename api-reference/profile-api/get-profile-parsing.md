@@ -10,7 +10,8 @@ Get /profile/parsing
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get the parsing's result of a given profile.
+This endpoint allows you to get the parsing's result of a given profile.  
+  
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -387,14 +388,14 @@ client.profile.parsing.get(source_key="source_key",
 ```javascript
 import Hrflow from 'hrflow';
 const client = new Hrflow({
-    api_secret: "Your API Key",
-    api_user: "Your API user email",
+    api_secret: 'Your API Key',
+    api_user: 'Your API user email',
 });
 
-client.profile.parsing.get("source_key", {
-    key: "profile_key",
+client.profile.parsing.get('source_key', {
+    key: 'profile_key',
     // or
-    reference: "profile_reference"
+    reference: 'profile_reference'
     // or
     email: 'example@example.com',   
 }).then(response => {
@@ -407,7 +408,7 @@ client.profile.parsing.get("source_key", {
 {% endtabs %}
 
 {% hint style="info" %}
- At least the "key"  or the "reference" or the "email" must be provided in the second parameter of the get method.
+ One of key , `reference` or `email` parameters should be provided to identify the profile.
 {% endhint %}
 
 

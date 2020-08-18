@@ -1,5 +1,5 @@
 ---
-description: This endpoint allows you to update an existing profile
+description: This endpoint allows you to update a JSON profile.
 ---
 
 # \[PUT\] /profile/indexing
@@ -486,80 +486,80 @@ client.profile.indexing.edit(source_key="source_key", key="profile_key", profile
 ```javascript
 import Hrflow from 'hrflow';
 const client = new Hrflow({
-    api_secret: "Your API Key",
-    api_user: "Your API user email",
+    api_secret: 'Your API Key',
+    api_user: 'Your API user email',
 });
 
 const data = {
-  "consent_algorithmic": {
-            "owner": {
-                "parsing": true,
-                "revealing": false,
-                "embedding": true,
-                "searching": false,
-                "scoring": true,
-                "reasoning": false
+  'consent_algorithmic': {
+            'owner': {
+                'parsing': true,
+                'revealing': false,
+                'embedding': true,
+                'searching': false,
+                'scoring': true,
+                'reasoning': false
             },
-            "controller": {
-                "parsing": true,
-                "revealing": false,
-                "embedding": true,
-                "searching": false,
-                "scoring": true,
-                "reasoning": false
+            'controller': {
+                'parsing': true,
+                'revealing': false,
+                'embedding': true,
+                'searching': false,
+                'scoring': true,
+                'reasoning': false
             }
         },
-  "info" : {
-      "full_name":"Harry Potter",
-      "first_name": "Harry",
-      "last_name": "Potter",
-      "email":"harry.potter@gmail.com",
-      "phone":"0202",
-      "gender": null,
-      "urls": {
-          "from_resume": [],
-          "linkedin":"",
-          "twitter":"",
-          "facebook":"",
-          "github":"",
-          "picture":""},
-      "picture":null,
-  	  "location":{"text": null},
-  	  "summary": "Brief summary"
+  'info' : {
+      'full_name':'Harry Potter',
+      'first_name': 'Harry',
+      'last_name': 'Potter',
+      'email':'harry.potter@gmail.com',
+      'phone':'0202',
+      'gender': null,
+      'urls': {
+          'from_resume': [],
+          'linkedin': '',
+          'twitter': '',
+          'facebook': '',
+          'github': '',
+          'picture': ''},
+      'picture':null,
+  	  'location':{'text': null},
+  	  'summary': 'Brief summary'
   },
-  "experiences": [{
-      "date_start":  {"iso8601": "2018-01-01T00:00:00"},
-      "date_end": {"iso8601": "2018-07-01T00:00:00"},
-      "title": "Lead",
-      "company": "Mathematic Departement",
-      "location": {"text":"Paris"},
-      "description": "Developping."
+  'experiences': [{
+      'date_start':  {'iso8601': '2018-01-01T00:00:00'},
+      'date_end': {'iso8601': '2018-07-01T00:00:00'},
+      'title': 'Lead',
+      'company': 'Mathematic Departement',
+      'location': {'text':'Paris'},
+      'description': 'Developping.'
       }],
-  "experiences_duration":5,
-  "educations": [{
-      "date_start": {"iso8601": "2016-01-01T00:00:00"},
-      "date_end": {"iso8601": "2018-01-01T00:00:00"},
-      "title": "Mathematicien",
-      "school": "University",
-      "description": "Description",
-      "location": {"text":"Scotland", "lat":"lat", "lng": "lng"}
+  'experiences_duration':5,
+  'educations': [{
+      'date_start': {'iso8601': '2016-01-01T00:00:00'},
+      'date_end': {'iso8601': '2018-01-01T00:00:00'},
+      'title': 'Mathematicien',
+      'school': 'University',
+      'description': 'Description',
+      'location': {'text':'Scotland', 'lat':'lat', 'lng': 'lng'}
   }],
-  "educations_duration":4,
-  "skills": [{"name":"manual skill", "type": "hard", "value": null},
-               {"name":"Creative spirit", "type": "soft","value": null}, 
-               {"name":"Writing skills", "type": "hard","value": null}, 
-               {"name":"Communication", "type": "soft","value": null}],
-  "languages" : [{"name":"english", "value": null}],
-  "interests": [{"name":"football", "value": null}],
-  "tags":[{"name":"archive", "value": false}],
-  "metadatas":[],
-  "labels":[{"stage":"yes", "job_key":"job_key"}],
-  "attachments": []
+  'educations_duration':4,
+  'skills': [{'name':'manual skill', 'type': 'hard', 'value': null},
+               {'name':'Creative spirit', 'type': 'soft','value': null}, 
+               {'name':'Writing skills', 'type': 'hard','value': null}, 
+               {'name':'Communication', 'type': 'soft','value': null}],
+  'languages' : [{'name':'english', 'value': null}],
+  'interests': [{'name':'football', 'value': null}],
+  'tags':[{'name':'archive', 'value': false}],
+  'metadatas':[],
+  'labels':[{'stage':'yes', 'job_key':'job_key'}],
+  'attachments': []
 };
 
 client.profile.indexing.edit(
-    "source_key", 
-    "profile_key", 
+    'source_key', 
+    'profile_key', 
     data
 ).then(response => {
     console.log(respone);

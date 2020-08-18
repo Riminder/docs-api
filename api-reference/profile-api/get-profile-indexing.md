@@ -202,6 +202,8 @@ Profile object is successfully retrieved
 {% endapi-method-spec %}
 {% endapi-method %}
 
+### Example
+
 {% tabs %}
 {% tab title="Python" %}
 ```python
@@ -223,14 +225,14 @@ client.profile.indexing.get(source_key="source_key",
 import Hrflow from 'hrflow';
 
 const client = new Hrflow({ 
-    api_secret: "Your API Key",
-    api_user: "Your API user email" 
+    api_secret: 'Your API Key',
+    api_user: 'Your API user email' 
 });
 
-client.profile.indexing.get("source_key", {
-    key: "profile_key",
+client.profile.indexing.get('source_key', {
+    key: 'profile_key',
     // or
-    reference: "profile_reference"
+    reference: 'profile_reference'
     // or
     email: 'example@example.com',   
 }).then(response => {
@@ -242,6 +244,6 @@ client.profile.indexing.get("source_key", {
 {% endtabs %}
 
 {% hint style="info" %}
-At least the "key"  or the "reference" or the "email" must be provided in the second parameter of the get method.
+At
 {% endhint %}
 

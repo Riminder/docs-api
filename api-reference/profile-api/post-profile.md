@@ -4,7 +4,7 @@ description: This endpoint allows you to add new profile using resume to a given
 
 # \[POST\]  /profile/parsing/file
 
-All possible extensions of a valid profile's resume are accepted \(.ie pdf, png, jpeg, docx, ppt, rtbf, html ...\)
+Supported extensions for the parsing API are .pdf, .png, .jpg, .jpeg, .bmp, .doc, .docx, .odt, .rtf, .odp, ppt, and .pptx .
 
 {% api-method method="post" host="https://api.hrflow.ai" path="/v1/profile/parsing/file" %}
 {% api-method-summary %}
@@ -61,7 +61,7 @@ Profile's reference
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="labels" type="array" required=false %}
-Profile's label  
+Profile's labels  
 \(ie \[{"job\_key": "job\_key", "job\_reference": "test", "stage": "yes", "stage\_timestamp":1585662186, "rating":0.5, "stage\_timestamp":1585662186}, ...\]\)
 {% endapi-method-parameter %}
 
@@ -75,7 +75,7 @@ Profile's metadata
 \(ie \[{"name":"mail","value":"test@test.com"}, ...\]\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="created\_at" type="integer" required=false %}
+{% api-method-parameter name="created\_at" type="string" required=false %}
 Reception date as iso format
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
@@ -158,28 +158,29 @@ For synchronous parsing , you will receive profile parsing in the response body.
 
 ![](../../.gitbook/assets/syncparsing-diagram.png)
 
-**sync\_parsing** is an optional request parameter , you can set its value to 1 to use sync parsing or set its value to 0 to use async parsing.  
- The default behavior uses asynchronous parsing.  
+**sync\_parsing** is an optional request parameter , you can set its value to 1 to use sync parsing or set its value to 0 to use async parsing.
+
+The default behavior uses asynchronous parsing.  
   
 So as to Use Sync Parsing, you need to:
 
 * Create an API source \(HTTP / Python / PHP ...\),
-* Enable SyncParsing for a given Source :
-  * Your admin must activate SyncParsing  in source's configuration,
+* Enable `sync_parsing` for a given Source :
+  * Your admin must activate `sync_parsing`  in source's configuration,
   * Send a request to HrFlow support team in order to enable this feature for you.
-* Set sync\_parsing to 1 in your request
+* Set `sync_parsing` to 1 in your request
 
-### What's a **profile\_id and how to retrieve it ?**
+### What's a **profile\_key and how to retrieve it ?**
 
-A profile ID is a unique identifier for a **HrFlow Profile**. This information is mandatory, **profile\_id guarantees the processing** of your profile \(parsing, revealing, embedding, etc\).
+A profile ID is a unique identifier for a **HrFlow Profile**. This information is mandatory, **`profile_key` guarantees the processing** of your profile \(parsing, revealing, embedding, etc\).
 
-**How to get a profile id**
+**How to get a profile\_key**
 
-If you are using SyncParsing you will receive profile\_id in response's body  and if you are using the AsyncParsing you have 3 possible ways that help you retrieve this information.
+If you are using SyncParsing you will receive profile\_key in the response's body  and if you are using the AsyncParsing you have 3 possible ways that help you retrieve this information.
 
-* Upload your document with a profile\_reference, thus you can get profile's parsing from [this endpoint](https://developers.hrflow.ai/api-reference/profile-api/get-profile-parsing) using source\_id and profile\_reference,
+* Upload your document with a `reference`, thus you can get profile's parsing from [this endpoint](https://developers.hrflow.ai/api-reference/profile-api/get-profile-parsing) using `source_key` and `reference`,
 * Set up a webhook that listens to all incoming notifications from HrFlow. As soon as your document is well parsed you will receive a success event including  the profile id,
-* Use HrFlow's Profile Search Engine, in order to find profile's details, then you can fetch for profile\_id.
+* Use HrFlow's Profile Search Engine, in order to find profile's details, then you can fetch for profile\_key.
 
 ### Example
 
@@ -244,35 +245,34 @@ client.profile.parsing.add_file(source_key="source_key",
 
 {% tab title="Javascript" %}
 ```javascript
-import * as fs from "fs";
+import * as fs from 'fs';
 import Hrflow from 'hrflow';
 const client = new Hrflow({
-    api_secret: "Your API Key",
-    api_user: "Your API user email",
+    api_secret: 'Your API Key',
+    api_user: 'Your API user email',
 });
 
-client.profile.parsing.addFile("source_key",
-  fs.createReadStream("path to your file"), {
+client.profile.parsing.addFile('source_key',
+  fs.createReadStream('path to your file'), {
     sync_parsing: 1,
-    created_at: "2016-01-01T00:00:00",
-    metadatas: [{"name":"mail","value":"test@test.com"}, ...],
+    created_at: '2016-01-01T00:00:00',
+    metadatas: [{'name':'mail','value':'test@test.com'}],
     profile_content_type: 'application/pdf', 
     profile_reference: 'profile_reference',
     labels:  [
       {
-        "job_key": "job_key",
-        "job_reference": "test",
-        "stage": "yes",
-        "stage_timestamp":1585662186,
-        "rating":0.5,
-        "stage_timestamp":1585662186
+        'job_key': 'job_key',
+        'job_reference': 'test',
+        'stage': 'yes',
+        'stage_timestamp':1585662186,
+        'rating':0.5,
+        'stage_timestamp':1585662186
       }, 
     ],
-    tags:  [{"name":"blacklist","value":true}],
+    tags:  [{ name: 'blacklist', value: true}],
 }).then(response => {
     console.log(response);
-    // ...
-});;
+});
 ```
 {% endtab %}
 {% endtabs %}

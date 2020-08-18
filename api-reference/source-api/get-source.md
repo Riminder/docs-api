@@ -10,7 +10,7 @@ Source
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to retrieve given source's information.
+This endpoint allows you to retrieve a given source's information.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -123,11 +123,11 @@ client.source.get(key="source_key")
 
 import Hrflow from 'hrflow';
 const client = new Hrflow({ 
-    api_secret: "Your API Key",
-    api_user: "Your API user email" 
+    api_secret: 'Your API Key',
+    api_user: 'Your API user email'
 });
 
-client.source.get("source_key").then(response => {
+client.source.get('source_key').then(response => {
     console.log(response);
     // ...
 });
