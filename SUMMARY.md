@@ -8,7 +8,7 @@
 * [Profile API](products-1/introduction.md)
 * [JOB API](products-1/job-api.md)
 * [Analytics API](products-1/analytics-api.md)
-* [Workflows](products-1/workflows.md)
+* [Workflows function](products-1/workflows.md)
 
 ## AI Layers
 
