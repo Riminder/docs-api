@@ -112,23 +112,23 @@ def encode_array(arr):
 client = hf.client(api_secret="Your API Key", api_user="Your API user email")
 
 
-profile_json = 
+profile_json = {
   "consent_algorithmic": {
             "owner": {
-                "parsing": true,
-                "revealing": false,
-                "embedding": true,
-                "searching": false,
-                "scoring": true,
-                "reasoning": false
+                "parsing": True,
+                "revealing": False,
+                "embedding": True,
+                "searching": False,
+                "scoring": True,
+                "reasoning": False
             },
             "controller": {
-                "parsing": true,
-                "revealing": false,
-                "embedding": true,
-                "searching": false,
-                "scoring": true,
-                "reasoning": false
+                "parsing": True,
+                "revealing": False,
+                "embedding": True,
+                "searching": False,
+                "scoring": True,
+                "reasoning": False
             }
         },
   "info" : {
@@ -137,7 +137,7 @@ profile_json =
       "last_name": "Potter",
       "email":"harry.potter@gmail.com",
       "phone":"0202",
-      "gender": null,
+      "gender": None,
       "urls": {
           "from_resume": [],
           "linkedin":"",
@@ -145,12 +145,12 @@ profile_json =
           "facebook":"",
           "github":"",
           "picture":""},
-      "picture":null,
-  	  "location":{"text": null},
+      "picture":None,
+  	  "location":{"text": None},
   	  "summary": "Brief summary"
   },
   "experiences": [{
-      "date_start":  2016-01-01T00:00:00,
+      "date_start":  "2016-01-01T00:00:00",
       "date_end": {"iso8601": "2018-07-01T00:00:00"},
       "title": "Lead",
       "company": "Mathematic Departement",
@@ -167,13 +167,13 @@ profile_json =
       "location": {"text":"Scotland", "lat":"lat", "lng": "lng"}
   }],
   "educations_duration":4,
-  "skills": [{"name":"manual skill", "type": "hard", "value": null},
-               {"name":"Creative spirit", "type": "soft","value": null}, 
-               {"name":"Writing skills", "type": "hard","value": null}, 
-               {"name":"Communication", "type": "soft","value": null}],
-  "languages" : [{"name":"english", "value": null}],
-  "interests": [{"name":"football", "value": null}],
-  "tags":[{"name":"archive", "value": false}],
+  "skills": [{"name":"manual skill", "type": "hard", "value": None},
+               {"name":"Creative spirit", "type": "soft","value": None}, 
+               {"name":"Writing skills", "type": "hard","value": None}, 
+               {"name":"Communication", "type": "soft","value": None}],
+  "languages" : [{"name":"english", "value": None}],
+  "interests": [{"name":"football", "value": None}],
+  "tags":[{"name":"archive", "value": False}],
   "metadatas":[],
   "labels":[{"stage":"yes", "job_key":"job_key"}],
   "attachments": []
