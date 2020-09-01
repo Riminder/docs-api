@@ -89,6 +89,10 @@ Invalid secret key.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="info" %}
+Max limit token is 512, if for a given text, this limit is exceeded, we will consider the first 512 tokens.
+{% endhint %}
+
 {% tabs %}
 {% tab title="Python" %}
 ```python
