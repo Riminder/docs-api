@@ -42,7 +42,7 @@ Default  is 30
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
 Sort by \(ie. date, profile\)  
-Default is Date
+Default is date
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}

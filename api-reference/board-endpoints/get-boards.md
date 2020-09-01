@@ -39,7 +39,8 @@ Max response size \(Default is 30\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" %}
-Sort by \(ie. date\)
+Sort bySort by \(ie. date, job\)  
+Default is date.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" %}
