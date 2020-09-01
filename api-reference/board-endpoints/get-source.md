@@ -4,13 +4,13 @@ description: Retrieve board's information for a given board key
 
 # \[GET\] /source
 
-{% api-method method="get" host="https://api.hrflow.ai" path="/v1/source" %}
+{% api-method method="get" host="https://api.hrflow.ai" path="/v1/board" %}
 {% api-method-summary %}
 Source
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to retrieve a board info given a key
+This endpoint allows you to retrieve a board info given a key.
 {% endapi-method-description %}
 
 {% api-method-spec %}
