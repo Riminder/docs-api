@@ -31,7 +31,7 @@ Text to reveal
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Revealing successfully retrieved.
+Revealing successfully generated.
 {% endapi-method-response-example-description %}
 
 ```bash
@@ -62,7 +62,7 @@ Revealing successfully retrieved.
 
 {% api-method-response-example httpCode=400 %}
 {% api-method-response-example-description %}
-Text could not be null.
+Text can't be null.
 {% endapi-method-response-example-description %}
 
 ```bash
