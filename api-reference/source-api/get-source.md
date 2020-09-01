@@ -10,7 +10,7 @@ Source
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to retrieve a given source's information.
+This endpoint allows you to retrieve a source given a key.
 {% endapi-method-description %}
 
 {% api-method-spec %}
