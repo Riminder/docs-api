@@ -39,17 +39,38 @@ Cake successfully retrieved.
 {% endapi-method-response-example-description %}
 
 ```
-{    "name": "Cake's name",    "recipe": "Cake's recipe name",    "cake": "Binary cake"}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-Could not find a cake matching this query.
-{% endapi-method-response-example-description %}
-
-```
-{    "message": "Ain't no cake like that."}
+{
+    "code": 200,
+    "message": "Board info",
+    "data": {
+        "id": 66,
+        "key": "a9f42c53255d3774a0b997849ea1d52cc3192f4d",
+        "name": "hiring campain",
+        "description": "archive",
+        "type": "api",
+        "subtype": "python",
+        "status": true,
+        "archive": null,
+        "members": [
+            "alaeddine.chhima@riminder.net"
+        ],
+        "user": {
+            "id": 221,
+            "email": "alaeddine.chhima@riminder.net",
+            "pseudo": null,
+            "firstName": null,
+            "lastName": null,
+            "avatarUrl": "/images/user.png",
+            "locale": "english",
+            "position": null,
+            "phone": null
+        },
+        "mapping_scoring": [],
+        "mapping_reasoning": [],
+        "updated_at": "2020-08-31T09:47:40+0000",
+        "created_at": "2020-08-31T09:46:07+0000"
+    }
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
