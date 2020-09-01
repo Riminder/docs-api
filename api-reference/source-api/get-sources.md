@@ -10,7 +10,7 @@ Sources
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get all sources created by your team.
+This endpoint allows you to get, search and filter sources in your workspace.
 {% endapi-method-description %}
 
 {% api-method-spec %}
