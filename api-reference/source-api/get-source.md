@@ -26,7 +26,7 @@ This endpoint allows you to retrieve a given source's information.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="source\_key" type="string" required=true %}
+{% api-method-parameter name="key" type="string" required=true %}
 Source key
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -35,20 +35,41 @@ Source key
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Source's info successfully retrieved.
+Source's info successfully retrieved.{
 {% endapi-method-response-example-description %}
 
 ```javascript
-{
     "code": 200,
     "message": "Source info",
     "data": {
-        "key": "source_key",
-        "name": "source_name",
+        "id": 1166,
+        "key": "91456df437fbd49a566adc5e0b0b33d13b115d06",
+        "name": "folder demo",
+        "description": null,
         "type": "folder",
-        "sub_type": "folder",
+        "subtype": "folder",
+        "private": true,
+        "status": true,
         "archive": null,
-        "date_creation": "2020-05-26T01:47:03+0000"
+        "members": [
+            "mohamed.benqassmi@riminder.net"
+        ],
+        "notification": false,
+        "consent": false,
+        "consent_url": null,
+        "user": {
+            "id": 16,
+            "email": "mohamed.benqassmi@riminder.net",
+            "pseudo": "medbenqa",
+            "firstName": null,
+            "lastName": null,
+            "avatarUrl": "/images/user.png",
+            "locale": "english",
+            "position": null,
+            "phone": null
+        },
+        "updated_at": "2020-09-01T17:51:36+0000",
+        "created_at": "2020-09-01T17:51:36+0000"
     }
 }
 ```

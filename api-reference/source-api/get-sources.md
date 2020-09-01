@@ -61,33 +61,114 @@ Source list successfully retrieved.
 ```javascript
 {
     "code": 200,
-    "page": 1,
-    "maxPage": 10,
-    "count": 30,
-    "total": 273,
     "message": "Source list",
+    "meta": {
+        "page": 1,
+        "maxPage": 11,
+        "count": 3,
+        "total": 33
+    },
     "data": [
         {
-            "source_id": "source_exemple_id",
-            "name": "python",
-            "type": "api",
-            "sub_type": "api",
-            "archive": false,
-            "date_creation": {
-                "date": "2020-03-03 23:18:16.000000",
-                "timezone_type": 3,
-                "timezone": "UTC"
+            "id": 1166,
+            "key": "91456df437fbd49a566adc5e0b0b33d13b115d06",
+            "name": "folder demo",
+            "description": null,
+            "type": "folder",
+            "subtype": "folder",
+            "private": true,
+            "status": true,
+            "archive": null,
+            "members": [
+                "mohamed.benqassmi@riminder.net"
+            ],
+            "notification": false,
+            "consent": false,
+            "consent_url": null,
+            "user": {
+                "id": 16,
+                "email": "mohamed.benqassmi@riminder.net",
+                "pseudo": "medbenqa",
+                "firstName": null,
+                "lastName": null,
+                "avatarUrl": "/images/user.png",
+                "locale": "english",
+                "position": null,
+                "phone": null
             },
+            "updated_at": "2020-09-01T17:51:36+0000",
+            "created_at": "2020-09-01T17:51:36+0000",
             "stats": {
-                "total_profiles": "n"
+                "size": "1"
             }
         },
-        .
-        .
-        .
-        .
-        ]
-    }
+        {
+            "id": 1165,
+            "key": "c5db72c0a4de151f05c10e80560668f872e84322",
+            "name": "cvbot demo",
+            "description": null,
+            "type": "cvbot",
+            "subtype": "cvbot",
+            "private": false,
+            "status": true,
+            "archive": null,
+            "members": [
+                "mohamed.benqassmi@riminder.net"
+            ],
+            "notification": false,
+            "consent": false,
+            "consent_url": null,
+            "user": {
+                "id": 16,
+                "email": "mohamed.benqassmi@riminder.net",
+                "pseudo": "medbenqa",
+                "firstName": null,
+                "lastName": null,
+                "avatarUrl": "/images/user.png",
+                "locale": "english",
+                "position": null,
+                "phone": null
+            },
+            "updated_at": "2020-09-01T13:38:56+0000",
+            "created_at": "2020-09-01T13:38:56+0000",
+            "stats": {
+                "size": "0"
+            }
+        },
+        {
+            "id": 1164,
+            "key": "b707a108bc0d90004be2f91ec4ae9260e1c942d4",
+            "name": "http_api demo",
+            "description": null,
+            "type": "api",
+            "subtype": "http_api",
+            "private": false,
+            "status": true,
+            "archive": null,
+            "members": [
+                "mohamed.benqassmi@riminder.net"
+            ],
+            "notification": false,
+            "consent": false,
+            "consent_url": null,
+            "user": {
+                "id": 16,
+                "email": "mohamed.benqassmi@riminder.net",
+                "pseudo": "medbenqa",
+                "firstName": null,
+                "lastName": null,
+                "avatarUrl": "/images/user.png",
+                "locale": "english",
+                "position": null,
+                "phone": null
+            },
+            "updated_at": "2020-09-01T12:01:04+0000",
+            "created_at": "2020-09-01T12:01:04+0000",
+            "stats": {
+                "size": "0"
+            }
+        }
+    ]
 }
 ```
 {% endapi-method-response-example %}
