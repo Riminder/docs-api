@@ -1,5 +1,5 @@
 ---
-description: Retrieve all sources created by a team
+description: Retrieve all sources from your workspace
 ---
 
 # \[GET\] /sources
@@ -10,7 +10,7 @@ Sources
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get, search and filter sources in your workspace.
+This endpoint allows you to fetch sources from your workspace.
 {% endapi-method-description %}
 
 {% api-method-spec %}
