@@ -182,6 +182,10 @@ If you are using SyncParsing you will receive profile\_key in the response's bod
 * Set up a webhook that listens to all incoming notifications from HrFlow. As soon as your document is well parsed you will receive a success event including  the profile id,
 * Use HrFlow's Profile Search Engine, in order to find profile's details, then you can fetch for profile\_key.
 
+{% hint style="info" %}
+The first 10 pages are parsed for documents with more than 10 pages.
+{% endhint %}
+
 ### Example
 
 {% tabs %}
