@@ -1,5 +1,5 @@
 ---
-description: Retrieve all boards created by a team
+description: Retrieve all boards from your workspace
 ---
 
 # \[GET\] /boards
@@ -10,7 +10,7 @@ Boards
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get all sources created by your team.
+This endpoint allows you to fetch boards from your workspace.
 {% endapi-method-description %}
 
 {% api-method-spec %}
