@@ -4,7 +4,7 @@ description: Retrieve source's information for a given source key
 
 # \[GET\] /source
 
-{% api-method method="get" host="https://api.hrflow.ai/v1" path="/source" %}
+{% api-method method="get" host="https://api.hrflow.ai/" path="v1/source" %}
 {% api-method-summary %}
 Source
 {% endapi-method-summary %}
