@@ -32,7 +32,7 @@ Filter by source's name.
 
 {% api-method-parameter name="page" type="integer" required=false %}
 API  page offset.  
-Deafult is 1
+Default is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
