@@ -7,6 +7,7 @@
 
 * [Profile API](products-1/introduction.md)
 * [JOB API](products-1/job-api.md)
+* [Document API](products-1/document-api.md)
 * [Analytics API](products-1/analytics-api.md)
 * [Workflows](products-1/workflows.md)
 
