@@ -84,9 +84,13 @@ Invalid secret key
 {% endapi-method-spec %}
 {% endapi-method %}
 
-The output of this endpoint is item's embedding encoded \(base64\).
 
-In order to get embedding as list\[list\], the user must decode \(base64\) response 's body to get binary format, then reshape \(-1, 1024\) the numpy array created based on generated binary. 
+
+## Embedding :
+
+Embedding's results are encoded \(base64\).
+
+In order to get embedding as **list\[list\]**, results must be decoded \(base64\) to get binary format of item's embedding, then based on this binary, numpy array could be generated and reshaped \(-1, 1024\). 
 
 {% tabs %}
 {% tab title="Python" %}
