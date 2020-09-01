@@ -2,7 +2,7 @@
 description: Put Job
 ---
 
-# \[PUT\] /job/indexing
+# PUT: /job/indexing
 
 {% hint style="info" %}
 XThis endpoint requires at least a job key and board\_key.

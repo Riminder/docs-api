@@ -2,7 +2,7 @@
 description: This endpoint allows you to update a JSON profile.
 ---
 
-# \[PUT\] /profile/indexing
+# PUT: /profile/indexing
 
 {% hint style="info" %}
 Profile key is required

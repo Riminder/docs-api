@@ -2,7 +2,7 @@
 description: Retrieve list of job with their scores regarding a profile
 ---
 
-# \[GET\] /jobs/scoring
+# GET: /jobs/scoring
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/jobs/scoring" %}
 {% api-method-summary %}

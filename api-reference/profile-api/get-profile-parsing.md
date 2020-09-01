@@ -2,7 +2,7 @@
 description: Retrieve profile's parsing given a profile key and a source key.
 ---
 
-# \[GET\] /profile/parsing
+# GET: /profile/parsing
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/parsing" %}
 {% api-method-summary %}

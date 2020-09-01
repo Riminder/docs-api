@@ -2,7 +2,7 @@
 description: Retrieve all boards from your workspace
 ---
 
-# \[GET\] /boards
+# GET: /boards
 
 {% api-method method="get" host="https://api.hrflow.ai" path="/v1/boards" %}
 {% api-method-summary %}

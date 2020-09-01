@@ -2,7 +2,7 @@
 description: Add job
 ---
 
-# \[POST\] /job/indexing
+# POST: /job/indexing
 
 This endpoint accepts json files.
 

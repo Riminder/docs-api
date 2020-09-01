@@ -1,4 +1,4 @@
-# \[POST\] /document/revealing
+# POST: /document/revealing
 
 {% api-method method="post" host="https://api.hrflow.ai" path="/v1/document/revealing" %}
 {% api-method-summary %}

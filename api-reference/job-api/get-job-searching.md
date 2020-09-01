@@ -2,7 +2,7 @@
 description: Retrieve a list of jobs based on given filters
 ---
 
-# \[GET\] /jobs/searching
+# GET: /jobs/searching
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/jobs/searching" %}
 {% api-method-summary %}

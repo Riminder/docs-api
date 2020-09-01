@@ -2,7 +2,7 @@
 description: This endpoint allows you to index new Json profile to a given source.
 ---
 
-# \[POST\] /profile/indexing
+# POST: /profile/indexing
 
 Please find below an example of Json profile that could be submitted.
 

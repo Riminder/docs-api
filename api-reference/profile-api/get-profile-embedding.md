@@ -2,7 +2,7 @@
 description: Retrieve profile's embedding given profile key and source key.
 ---
 
-# \[GET\] /profile/embedding \(alpha\)
+# GET: /profile/embedding
 
 {% hint style="info" %}
 This endpoint requires either profile key or profile reference or profile email.

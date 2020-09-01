@@ -2,7 +2,7 @@
 description: This endpoint allows to retrieve  the profile indexing
 ---
 
-# \[GET\] /profile/indexing
+# GET: /profile/indexing
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/indexing" %}
 {% api-method-summary %}

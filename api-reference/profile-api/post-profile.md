@@ -2,7 +2,7 @@
 description: This endpoint allows you to add new profile using resume to a given source.
 ---
 
-# \[POST\]  /profile/parsing/file
+# POST: /profile/parsing/file
 
 Supported extensions for the parsing API are .pdf, .png, .jpg, .jpeg, .bmp, .doc, .docx, .odt, .rtf, .odp, ppt, and .pptx .
 

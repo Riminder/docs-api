@@ -2,7 +2,7 @@
 description: Retrieve a board info
 ---
 
-# \[GET\] /board
+# GET: /board
 
 {% api-method method="get" host="https://api.hrflow.ai" path="/v1/board" %}
 {% api-method-summary %}

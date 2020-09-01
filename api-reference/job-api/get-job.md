@@ -2,7 +2,7 @@
 description: Retrieve Job
 ---
 
-# \[GET\] /job/indexing
+# GET: /job/indexing
 
 {% hint style="info" %}
 This endpoint requires at least a job key and board\_key.

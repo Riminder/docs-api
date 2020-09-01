@@ -2,7 +2,7 @@
 description: Retrieve all sources from your workspace
 ---
 
-# \[GET\] /sources
+# GET: /sources
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/sources" %}
 {% api-method-summary %}
