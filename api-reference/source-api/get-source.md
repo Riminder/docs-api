@@ -1,5 +1,5 @@
 ---
-description: Retrieve source's information for a given source key
+description: Retrieve a source info
 ---
 
 # \[GET\] /source

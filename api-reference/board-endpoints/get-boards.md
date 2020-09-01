@@ -56,7 +56,115 @@ Cake successfully retrieved.
 {% endapi-method-response-example-description %}
 
 ```
-{    "name": "Cake's name",    "recipe": "Cake's recipe name",    "cake": "Binary cake"}
+{
+    "code": 200,
+    "message": "Board list",
+    "meta": {
+        "page": 1,
+        "maxPage": 2,
+        "count": 3,
+        "total": 4
+    },
+    "data": [
+        {
+            "id": 66,
+            "key": "a9f42c53255d3774a0b997849ea1d52cc3192f4d",
+            "name": "hiring campaign ",
+            "description": "archive ",
+            "type": "api",
+            "subtype": "python",
+            "status": true,
+            "archive": null,
+            "members": [
+                "alaeddine.chhima@riminder.net"
+            ],
+            "user": {
+                "id": 221,
+                "email": "alaeddine.chhima@riminder.net",
+                "pseudo": null,
+                "firstName": null,
+                "lastName": null,
+                "avatarUrl": "/images/user.png",
+                "locale": "english",
+                "position": null,
+                "phone": null
+            },
+            "mapping_scoring": [],
+            "mapping_reasoning": [],
+            "updated_at": "2020-08-31T09:47:40+0000",
+            "created_at": "2020-08-31T09:46:07+0000",
+            "stats": {
+                "size": "0"
+            }
+        },
+        {
+            "id": 65,
+            "key": "8f10a8bc9279ab8cfc68ce60c9650e3b344fc1f0",
+            "name": "folder",
+            "description": "test",
+            "type": "folder",
+            "subtype": "folder",
+            "status": true,
+            "archive": null,
+            "members": [
+                "thomas.zhu@riminder.net"
+            ],
+            "user": {
+                "id": 219,
+                "email": "thomas.zhu@riminder.net",
+                "pseudo": "Thomas",
+                "firstName": "Thomas",
+                "lastName": "ZHU",
+                "avatarUrl": "/images/user.png",
+                "locale": "english",
+                "position": "Dealer",
+                "phone": null
+            },
+            "mapping_scoring": [],
+            "mapping_reasoning": [],
+            "updated_at": "2020-08-25T10:19:08+0000",
+            "created_at": "2020-08-25T10:19:08+0000",
+            "stats": {
+                "size": "1"
+            }
+        },
+        {
+            "id": 42,
+            "key": "017f8c538b1d0021a53b4225dfa62a855871a19a",
+            "name": "folder",
+            "description": "test folder",
+            "type": "folder",
+            "subtype": "folder",
+            "status": true,
+            "archive": null,
+            "members": [
+                "mohamed.benqassmi@riminder.net",
+                "cedric.defaut@riminder.net",
+                "mouhidine.seiv@riminder.net",
+                "thomas.zhu@riminder.net",
+                "moustapha.ebnou@riminder.net"
+            ],
+            "user": {
+                "id": 6,
+                "email": "mohamed.nouayti@riminder.net",
+                "pseudo": "mnouayti",
+                "firstName": "Mohammed",
+                "lastName": "NOUAYTI",
+                "avatarUrl": "/images/user.png",
+                "locale": "english",
+                "position": "Lead Software Engineer",
+                "phone": null
+            },
+            "mapping_scoring": [],
+            "mapping_reasoning": [],
+            "updated_at": "2020-07-02T15:41:19+0000",
+            "created_at": "2020-07-02T15:26:52+0000",
+            "stats": {
+                "size": "13"
+            }
+        }
+    ]
+}
 ```
 {% endapi-method-response-example %}
 
