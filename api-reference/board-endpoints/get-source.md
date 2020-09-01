@@ -10,7 +10,7 @@ Source
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to retrieve a board's information.
+This endpoint allows you to retrieve a board info given a key
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -26,7 +26,7 @@ User's email
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="board\_key" type="string" required=true %}
+{% api-method-parameter name="key" type="string" required=true %}
 Board key
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
