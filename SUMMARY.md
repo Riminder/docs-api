@@ -42,7 +42,7 @@
   * [\[GET\] /source](api-reference/source-api/get-source.md)
 * [Board Endpoints](api-reference/board-endpoints/README.md)
   * [\[GET\] /boards](api-reference/board-endpoints/get-boards.md)
-  * [\[GET\] /source](api-reference/board-endpoints/get-source.md)
+  * [\[GET\] /board](api-reference/board-endpoints/get-source.md)
 * [Profile Endpoints](api-reference/profile-api/README.md)
   * [\[POST\]  /profile/parsing/file](api-reference/profile-api/post-profile.md)
   * [\[GET\] /profile/parsing](api-reference/profile-api/get-profile-parsing.md)

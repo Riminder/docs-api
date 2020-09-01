@@ -1,8 +1,8 @@
 ---
-description: Retrieve board's information for a given board key
+description: Retrieve a board info
 ---
 
-# \[GET\] /source
+# \[GET\] /board
 
 {% api-method method="get" host="https://api.hrflow.ai" path="/v1/board" %}
 {% api-method-summary %}
