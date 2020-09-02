@@ -35,10 +35,10 @@ Board key
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Cake successfully retrieved.
+Board's info successfully retrieved.
 {% endapi-method-response-example-description %}
 
-```
+```bash
 {
     "code": 200,
     "message": "Board info",
@@ -70,6 +70,32 @@ Cake successfully retrieved.
         "updated_at": "2020-08-31T09:47:40+0000",
         "created_at": "2020-08-31T09:46:07+0000"
     }
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Coulf not find a board matching this query
+{% endapi-method-response-example-description %}
+
+```bash
+{
+    "code": 400,
+    "message": "Invalid board fields"
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+Invalid secret key
+{% endapi-method-response-example-description %}
+
+```bash
+{
+    "code": 401,
+    "message": "Unauthorized. Invalid secret key: xxxxx "
 }
 ```
 {% endapi-method-response-example %}
