@@ -56,7 +56,7 @@ Default is desc
 Boards successfully retrieved.
 {% endapi-method-response-example-description %}
 
-```
+```bash
 {
     "code": 200,
     "message": "Board list",
@@ -165,6 +165,19 @@ Boards successfully retrieved.
             }
         }
     ]
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=401 %}
+{% api-method-response-example-description %}
+Invalid secret key: xxxx
+{% endapi-method-response-example-description %}
+
+```bash
+{
+    "code": 401,
+    "message": "Unauthorized. Invalid secret key: xxxxx "
 }
 ```
 {% endapi-method-response-example %}
