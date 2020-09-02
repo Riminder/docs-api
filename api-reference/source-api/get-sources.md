@@ -218,7 +218,7 @@ $resp = $client->source->list($params) ;
 
 {% tab title="Python" %}
 ```python
-imoort hrflow as hf
+import hrflow as hf
 
 client = hf.client(api_secret: "Your API Key", api_user: "Your API user email")
 
