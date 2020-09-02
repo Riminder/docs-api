@@ -175,7 +175,7 @@ Source list successfully retrieved.
 
 {% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
-Invalid secret key
+Invalid secret key: xxxx
 {% endapi-method-response-example-description %}
 
 ```javascript
