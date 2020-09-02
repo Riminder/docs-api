@@ -83,7 +83,7 @@ Could not find a source matching this query.
 ```javascript
 {
     "code": 400,
-    "message": "Bad Request. Invalid source_key: xxxxx"
+    "message": "Invalid source fields"
 }
 ```
 {% endapi-method-response-example %}
