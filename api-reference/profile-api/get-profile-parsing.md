@@ -371,9 +371,9 @@ $client->profile->parsing->list($source_key, $key, $reference, $email);
 
 {% tab title="Python" %}
 ```python
-import hrflow as hf
+from hrflow import Hrflow
 
-client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 client.profile.parsing.get(source_key="source_key",
                            key="profile_key",

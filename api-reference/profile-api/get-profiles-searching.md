@@ -273,9 +273,9 @@ Invalid secret key.
 {% tabs %}
 {% tab title="Python" %}
 ```python
-import hrflow as hf
+from hrflow import Hrflow
 
-client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 client.profile.searching.list(source_keys=["source_key1", "source_key2"],
                             limit: 10, page: 1, order_by: 'asc',

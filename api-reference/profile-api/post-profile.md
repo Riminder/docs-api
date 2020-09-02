@@ -217,9 +217,9 @@ $client->profile::addFile($source_id, $profile_file, $data);
 
 {% tab title="Python" %}
 ```python
-import hrflow as hf
+from hrflow import Hrflow
 
-client = hf.client(api_secret="Your API Key", api_user="Your API user email",=)
+client = Hrflow(api_secret="Your API Key", api_user="Your API user email",=)
 
 with open('/path/to/file.pdf','rb') as file:
     profile_file = file.read()

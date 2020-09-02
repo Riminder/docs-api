@@ -338,9 +338,9 @@ $client->profile->searching->get($source_ids, $job_id, $params);
 
 {% tab title="Python" %}
 ```python
-import hrflow as hf
+from hrflow import Hrflow
 
-client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 client.profile.scoring.list(source_keys=["source_key1", "source_key2"],
                             board_key="board_key", job_key="job_key", use_agent= 1,

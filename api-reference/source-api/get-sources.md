@@ -218,9 +218,9 @@ $resp = $client->source->list($params) ;
 
 {% tab title="Python" %}
 ```python
-import hrflow as hf
+from hrflow import Hrflow
 
-client = hf.client(api_secret: "Your API Key", api_user: "Your API user email")
+client = Hrflow(api_secret: "Your API Key", api_user: "Your API user email")
 
 client.source.list(name='cvbot', page=1, limit=1, sort_by='date', order_by'asc')
 ```

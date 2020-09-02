@@ -407,9 +407,9 @@ Could not find a cake matching this query.
 {% tabs %}
 {% tab title="Python" %}
 ```python
-import hrflow as hf
+from hrflow import Hrflow
 
-client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 data = {
   "consent_algorithmic": {

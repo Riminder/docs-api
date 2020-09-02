@@ -124,9 +124,9 @@ $client->profile->embedding->get($source_id, $profile_id, $fields, $profile_refe
 
 {% tab title="Python" %}
 ```python
-import hrflow as hf
+from hrflow import Hrflow
 
-client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 client.profile.embedding.get(source_key="source_key",
                              key="profile_key",

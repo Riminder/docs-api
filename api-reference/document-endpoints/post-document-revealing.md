@@ -96,10 +96,9 @@ Max limit token is 512, if for a given text, this limit is exceeded, we will con
 {% tabs %}
 {% tab title="Python" %}
 ```python
-import hrflow as hf
-    
-    
-client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+from hrflow import Hrflow
+
+client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 
 response = client.document.revealing.post(text="hello")

@@ -5,7 +5,7 @@ description: Put Job
 # PUT: /job/indexing
 
 {% hint style="info" %}
-XThis endpoint requires at least a job key and board\_key.
+This endpoint requires at least a job key and board\_key.
 {% endhint %}
 
 {% api-method method="put" host="https://api.hrflow.ai/v1" path="/job/indexing" %}
@@ -235,9 +235,9 @@ Invalid secret key
 {% tabs %}
 {% tab title="Python" %}
 ```python
-import hrflow as hf
+from hrflow import Hrflow
 
-client = hf.client(api_secret="Your API Key", api_user="Your API user email")
+client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 data = {
     "name": "Data Engineer",
