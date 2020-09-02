@@ -185,6 +185,8 @@ Invalid secret key: xxxx
 {% endapi-method-spec %}
 {% endapi-method %}
 
+## Example
+
 {% tabs %}
 {% tab title="Python" %}
 ```python

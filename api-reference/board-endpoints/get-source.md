@@ -103,5 +103,19 @@ Invalid secret key
 {% endapi-method-spec %}
 {% endapi-method %}
 
+## Example
+
+{% tabs %}
+{% tab title="Python" %}
+```python
+import hrflow as hf
+
+client = hf.client(api_secret: "Your API Key", api_user: "Your API user email")
+
+client.board.get(key="board_key")
+```
+{% endtab %}
+{% endtabs %}
+
 
 
