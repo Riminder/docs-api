@@ -104,6 +104,22 @@ client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 response = client.document.revealing.post(text="hello")
 ```
 {% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+import Hrflow from 'hrflow';
+const client = new Hrflow({ 
+    api_secret: 'Your API Key',
+    api_user: 'Your API user email'
+});
+
+client.document.revealing.post("text").then(response => {
+    console.log(response);
+    // ...
+});
+
+```
+{% endtab %}
 {% endtabs %}
 
 

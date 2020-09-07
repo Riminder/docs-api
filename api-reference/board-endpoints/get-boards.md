@@ -197,5 +197,27 @@ client = Hrflow(api_secret: "Your API Key", api_user: "Your API user email")
 client.board.list(name='compaign', page=1, limit=1, sort_by='date', order_by'asc')
 ```
 {% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+import Hrflow from 'hrflow';
+const client = new Hrflow({ 
+    api_secret: 'Your API Key',
+    api_user: 'Your API user email' 
+});
+
+const params = {
+  name: 'compaign',
+  page: 1,
+  limit: 10,
+  sort_by: 'date',
+  order_by: 'asc',
+};
+client.board.list(params).then(response => {
+    console.log(response);
+    // ...
+});
+```
+{% endtab %}
 {% endtabs %}
 

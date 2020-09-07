@@ -115,6 +115,22 @@ client = Hrflow(api_secret: "Your API Key", api_user: "Your API user email")
 client.board.get(key="board_key")
 ```
 {% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+import Hrflow from 'hrflow';
+const client = new Hrflow({ 
+    api_secret: 'Your API Key',
+    api_user: 'Your API user email'
+});
+
+client.board.get('board_key').then(response => {
+    console.log(response);
+    // ...
+});
+
+```
+{% endtab %}
 {% endtabs %}
 
 
