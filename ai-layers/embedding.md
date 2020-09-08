@@ -4,19 +4,19 @@ description: ENDLESS POSSIBILITIES AT YOUR FINGERTIPS
 
 # Embedding
 
-The ‘_**Profile & Job Embedding**_’ model analyzes the output of ‘Parsing’ and ‘Revealing’ layers and returns numerical vectors that represent a profile or job given as an input in a 512-dimensional space. 
+The ‘_**Profile & Job Embedding**_’ model analyzes the output of ‘Parsing’ and ‘Revealing’ layers and returns numerical vectors that represent a profile or job given as an input in a 1024-dimensional space. 
 
-The vector representation is computed by using the same **HrFlow.ai** technology used for ‘Scoring’ and ‘Reasoning’ layers. The vectors of similar profiles or jobs will be close to each other in the 512-dimensional space. The ‘Profile & Job Embedding’ model can be used for organizing to unleash endless uses cases. 
+The vector representation is computed by using the same **HrFlow.ai** technology used for ‘Scoring’ and ‘Reasoning’ layers. The vectors of similar profiles or jobs will be close to each other in the 1024-dimensional space. The ‘Profile & Job Embedding’ model can be used for organizing to unleash endless uses cases. 
 
 Now on, your AI experts Developers can focus on building great models instead of spending 90% of their time on pre-processing and vectorization.
 
 | Embedding \(Vectors\) | Dimension |
 | :--- | :--- |
-| Profile2vec | 512 |
-| Experience2vec | 512 |
-| Education2vec | 512 |
-| Skills2vec | 512 |
-| Job2vec | 512 |
+| Profile2vec | 1024 |
+| Experience2vec | 1024 |
+| Education2vec | 1024 |
+| Skills2vec | 1024 |
+| Job2vec | 1024 |
 
 Our Embedding API offers several different encoding levels, particularly when it comes to profiles, it can be a Profile Encoder _**Profile2vec**_ or an Encoder Section \(_**Experience2vec**_,  _**Education2vec**_, _**Skills2vec**_\).
 
