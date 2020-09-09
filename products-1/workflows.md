@@ -12,7 +12,7 @@ Two main execution modes are available: _**Catch**_ and _**Pull**_. The _**Catch
 
 ## Workflow setup
 
-**Workflows** is a _self-service_ that you can configure from the app by navigating to the dedicated section. If you click the top-right `Create Workflow`  button a new window lets you choose the kind of _Webhook execution_ that you need.
+**Workflows** is a _self-service_ that you can configure from the app by navigating to the dedicated section. If you click the top-right `Create Workflow`  button a new window lets you choose the kind of _workflow execution_ that you need.
 
 Once created your workflow must be configured by clicking on it from the main **Workflows** section in the app.
 
@@ -27,7 +27,7 @@ The core of your **Catch** workflow is the `Function`  section. To execute your 
 Two arguments are available to your code in this mode : 
 
 * `body` is a dictionary containing the body of the request that triggered the workflow execution
-* `settings` is a dictionary containing data that you defined in the **Environment Properties** section
+* `settings` is a dictionary containing data that you defined in the **Environment Properties** section. It can also be used a way to store data that get persisted from one execution to another. Mind that both the key and value should **be natively JSON serializable**. For example, it won't work with `Python` `datetime.datetime.now()`
 
 To illustrate let's consider this example where you process the event sent by some third-party service to add a new file to your HrFlow profile database.  
 
@@ -43,23 +43,22 @@ import requests
 from hrflow import Hrflow
 
 def workflow(body, settings):
-    client = Hrflow(api_secret=settings['API_KEY'], api_user=settings['USER_EMAIL'])
+    client = Hrflow(api_secret=settings["API_KEY"], api_user=settings["USER_EMAIL"])
     
-    file_url = body['file_url']
+    file_url = body["file_url"]
     file_content = requests.get(file_url, allow_redirects=True).content
     
     client.profile.parsing.add_file(
-        source_key=settings['SOURCE_KEY']),
+        source_key=settings["SOURCE_KEY"]),
         profile_file=file_content,
-        profile_content_type='application/pdf',
-        reference='profile_reference'
+        profile_content_type="application/pdf",
+        reference="profile_reference"
     )
     
-    requests.post(settings['OTHER_SERVICE_URL'], data={'key': 'value'})
-    
+    requests.post(settings["OTHER_SERVICE_URL"], data={"key": "value"})
 ```
 
-![](../.gitbook/assets/screen-shot-2020-09-03-at-12.10.49.png)
+![](../.gitbook/assets/screen-shot-2020-09-09-at-18.10.29.png)
 
 For that code to execute correctly you must fill in the appropriate **environment properties** in the `Function` section of that particular **Catch** workflow. 
 
@@ -83,4 +82,30 @@ The **Pull** setup is almost identical to the **Catch** one except for these two
 
 * The execution is not triggered by a request to some endpoint. The code is run continuously at the rate of your choosing
 * Your function doesn't have access to a `body` argument. The expected signature is shorter `def workflow(settings: Dict) -> None:`
+
+Here is a workflow that uses a static endpoint to perform periodic fetching and storing of data in HrFlow. This example illustrates the storage capabilities of `settings`. 
+
+```python
+from hrflow import Hrflow
+
+INTERNAL_ENDPOINT = "https://storage.company.com/records"
+
+def workflow(settings):
+    client = Hrflow(api_secret=settings["API_KEY"], api_user=settings["USER_EMAIL"])
+    
+    last_uid = settings["LAST_UID"]
+    data = request.get("{}?last_uid={}".format(INTERNAL_ENDPOINT, last_uid)).json()
+    for file_url in data["files"]:
+        file_content = requests.get(file_url, allow_redirects=True).content
+        
+        client.profile.parsing.add_file(
+            source_key=settings["SOURCE_KEY"]),
+            profile_file=file_content,
+            profile_content_type="application/pdf",
+            reference="profile_reference"
+        )
+    
+    # Update LAST_UID
+    settings["LAST_UID"] = data["last_uid"]
+```
 
