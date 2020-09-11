@@ -36,7 +36,7 @@
 * [Metadatas support](getting-started/metadatas.md)
 * [F.A.Q](getting-started/f.a.q.md)
 
-## Hr Json
+## Hr Json <a id="hr-json"></a>
 
 * [Profile objects](hr-json/profile-objects/README.md)
   * [Parsing object](hr-json/profile-objects/parsing-object.md)
@@ -44,7 +44,7 @@
 * [Job objects](hr-json/job-objects/README.md)
   * [Job object](hr-json/job-objects/job-object.md)
 
-## API Reference <a id="api-reference-1"></a>
+## API Reference <a id="api-reference"></a>
 
 ---
 
