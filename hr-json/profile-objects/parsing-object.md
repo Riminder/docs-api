@@ -2,14 +2,14 @@
 
 ## Parsing
 
-This is a complete object that contains **Parsing** results, it details
- detected entities by our algorithm such dates and locations as they have 
- been in the document, it helps data scientist to go further in their studies.
+This is a complete object containing **Parsing** results, it details all
+ detected entities by our algorithm, it helps data scientist to go further
+  in their studies and enhance the quality of their studies.
  
 | **ENDPOINTS** |
 | :--- |
-| \*\*\*\*[**POST** /v1/profile/parsing/file](https://developers.hrflow.ai/api-reference/profile-api/post-profile) |
-| \*\*\*\*[**GET** /v1/profile/parsing](https://developers.hrflow.ai/api-reference/profile-api/get-profile-parsing) |
+| [**POST** /v1/profile/parsing/file](https://developers.hrflow.ai/api-reference/profile-api/post-profile) |
+| [**GET** /v1/profile/parsing](https://developers.hrflow.ai/api-reference/profile-api/get-profile-parsing) |
 
 ## The Parsing Object
 
@@ -64,15 +64,17 @@ This is a complete object that contains **Parsing** results, it details
      'text_language': 'en'
      'educations': [
                     {'content_uid': 'content_uid',
-                     'date_end': {
-                                  'iso8601': '2018-01-01T00:00:00', 
-                                  'text': '2018-01-01', 
-                                  'timestamp': 1514761200},
+                     'title': 'Mathematicien'                     
+                     'school': 'University',
+                     'description': 'Education description',
                      'date_start': {
                                     'iso8601': '2016-01-01T00:00:00',
                                     'text': '2016-01-01',
                                     'timestamp': 1451602800},
-                     'description': 'Education description',
+                     'date_end': {
+                                  'iso8601': '2018-01-01T00:00:00', 
+                                  'text': '2018-01-01', 
+                                  'timestamp': 1514761200},
                      'location': {'geojson': {'category': null,
                                           'city': null,
                                           'city_district': null,
@@ -95,52 +97,51 @@ This is a complete object that contains **Parsing** results, it details
                                           'world_region': null},
                               'lat': null,
                               'lng': null,
-                              'text': null},
-                 'school': 'University',
-                 'title': 'Mathematicien'}
+                              'text': null}}
                ],
- 'educations_duration': 2,
- 'experiences': [
-                 {'content_uid': 'content_uid',
-                  'company': 'Mathematic Departement',
-                  'date_end': {'iso8601': '2018-07-01T00:00:00',
-                               'text': '2018-07-01',
-                               'timestamp': 1530396000},
-                  'date_start': {'iso8601': '2018-01-01T00:00:00',
-                                 'text': '2018-01-01',
-                                 'timestamp': 1467324000},
-                  'description': 'Experience s description',
-                  'location': {'geojson': {'category': null,
-                                           'city': null,
-                                           'city_district': null,
-                                           'country': null,
-                                           'country_region': null,
-                                           'entrance': null,
-                                           'house': null,
-                                           'house_number': null,
-                                           'island': null,
-                                           'level': null,
-                                           'near': null,
-                                           'po_box': null,
-                                           'postcode': null,
-                                           'road': null,
-                                           'staircase': null,
-                                           'state': null,
-                                           'state_district': null,
-                                           'suburb': null,
-                                           'unit': null,
-                                           'world_region': null},
-                               'lat': null,
-                               'lng': null,
-                               'text': null},
-                  'title': 'Data scientist'}],
- 'experiences_duration': 0.7,
- 'skills': [{'name':'manual skill', 'type': 'hard', 'value': null},
-            {'name':'Creative spirit', 'type': 'soft','value': null}, 
-            {'name':'Writing skills', 'type': 'hard','value': null}, 
-            {'name':'Communication', 'type': 'soft','value': null}],
- 'languages': [{'name':'english', 'value': null}],
- 'interests': [{'name':'football', 'value': null}]
+     'educations_duration': 2,
+     'experiences': [
+                     {'content_uid': 'content_uid',
+                      'title': 'Data scientist'
+                      'company': 'Mathematic Departement',
+                      'description': 'Experience s description',
+                      'date_start': {'iso8601': '2018-01-01T00:00:00',
+                                     'text': '2018-01-01',
+                                     'timestamp': 1467324000},
+                      'date_end': {'iso8601': '2018-07-01T00:00:00',
+                                   'text': '2018-07-01',
+                                   'timestamp': 1530396000},
+                      'location': {'geojson': {'category': null,
+                                               'city': null,
+                                               'city_district': null,
+                                               'country': null,
+                                               'country_region': null,
+                                               'entrance': null,
+                                               'house': null,
+                                               'house_number': null,
+                                               'island': null,
+                                               'level': null,
+                                               'near': null,
+                                               'po_box': null,
+                                               'postcode': null,
+                                               'road': null,
+                                               'staircase': null,
+                                               'state': null,
+                                               'state_district': null,
+                                               'suburb': null,
+                                               'unit': null,
+                                               'world_region': null},
+                                   'lat': null,
+                                   'lng': null,
+                                   'text': null}
+                        }],
+     'experiences_duration': 0.7,
+     'skills': [{'name':'manual skill', 'type': 'hard', 'value': null},
+                {'name':'Creative spirit', 'type': 'soft','value': null}, 
+                {'name':'Writing skills', 'type': 'hard','value': null}, 
+                {'name':'Communication', 'type': 'soft','value': null}],
+     'languages': [{'name':'english', 'value': null}],
+     'interests': [{'name':'football', 'value': null}]
  }
 ```
 
@@ -152,10 +153,10 @@ This is a complete object that contains **Parsing** results, it details
 | key | Unique identifier for the object |
 | file name | The original uploaded file name |
 | file size | The original uploaded file size |
-| persons | A list of all parsed Persons |
+| persons | [A list of all parsed Persons](https://developers.hrflow.ai/hr-json/profile-objects/person-object) |
 | emails | A list of all parsed emails |
 | phones | A list of all parsed phones |
-| location | The Profile's location object|
+| location | [The Profile's location object](https://developers.hrflow.ai/hr-json/profile-objects/location-object)|
 | images | All detected images  |
 | picture | An url for parsed profile's picture |
 | urls |  |
@@ -164,11 +165,11 @@ This is a complete object that contains **Parsing** results, it details
 | summary | The Profile's parsed summary |
 | text | The Profile's parsed text |
 | text language | The profile's document original language  |
-| experiences | A list of experience object |
-| experiences\_duration | Experience's duration |
-| educations | A list of Object education |
+| educations | [A list of education object](https://developers.hrflow.ai/hr-json/profile-objects/education-object) |
 | eductions\_duration | Education's duration |
-| skills | The profile's parsed skills |
-| languages | The profile's parsed languages |
-| interests | The profile's parsed interests |
+| experiences | [A list of experience object](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) |
+| experiences\_duration | Experience's duration |
+| skills | [The profile's parsed skills](https://developers.hrflow.ai/hr-json/profile-objects/skill-object) |
+| languages | [The profile's parsed languages](https://developers.hrflow.ai/hr-json/profile-objects/language-object) |
+| interests | [The profile's parsed interests](https://developers.hrflow.ai/hr-json/profile-objects/interest-object) |
 
