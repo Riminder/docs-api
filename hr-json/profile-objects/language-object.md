@@ -1,5 +1,5 @@
 # Interest
-This object contains extracted date
+This object represents a language.
  
 ## The Interest Object
 

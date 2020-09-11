@@ -1,5 +1,5 @@
 # Interest
-This object contains extracted date
+This object represents a interest.
  
 ## The Interest Object
 

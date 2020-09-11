@@ -1,8 +1,6 @@
 # Education
 
-This is a complete object that contains **Parsing** results, it details
- detected entities by our algorithm such dates and locations as they have 
- been in the document, it helps data scientist to go further in their studies.
+This is a standard representation for all parsed education.
  
 ## The Education Object
 
@@ -50,11 +48,11 @@ This is a complete object that contains **Parsing** results, it details
 
 | name | description |
 | :--- | :--- |
-| content\_uid | The education's content_uid |
+| content\_uid | The education's content uid |
 | key | Unique identifier for the object |
-| title | The original uploaded file name |
-| school | The original uploaded file size |
-| description | A list of all parsed full names |
-| date_start | A list of all parsed emails |
-| date_end | A list of all parsed phones |
-| location | Location as detected in the document, it contains the original text|
+| title | The education's title |
+| school | The education's school |
+| description | The education's description |
+| date_start | The education's date start as [date](https://developers.hrflow.ai/hr-json/profile-objects/date-object) object |
+| date_end | The education's date end as [date](https://developers.hrflow.ai/hr-json/profile-objects/date-object) object |
+| location | The education's location as [location](https://developers.hrflow.ai/hr-json/profile-objects/location-object) object|

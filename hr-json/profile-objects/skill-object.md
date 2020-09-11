@@ -1,5 +1,5 @@
 # Skill
-This object contains extracted date
+This object represents a skill.
  
 ## The Skill Object
 

@@ -1,5 +1,5 @@
 # Date
-This object contains extracted date
+This object contains extracted date as iso8601 format, timestamp and parsed date's text.
  
 ## The Date Object
 

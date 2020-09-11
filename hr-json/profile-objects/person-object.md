@@ -1,5 +1,5 @@
 # Person
-This object contains extracted date
+This object represents a person (full name, first name, last name).
  
 ## The Date Object
 
