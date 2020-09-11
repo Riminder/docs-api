@@ -153,10 +153,10 @@ This is a complete object containing **Parsing** results, it details all
 | key | Unique identifier for the object |
 | file name | The original uploaded file name |
 | file size | The original uploaded file size |
-| persons | [A list of all parsed Persons](https://developers.hrflow.ai/hr-json/profile-objects/person-object) |
+| persons | A list of all parsed [Persons](https://developers.hrflow.ai/hr-json/profile-objects/person-object) |
 | emails | A list of all parsed emails |
 | phones | A list of all parsed phones |
-| location | [The Profile's location object](https://developers.hrflow.ai/hr-json/profile-objects/location-object)|
+| location | The Profile's [Location](https://developers.hrflow.ai/hr-json/profile-objects/location-object) object|
 | images | All detected images  |
 | picture | An url for parsed profile's picture |
 | urls |  |
@@ -164,12 +164,12 @@ This is a complete object containing **Parsing** results, it details all
 | driving licence | The Profile's parsed driving licence if exits unless it is set to null  |
 | summary | The Profile's parsed summary |
 | text | The Profile's parsed text |
-| text language | The profile's document original language  |
-| educations | [A list of education object](https://developers.hrflow.ai/hr-json/profile-objects/education-object) |
+| text language | The original language of the document |
+| educations | A list of [Education](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object |
 | eductions\_duration | Education's duration |
-| experiences | [A list of experience object](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) |
+| experiences | A list of [Experience](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object |
 | experiences\_duration | Experience's duration |
-| skills | [The profile's parsed skills](https://developers.hrflow.ai/hr-json/profile-objects/skill-object) |
-| languages | [The profile's parsed languages](https://developers.hrflow.ai/hr-json/profile-objects/language-object) |
-| interests | [The profile's parsed interests](https://developers.hrflow.ai/hr-json/profile-objects/interest-object) |
+| skills | A list of profile's [Skill](https://developers.hrflow.ai/hr-json/profile-objects/skill-object) object |
+| languages | A list of profile's [Language](https://developers.hrflow.ai/hr-json/profile-objects/language-object) object |
+| interests | A list of profile's [Interest](https://developers.hrflow.ai/hr-json/profile-objects/interest-object) object |
 
