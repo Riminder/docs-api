@@ -16,5 +16,5 @@ This object contains extracted date as iso8601 format, timestamp and parsed date
 | name | description |
 | :--- | :--- |
 | iso8601 | The date as iso8601 format |
-| text | The parsed date as it exitsts in the document |
+| text | The parsed date as it exists in the document |
 | timestamp | The date as timestamp. Measured in seconds since the Unix epoch |

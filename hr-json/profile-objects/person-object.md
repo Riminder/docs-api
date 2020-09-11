@@ -1,5 +1,5 @@
 # Person
-This object represents a person (full name, first name, last name).
+This object represents a person (full name, first name, last name) detected in the document.
  
 ## The Date Object
 
