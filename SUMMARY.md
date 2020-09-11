@@ -40,6 +40,12 @@
 
 * [Profile objects](hr-json/profile-objects/README.md)
   * [Parsing object](hr-json/profile-objects/parsing-object.md)
+  * [Date object](hr-json/profile-objects/date-object.md)
+  * [Education object](hr-json/profile-objects/education-object.md)
+  * [Experience object](hr-json/profile-objects/experience-object.md)
+  * [Interest object](hr-json/profile-objects/interest-object.md)
+  * [Location object](hr-json/profile-objects/location-object.md)
+  * [Person object](hr-json/profile-objects/person-object.md)
   * [Profile object](hr-json/profile-objects/profile-object.md)
 * [Job objects](hr-json/job-objects/README.md)
   * [Job object](hr-json/job-objects/job-object.md)
