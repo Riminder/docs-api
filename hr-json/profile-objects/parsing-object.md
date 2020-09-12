@@ -2,10 +2,8 @@
 
 ## Parsing
 
-This is a complete object containing **Parsing** results, it details all
- detected entities by our algorithm, it helps data scientist to go further
-  in their studies and enhance the quality of their studies.
- 
+This is a complete object containing **Parsing** results, it details all detected entities by our algorithm, it helps data scientist to go further in their studies and enhance the quality of their studies.
+
 | **ENDPOINTS** |
 | :--- |
 | [**POST** /v1/profile/parsing/file](https://developers.hrflow.ai/api-reference/profile-api/post-profile) |
@@ -149,19 +147,19 @@ This is a complete object containing **Parsing** results, it details all
 
 | name | description |
 | :--- | :--- |
-| content\_uid | The document's content_uid |
+| content\_uid | The document's content\_uid |
 | key | Unique identifier for the object |
 | file name | The original uploaded file name |
 | file size | The original uploaded file size |
 | persons | A list of all parsed [Persons](https://developers.hrflow.ai/hr-json/profile-objects/person-object) |
 | emails | A list of all parsed emails |
 | phones | A list of all parsed phones |
-| location | The Profile's [Location](https://developers.hrflow.ai/hr-json/profile-objects/location-object) object|
-| images | All detected images  |
+| location | The Profile's [Location](https://developers.hrflow.ai/hr-json/profile-objects/location-object) object |
+| images | All detected images |
 | picture | An url for parsed profile's picture |
 | urls |  |
 | gender | The Profile's gender |
-| driving licence | The Profile's parsed driving licence if exits unless it is set to null  |
+| driving licence | The Profile's parsed driving licence if exits unless it is set to null |
 | summary | The Profile's parsed summary |
 | text | The Profile's parsed text |
 | text language | The original language of the document |

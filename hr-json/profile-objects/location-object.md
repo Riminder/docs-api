@@ -3,7 +3,7 @@
 ## Location
 
 This is object contains Location.
- 
+
 ## The Location Object
 
 ```python
@@ -43,5 +43,4 @@ This is object contains Location.
 | lat | The location's latitude |
 | lng | The location's longitude |
 | geojson | geojson object |
-
 

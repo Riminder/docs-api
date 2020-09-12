@@ -1,6 +1,7 @@
-# Person
-This object represents a person (full name, first name, last name) detected in the document.
- 
+# Person object
+
+This object represents a person \(full name, first name, last name\) detected in the document.
+
 ## The Date Object
 
 ```python
@@ -15,6 +16,7 @@ This object represents a person (full name, first name, last name) detected in t
 
 | name | description |
 | :--- | :--- |
-| full_name | The person's full name |
-| first_name | The person's first name |
-| last_name | The person's last name |
+| full\_name | The person's full name |
+| first\_name | The person's first name |
+| last\_name | The person's last name |
+

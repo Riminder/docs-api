@@ -36,7 +36,7 @@
 * [Metadatas support](getting-started/metadatas.md)
 * [F.A.Q](getting-started/f.a.q.md)
 
-## Hr Json <a id="hr-json"></a>
+## Hr Json
 
 * [Profile objects](hr-json/profile-objects/README.md)
   * [Parsing object](hr-json/profile-objects/parsing-object.md)
@@ -50,9 +50,7 @@
 * [Job objects](hr-json/job-objects/README.md)
   * [Job object](hr-json/job-objects/job-object.md)
 
-## API Reference <a id="api-reference"></a>
-
----
+## API Reference
 
 * [Source Endpoints](api-reference/source-api/README.md)
   * [GET: /sources](api-reference/source-api/get-sources.md)
@@ -93,7 +91,7 @@
     * [profile.parsing](api-reference/webhooks/events/profile.parsing.md)
     * [job.parsing](api-reference/webhooks/events/job.parsing.md)
 
-## INTEGRATIONS <a id="integrations"></a>
+## INTEGRATIONS
 
 * [Destinations](integrations/destinations/README.md)
   * [Webhooks](integrations/destinations/webhook.md)
@@ -121,5 +119,4 @@
 * [Help center](https://support.hrflow.ai)
 * [Service status](https://status.hrflow.ai)
 * [Public Roadmap](https://updates.hrflow.ai)
-
 

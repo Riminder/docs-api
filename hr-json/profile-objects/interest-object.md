@@ -1,6 +1,7 @@
-# Interest
+# Interest object
+
 This object represents a interest.
- 
+
 ## The Interest Object
 
 ```python
@@ -16,3 +17,4 @@ This object represents a interest.
 | :--- | :--- |
 | name | The interest's name |
 | value | The interest's value |
+
