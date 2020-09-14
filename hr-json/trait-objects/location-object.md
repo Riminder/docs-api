@@ -2,7 +2,8 @@
 
 ## Location
 
-To draw up an exhaustive geo location overview of an object, you can use location object. Using detailed information can help to get more accurate analysis.
+To draw up an exhaustive geo location overview of an object, you can use location
+ object.
 
 ## The Location Object
 
@@ -42,5 +43,5 @@ To draw up an exhaustive geo location overview of an object, you can use locatio
 | text | The location's text as parsed |
 | lat | The location's latitude |
 | lng | The location's longitude |
-| geojson | The geojson object that gives more details about location : street number / city / country ... |
+| geojson | The geojson object gives more details about location : street number / city / country ... |
 

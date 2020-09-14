@@ -1,6 +1,7 @@
 # Skill object
 
-Skill describes the expertise as it is mentioned on the document, skill can be either hard or soft, it will be classified by our algorithm.
+Skill describes the expertise as it is mentioned on the document, skill's type
+ can be either hard or soft, it will be classified by our algorithm.
 
 ## The Skill Object
 

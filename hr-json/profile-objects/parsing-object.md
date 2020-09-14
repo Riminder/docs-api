@@ -4,7 +4,7 @@
 
 This is a complete object containing **Parsing** results, it details all detected entities on a document.
 
-It helps data scientist to go further in their studies and enhance the quality of their studies.
+It helps data scientist to go further in their studies and enhance the quality of their analysis.
 
 | **ENDPOINTS** |
 | :--- |
@@ -149,7 +149,7 @@ It helps data scientist to go further in their studies and enhance the quality o
 
 | name | description |
 | :--- | :--- |
-| content\_uid | The document's content\_uid |
+| content\_uid | The object's content uid |
 | key | Unique identifier for the object |
 | file name | The original uploaded file name |
 | file size | The original uploaded file size |
@@ -161,7 +161,7 @@ It helps data scientist to go further in their studies and enhance the quality o
 | picture | The url of profile's picture |
 | urls | The urls for: linkedin / twitter / facebook / github if they exist |
 | gender | The Profile's gender |
-| driving licence | The Profile's driving licence if exits unless it is set to null |
+| driving licence | The Profile's driving licence if exits otherwise the default value is null |
 | summary | The Profile's summary |
 | text | The Profile's text, it contains a long résumé of a profile |
 | text language | The original language of the document |

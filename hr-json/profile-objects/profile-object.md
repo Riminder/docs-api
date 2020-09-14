@@ -2,7 +2,11 @@
 
 ## Profile
 
-The Profile object is a standard representation of a candidate, aims to improve Object Hr Management. It is a faster / readable data structure helping developer to cover many Hr use case.
+The Profile object is a standard representation of a candidate, aims to improve
+ Object Hr Management. 
+ 
+ It is a faster / readable data structure helping developers to cover many Hr use
+  cases.
 
 The API allows you to create, update and retrieve your profile.
 
@@ -103,16 +107,16 @@ The API allows you to create, update and retrieve your profile.
 
 | name | description |
 | :--- | :--- |
-| id | The document's id |
+| id | The object's id |
 | key | Unique identifier for the object |
-| reference | The profile's reference it must be unique for a given source |
+| reference | The profile's reference, it must be unique for a given source |
 | archive | The date when a profile is archived, if the profile is not archived archive will be null |
 | consent\_algorithmic | A list of all parsed full names |
 | source | The source to which the profile belong |
 | updated\_at | Time at which the object was last updated |
 | created\_at | Time at which the object was created |
 | info | The Profile's info, it contains personnel information about a profile such as email, phone |
-| text | The Profile's parsed text, it contains a long résumé of a profile |
+| text | The Profile's text, it contains a long résumé of a profile |
 | text\_language | The original language of the document |
 | educations | A list of [Education](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object, education is identified by a unique key |
 | educations\_duration | The Profile's parsed driving licence if exits |
