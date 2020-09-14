@@ -1,5 +1,5 @@
 ---
-description: Retrieve all boards from your workspace
+description: This endpoint allows you to fetch boards from your workspace.
 ---
 
 # GET: /boards
@@ -10,7 +10,7 @@ Boards
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to fetch boards from your workspace.
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -31,21 +31,19 @@ Filter by board's name
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="string" required=false %}
-API page offset \(Default is 1\)
+API page offset, default value is **1**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Max response size \(Default is 30\)
+Max response size, default value is **30**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" %}
-Sort by \(ie. date, job\)  
-Default is date.
+Sort by \(ie. date, job\), default value is **date.**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" %}
-Order by \(ie asc, desc\)  
-Default is desc
+Order by \(ie asc, desc\), default value is **desc**
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}

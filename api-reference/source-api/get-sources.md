@@ -1,5 +1,5 @@
 ---
-description: Retrieve all sources from your workspace
+description: This endpoint allows you to fetch sources from your workspace.
 ---
 
 # GET: /sources
@@ -10,7 +10,7 @@ Sources
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to fetch sources from your workspace.
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -31,23 +31,19 @@ Filter by source's name.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
-API  page offset.  
-Default is 1
+API  page offset, default value is **1**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Max response size.  
-Default  is 30
+Max response size, default value  is **30**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-Sort by \(ie. date, profile\)  
-Default is date
+Sort by \(ie. date, profile\), default value is **date**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}
-Order by \(.ie asc, desc\)  
-Default is desc
+Order by \(.ie asc, desc\), default value is **desc**
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -195,24 +191,6 @@ Invalid secret key: xxxx
 {% tab title="Bash" %}
 ```bash
 $curl --url "https://api.hrflow.ai/sources?name=python&page=2&limit=5&sort_by=date&order_by=asc" --header "X-API-KEY: api_key"
-```
-{% endtab %}
-
-{% tab title="PHP" %}
-```php
-require_once('vendor/autoload.php');
-
-$client = new Hrflow\Client('your secret key');
-
-$params = [
-    'name'     => 'cvbot',
-    'page'     => 1,
-    'limit'    => 10,
-    'sort_by'  => 'date',
-    'order_by' => 'asc',
-];
-
-$resp = $client->source->list($params) ;
 ```
 {% endtab %}
 

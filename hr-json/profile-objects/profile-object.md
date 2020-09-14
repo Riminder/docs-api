@@ -2,11 +2,9 @@
 
 ## Profile
 
-The Profile object is a standard representation of a candidate, aims to improve
- Object Hr Management. 
- 
- It is a faster / readable data structure helping developers to cover many Hr use
-  cases.
+The Profile object is a standard representation of a candidate, aims to improve Object Hr Management.
+
+It is a faster / readable data structure helping developers to cover many Hr use cases.
 
 The API allows you to create, update and retrieve your profile.
 

@@ -33,12 +33,11 @@ Source key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="file" type="object" required=true %}
-Profile's file resume
+Profile's file resume in binary format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sync\_parsing" type="integer" required=false %}
-Use sync parsing \(ie. 0 or 1\)  
-Default is 0
+Use sync parsing \(ie. 0 or 1\), default value is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sync\_parsing\_indexing" type="integer" required=false %}
@@ -52,7 +51,7 @@ Receive webhook parsing success notification
 Default is 0
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="profile\_content\_type" type="string" required=false %}
+{% api-method-parameter name="content\_type" type="string" required=false %}
 Document content type \(ie application/pdf\)
 {% endapi-method-parameter %}
 
@@ -187,32 +186,6 @@ The first 10 pages are parsed for documents with more than 10 pages.
 ## Example
 
 {% tabs %}
-{% tab title="PHP" %}
-```php
-$client = new Hrflow\Client('your api key');
-
-$data = [
-  'timestamp_reception'   => 1569320033,  
-  'profile_content_type'  => 'application/pdf', 
-  'profile_reference'     => 'profile_reference', 
-  'profile_labels'        =>  [
-    [
-      'job_id'           => 'job_id',
-      'stage'            => 'yes',
-      'stage_timestamp'  => 1585662186,
-      'rating'           => 0.5,
-      'stage_timestamp'  => 1585662186
-    ], 
-    ...
-  ],
-  'profile_metadatas' => [["name" => "mail", "value" => "test@test.com"], ...],
-]
-$profile_file = fopen('/path/to/file.pdf','rb');
-
-$client->profile::addFile($source_id, $profile_file, $data);
-```
-{% endtab %}
-
 {% tab title="Python" %}
 ```python
 from hrflow import Hrflow
