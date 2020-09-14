@@ -163,7 +163,7 @@ It helps data scientist to further in their studies and enhance the quality of t
 | gender | The Profile's gender |
 | driving licence | The Profile's driving licence if exits otherwise the default value is null |
 | summary | The Profile's summary |
-| text | The Profile's text, it contains a long résumé of a profile |
+| text | The Profile's text, it contains a long résumé of a profile, it is generated based on parsed text |
 | text language | The original language of the document |
 | educations | A list of [Education](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object |
 | eductions\_duration | Education's duration |
