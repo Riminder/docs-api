@@ -71,7 +71,7 @@ Profile's tags
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="metadatas" type="array" required=false %}
-Profile's metadata         
+Profile's metadata  
 \(ie \[{"name":"mail","value":"test@test.com"}, ...\]\)
 {% endapi-method-parameter %}
 
@@ -142,13 +142,11 @@ Invalid secret key.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-
-
 While uploading a profile file you can use either **synchronous** or **asynchronous** parsing:
 
-### **Asynchronous parsing:**
+## **Asynchronous parsing:**
 
-As explained in this diagram, parsing **** will be done **asynchronously** as soon as it is available. Then you will receive a webhook notification for success or failure of profile parsing.
+As explained in this diagram, parsing **\*\* will be done** asynchronously\*\* as soon as it is available. Then you will receive a webhook notification for success or failure of profile parsing.
 
 ![](../../.gitbook/assets/asyncparsing-diagram.png)
 
@@ -160,8 +158,8 @@ For synchronous parsing , you will receive profile parsing in the response body.
 
 **sync\_parsing** is an optional request parameter , you can set its value to 1 to use sync parsing or set its value to 0 to use async parsing.
 
-The default behavior uses asynchronous parsing.  
-  
+The default behavior uses asynchronous parsing.
+
 So as to Use Sync Parsing, you need to:
 
 * Create an API source \(HTTP / Python / PHP ...\),
@@ -170,13 +168,13 @@ So as to Use Sync Parsing, you need to:
   * Send a request to HrFlow support team in order to enable this feature for you.
 * Set `sync_parsing` to 1 in your request
 
-### What's a **profile\_key and how to retrieve it ?**
+## What's a **profile\_key and how to retrieve it ?**
 
 A profile ID is a unique identifier for a **HrFlow Profile**. This information is mandatory, **`profile_key` guarantees the processing** of your profile \(parsing, revealing, embedding, etc\).
 
 **How to get a profile\_key**
 
-If you are using SyncParsing you will receive profile\_key in the response's body  and if you are using the AsyncParsing you have 3 possible ways that help you retrieve this information.
+If you are using SyncParsing you will receive profile\_key in the response's body and if you are using the AsyncParsing you have 3 possible ways that help you retrieve this information.
 
 * Upload your document with a `reference`, thus you can get profile's parsing from [this endpoint](https://developers.hrflow.ai/api-reference/profile-api/get-profile-parsing) using `source_key` and `reference`,
 * Set up a webhook that listens to all incoming notifications from HrFlow. As soon as your document is well parsed you will receive a success event including  the profile id,
@@ -186,7 +184,7 @@ If you are using SyncParsing you will receive profile\_key in the response's bod
 The first 10 pages are parsed for documents with more than 10 pages.
 {% endhint %}
 
-### Example
+## Example
 
 {% tabs %}
 {% tab title="PHP" %}
@@ -223,7 +221,7 @@ client = Hrflow(api_secret="Your API Key", api_user="Your API user email",=)
 
 with open('/path/to/file.pdf','rb') as file:
     profile_file = file.read()
-    
+
 client.profile.parsing.add_file(source_key="source_key",
                         profile_file=profile_file,
                         profile_content_type='application/pdf',
@@ -280,8 +278,4 @@ client.profile.parsing.addFile('source_key',
 ```
 {% endtab %}
 {% endtabs %}
-
-
-
-
 

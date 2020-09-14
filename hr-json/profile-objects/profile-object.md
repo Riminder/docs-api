@@ -105,19 +105,19 @@ The API allows you to create, update and retrieve your profile.
 
 | name | description |
 | :--- | :--- |
-| id | The document's content_uid |
+| id | The document's content\_uid |
 | key | Unique identifier for the object |
 | reference | The profile's reference |
-| archive | The date when a profile is archived, if the profile is not archived archive will be null  |
+| archive | The date when a profile is archived, if the profile is not archived archive will be null |
 | consent\_algorithmic | A list of all parsed full names |
 | source | The source object |
-| updated_at | Time at which the object was last updated |
-| created_at | Time at which the object was created |
-| info | The Profile's info object  |
-| text_language | The original language of Profile's attached document |
+| updated\_at | Time at which the object was last updated |
+| created\_at | Time at which the object was created |
+| info | The Profile's info object |
+| text\_language | The original language of Profile's attached document |
 | text | The Profile's text |
-| experiences_duration | The Profile's gender |
-| educations_duration | The Profile's parsed driving licence if exits  |
+| experiences\_duration | The Profile's gender |
+| educations\_duration | The Profile's parsed driving licence if exits |
 | experiences | A list of profile's experience object |
 | educations | A list of profile's education object |
 | attachments | A list of profile's attachment object |
@@ -126,4 +126,5 @@ The API allows you to create, update and retrieve your profile.
 | interests | A list of Object interest |
 | labels | A list of label object that you can attach to an object |
 | tags | A list of tag object that you can include with an object, This can be helpful in attaching tags to a profile |
-| metadatas | A list of metadata object that you can include with an object. This can be useful for storing additional information about the object in a structured format|
+| metadatas | A list of metadata object that you can include with an object. This can be useful for storing additional information about the object in a structured format |
+

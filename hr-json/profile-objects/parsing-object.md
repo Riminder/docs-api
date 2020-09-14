@@ -1,5 +1,3 @@
-# Parsing object
-
 ## Parsing
 
 This is a complete object containing **Parsing** results, it details all
@@ -151,19 +149,23 @@ It helps data scientist to go further in their studies and enhance the quality o
 
 | name | description |
 | :--- | :--- |
-| content\_uid | The document's content_uid |
+| content\_uid | The document's content\_uid |
 | key | Unique identifier for the object |
 | file name | The original uploaded file name |
 | file size | The original uploaded file size |
 | persons | A list of all parsed [Persons](https://developers.hrflow.ai/hr-json/profile-objects/person-object) |
 | emails | A list of all parsed emails, this field records all existing emails in a document. |
 | phones | A list of all parsed phones |
+<<<<<<< HEAD
 | location | The Profile's [Location](https://developers.hrflow.ai/hr-json/profile-objects/location-object) object|
+=======
+| location | The Profile's [Location](https://developers.hrflow.ai/hr-json/profile-objects/location-object) object |
+>>>>>>> 668b125b34e63ab8c65cf7a5def81bbf4acb8485
 | images | All detected images |
 | picture | An url for parsed profile's picture |
 | urls | Details about parsed urls in a document: linkedin / twitter / facebook / github |
 | gender | The Profile's gender |
-| driving licence | The Profile's parsed driving licence if exits unless it is set to null  |
+| driving licence | The Profile's parsed driving licence if exits unless it is set to null |
 | summary | The Profile's parsed summary |
 | text | The Profile's parsed text, it contains a long résumé of a profile |
 | text language | The original language of the document |

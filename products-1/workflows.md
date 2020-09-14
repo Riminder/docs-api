@@ -73,7 +73,7 @@ curl -X POST https://api-workflows.hrflow.ai/teams/XXX/YYY/python3.6/ZZZ \
 ```
 
 {% hint style="danger" %}
-**Important**: The endpoint provided expects to receive a **POST** request with a **valid JSON payloa**d. Using other HTTP methods or sending **multipart/form-data** won't work.
+**Important**: The endpoint provided expects to receive a **POST** request with a **valid JSON payload**. Using other HTTP methods or sending **multipart/form-data** won't work.
 {% endhint %}
 
 ### Pull setup

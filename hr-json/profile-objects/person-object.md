@@ -16,6 +16,7 @@ This object represents a name (full name, first name, last name) as it is detect
 
 | name | description |
 | :--- | :--- |
-| full_name | The person's full name |
-| first_name | The person's first name |
-| last_name | The person's last name |
+| full\_name | The person's full name |
+| first\_name | The person's first name |
+| last\_name | The person's last name |
+

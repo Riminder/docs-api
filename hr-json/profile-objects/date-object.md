@@ -1,6 +1,7 @@
-# Date
+# Date object
+
 This object contains extracted date as iso8601 format, timestamp and parsed date's text.
- 
+
 ## The Date Object
 
 ```python
@@ -18,3 +19,4 @@ This object contains extracted date as iso8601 format, timestamp and parsed date
 | iso8601 | The date as iso8601 format |
 | text | The parsed date as it exists in the document |
 | timestamp | The date as timestamp. Measured in seconds since the Unix epoch |
+

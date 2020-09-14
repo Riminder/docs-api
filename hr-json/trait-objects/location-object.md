@@ -44,4 +44,3 @@ for more accurate analysis.
 | lng | The location's longitude |
 | geojson | The geojson object that gives more details about location : street number / city / country ... |
 
-
