@@ -48,10 +48,16 @@
   * [Date object](hr-json/profile-objects/date-object.md)
 * [Job objects](hr-json/job-objects/README.md)
   * [Job object](hr-json/job-objects/job-object.md)
+  * [Range Date object](hr-json/job-objects/range-date-object.md)
+  * [Range Float object](hr-json/job-objects/range-float-object.md)
+  * [Section object](hr-json/job-objects/section-object.md)
 * [Trait objects](hr-json/trait-objects/README.md)
   * [Location object](hr-json/trait-objects/location-object.md)
   * [Skill object](hr-json/trait-objects/skill-object.md)
   * [Language object](hr-json/trait-objects/language-object.md)
+  * [Label object](hr-json/trait-objects/label-object.md)
+  * [Tag object](hr-json/trait-objects/tag-object.md)
+  * [Metadata object](hr-json/trait-objects/metadata-object.md)
 
 
 

@@ -155,21 +155,21 @@ It helps data scientist to go further in their studies and enhance the quality o
 | file size | The original uploaded file size |
 | persons | A list of all parsed [Persons](https://developers.hrflow.ai/hr-json/profile-objects/person-object) |
 | emails | A list of all parsed emails, this field records all existing emails in a document. |
-| phones | A list of all parsed phones |
-| location | The Profile's [Location](https://developers.hrflow.ai/hr-json/profile-objects/location-object) object |
-| images | All detected images |
-| picture | An url for parsed profile's picture |
-| urls | Details about parsed urls in a document: linkedin / twitter / facebook / github |
+| phones | A list of all parsed phones, this field records all parsed phones in a document. |
+| location | The Profile's [Location](https://developers.hrflow.ai/hr-json/trait-objects/location-object) object |
+| images | A list of URLs for all detected images |
+| picture | The url of profile's picture |
+| urls | The urls for: linkedin / twitter / facebook / github if they exist |
 | gender | The Profile's gender |
-| driving licence | The Profile's parsed driving licence if exits unless it is set to null |
-| summary | The Profile's parsed summary |
-| text | The Profile's parsed text, it contains a long résumé of a profile |
+| driving licence | The Profile's driving licence if exits unless it is set to null |
+| summary | The Profile's summary |
+| text | The Profile's text, it contains a long résumé of a profile |
 | text language | The original language of the document |
 | educations | A list of [Education](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object |
 | eductions\_duration | Education's duration |
 | experiences | A list of [Experience](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object |
-| experiences\_duration | Experience's duration, it shows the profile's seniority  |
-| skills | A list of profile's [Skill](https://developers.hrflow.ai/hr-json/profile-objects/skill-object) object |
-| languages | A list of profile's [Language](https://developers.hrflow.ai/hr-json/profile-objects/language-object) object |
-| interests | A list of profile's [Interest](https://developers.hrflow.ai/hr-json/profile-objects/interest-object) object |
+| experiences\_duration | Experience's duration, it calculates the profile's seniority  |
+| skills | A list of profile's [Skill](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
+| languages | A list of profile's [Language](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
+| interests | A list of profile's [Interest](https://developers.hrflow.ai/hr-json/trait-objects/interest-object) object |
 
