@@ -156,11 +156,7 @@ It helps data scientist to go further in their studies and enhance the quality o
 | persons | A list of all parsed [Persons](https://developers.hrflow.ai/hr-json/profile-objects/person-object) |
 | emails | A list of all parsed emails, this field records all existing emails in a document. |
 | phones | A list of all parsed phones |
-<<<<<<< HEAD
-| location | The Profile's [Location](https://developers.hrflow.ai/hr-json/profile-objects/location-object) object|
-=======
 | location | The Profile's [Location](https://developers.hrflow.ai/hr-json/profile-objects/location-object) object |
->>>>>>> 668b125b34e63ab8c65cf7a5def81bbf4acb8485
 | images | All detected images |
 | picture | An url for parsed profile's picture |
 | urls | Details about parsed urls in a document: linkedin / twitter / facebook / github |
