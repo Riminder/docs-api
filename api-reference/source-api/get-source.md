@@ -1,5 +1,5 @@
 ---
-description: Retrieve a source info
+description: This endpoint allows you to retrieve a source info given a key.
 ---
 
 # GET: /source
@@ -10,7 +10,7 @@ Source
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to retrieve a source info given a key.
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -112,19 +112,6 @@ Invalid secret key.
 {% tab title="Bash" %}
 ```bash
 $curl --url "https://api.hrflow.ai/source?source_id=source_id" --header "X-API-KEY: api_key"
-```
-{% endtab %}
-
-{% tab title="PHP" %}
-```php
-require_once('vendor/autoload.php');
-
-$client = new Hrflow\Client('your secert key');
-
-$source_id = 'source_id' ;
-
-$client->source->get($source_id) ;
-
 ```
 {% endtab %}
 

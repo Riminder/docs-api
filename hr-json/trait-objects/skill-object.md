@@ -3,6 +3,7 @@
 Skill describes the expertise as it is mentioned on the document, skill's type
  can be either hard or soft, it will be parsed then classified by our algorithm.
 
+
 ## The Skill Object
 
 ```python
