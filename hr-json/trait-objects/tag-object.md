@@ -1,12 +1,12 @@
-# Interest
-Language object represents the parsed language in the document.
+# Tag
+Tag helps to mark objects (profile/job).
   
-## The Interest Object
+## The Tag Object
 
 ```python
 {
-    'name':'english',
-    'value': 0.6
+    'name':'archive',
+    'value': true
 }
 ```
 
@@ -14,5 +14,5 @@ Language object represents the parsed language in the document.
 
 | name | description |
 | :--- | :--- |
-| name | The language's name |
-| value | The language's value |
+| name | The tag's name |
+| value | The tag's value |

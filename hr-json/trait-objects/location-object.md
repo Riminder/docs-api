@@ -1,7 +1,6 @@
 ## Location
 
-To draw up an exhaustive position's profile and location for all education 
-and experience, you can use location object. You can use detailed information
+To draw up an exhaustive geo location overview, you can use location object. You can use detailed information
 for more accurate analysis.
  
 ## The Location Object

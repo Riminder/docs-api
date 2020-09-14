@@ -1,12 +1,13 @@
-# Interest
-Language object represents the parsed language in the document.
+# Metadata
+Metadata is a set of an extra-data attached to an object that gives additional
+ information in order to include a more accurate description of the object.
   
-## The Interest Object
+## The Tag Object
 
 ```python
 {
-    'name':'english',
-    'value': 0.6
+    'name':'extra-email',
+    'value': "harry.potter@hrflow.ai"
 }
 ```
 
@@ -14,5 +15,5 @@ Language object represents the parsed language in the document.
 
 | name | description |
 | :--- | :--- |
-| name | The language's name |
-| value | The language's value |
+| name | The metadata's name |
+| value | The metadata's value |

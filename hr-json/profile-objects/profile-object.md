@@ -124,7 +124,7 @@ The API allows you to create, update and retrieve your profile.
 | skills | A list of profile's [Skill](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
 | languages | A list of profile's [Language](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
 | interests | A list of profile's [Interest](https://developers.hrflow.ai/hr-json/trait-objects/interest-object) object |
-| labels | A list of [label](https://developers.hrflow.ai/hr-json/trait-objects/label-object) object that you can attach to an object |
+| labels | A list of [label](https://developers.hrflow.ai/hr-json/profile-objects/label-object) object that you can attach to an object |
 | tags | A list of [tag](https://developers.hrflow.ai/hr-json/trait-objects/tag-object) object that you can include with an object, This can be helpful in attaching tags to a profile |
 | metadatas | A list of [metadata](https://developers.hrflow.ai/hr-json/trait-objects/metadata-object) object that you can include with an object. This can be useful for storing additional information about the object in a structured format |
 
