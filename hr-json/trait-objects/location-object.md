@@ -1,7 +1,7 @@
 ## Location
 
-To draw up an exhaustive geo location overview, you can use location object. You can use detailed information
-for more accurate analysis.
+To draw up an exhaustive geo location overview of an object, you can use location 
+object. Using detailed information can help to get more accurate analysis.
  
 ## The Location Object
 

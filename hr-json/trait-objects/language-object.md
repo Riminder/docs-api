@@ -1,5 +1,5 @@
 # Interest
-Language object represents the parsed language in the document.
+This object contains the parsed language present in a document.
   
 ## The Interest Object
 

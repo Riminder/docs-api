@@ -1,8 +1,6 @@
-# Section object
-
 ## Section
 
-All job's section can be structured and presented as a Section object. 
+A job's section can be presented as one structured object.
  
 ## The Section Object
 

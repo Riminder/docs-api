@@ -1,8 +1,7 @@
-# Range Float object
-
 ## Range Float
 
-To detail. 
+Range Float can be treated using this object. For example, salary related information 
+will be in a Range Float object. 
  
 ## The Range Float Object
 

@@ -1,8 +1,6 @@
-# Range Date object
-
 ## Range Date
 
-All job's section can be structured and presented as a Section object. 
+Range Dates can be treated using this object. 
  
 ## The Range Date Object
 

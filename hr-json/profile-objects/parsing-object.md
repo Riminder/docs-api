@@ -171,5 +171,5 @@ It helps data scientist to go further in their studies and enhance the quality o
 | experiences\_duration | Experience's duration, it calculates the profile's seniority  |
 | skills | A list of profile's [Skill](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
 | languages | A list of profile's [Language](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
-| interests | A list of profile's [Interest](https://developers.hrflow.ai/hr-json/trait-objects/interest-object) object |
+| interests | A list of profile's [Interest](https://developers.hrflow.ai/hr-json/profile-objects/interest-object) object |
 
