@@ -1,7 +1,8 @@
 # Experience
 
-This is a standard representation for all parsed education.
-
+Experience is way to describe the profile's career path, it contains general
+ information about location, date start/end and detailed description / title
+  as it is parsed.
  
 ## The Experience Object
 
@@ -48,7 +49,6 @@ This is a standard representation for all parsed education.
 | name | description |
 | :--- | :--- |
 | content\_uid | The experience's content uid |
-| key | Unique identifier for the object |
 | title | The experience's title |
 | company | The experience's school |
 | description | The experience's description |

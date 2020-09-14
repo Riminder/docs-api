@@ -1,5 +1,7 @@
 # Skill
-This object represents a skill.
+
+Skill describes the expertise as it is mentioned on the document, skill
+ can be either hard or soft, it will be classified by our algorithm.
  
 ## The Skill Object
 

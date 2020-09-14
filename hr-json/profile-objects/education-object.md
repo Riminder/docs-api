@@ -1,6 +1,8 @@
 # Education
 
-This is a standard representation for all parsed education.
+Education is way to describe the profile's academic background, it contains general
+ information about location, date start/end and detailed description / title 
+ as it is parsed.
  
 ## The Education Object
 
@@ -49,7 +51,6 @@ This is a standard representation for all parsed education.
 | name | description |
 | :--- | :--- |
 | content\_uid | The education's content uid |
-| key | Unique identifier for the object |
 | title | The education's title |
 | school | The education's school |
 | description | The education's description |

@@ -1,6 +1,6 @@
 # Interest
-This object represents a language.
- 
+Language object represents the parsed language in the document.
+  
 ## The Interest Object
 
 ```python

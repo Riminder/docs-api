@@ -1,8 +1,8 @@
-# Location object
-
 ## Location
 
-This is object contains Location.
+To draw up an exhaustive position's profile and location for all education 
+and experience, you can use location object. You can use detailed information
+for more accurate analysis.
  
 ## The Location Object
 
@@ -42,6 +42,6 @@ This is object contains Location.
 | text | The location's text as parsed |
 | lat | The location's latitude |
 | lng | The location's longitude |
-| geojson | geojson object |
+| geojson | The geojson object that gives more details about location : street number / city / country ... |
 
 

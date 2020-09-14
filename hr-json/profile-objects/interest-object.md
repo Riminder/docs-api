@@ -1,5 +1,6 @@
 # Interest
-This object represents a interest.
+This object helps finding interesting and exciting things in the document.
+ It lists hobbies and interests detected in the document.
  
 ## The Interest Object
 
