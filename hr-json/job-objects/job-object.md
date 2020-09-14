@@ -2,11 +2,10 @@
 
 ## Profile
 
-This object is a standard representation of a job, it is an abstraction of how 
-it can be treated in a more faster and clearer way. 
- 
+This object is a standard representation of a job, it is an abstraction of how it can be treated in a more faster and clearer way.
+
 The API allows you to create, update and retrieve your job.
- 
+
 | **ENDPOINTS** |
 | :--- |
 | [**POST** /v1/job/indexing](https://developers.hrflow.ai/api-reference/job-api/post-job) |
@@ -69,9 +68,9 @@ The API allows you to create, update and retrieve your job.
 | url | The Job's url where it is published |
 | summary | The Job's summary |
 | location | The Job's [Location](https://developers.hrflow.ai/hr-json/trait-objects/location-object) object |
-| sections | A list of Job's [Section](https://developers.hrflow.ai/hr-json/job-objects/section-object) object, it is very usefull structured format for a section  |
-| ranges_date | A list of Job's [Range Date](https://developers.hrflow.ai/hr-json/job-objects/range-date-object) object, it records all range dates that you can include with a job |
-| ranges_float | A list of Job's [Range Float](https://developers.hrflow.ai/hr-json/job-objects/range-float-object) object, it records all range floats that you can include with a job |
+| sections | A list of Job's [Section](https://developers.hrflow.ai/hr-json/job-objects/section-object) object, it is very usefull structured format for a section |
+| ranges\_date | A list of Job's [Range Date](https://developers.hrflow.ai/hr-json/job-objects/range-date-object) object, it records all range dates that you can include with a job |
+| ranges\_float | A list of Job's [Range Float](https://developers.hrflow.ai/hr-json/job-objects/range-float-object) object, it records all range floats that you can include with a job |
 | skills | A list of Job's [Skill](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
 | languages | A list of profile's [Language](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
 | tags | A list of [tag](https://developers.hrflow.ai/hr-json/trait-objects/tag-object) object that you can include with an object, This can be helpful in marking jobs |

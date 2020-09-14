@@ -55,11 +55,9 @@
   * [Location object](hr-json/trait-objects/location-object.md)
   * [Skill object](hr-json/trait-objects/skill-object.md)
   * [Language object](hr-json/trait-objects/language-object.md)
-  * [Label object](hr-json/profile-objects/label-object.md)
+  * [Label object](hr-json/trait-objects/label-object.md)
   * [Tag object](hr-json/trait-objects/tag-object.md)
   * [Metadata object](hr-json/trait-objects/metadata-object.md)
-
-
 
 ## API Reference
 

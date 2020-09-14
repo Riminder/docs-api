@@ -4,10 +4,6 @@ description: This endpoint allows you to update a JSON profile.
 
 # PUT: /profile/indexing
 
-{% hint style="info" %}
-Profile key is required
-{% endhint %}
-
 Please find below an example of Profile json to update.
 
 ```bash

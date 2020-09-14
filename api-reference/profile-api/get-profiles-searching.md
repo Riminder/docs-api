@@ -67,7 +67,7 @@ Filter by location's latitude and longitude
 \(ie. {"lat":35.7516600, "lng":10.7110900}\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="location\_distance" type="number" required=false %}
+{% api-method-parameter name="location\_distance" type="integer" required=false %}
 Filter by raduis
 {% endapi-method-parameter %}
 
@@ -91,11 +91,11 @@ Filter by experience location's latitude and longitude
 Filter by experience location radius
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="experiences\_duration\_min" type="number" required=false %}
+{% api-method-parameter name="experiences\_duration\_min" type="integer" required=false %}
 Filter by experience duration min
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="experiences\_duration\_max" type="number" required=false %}
+{% api-method-parameter name="experiences\_duration\_max" type="integer" required=false %}
 Filter by experience duration max
 {% endapi-method-parameter %}
 
@@ -107,15 +107,15 @@ Filter by education keywords
 Filter by education location's latitude and longitude
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="education\_location\_distance" type="number" required=false %}
+{% api-method-parameter name="education\_location\_distance" type="integer" required=false %}
 Filter by education location radius
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="educations\_duration\_min" type="number" required=false %}
+{% api-method-parameter name="educations\_duration\_min" type="integer" required=false %}
 Filter by education duration min
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="educations\_duration\_max" type="number" required=false %}
+{% api-method-parameter name="educations\_duration\_max" type="integer" required=false %}
 Filter by education duration max
 {% endapi-method-parameter %}
 
@@ -278,21 +278,21 @@ from hrflow import Hrflow
 client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 client.profile.searching.list(source_keys=["source_key1", "source_key2"],
-                            limit: 10, page: 1, order_by: 'asc',
+                            limit=10, page=1, order_by='asc',
                             sort_by='date', created_at_min='2020-05-15T23:59:59.999Z',
                             created_at_max='2020-07-15T23:59:59.999Z', name='name',
                             email='exemple@exemple.com',
                             location_geopoint={
-                              lat:'357516600',
-                              lon:'10.7110900',
+                              'lat':'357516600',
+                              'lon':'10.7110900',
                             },
                             location_distance=40,
                             summary_keywords=["keyword1", "keyword2"],
                             text_keywords=["keyword1", "keyword2"],
                             experience_keywords=["keyword1", "keyword2"],
                             experience_location_geopoint={
-                              lat: 35.7516600,
-                              lon: 10.7110900',
+                              'lat': 35.7516600,
+                              'lon': 10.7110900',
                             },
                             experience_location_distance=40,
                             experiences_duration_min=3,

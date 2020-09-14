@@ -1,5 +1,5 @@
 ---
-description: Put Job
+description: This endpoint allows you to update an existing job.
 ---
 
 # PUT: /job/indexing
@@ -51,7 +51,7 @@ Agent key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at" type="string" required=true %}
-Creation date as iso format
+Creation date in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="url" type="string" required=true %}
@@ -244,12 +244,12 @@ data = {
     "agent_key": "agent_key",
     "reference": "Job's reference abc",
     "url": "https://www.pole-emploi.ai/jobs/data_engineer",
-    "summary": "As an engineer for the Data Engineering Infrastructure team,
+    "summary": """As an engineer for the Data Engineering Infrastructure team,
                 you will design, build, scale, and evolve our data engineering
                 platform, services and tooling. Your work will have a critical 
                 impact on all areas of business: powering core data pipelines,
                 supporting detailed internal analytics, calculating customer
-                usage, securing our platform, and much more.",
+                usage, securing our platform, and much more.""",
     "location": {
                   "text": "Dampierre en Burly (45)",
                   "geopoint": {

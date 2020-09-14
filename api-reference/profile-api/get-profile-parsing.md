@@ -351,24 +351,13 @@ Invalid secret key.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="info" %}
+One of key , reference or email parameters should be provided to identify the profile.
+{% endhint %}
+
 ### Example
 
 {% tabs %}
-{% tab title="PHP" %}
-```php
-require_once('vendor/autoload.php');
-
-$client = new Hrflow\Client('your secret key');
-
-$source_key         = 'source_key' ;
-$key                = 'key';
-$reference          = 'profile_reference'; // optional
-$email              = 'profile_email'; // optional
-
-$client->profile->parsing->list($source_key, $key, $reference, $email);
-```
-{% endtab %}
-
 {% tab title="Python" %}
 ```python
 from hrflow import Hrflow
@@ -406,10 +395,6 @@ client.profile.parsing.get('source_key', {
 ```
 {% endtab %}
 {% endtabs %}
-
-{% hint style="info" %}
- One of key , `reference` or `email` parameters should be provided to identify the profile.
-{% endhint %}
 
 
 

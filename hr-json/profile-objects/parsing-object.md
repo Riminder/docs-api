@@ -1,11 +1,11 @@
+# Parsing object
+
 ## Parsing
 
-This is a complete object containing **Parsing** results, it details all
- detected entities on a document.
- 
-It helps data scientist to go further in their studies and enhance the quality of
- their studies.
- 
+This is a complete object containing **Parsing** results, it details all detected entities on a document.
+
+It helps data scientist to go further in their studies and enhance the quality of their studies.
+
 | **ENDPOINTS** |
 | :--- |
 | [**POST** /v1/profile/parsing/file](https://developers.hrflow.ai/api-reference/profile-api/post-profile) |
@@ -168,7 +168,7 @@ It helps data scientist to go further in their studies and enhance the quality o
 | educations | A list of [Education](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object |
 | eductions\_duration | Education's duration |
 | experiences | A list of [Experience](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object |
-| experiences\_duration | Experience's duration, it calculates the profile's seniority  |
+| experiences\_duration | Experience's duration, it calculates the profile's seniority |
 | skills | A list of profile's [Skill](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
 | languages | A list of profile's [Language](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
 | interests | A list of profile's [Interest](https://developers.hrflow.ai/hr-json/profile-objects/interest-object) object |

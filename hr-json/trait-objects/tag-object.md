@@ -1,6 +1,7 @@
-# Tag
-Tag helps to mark objects (profile/job).
-  
+# Tag object
+
+Tag helps to mark objects \(profile/job\).
+
 ## The Tag Object
 
 ```python
@@ -16,3 +17,4 @@ Tag helps to mark objects (profile/job).
 | :--- | :--- |
 | name | The tag's name |
 | value | The tag's value |
+

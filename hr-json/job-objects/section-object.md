@@ -1,7 +1,9 @@
+# Section object
+
 ## Section
 
 A job's section can be presented as one structured object.
- 
+
 ## The Section Object
 
 ```python
@@ -19,3 +21,4 @@ A job's section can be presented as one structured object.
 | description | The section's description |
 | name | The section's name |
 | title | The section's title |
+

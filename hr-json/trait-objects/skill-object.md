@@ -1,8 +1,7 @@
-# Skill
+# Skill object
 
-Skill describes the expertise as it is mentioned on the document, skill
- can be either hard or soft, it will be classified by our algorithm.
- 
+Skill describes the expertise as it is mentioned on the document, skill can be either hard or soft, it will be classified by our algorithm.
+
 ## The Skill Object
 
 ```python
@@ -20,3 +19,4 @@ Skill describes the expertise as it is mentioned on the document, skill
 | name | The skill's name |
 | type | The skill's value : either hard or soft |
 | value | The skill's value |
+

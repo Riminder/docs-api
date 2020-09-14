@@ -2,12 +2,10 @@
 
 ## Profile
 
-The Profile object is a standard representation of a candidate, aims to improve
- Object Hr Management. It is a faster / readable data structure helping developer 
- to cover many Hr use case. 
- 
+The Profile object is a standard representation of a candidate, aims to improve Object Hr Management. It is a faster / readable data structure helping developer to cover many Hr use case.
+
 The API allows you to create, update and retrieve your profile.
- 
+
 | **ENDPOINTS** |
 | :--- |
 | [**POST** /v1/profile/indexing](https://developers.hrflow.ai/api-reference/profile-api/post-profile-indexing) |
@@ -107,19 +105,19 @@ The API allows you to create, update and retrieve your profile.
 | :--- | :--- |
 | id | The document's id |
 | key | Unique identifier for the object |
-| reference | The profile's reference it must be unique for a given source|
+| reference | The profile's reference it must be unique for a given source |
 | archive | The date when a profile is archived, if the profile is not archived archive will be null |
 | consent\_algorithmic | A list of all parsed full names |
 | source | The source to which the profile belong |
 | updated\_at | Time at which the object was last updated |
 | created\_at | Time at which the object was created |
-| info | The Profile's info, it contains personnel information about a profile such as email, phone  |
+| info | The Profile's info, it contains personnel information about a profile such as email, phone |
 | text | The Profile's parsed text, it contains a long résumé of a profile |
 | text\_language | The original language of the document |
 | educations | A list of [Education](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object, education is identified by a unique key |
 | educations\_duration | The Profile's parsed driving licence if exits |
 | experiences | A list of [Experience](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object, experience is identified by a unique key |
-| experiences\_duration | Experience's duration, it calculates the profile's seniority  |
+| experiences\_duration | Experience's duration, it calculates the profile's seniority |
 | attachments | A list of profile's attachment object |
 | skills | A list of profile's [Skill](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
 | languages | A list of profile's [Language](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |

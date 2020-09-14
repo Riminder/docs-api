@@ -10,7 +10,7 @@ description: Retrieve profile's scoring given profile id and source_id.
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to score list of profiles for a given job.
+This endpoint allows you to score list of profiles against given job.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -81,7 +81,7 @@ Profile's name
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="email" type="string" required=false %}
-Profile"s email
+Profile's email
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_geopoint" type="object" required=false %}
@@ -125,15 +125,15 @@ Education keywords
 Education's latitude and longitude
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="education\_location\_distance" type="number" required=false %}
+{% api-method-parameter name="education\_location\_distance" type="integer" required=false %}
 Education's location raduis 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="educations\_duration\_min" type="number" required=false %}
+{% api-method-parameter name="educations\_duration\_min" type="integer" required=false %}
 Education duration min
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="educations\_duration\_max" type="number" required=false %}
+{% api-method-parameter name="educations\_duration\_max" type="integer" required=false %}
 Education duration max
 {% endapi-method-parameter %}
 
@@ -344,21 +344,21 @@ client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 client.profile.scoring.list(source_keys=["source_key1", "source_key2"],
                             board_key="board_key", job_key="job_key", use_agent= 1,
-                            stage="new", limit: 10, page: 1, order_by: 'asc',
+                            stage="new", limit= 10, page= 1, order_by= 'asc',
                             sort_by='date', created_at_min='2020-05-15T23:59:59.999Z',
                             created_at_max='2020-07-15T23:59:59.999Z', name='name',
                             email='exemple@exemple.com',
                             location_geopoint={
-                              lat:'357516600',
-                              lon:'10.7110900',
+                              'lat':'357516600',
+                              'lon':'10.7110900',
                             },
                             location_distance=40,
                             summary_keywords=["keyword1", "keyword2"],
                             text_keywords=["keyword1", "keyword2"],
                             experience_keywords=["keyword1", "keyword2"],
                             experience_location_geopoint={
-                              lat: 35.7516600,
-                              lon: 10.7110900',
+                              'lat': 35.7516600,
+                              'lon': 10.7110900',
                             },
                             experience_location_distance=40,
                             experiences_duration_min=3,

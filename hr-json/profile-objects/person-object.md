@@ -1,7 +1,7 @@
-# Person
-This object represents a name (full name, first name, last name) as it is detected in
- the document.
- 
+# Person object
+
+This object represents a name \(full name, first name, last name\) as it is detected in the document.
+
 ## The Date Object
 
 ```python

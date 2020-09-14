@@ -32,30 +32,30 @@ List of board keys
 
 {% api-method-parameter name="limit" type="integer" required=false %}
 Total job to retrieve  
-Default is 10
+Default value is 10
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
 API page offset  
-Default is 1
+Default value is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}
 Order by \(ie. desc, asc\)  
-Default is "desc"
+Default value is "desc"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
 Sort by \(ie. created\_at, searching, scoring\)  
-Default is "created\_at"
+Default value is "created\_at"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_min" type="string" required=false %}
-Start date as iso format
+Start date in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_max" type="string" required=false %}
-End date as iso format
+End date in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=false %}

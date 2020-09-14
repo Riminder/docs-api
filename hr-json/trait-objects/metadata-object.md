@@ -1,7 +1,7 @@
-# Metadata
-Metadata is a set of an extra-data attached to an object that gives additional
- information in order to include a more accurate description of the object.
-  
+# Metadata object
+
+Metadata is a set of an extra-data attached to an object that gives additional information in order to include a more accurate description of the object.
+
 ## The Tag Object
 
 ```python
@@ -17,3 +17,4 @@ Metadata is a set of an extra-data attached to an object that gives additional
 | :--- | :--- |
 | name | The metadata's name |
 | value | The metadata's value |
+

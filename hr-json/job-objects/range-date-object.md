@@ -1,7 +1,9 @@
+# Range Date object
+
 ## Range Date
 
-Range Dates can be treated using this object. 
- 
+Range Dates can be treated using this object.
+
 ## The Range Date Object
 
 ```python
@@ -17,5 +19,6 @@ Range Dates can be treated using this object.
 | name | description |
 | :--- | :--- |
 | name | The section's description |
-| value_max | The section's name |
-| value_min | The section's title |
+| value\_max | The section's name |
+| value\_min | The section's title |
+

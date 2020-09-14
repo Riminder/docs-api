@@ -1,10 +1,8 @@
 ---
-description: Add job
+description: This endpoint allows you to add new job to a given board.
 ---
 
 # POST: /job/indexing
-
-This endpoint accepts json files.
 
 Please find below an example of json job that you can upload.
 
@@ -159,7 +157,10 @@ Job's summary
 
 {% api-method-parameter name="sections" type="array" required=true %}
 Job's sections  
-\(ie. \[{"name": "section\_name", "title": "section\_title", ""
+\(ie. \[{  
+         "name": "section\_name",   
+         "title": "section\_title",   
+         "description": "section\_description"}...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location" type="object" required=true %}
@@ -194,11 +195,20 @@ Job's metadatas
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ranges\_float" type="array" required=true %}
-Job's ranges float
+Job's ranges float  
+ \(ie. \[{  
+         'name': 'salary',  
+         'unit': 'eur',  
+         'value\_max': 50,  
+         'calue\_min': 30} ...\]\) 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ranges\_date" type="array" required=true %}
-Job's ranges date
+Job's ranges date  
+\(ie. \[{  
+         'name': 'dates',  
+         'value\_max': '2020-09-15T21:59',  
+         'value\_min': '2020-05-18T21:59'}...\]\)
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -314,12 +324,12 @@ data = {
     "agent_key": "agent_key",
     "reference": "Job's reference abc",
     "url": "https://www.pole-emploi.ai/jobs/data_engineer",
-    "summary": "As an engineer for the Data Engineering Infrastructure team,
+    "summary": """As an engineer for the Data Engineering Infrastructure team, 
                 you will design, build, scale, and evolve our data engineering
                 platform, services and tooling. Your work will have a critical 
                 impact on all areas of business: powering core data pipelines,
                 supporting detailed internal analytics, calculating customer
-                usage, securing our platform, and much more.",
+                usage, securing our platform, and much more.""",
     "location": {
                   "text": "Dampierre en Burly (45)",
                   "geopoint": {

@@ -1,12 +1,8 @@
 ---
-description: Retrieve Job
+description: This endpoint allows you to retrieve an existing job.
 ---
 
 # GET: /job/indexing
-
-{% hint style="info" %}
-This endpoint requires at least a job key and board\_key.
-{% endhint %}
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/job/indexing" %}
 {% api-method-summary %}
@@ -34,12 +30,12 @@ User's email.
 Board key
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="key" type="string" required=false %}
-Job key
+{% api-method-parameter name="key" type="string" required=true %}
+Job' s key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="reference" type="string" required=false %}
-Job reference
+Job's reference
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
