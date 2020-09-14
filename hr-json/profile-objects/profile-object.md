@@ -91,7 +91,26 @@ The API allows you to create, update and retrieve your profile.
                       'hard_skills': [],
                       'soft_skills': []}],
     'experiences_duration': 0.7,
-    'attachments': [],
+    'attachments': [{
+                      'alt': 'alt_resume',
+                      'created_at': '2020-09-11T10:26:29+0000',
+                      'extension': '.pdf',
+                      'file_name': 'resume',
+                      'file_size': 528305,
+                      'original_file_name': 'resume',
+                      'public_url': 'https://riminder-documents-eu-2019-12.s3-eu-west-1.amazonaws.com/resume.pdf',
+                      'type': 'resume',
+                      'updated_at': '2020-09-11T10:26:29+0000'},
+                     {
+                      'alt': 'alt_original',
+                      'created_at': '2020-09-11T10:26:29+0000',
+                      'extension': '.pdf',
+                      'file_name': 'original',
+                      'file_size': 537789,
+                      'original_file_name': 'original',
+                      'public_url': 'https://riminder-documents-eu-2019-12.s3-eu-west-1.amazonaws.com/original.pdf',
+                      'type': 'original',
+                      'updated_at': '2020-09-11T10:26:29+0000'}],
     'skills': [{'name': 'manual skill', 'value': null},
                 {'name': 'Creative spirit', 'value': null},
                 {'name': 'Writing skills', 'value': null},
@@ -111,7 +130,7 @@ The API allows you to create, update and retrieve your profile.
 | key | Unique identifier for the object |
 | reference | The profile's reference, it must be unique for a given source |
 | archive | The date when a profile is archived, if the profile is not archived archive will be null |
-| consent\_algorithmic | A list of all parsed full names |
+| consent\_algorithmic | The user's algorithmic consent, it tells the algorithm what permissions it has to use personnel data |
 | source | The source to which the profile belong |
 | updated\_at | Time at which the object was last updated |
 | created\_at | Time at which the object was created |
@@ -122,7 +141,7 @@ The API allows you to create, update and retrieve your profile.
 | educations\_duration | The Profile's parsed driving licence if exits |
 | experiences | A list of [Experience](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object, experience is identified by a unique key |
 | experiences\_duration | Experience's duration, it calculates the profile's seniority |
-| attachments | A list of profile's attachment object |
+| attachments | A list of profile's [Attachment](https://developers.hrflow.ai/hr-json/profile-objects/attachment-object) object |
 | skills | A list of profile's [Skill](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
 | languages | A list of profile's [Language](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
 | interests | A list of profile's [Interest](https://developers.hrflow.ai/hr-json/trait-objects/interest-object) object |

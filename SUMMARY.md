@@ -46,6 +46,7 @@
   * [Experience object](hr-json/profile-objects/experience-object.md)
   * [Interest object](hr-json/profile-objects/interest-object.md)
   * [Date object](hr-json/profile-objects/date-object.md)
+  * [Attachment object](hr-json/profile-objects/attachment-object.md)
 * [Job objects](hr-json/job-objects/README.md)
   * [Job object](hr-json/job-objects/job-object.md)
   * [Range Date object](hr-json/job-objects/range-date-object.md)

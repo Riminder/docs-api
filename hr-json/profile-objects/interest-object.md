@@ -1,6 +1,7 @@
 # Interest object
 
-This object helps finding interesting and exciting things in the document. It lists hobbies and interests detected in the document.
+This object helps finding interesting and exciting things mentioned in the document.
+ It lists all parsed hobbies and interests.
 
 ## The Interest Object
 
