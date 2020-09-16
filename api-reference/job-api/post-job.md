@@ -128,35 +128,35 @@ User's email.
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="board\_key" type="string" required=true %}
-Board key
+The key of the board in which the Job will be added
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=true %}
-Job's name
+The Job's title
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="agent\_key" type="string" required=false %}
-Agent key
+The Agent unique identifier to attach to this Job
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="reference" type="string" required=true %}
-Job reference
+The Job's reference, it is unique for a given board
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at" type="string" required=true %}
-Creation date as iso Format
+The creation date in iso Format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="url" type="string" required=true %}
-Job's url
+The Job's url
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="summary" type="string" required=true %}
-Job's summary
+A brief summary to describe missions and context of the Job
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sections" type="array" required=true %}
-Job's sections  
+The Job's sections  
 \(ie. \[{  
          "name": "section\_name",   
          "title": "section\_title",   
@@ -175,27 +175,27 @@ Job's location
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="skills" type="array" required=true %}
-Job's skills  
+The Job's required skills  
 \(ie. \[{"name": "skill", "type":"hard or soft", "value":0.8}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="languages" type="array" required=true %}
-Job's languages  
+The Job's required languages  
 \(ie. \[{"name": "language", "value": 0.7}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags" type="array" required=true %}
-Job's tags  
+The Job's tags to include with the Job  
 \(ie. \[{"name": "tag", "value":"tag\_value"}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="metadatas" type="array" required=true %}
-Job's metadatas   
+The Job's metadata   
 \(ie. \[{"name": "meta", "value":"meta\_value"}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ranges\_float" type="array" required=true %}
-Job's ranges float  
+The Job's ranges float  
  \(ie. \[{  
          'name': 'salary',  
          'unit': 'eur',  
@@ -204,7 +204,7 @@ Job's ranges float
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ranges\_date" type="array" required=true %}
-Job's ranges date  
+The Job's ranges date  
 \(ie. \[{  
          'name': 'dates',  
          'value\_max': '2020-09-15T21:59',  

@@ -29,7 +29,7 @@ User's email
 
 {% api-method-form-data-parameters %}
 {% api-method-parameter name="source\_key" type="string" required=true %}
-Source key
+The key of the source in which the Profile will be added
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="file" type="object" required=true %}
@@ -37,17 +37,17 @@ Profile's file resume in binary format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sync\_parsing" type="integer" required=false %}
-Use sync parsing \(ie. 0 or 1\), default value is 0
+To enable sync parsing you set this value to 1 otherwise the value is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sync\_parsing\_indexing" type="integer" required=false %}
-Index sync parsing results \(ie. 0 or 1\), default value  
-is 0
+This parameter is used when you are using sync parsing, it enables Profile indexing
+  so this object will be available using search engine. The default value is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="webhook\_parsing\_sending" type="integer" required=false %}
-Receive webhook parsing success notification  
-\(ie. 0 or 1\), default value is 0
+To enable the reception of webhook notification after parsing and before indexing,
+you set the value to 1. The default value is 0.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="content\_type" type="string" required=false %}
@@ -64,21 +64,21 @@ Profile's reference, it is a unique value for a given source
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at" type="string" required=false %}
-Reception date in iso format
+The Creation datetime in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="labels" type="array" required=false %}
-Profile's labels  
+The Profile's labels to include with the object 
 \(ie \[{"job\_key": "job\_key", "job\_reference": "test", "stage": "yes", "stage\_timestamp":1585662186, "rating":0.5, "stage\_timestamp":1585662186}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags" type="array" required=false %}
-Profile's tags  
+The Profile's tags, aims to mark uploaded object
 \(ie \[{"name":"blacklist","value":true}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="metadatas" type="array" required=false %}
-Profile's metadata  
+The Profile's metadata  
 \(ie \[{"name":"mail","value":"test@test.com"}, ...\]\)
 {% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
@@ -155,7 +155,7 @@ As explained in this diagram, parsing **\*\* will be done** asynchronously\*\* a
 
 **Synchronous parsing:**
 
-For synchronous parsing , you will receive profile parsing in the response body.
+For synchronous parsing , you will receive [Profile](https://developers.hrflow.ai/hr-json/profile-objects/profile-object) and [Parsing](https://developers.hrflow.ai/hr-json/profile-objects/parsing-object) object in the response body.
 
 ![](../../.gitbook/assets/syncparsing-diagram.png)
 

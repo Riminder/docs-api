@@ -27,15 +27,15 @@ User's email.
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="board\_key" type="string" required=true %}
-Board's key containing the giving job.
+The board's unique identifier containing the given Job.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="job\_key" type="string" required=true %}
-Job' s key
+The Job's unique identifier
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="source\_keys" type="array" required=true %}
-List of source keys in which profiles will be scored
+Only Profiles in these sources will be scored
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="use\_agent" type="array" required=false %}
@@ -43,7 +43,7 @@ Use agent or not \(ie. 0 or 1\), default value is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="stage" type="string" required=false %}
-Stage \(ie. 'new', 'yes', 'later', 'no'\), default value is 'new'
+Filter by Profile's stage \(ie. 'new', 'yes', 'later', 'no'\), default value is 'new'
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
@@ -85,7 +85,8 @@ Filter by location's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="integer" required=false %}
-Max radius to set in the query
+If location's latitude and longitude are present, you can set radius to in filter
+ query
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="summary\_keywords" type="array" required=false %}
@@ -105,7 +106,7 @@ Filter by experience location's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="experience\_location\_distance" type="integer" required=false %}
-Set experience's location raduis 
+Set experience's location radius 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="experiences\_duration\_min" type="integer" required=false %}
@@ -125,7 +126,7 @@ Filter by education's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="education\_location\_distance" type="integer" required=false %}
-Set education's location raduis 
+Set education's location radius 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations\_duration\_min" type="integer" required=false %}

@@ -98,23 +98,23 @@ User's email
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="source\_key" type="string" required=true %}
-Source key
+The key of the source in which the Profile will be added
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="key" type="string" required=true %}
-Profile key
+The key of the Profile update
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="consent\_algorithmic" type="object" required=true %}
-Profile's consent
+The user's algorithmic consent, it tells the algorithm what permissions it has to use personal data
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at" type="string" required=true %}
-Created date as ISO
+The Creation datetime in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="reference" type="string" required=false %}
-Profile's reference
+Profile's reference, it is a unique for a given source
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="info" type="array" required=true %}
@@ -131,26 +131,6 @@ Profile's related info :
       "summary": "Brief summary",  
       "urls" : {...}  
 }
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="experiences" type="array" required=true %}
-Profile's experiences:  
-\[{  
-      "title": "EXP1",  
-      "company": "HrFlow"  
-      "description": "Exp description",  
-      "location": {  
-                       "text": "Paris",   
-                       "lat": 48.8534 ,  
-                       "lng": 2.3488},  
-      "date\_start": {"iso8601": "2018-01-01T00:00:00"},  
-      "date\_end": {"iso8601": "2018-07-01T00:00:00"}  
-},  
-...\]
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="experiences\_duration" type="number" required=true %}
-Experience's duration
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations" type="array" required=true %}
@@ -171,15 +151,35 @@ Profile's educations:
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations\_duration" type="number" required=true %}
-Education's duration
+The Education's duration
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="experiences" type="array" required=true %}
+Profile's experiences:  
+\[{  
+      "title": "EXP1",  
+      "company": "HrFlow"  
+      "description": "Exp description",  
+      "location": {  
+                       "text": "Paris",   
+                       "lat": 48.8534 ,  
+                       "lng": 2.3488},  
+      "date\_start": {"iso8601": "2018-01-01T00:00:00"},  
+      "date\_end": {"iso8601": "2018-07-01T00:00:00"}  
+},  
+...\]
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="experiences\_duration" type="number" required=true %}
+The profile's seniority.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="text" type="string" required=true %}
-Profile's text
+A text to include with a Profile, it describes concisely each experience and education.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="text\_language" type="string" required=true %}
-Text language
+The language of the original text, it is in ISO 639-1 format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="skills" type="array" required=true %}
@@ -191,15 +191,15 @@ Profile's skills : \[{
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="languages" type="array" required=true %}
-Profile's languages \[{"name": "english", "value":1}, ...\]
+The Profile's languages \[{"name": "english", "value":1}, ...\]
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="interests" type="array" required=true %}
-Profile's interests \[{"name": "e-sport", "value": 0.8},...\]
+The Profile's interests \[{"name": "e-sport", "value": 0.8},...\]
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="labels" type="array" required=true %}
-Profile's labels \[{  
+The Profile's labels \[{  
                               "stage": "yes",   
                               "job\_key": job\_key,  
                               "date\_stage": "2020-07-07T00:00:00",  
@@ -209,7 +209,7 @@ Profile's labels \[{
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags" type="array" required=true %}
-Profile's tags \[{"name": "archive", "value": true}, ...\]
+The Profile's tags \[{"name": "archive", "value": true}, ...\]
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="metadatas" type="array" required=true %}

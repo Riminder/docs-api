@@ -1,7 +1,5 @@
 ---
-description: >-
-  For a given profile retrieves a list of jobs with the profile's matching
-  score.
+description: This endpoint allows you to get job's scoring.
 ---
 
 # GET: /jobs/scoring
@@ -12,7 +10,6 @@ Get /jobs/scoring
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get job's scoring.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -28,20 +25,20 @@ User's email.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="board\_keys" type="array" required=true %}
-List of board keys
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="agent\_key" type="string" required=true %}
-Agent key
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="source\_key" type="string" required=true %}
-Source key
+The source's unique identifier containing the given Profile.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="profile\_key" type="string" required=true %}
-Profile key
+The Profile unique identifier
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="board\_keys" type="array" required=true %}
+Only Jobs in these boards will be scored
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="agent\_key" type="string" required=true %}
+The agent unique identifier
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="use\_agent" type="integer" required=false %}
@@ -66,11 +63,11 @@ Sort by \(ie. created\_at\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_min" type="string" required=false %}
-Start date as iso Format
+Minimum creation datetime in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_max" type="string" required=false %}
-End date as iso Format
+Maximum creation datetime in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_geopoint" type="object" required=false %}
@@ -78,8 +75,9 @@ Filter by location's latitude and longitude
 \(ie. {"lat":35.7516600, "lng":10.7110900}\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="location\_distance" type="number" required=false %}
-Max radius
+{% api-method-parameter name="location\_distance" type="integer" required=false %}
+If location's latitude and longitude are present, you can set radius to in filter
+ query
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="summary\_keywords" type="array" required=false %}

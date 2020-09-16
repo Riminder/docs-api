@@ -1,5 +1,5 @@
 ---
-description: Retrieve a list of profiles based on given filters
+description: This endpoint allows you to search profiles based on filters.
 ---
 
 # GET: /profiles/searching
@@ -10,7 +10,6 @@ Get /profiles/searching
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to search profiles based on filters.
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -25,25 +24,28 @@ User's email.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="source\_keys" type="string" required=true %}
-List of source key
+{% api-method-parameter name="source\_keys" type="array" required=true %}
+Only Profiles in these sources will be scored
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="stage" type="string" required=false %}
+Filter by Profile's stage \(ie. 'new', 'yes', 'later', 'no'\), default value is 'new'
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Total profiles to search per page
+Total profiles to score, default value is 30
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
-API page offset
+API page offset, default value is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}
-order by \(ie. asc, desc\)
+Order by \(ie. asc, desc\), default value is "desc"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-sort by \(ie. created_at, updated_at, location, location_experience,
+Sort by \(ie. created_at, updated_at, location, location_experience,
  location_education, searching, scoring \)
 {% endapi-method-parameter %}
 
@@ -69,7 +71,8 @@ Filter by location's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="integer" required=false %}
-Max radius to set in the query
+If location's latitude and longitude are present, you can set radius to in filter
+ query
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="summary\_keywords" type="array" required=false %}
@@ -89,7 +92,7 @@ Filter by experience location's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="experience\_location\_distance" type="integer" required=false %}
-Set experience's location raduis 
+Set experience's location radius 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="experiences\_duration\_min" type="integer" required=false %}
@@ -109,7 +112,7 @@ Filter by education's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="education\_location\_distance" type="integer" required=false %}
-Set education's location raduis 
+Set education's location radius 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations\_duration\_min" type="integer" required=false %}

@@ -26,36 +26,34 @@ User's email.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
+
 {% api-method-parameter name="board\_keys" type="array" required=true %}
-List of board keys
+Only Jobs in these boards will be scored
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Total job to retrieve  
-Default value is 10
+Total job to score, default value is 30
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
-API page offset  
-Default value is 1
+API page offset, default value is 30
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}
-Order by \(ie. desc, asc\)  
-Default value is "desc"
+Order by \(ie. desc or asc\)  
+Default is "desc"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-Sort by \(ie. created\_at, searching, scoring\)  
-Default value is "created\_at"
+Sort by \(ie. created\_at\) 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_min" type="string" required=false %}
-Start date as iso Format
+Minimum creation datetime in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_max" type="string" required=false %}
-End date as iso Format
+Maximum creation datetime in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_geopoint" type="object" required=false %}
@@ -63,8 +61,9 @@ Filter by location's latitude and longitude
 \(ie. {"lat":35.7516600, "lng":10.7110900}\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="location\_distance" type="number" required=false %}
-Max radius
+{% api-method-parameter name="location\_distance" type="integer" required=false %}
+If location's latitude and longitude are present, you can set radius to in filter
+ query
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="summary\_keywords" type="array" required=false %}

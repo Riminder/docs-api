@@ -31,19 +31,19 @@ User's email.
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="source\_key" type="string" required=true %}
-source key.
+The source unique identifier
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="key" type="string" required=false %}
-profile key.
+The profile unique identifier
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="reference" type="string" required=false %}
-profile reference.
+The profile's reference
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="email" type="string" required=false %}
-profile email.
+The profile's email
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
