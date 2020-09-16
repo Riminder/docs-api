@@ -343,7 +343,8 @@ data = {
                     "description": "Bac+5"
                   }],
     "skills": [{
-                  "name": "python",None               },
+                  "name": "python",
+                  "value": None},
                {
                   "name": "spark",
                   "value": 0.9
