@@ -154,8 +154,8 @@ It helps data scientist to further in their studies and enhance the quality of t
 | file name | The original uploaded file name |
 | file size | The original uploaded file size |
 | persons | A list of all parsed [Persons](https://developers.hrflow.ai/hr-json/profile-objects/person-object) |
-| emails | A list of all parsed emails, this field records all existing emails in a document. |
-| phones | A list of all parsed phones, this field records all parsed phones from a document. |
+| emails | This field records all existing emails in a document. |
+| phones | This field records all parsed phones from a document. |
 | location | The Profile's [Location](https://developers.hrflow.ai/hr-json/trait-objects/location-object) object |
 | images | A list of URLs for all detected images |
 | picture | The url of profile's picture |
@@ -163,7 +163,7 @@ It helps data scientist to further in their studies and enhance the quality of t
 | gender | The Profile's gender |
 | driving licence | The Profile's driving licence if exits otherwise the default value is null |
 | summary | The Profile's summary |
-| text | The Profile's text, it contains a long résumé of a profile, it is generated based on parsed text |
+| text | The Profile's text, it contains a long resume of a profile, it is generated based on parsed text |
 | text language | The original language of the document |
 | educations | A list of [Education](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object |
 | eductions\_duration | Education's duration |

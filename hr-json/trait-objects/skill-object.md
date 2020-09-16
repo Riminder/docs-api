@@ -1,14 +1,14 @@
 # Skill object
 
-Skill describes the expertise as it is mentioned on the document, skill's type
- can be either hard or soft, it will be parsed then classified by our algorithm.
+Skill describes a detected expertise. Our AI algorithm further tag the skill with 
+a hard (for hard skills) or soft (for soft skill) type.
 
 
 ## The Skill Object
 
 ```python
 {
-    'name':'manual skill',
+    'name':'python',
     'type': 'hard',
     'value': 1
 }
@@ -19,6 +19,6 @@ Skill describes the expertise as it is mentioned on the document, skill's type
 | name | description |
 | :--- | :--- |
 | name | The skill's name |
-| type | The skill's value : either hard or soft |
-| value | The skill's value |
+| type | The skill's type : either hard or soft |
+| value | The skill's value, it measures the confidence level of expertise|
 

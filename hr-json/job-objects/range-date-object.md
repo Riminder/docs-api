@@ -18,7 +18,7 @@ Range Dates can be treated using this object.
 
 | name | description |
 | :--- | :--- |
-| name | The section's description |
-| value\_max | The section's name |
-| value\_min | The section's title |
+| name | The range date's description |
+| value\_max | The range date's name |
+| value\_min | The range date's title |
 

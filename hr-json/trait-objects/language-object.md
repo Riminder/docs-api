@@ -1,6 +1,6 @@
 # Language object
 
-This object contains the parsed language present in a document.
+This object holds language information.
 
 ## The Interest Object
 
@@ -16,5 +16,5 @@ This object contains the parsed language present in a document.
 | name | description |
 | :--- | :--- |
 | name | The language's name |
-| value | The language's value |
+| value | The language's value, measuring language's expertise'  |
 

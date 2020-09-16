@@ -1,6 +1,8 @@
 # Date object
 
-This object contains extracted date as iso8601 format, timestamp and parsed date's text.
+This object contains datetime information in ISO8601 format with further 
+timestamp and detected parsed date in text attribute.
+
 
 ## The Date Object
 
@@ -16,7 +18,7 @@ This object contains extracted date as iso8601 format, timestamp and parsed date
 
 | name | description |
 | :--- | :--- |
-| iso8601 | The date as iso8601 format |
-| text | The parsed date as it exists in the document |
+| iso8601 | The datetime in iso8601 format |
+| text | The parsed date as found in the document |
 | timestamp | The date as timestamp. Measured in seconds since the Unix epoch |
 

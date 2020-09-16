@@ -2,7 +2,8 @@
 
 ## Range Float
 
-Range Float can be treated using this object. For example, salary related information will be in a Range Float object.
+Range Float can be treated using this object. For example, salary related
+ information will be in a Range Float object.
 
 ## The Range Float Object
 
@@ -19,8 +20,8 @@ Range Float can be treated using this object. For example, salary related inform
 
 | name | description |
 | :--- | :--- |
-| name | The range date's name |
-| unit | The range date's unit |
-| value\_max | The range date's maximum value |
-| value\_min | The range date's minimum title |
+| name | The range float's name |
+| unit | The range float's unit |
+| value\_max | The float date's maximum value |
+| value\_min | The float date's minimum value |
 

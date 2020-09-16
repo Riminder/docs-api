@@ -1,7 +1,8 @@
 # Experience object
 
 Experience is way to describe the profile's career path, it contains general 
-information about location, date start/end and detailed such as description / title.
+information like location, date start/end and details information such as
+ description / title.
 
 ## The Experience Object
 
@@ -51,7 +52,7 @@ information about location, date start/end and detailed such as description / ti
 | title | The experience's title |
 | company | The experience's school |
 | description | The experience's description |
-| date\_start | The experience's date start as [date](https://developers.hrflow.ai/hr-json/profile-objects/date-object) object |
-| date\_end | The experience's date end as [date](https://developers.hrflow.ai/hr-json/profile-objects/date-object) object |
+| date\_start | The education's start date as [date](https://developers.hrflow.ai/hr-json/profile-objects/date-object) object |
+| date\_end | The experience's end date as [date](https://developers.hrflow.ai/hr-json/profile-objects/date-object) object |
 | location | The experience's location as [location](https://developers.hrflow.ai/hr-json/profile-objects/location-object) object |
 

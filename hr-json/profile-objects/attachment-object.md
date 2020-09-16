@@ -1,6 +1,6 @@
 # Attachment object
 
-This object represents the attached document, it can be a resume or a cover.
+This object represents an attachment (resume or cover).
 
 ## The Attachment Object
 
@@ -26,9 +26,9 @@ This object represents the attached document, it can be a resume or a cover.
 | updated_at | Time at which the object was last updated |
 | created_at | Time at which the object was created |
 | extension | The attachment's extension |
-| file_name | The attachment's file name |
-| file_size | The attachment's file size |
-| original_file_name | The attachment's original file name |
-| public_url | The attachment's url, it is useful when you want to retrieve original files |
+| file_name | The attachment's name |
+| file_size | The attachment's size |
+| original_file_name | The attachment's original name |
+| public_url | The attachment's url, One of ["resume", "cover", "other"] |
 | type | The attachment's type, its value can be one from this set (resume/cover/other) |
 
