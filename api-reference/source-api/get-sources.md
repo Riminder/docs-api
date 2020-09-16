@@ -4,7 +4,7 @@ description: This endpoint allows you to fetch sources from your workspace.
 
 # GET: /sources
 
-{% api-method method="get" host="https://api.hrflow.ai/v1" path="/sources" %}
+{% api-method method="get" host="https://api.hrflow.ai" path="/v1/sources" %}
 {% api-method-summary %}
 Sources
 {% endapi-method-summary %}

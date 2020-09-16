@@ -1,5 +1,5 @@
 ---
-description: This endpoint allows you to get the profile's attachment.
+description: This endpoint allows you to get the Profile's attachment.
 ---
 
 # GET: /profile/indexing/attachment
@@ -8,7 +8,7 @@ description: This endpoint allows you to get the profile's attachment.
 One of key , reference or email parameters should be provided to identify the profile.
 {% endhint %}
 
-{% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/indexing/attachments" %}
+{% api-method method="get" host="https://api.hrflow.ai" path="/v1/profile/indexing/attachments" %}
 {% api-method-summary %}
 Get /profile/indexing/attachments
 {% endapi-method-summary %}

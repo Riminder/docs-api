@@ -8,7 +8,7 @@ description: This endpoint allows you to get the Parsing object.
 One of key , reference or email parameters should be provided to identify the profile.
 {% endhint %}
 
-{% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/parsing" %}
+{% api-method method="get" host="https://api.hrflow.ai" path="/v1/profile/parsing" %}
 {% api-method-summary %}
 Get /profile/parsing
 {% endapi-method-summary %}

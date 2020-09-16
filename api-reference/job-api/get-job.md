@@ -4,7 +4,7 @@ description: This endpoint allows you to retrieve an existing Job.
 
 # GET: /job/indexing
 
-{% api-method method="get" host="https://api.hrflow.ai/v1" path="/job/indexing" %}
+{% api-method method="get" host="https://api.hrflow.ai" path="/v1/job/indexing" %}
 {% api-method-summary %}
 Get Job
 {% endapi-method-summary %}

@@ -4,7 +4,7 @@ description: This endpoint allows you to retrieve a source info given a key.
 
 # GET: /source
 
-{% api-method method="get" host="https://api.hrflow.ai/" path="v1/source" %}
+{% api-method method="get" host="https://api.hrflow.ai" path="/v1/source" %}
 {% api-method-summary %}
 Source
 {% endapi-method-summary %}

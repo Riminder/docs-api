@@ -105,7 +105,7 @@ You can include complementary information such as :
 * job's tags,
 * job's metadata.
 
-{% api-method method="post" host="https://api.hrflow.ai/v1" path="/job/indexing" %}
+{% api-method method="post" host="https://api.hrflow.ai" path="/v1/job/indexing" %}
 {% api-method-summary %}
 Post /job/indexing
 {% endapi-method-summary %}

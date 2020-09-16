@@ -1,5 +1,5 @@
 ---
-description: This endpoint allows you to index new Profile.
+description: This endpoint allows you to index new Profile object.
 ---
 
 # POST: /profile/indexing

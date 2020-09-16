@@ -1,5 +1,5 @@
 ---
-description: This endpoint allows you to update an existing job.
+description: This endpoint allows you to update an existing Job.
 ---
 
 # PUT: /job/indexing
@@ -8,7 +8,7 @@ description: This endpoint allows you to update an existing job.
 This endpoint requires at least a job key and board\_key.
 {% endhint %}
 
-{% api-method method="put" host="https://api.hrflow.ai/v1" path="/job/indexing" %}
+{% api-method method="put" host="https://api.hrflow.ai" path="/v1/job/indexing" %}
 {% api-method-summary %}
 Put Job
 {% endapi-method-summary %}

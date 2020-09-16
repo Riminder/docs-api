@@ -4,7 +4,7 @@ description: Retrieve a list of jobs based on given filters
 
 # GET: /jobs/searching
 
-{% api-method method="get" host="https://api.hrflow.ai/v1" path="/jobs/searching" %}
+{% api-method method="get" host="https://api.hrflow.ai" path="/v1/jobs/searching" %}
 {% api-method-summary %}
 Get /jobs/searching
 {% endapi-method-summary %}
@@ -51,20 +51,16 @@ Default value is "created\_at"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_min" type="string" required=false %}
-Start date in iso format
+Start date as iso Format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_max" type="string" required=false %}
-End date in iso format
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="name" type="string" required=false %}
-Filter by job's name
+End date as iso Format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_geopoint" type="object" required=false %}
-Filter by location's lattitude and longitude  
-\(ie. {"lat"35.7516600: , "lon":10.7110900}\)
+Filter by location's latitude and longitude   
+\(ie. {"lat":35.7516600, "lng":10.7110900}\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="number" required=false %}
@@ -72,11 +68,11 @@ Max radius
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="summary\_keywords" type="array" required=false %}
-Filter by summary keywords
+Filter by keywords in summary
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="text\_keywords" type="array" required=false %}
-Filter by text keywords
+Filter by keywords in text
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="skills" type="array" required=false %}
@@ -88,15 +84,19 @@ Filter by languages
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags\_included" type="array" required=false %}
-Filter by tags
+Filter by tags to include
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="tags\_excluded" type="array" required=false %}
+Filter by tags to exclude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ranges\_float" type="array" required=false %}
-Filter by ranges float
+Filter by range floats
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ranges\_date" type="array" required=false %}
-Filter by ranges date
+Filter by range dates
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}

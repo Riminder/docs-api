@@ -6,7 +6,7 @@ description: >-
 
 # GET: /jobs/scoring
 
-{% api-method method="get" host="https://api.hrflow.ai/v1" path="/jobs/scoring" %}
+{% api-method method="get" host="https://api.hrflow.ai" path="/v1/jobs/scoring" %}
 {% api-method-summary %}
 Get /jobs/scoring
 {% endapi-method-summary %}
@@ -45,18 +45,15 @@ Profile key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="use\_agent" type="integer" required=false %}
-Use agent \(ie 0 or 1\)  
-Default is 1
+Use agent \(ie 0 or 1\), default value is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Total job to score  
-Default is 30
+Total job to score, default value is 30
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
-API page offset  
-Default is 30
+API page offset, default value is 30
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}
@@ -102,15 +99,19 @@ Filter by languages
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags\_included" type="array" required=false %}
-Filter by tags 
+Filter by tags to include
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="tags\_excluded" type="array" required=false %}
+Filter by tags to exclude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ranges\_float" type="array" required=false %}
-Filter by range float
+Filter by range floats
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ranges\_date" type="array" required=false %}
-Filter by range date
+Filter by range dates
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}

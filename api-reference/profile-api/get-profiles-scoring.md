@@ -4,7 +4,7 @@ description: This endpoint allows you to score list of profiles against given jo
 
 # GET: /profiles/scoring
 
-{% api-method method="get" host="https://api.hrflow.ai/v1" path="/profiles/scoring" %}
+{% api-method method="get" host="https://api.hrflow.ai" path="/v1/profiles/scoring" %}
 {% api-method-summary %}
 /profiles/scoring
 {% endapi-method-summary %}
@@ -55,11 +55,12 @@ API page offset, default value is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}
-order by \(ie. asc, desc\), default value is "desc"
+Order by \(ie. asc, desc\), default value is "desc"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-sort by \(ie. scoring, searching, date\), default value is "created\_at"
+Sort by \(ie. created_at, updated_at, location, location_experience,
+ location_education, searching, scoring \)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at\_min" type="string" required=false %}
@@ -103,6 +104,10 @@ Filter by experience keywords
 Filter by experience location's latitude and longitude
 {% endapi-method-parameter %}
 
+{% api-method-parameter name="experience\_location\_distance" type="integer" required=false %}
+Set experience's location raduis 
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="experiences\_duration\_min" type="integer" required=false %}
 Filter by minimum seniority
 {% endapi-method-parameter %}
@@ -120,7 +125,7 @@ Filter by education's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="education\_location\_distance" type="integer" required=false %}
-Filter by education's location raduis 
+Set education's location raduis 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations\_duration\_min" type="integer" required=false %}
@@ -141,14 +146,19 @@ Filter by a list of languages
 \( ie. \[{ name: 'english', value: 'fluent' }\] \) 
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="tags" type="array" required=false %}
-Filter a List of tags \(ie. \[{ name: 'active', value: true }\] \)
-{% endapi-method-parameter %}
-
 {% api-method-parameter name="interests" type="array" required=false %}
 Filter by a list of interests  
  \(ie. \[{ name: 'football', value: null }\] \)
 {% endapi-method-parameter %}
+
+{% api-method-parameter name="tags_included" type="array" required=false %}
+Filter by a List of tags to include \(ie. \[{ name: 'active', value: true }\] \)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="tags_excluded" type="array" required=false %}
+Filter by a List of tags to exclude \(ie. \[{ name: 'active', value: false }\] \)
+{% endapi-method-parameter %}
+
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
