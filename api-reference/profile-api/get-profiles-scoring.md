@@ -64,11 +64,11 @@ Sort by \(ie. created_at, updated_at, location, location_experience,
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at\_min" type="string" required=false %}
-start date in iso datetime
+Filter by minimum creation
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at\_max" type="string" required=false %}
-end date in iso datetime
+Filter by maximum creation
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=false %}
