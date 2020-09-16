@@ -2,8 +2,7 @@
 
 ## Job
 
-This object is a standard representation of a job, it is an abstraction of 
-how it can be treated in a faster and clearer way.
+This object is a standard representation of a job, it is an abstraction of how it can be treated in a faster and clearer way.
 
 The API allows you to create, update and retrieve your job.
 

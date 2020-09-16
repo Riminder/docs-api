@@ -41,14 +41,13 @@ Use sync parsing \(ie. 0 or 1\), default value is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sync\_parsing\_indexing" type="integer" required=false %}
-Index sync parsing results \(ie. 0 or 1\)  
-Default is 0
+Index sync parsing results \(ie. 0 or 1\), default value  
+is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="webhook\_parsing\_sending" type="integer" required=false %}
 Receive webhook parsing success notification  
-\(ie. 0 or 1\)  
-Default is 0
+\(ie. 0 or 1\), default value is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="content\_type" type="string" required=false %}
@@ -56,7 +55,7 @@ Document content type \(ie application/pdf\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="reference" type="string" required=false %}
-Profile's reference
+Profile's reference, it is a unique value for a given source
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="labels" type="array" required=false %}

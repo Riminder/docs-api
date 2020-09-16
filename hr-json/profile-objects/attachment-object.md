@@ -1,6 +1,6 @@
 # Attachment object
 
-This object represents an attachment (resume or cover).
+This object represents an attachment \(resume or cover\).
 
 ## The Attachment Object
 
@@ -23,12 +23,12 @@ This object represents an attachment (resume or cover).
 | name | description |
 | :--- | :--- |
 | alt | The file hash id, the value is calculated based on the file's binary |
-| updated_at | Time at which the object was last updated |
-| created_at | Time at which the object was created |
+| updated\_at | Time at which the object was last updated |
+| created\_at | Time at which the object was created |
 | extension | The attachment's extension |
-| file_name | The attachment's name |
-| file_size | The attachment's size |
-| original_file_name | The attachment's original name |
-| public_url | The attachment's url, One of ["resume", "cover", "other"] |
-| type | The attachment's type, its value can be one from this set (resume/cover/other) |
+| file\_name | The attachment's name |
+| file\_size | The attachment's size |
+| original\_file\_name | The attachment's original name |
+| public\_url | The attachment's url, One of \["resume", "cover", "other"\] |
+| type | The attachment's type, its value can be one from this set \(resume/cover/other\) |
 

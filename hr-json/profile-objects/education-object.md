@@ -1,8 +1,6 @@
 # Education object
 
-Education is way to describe the profile's academic background, it contains general 
-information like location, date start/end and details information such as
- description / title.
+Education is way to describe the profile's academic background, it contains general information like location, date start/end and details information such as description / title.
 
 ## The Education Object
 

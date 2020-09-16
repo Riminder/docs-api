@@ -1,8 +1,6 @@
 # Experience object
 
-Experience is way to describe the profile's career path, it contains general 
-information like location, date start/end and details information such as
- description / title.
+Experience is way to describe the profile's career path, it contains general information like location, date start/end and details information such as description / title.
 
 ## The Experience Object
 

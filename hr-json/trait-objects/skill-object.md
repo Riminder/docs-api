@@ -1,8 +1,6 @@
 # Skill object
 
-Skill describes a detected expertise. Our AI algorithm further tag the skill with 
-a hard (for hard skills) or soft (for soft skill) type.
-
+Skill describes a detected expertise. Our AI algorithm further tag the skill with a hard \(for hard skills\) or soft \(for soft skill\) type.
 
 ## The Skill Object
 
@@ -20,5 +18,5 @@ a hard (for hard skills) or soft (for soft skill) type.
 | :--- | :--- |
 | name | The skill's name |
 | type | The skill's type : either hard or soft |
-| value | The skill's value, it measures the confidence level of expertise|
+| value | The skill's value, it measures the confidence level of expertise |
 

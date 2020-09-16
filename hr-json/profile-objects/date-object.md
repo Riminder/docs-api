@@ -1,8 +1,6 @@
 # Date object
 
-This object contains datetime information in ISO8601 format with further 
-timestamp and detected parsed date in text attribute.
-
+This object contains datetime information in ISO8601 format with further timestamp and detected parsed date in text attribute.
 
 ## The Date Object
 
