@@ -54,8 +54,16 @@ Receive webhook parsing success notification
 Document content type \(ie application/pdf\)
 {% endapi-method-parameter %}
 
+{% api-method-parameter name="key" type="string" required=false %}
+Profile's key, the key is used when you want to override an existing parsing.
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="reference" type="string" required=false %}
 Profile's reference, it is a unique value for a given source
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="created\_at" type="string" required=false %}
+Reception date as iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="labels" type="array" required=false %}
@@ -73,9 +81,6 @@ Profile's metadata
 \(ie \[{"name":"mail","value":"test@test.com"}, ...\]\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="created\_at" type="string" required=false %}
-Reception date as iso format
-{% endapi-method-parameter %}
 {% endapi-method-form-data-parameters %}
 {% endapi-method-request %}
 
