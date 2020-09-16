@@ -17,11 +17,11 @@ Source
 {% api-method-request %}
 {% api-method-headers %}
 {% api-method-parameter name="X-API-KEY" type="string" required=true %}
- Authentication token
+Authentication token
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
- User's email
+User's email
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
@@ -104,9 +104,7 @@ Invalid secret key.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-
-
-### Example
+## Example
 
 {% tabs %}
 {% tab title="Bash" %}
@@ -139,7 +137,6 @@ client.source.get('source_key').then(response => {
     console.log(response);
     // ...
 });
-
 ```
 {% endtab %}
 {% endtabs %}

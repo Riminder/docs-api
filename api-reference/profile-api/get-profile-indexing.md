@@ -206,7 +206,7 @@ Profile object is successfully retrieved
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example
+## Example
 
 {% tabs %}
 {% tab title="Python" %}

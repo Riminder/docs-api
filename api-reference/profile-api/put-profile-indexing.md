@@ -41,8 +41,8 @@ Please find below an example of Profile json to update.
           "github":"",
           "picture":""},
       "picture":null,
-  	  "location":{"text": null},
-  	  "summary": "Brief summary"
+        "location":{"text": null},
+        "summary": "Brief summary"
   },
   "experiences": [{
       "date_start":  {"iso8601": "2018-01-01T00:00:00"},
@@ -120,34 +120,33 @@ Profile's reference, it is a unique for a given source
 {% api-method-parameter name="info" type="array" required=true %}
 Profile's related info :  
 {  
-      "full\_name": XXX,  
-      "first\_name": XXX,  
-      "last\_name": XXX,  
-      "email": XXX,  
-      "phone": 20202020,  
-      "gender": F,  
-      "picture":  
-      "location": {"text": null},  
-      "summary": "Brief summary",  
-      "urls" : {...}  
+"full\_name": XXX,  
+"first\_name": XXX,  
+"last\_name": XXX,  
+"email": XXX,  
+"phone": 20202020,  
+"gender": F,  
+"picture":  
+"location": {"text": null},  
+"summary": "Brief summary",  
+"urls" : {...}  
 }
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations" type="array" required=true %}
 Profile's educations:  
 \[{  
-      "title" : "EDU1",  
-      "school": "HrFlow Academy",  
-      "description": "Edu description",  
-      "location": {  
-                       "text": "Paris",  
-                       "lat" : 48.8534,  
-                       "lng": 2.3488},  
-     "date\_start": { "iso8601": "2016-01-01T00:00:00"},  
-     "date\_end": {"iso8601": "2018-01-01T00:00:00"}  
+"title" : "EDU1",  
+"school": "HrFlow Academy",  
+"description": "Edu description",  
+"location": {  
+"text": "Paris",  
+"lat" : 48.8534,  
+"lng": 2.3488},  
+"date\_start": { "iso8601": "2016-01-01T00:00:00"},  
+"date\_end": {"iso8601": "2018-01-01T00:00:00"}  
 },  
-...\]  
-                          
+...\]
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations\_duration" type="number" required=true %}
@@ -157,15 +156,15 @@ The Education's duration
 {% api-method-parameter name="experiences" type="array" required=true %}
 Profile's experiences:  
 \[{  
-      "title": "EXP1",  
-      "company": "HrFlow"  
-      "description": "Exp description",  
-      "location": {  
-                       "text": "Paris",   
-                       "lat": 48.8534 ,  
-                       "lng": 2.3488},  
-      "date\_start": {"iso8601": "2018-01-01T00:00:00"},  
-      "date\_end": {"iso8601": "2018-07-01T00:00:00"}  
+"title": "EXP1",  
+"company": "HrFlow"  
+"description": "Exp description",  
+"location": {  
+"text": "Paris",  
+"lat": 48.8534 ,  
+"lng": 2.3488},  
+"date\_start": {"iso8601": "2018-01-01T00:00:00"},  
+"date\_end": {"iso8601": "2018-07-01T00:00:00"}  
 },  
 ...\]
 {% endapi-method-parameter %}
@@ -184,10 +183,10 @@ The language of the original text, it is in ISO 639-1 format
 
 {% api-method-parameter name="skills" type="array" required=true %}
 Profile's skills : \[{  
-                              "name": "Python",   
-                              "type": "hard",  
-                              "value": 0.6},  
-                              ...\]
+"name": "Python",  
+"type": "hard",  
+"value": 0.6},  
+...\]
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="languages" type="array" required=true %}
@@ -200,12 +199,12 @@ The Profile's interests \[{"name": "e-sport", "value": 0.8},...\]
 
 {% api-method-parameter name="labels" type="array" required=true %}
 The Profile's labels \[{  
-                              "stage": "yes",   
-                              "job\_key": job\_key,  
-                              "date\_stage": "2020-07-07T00:00:00",  
-                              "rating": 5,  
-                              "date\_rating" : "2020-07-06T00:00:00"},  
-                           ...\]
+"stage": "yes",  
+"job\_key": job\_key,  
+"date\_stage": "2020-07-07T00:00:00",  
+"rating": 5,  
+"date\_rating" : "2020-07-06T00:00:00"},  
+...\]
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags" type="array" required=true %}
@@ -441,8 +440,8 @@ data = {
           "github":"",
           "picture":""},
       "picture":None,
-  	  "location":{"text": None},
-  	  "summary": "Brief summary"
+        "location":{"text": None},
+        "summary": "Brief summary"
   },
   "experiences": [{
       "date_start":  {"iso8601": "2018-01-01T00:00:00"},
@@ -520,8 +519,8 @@ const data = {
           'github': '',
           'picture': ''},
       'picture':null,
-  	  'location':{'text': null},
-  	  'summary': 'Brief summary'
+        'location':{'text': null},
+        'summary': 'Brief summary'
   },
   'experiences': [{
       'date_start':  {'iso8601': '2018-01-01T00:00:00'},

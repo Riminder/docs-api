@@ -10,6 +10,7 @@ Get /jobs/scoring
 {% endapi-method-summary %}
 
 {% api-method-description %}
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -59,7 +60,7 @@ Default is "desc"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-Sort by \(ie. created\_at\) 
+Sort by \(ie. created\_at\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_min" type="string" required=false %}
@@ -71,13 +72,12 @@ Maximum creation datetime in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_geopoint" type="object" required=false %}
-Filter by location's latitude and longitude   
+Filter by location's latitude and longitude  
 \(ie. {"lat":35.7516600, "lng":10.7110900}\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="integer" required=false %}
-If location's latitude and longitude are present, you can set radius to in filter
- query
+If location's latitude and longitude are present, you can set radius to in filter query
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="summary\_keywords" type="array" required=false %}
@@ -117,7 +117,7 @@ Filter by range dates
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Jobs successfully retrieved 
+Jobs successfully retrieved
 {% endapi-method-response-example-description %}
 
 ```python

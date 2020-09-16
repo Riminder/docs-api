@@ -97,6 +97,23 @@ client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 response = client.document.parsing.post(text="Harry Potter is a Python Enginner")
 ```
 {% endtab %}
+
+{% tab title="Javascript" %}
+```javascript
+import Hrflow from 'hrflow';
+const client = new Hrflow({ 
+    api_secret: 'Your API Key',
+    api_user: 'Your API user email'
+});
+
+client.document.parsing.post("Harry Potter is a Python Enginner")
+.then(response => {
+    console.log(response);
+    // ...
+});
+
+```
+{% endtab %}
 {% endtabs %}
 
 

@@ -216,7 +216,7 @@ Invalid secret key.
 {% endapi-method-spec %}
 {% endapi-method %}
 
-### Example
+## Example
 
 {% tabs %}
 {% tab title="Python" %}
@@ -252,12 +252,7 @@ client.profile.parsing.get('source_key', {
     console.log(response);
     // ...
 });
-
 ```
 {% endtab %}
 {% endtabs %}
-
-
-
-
 
