@@ -41,13 +41,11 @@ To enable sync parsing you set this value to 1 otherwise the value is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sync\_parsing\_indexing" type="integer" required=false %}
-This parameter is used when you are using sync parsing, it enables Profile indexing
-  so this object will be available using search engine. The default value is 0
+This parameter is used when you are using sync parsing, it enables Profile indexing so this object will be available using search engine. The default value is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="webhook\_parsing\_sending" type="integer" required=false %}
-To enable the reception of webhook notification after parsing and before indexing,
-you set the value to 1. The default value is 0.
+To enable the reception of webhook notification after parsing and before indexing, you set the value to 1. The default value is 0.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="content\_type" type="string" required=false %}
@@ -68,13 +66,11 @@ The Creation datetime in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="labels" type="array" required=false %}
-The Profile's labels to include with the object 
-\(ie \[{"job\_key": "job\_key", "job\_reference": "test", "stage": "yes", "stage\_timestamp":1585662186, "rating":0.5, "stage\_timestamp":1585662186}, ...\]\)
+The Profile's labels to include with the object \(ie \[{"job\_key": "job\_key", "job\_reference": "test", "stage": "yes", "stage\_timestamp":1585662186, "rating":0.5, "stage\_timestamp":1585662186}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags" type="array" required=false %}
-The Profile's tags, aims to mark uploaded object
-\(ie \[{"name":"blacklist","value":true}, ...\]\)
+The Profile's tags, aims to mark uploaded object \(ie \[{"name":"blacklist","value":true}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="metadatas" type="array" required=false %}

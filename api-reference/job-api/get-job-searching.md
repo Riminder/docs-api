@@ -26,7 +26,6 @@ User's email.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
-
 {% api-method-parameter name="board\_keys" type="array" required=true %}
 Only Jobs in these boards will be scored
 {% endapi-method-parameter %}
@@ -45,7 +44,7 @@ Default is "desc"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-Sort by \(ie. created\_at\) 
+Sort by \(ie. created\_at\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="date\_range\_min" type="string" required=false %}
@@ -57,7 +56,7 @@ Maximum creation datetime in iso format
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_geopoint" type="object" required=false %}
-Filter by location's latitude and longitude   
+Filter by location's latitude and longitude  
 \(ie. {"lat":35.7516600, "lng":10.7110900}\)
 {% endapi-method-parameter %}
 
@@ -199,7 +198,6 @@ client.job.searching.list(["board_key1", "board_key2"],  {
     location_distance: 30,
     location_geopoint: {"lat":33.59662,"lng":-7.61889}
 });
-
 ```
 {% endtab %}
 {% endtabs %}

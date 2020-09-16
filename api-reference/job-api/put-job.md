@@ -65,20 +65,20 @@ A brief summary to describe missions and context of the Job
 {% api-method-parameter name="sections" type="array" required=true %}
 The Job's sections  
 \(ie. \[{  
-         "name": "section\_name",   
-         "title": "section\_title",   
-         "description": "section\_description"}...\]\)
+"name": "section\_name",  
+"title": "section\_title",  
+"description": "section\_description"}...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location" type="object" required=true %}
 Job's location  
 \(ie. {  
-        "text": "xx rue XXXX" ,  
-        "geopoint": {  
-                              "lat":38.299637 ,  
-                              "lng": -122.657535  
-                             }  
-        }\)
+"text": "xx rue XXXX" ,  
+"geopoint": {  
+"lat":38.299637 ,  
+"lng": -122.657535  
+}  
+}\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="skills" type="array" required=true %}
@@ -97,25 +97,25 @@ The Job's tags to include with the Job
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="metadatas" type="array" required=true %}
-The Job's metadata   
+The Job's metadata  
 \(ie. \[{"name": "meta", "value":"meta\_value"}, ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ranges\_float" type="array" required=true %}
 The Job's ranges float  
- \(ie. \[{  
-         'name': 'salary',  
-         'unit': 'eur',  
-         'value\_max': 50,  
-         'calue\_min': 30} ...\]\) 
+\(ie. \[{  
+'name': 'salary',  
+'unit': 'eur',  
+'value\_max': 50,  
+'calue\_min': 30} ...\]\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="ranges\_date" type="array" required=true %}
 The Job's ranges date  
 \(ie. \[{  
-         'name': 'dates',  
-         'value\_max': '2020-09-15T21:59',  
-         'value\_min': '2020-05-18T21:59'}...\]\)
+'name': 'dates',  
+'value\_max': '2020-09-15T21:59',  
+'value\_min': '2020-05-18T21:59'}...\]\)
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}

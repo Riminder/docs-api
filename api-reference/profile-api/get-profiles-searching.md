@@ -10,6 +10,7 @@ Get /profiles/searching
 {% endapi-method-summary %}
 
 {% api-method-description %}
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -46,8 +47,7 @@ Order by \(ie. asc, desc\), default value is "desc"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-Sort by \(ie. created_at, updated_at, location, location_experience,
- location_education, searching, scoring \)
+Sort by \(ie. created\_at, updated\_at, location, location\_experience, location\_education, searching, scoring \)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at\_min" type="string" required=false %}
@@ -67,7 +67,7 @@ Filter by Profile's email
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_geopoint" type="object" required=false %}
-Filter by location's latitude and longitude   
+Filter by location's latitude and longitude  
 \(ie. {"lat":35.7516600, "lng":10.7110900} \)
 {% endapi-method-parameter %}
 
@@ -93,7 +93,7 @@ Filter by experience location's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="experience\_location\_distance" type="integer" required=false %}
-Set experience's location radius 
+Set experience's location radius
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="experiences\_duration\_min" type="integer" required=false %}
@@ -113,7 +113,7 @@ Filter by education's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="education\_location\_distance" type="integer" required=false %}
-Set education's location radius 
+Set education's location radius
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations\_duration\_min" type="integer" required=false %}
@@ -126,24 +126,24 @@ Filter by education maximum duration
 
 {% api-method-parameter name="skills" type="array" required=false %}
 Filter by a list of skills  
- \( ie. \[{ name: 'python', value: 0.9 }\] \)
+\( ie. \[{ name: 'python', value: 0.9 }\] \)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="languages" type="array" required=false %}
-Filter by a list of languages   
-\( ie. \[{ name: 'english', value: 'fluent' }\] \) 
+Filter by a list of languages  
+\( ie. \[{ name: 'english', value: 'fluent' }\] \)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="interests" type="array" required=false %}
 Filter by a list of interests  
- \(ie. \[{ name: 'football', value: null }\] \)
+\(ie. \[{ name: 'football', value: null }\] \)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="tags_included" type="array" required=false %}
-Filter by a List of tags to include \(ie. \[[{ name: 'active', value: true }\]] \),
+{% api-method-parameter name="tags\_included" type="array" required=false %}
+Filter by a List of tags to include \(ie. \[{ name: 'active', value: true }\] \)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="tags_excluded" type="array" required=false %}
+{% api-method-parameter name="tags\_excluded" type="array" required=false %}
 Filter by a List of tags to exclude \(ie. \[{ name: 'active', value: false }\] \)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -201,7 +201,7 @@ Profiles successfully retrieved.
                     .
                     .
                     .
-            
+
                 ],
                 "experiences_duration": 1.2547945205479452,
                 "interests": [{"name": "Psychology","value": null}],
@@ -355,7 +355,6 @@ client.profile.searching.list(['source_key1', 'source_key2'], {
   interests: [{name: 'design', value: 1}],
   tags: [{name: 'active', value: true}],
 });
-
 ```
 {% endtab %}
 {% endtabs %}

@@ -31,11 +31,11 @@ Filter by source's name.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
-API  page offset, default value is **1**
+API page offset, default value is **1**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Max response size, default value  is **30**
+Max response size, default value is **30**
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
@@ -206,7 +206,6 @@ client.source.list(name='cvbot', page=1, limit=1, sort_by='date', order_by'asc')
 
 {% tab title="Javascript" %}
 ```javascript
-
 import Hrflow from 'hrflow';
 const client = new Hrflow({ 
     api_secret: 'Your API Key',
@@ -227,6 +226,4 @@ client.source.list(params).then(response => {
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

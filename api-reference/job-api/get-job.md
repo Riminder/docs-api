@@ -123,8 +123,6 @@ Invalid secret key
 {% endapi-method-spec %}
 {% endapi-method %}
 
-
-
 {% tabs %}
 {% tab title="Python" %}
 ```python
