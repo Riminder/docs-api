@@ -24,6 +24,7 @@ User's email.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
+{% api-method-query-parameters %}
 {% api-method-parameter name="source\_keys" type="array" required=true %}
 Only Profiles in these sources will be scored
 {% endapi-method-parameter %}
