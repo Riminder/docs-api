@@ -1,8 +1,12 @@
 ---
-description: This endpoint allows to retrieve  the profile indexing
+description: This endpoint allows to retrieve  the Profile object.
 ---
 
 # GET: /profile/indexing
+
+{% hint style="info" %}
+One of key , reference or email parameters should be provided to identify the profile.
+{% endhint %}
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/indexing" %}
 {% api-method-summary %}
@@ -10,7 +14,7 @@ description: This endpoint allows to retrieve  the profile indexing
 {% endapi-method-summary %}
 
 {% api-method-description %}
- endpoint allows you to get the profile indexing.
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -242,8 +246,4 @@ client.profile.indexing.get('source_key', {
 ```
 {% endtab %}
 {% endtabs %}
-
-{% hint style="info" %}
-At
-{% endhint %}
 

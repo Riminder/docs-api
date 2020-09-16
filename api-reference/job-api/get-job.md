@@ -1,5 +1,5 @@
 ---
-description: This endpoint allows you to retrieve an existing job.
+description: This endpoint allows you to retrieve an existing Job.
 ---
 
 # GET: /job/indexing
@@ -10,7 +10,7 @@ Get Job
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get a job.
+
 {% endapi-method-description %}
 
 {% api-method-spec %}

@@ -1,5 +1,5 @@
 ---
-description: This endpoint allows you to update a JSON profile.
+description: This endpoint allows you to update a Profile object.
 ---
 
 # PUT: /profile/indexing

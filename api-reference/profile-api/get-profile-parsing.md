@@ -1,8 +1,12 @@
 ---
-description: Retrieve profile's parsing given a profile key and a source key.
+description: This endpoint allows you to get the Parsing object.
 ---
 
 # GET: /profile/parsing
+
+{% hint style="info" %}
+One of key , reference or email parameters should be provided to identify the profile.
+{% endhint %}
 
 {% api-method method="get" host="https://api.hrflow.ai/v1" path="/profile/parsing" %}
 {% api-method-summary %}
@@ -10,8 +14,7 @@ Get /profile/parsing
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get the parsing's result of a given profile.  
-  
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -48,277 +51,139 @@ profile email.
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
-Parsing successfully retrieved.
+Parsing object successfully retrieved.
 {% endapi-method-response-example-description %}
 
 ```scheme
 {
-    "code": 200,
-    "message": "Profile parsing",
-    "data":{
-                "date_creation": "2019-01-15T12:09:58",
-                "date_reception": "2019-01-15T12:09:42",
-                "educations": [
-                    {
-                        "description": "Hogwarts School of Witchcraft and Wizardry",
-                        "end_date": {
-                            "date": null,
-                            "text": null
-                        },
-                        "id": "education_id",
-                        "location": {
-                            "geocoder": {
-                                "fields": {
-                                    "category": null,
-                                    "city": null,
-                                    "city_district": null,
-                                    "country": Scotland,
-                                    "country_region": null,
-                                    "entrance": null,
-                                    "house": null,
-                                    "house_number": null,
-                                    "island": null,
-                                    "level": null,
-                                    "near": null,
-                                    "po_box": null,
-                                    "postcode": null,
-                                    "road": null,
-                                    "staircase": null,
-                                    "state": null,
-                                    "state_district": null,
-                                    "suburb": null,
-                                    "unit": null,
-                                    "world_region": null
-                                },
-                                "gmaps": null,
-                                "is_correct": null,
-                                "lat": null,
-                                "lng": null,
-                                "text": null
-                            },
-                            "geopoint": {
-                                "lat": null,
-                                "lon": null
-                            },
-                            "text": null
-                        },
-                        "school": "Hogwarts",
-                        "start_date": {
-                            "date": "2013-01-01T01:00:00",
-                            "text": "2013-2017"
-                        },
-                        "title": "MASTER IN APPLIED MATHEMATICS AND SIGNAL PROCESSING"
-                    },
-                    .
-                    .
-                    .
-                    ],
-                "educations_duration": n,
-                "email": {
-                    "text": "harry.potter@gmail.com"
-                },
-                "experiences": [
-                    {
-                        "company": "Gryffindor",
-                        "description": "Chemistry – Potioneer.",
-                        "end_date": {
-                            "date": null,
-                            "text": null
-                        },
-                        "id": "experience_id",
-                        "location": {
-                            "geocoder": {
-                                "fields": {
-                                    "category": null,
-                                    "city": null,
-                                    "city_district": null,
-                                    "country": null,
-                                    "country_region": null,
-                                    "entrance": null,
-                                    "house": null,
-                                    "house_number": null,
-                                    "island": null,
-                                    "level": null,
-                                    "near": null,
-                                    "po_box": null,
-                                    "postcode": null,
-                                    "road": null,
-                                    "staircase": null,
-                                    "state": null,
-                                    "state_district": null,
-                                    "suburb": null,
-                                    "unit": null,
-                                    "world_region": null
-                                },
-                                "gmaps": "https://www.google.com/maps/place/1.29019,103.85199",
-                                "is_correct": true,
-                                "lat": 1.2901899814605713,
-                                "lng": 103.85198974609375,
-                                "text": "Singapore"
-                            },
-                            "geopoint": {
-                                "lat": 1.2901899814605713,
-                                "lon": 103.85198974609375
-                            },
-                            "text": "Singapore"
-                        },
-                        "start_date": {
-                            "date": "2017-03-01T01:00:00",
-                            "text": "March 2017-September 2017"
-                        },
-                        "title": "Machine Learning Engineer"
-                    },
-                    .
-                    .
-                    .
-            
-                ],
-                "experiences_duration": 1.2547945205479452,
-                "interests": [
-                    {
-                        "name": "Psychology",
-                        "value": null
-                    }
-                ],
-                "labels": [
-                    {
-                        "date_rating": "2019-07-15T14:51:07",
-                        "date_stage": "2019-07-15T14:51:07",
-                        "job_id": "job_id",
-                        "job_reference": "19051996",
-                        "rating": null,
-                        "stage": "yes"
-                    }
-                ],
-                "languages": [
-                    {
-                        "name": "english",
-                        "value": null
-                    },
-                    {
-                        "name": "french",
-                        "value": null
-                    }
-                ],
-                "location": {
-                    "geocoder": {
-                        "fields": {
-                            "category": null,
-                            "city": null,
-                            "city_district": null,
-                            "country": null,
-                            "country_region": null,
-                            "entrance": null,
-                            "house": null,
-                            "house_number": null,
-                            "island": null,
-                            "level": null,
-                            "near": null,
-                            "po_box": null,
-                            "postcode": null,
-                            "road": null,
-                            "staircase": null,
-                            "state": null,
-                            "state_district": null,
-                            "suburb": null,
-                            "unit": null,
-                            "world_region": null
-                        },
-                        "gmaps": null,
-                        "is_correct": null,
-                        "lat": null,
-                        "lng": null,
-                        "text": null
-                    },
-                    "geopoint": {
-                        "lat": null,
-                        "lon": null
-                    },
-                    "text": null
-                },
-                "name": {
-                    "first_name": "Harry",
-                    "last_name": "Potter",
-                    "text": "Harry Potter"
-                },
-                "profile_id": "profile_id",
-                "skills": [
-                    {
-                        "is_predicted": false,
-                        "name": "Chemistry",
-                        "type": "hard_skill",
-                        "value": null
-                    },
-                    {
-                        "is_predicted": false,
-                        "name": "Mathematics",
-                        "type": "hard_skill",
-                        "value": null
-                    },
-                    {
-                        "is_predicted": false,
-                        "name": "algorithms",
-                        "type": "hard_skill",
-                        "value": null
-                    },
-                    {
-                        "is_predicted": false,
-                        "name": "Psychology",
-                        "type": "soft_skill",
-                        "value": null
-                    },
-                    
-                ],
-                "source_id": "source_id",
-                "summary": "Bayesian Optimization",
-                "team_id": "team_id",
-                "text": {
-                    "ar": "",
-                    "bg": "",
-                    "bn": "",
-                    "ca": "",
-                    "cjk": "",
-                    "cs": "",
-                    "da": "",
-                    "de": "",
-                    "el": "",
-                    "en": "Description",
-                    "es": "",
-                    "eu": "",
-                    "fa": "",
-                    "fi": "",
-                    "fr": "",
-                    "ga": "",
-                    "gl": "",
-                    "hi": "",
-                    "hu": "",
-                    "hy": "",
-                    "id": "",
-                    "it": "",
-                    "ku": "",
-                    "lt": "",
-                    "lv": "",
-                    "nl": "",
-                    "no": "",
-                    "pt": "",
-                    "pt-BR": "",
-                    "ro": "",
-                    "ru": "",
-                    "sv": "",
-                    "th": "",
-                    "tr": ""
-                },
-                "urls": {
-                    "facebook": null,
-                    "from_resume": [],
-                    "github": null,
-                    "linkedin": null,
-                    "picture": null,
-                    "twitter": null
-                },
-                "uuid": "H60lHC-0EemVogJCrBEAAw"
-    }
- 
+      'content_uid': 'content_uid', 
+      'key': 'profile_key',
+      'file_name': 'filename.pdf',
+      'file_size': null, 
+      'persons': [{'full_name': 'Harry Potter', 
+                   'first_name': 'Harry',
+                   'last_name': 'Potter'}],
+      'emails': ['harry.potter@gmail.com'],
+      'phones': ['0202'],
+      'location': {
+           'text': '803 Green Lane London N07 8MA',
+           'lat': 51.581551, 
+           'lng': -0.099649, 
+           'geojson': {
+              'house': null, 
+              'category': null, 
+              'near': null, 
+              'house_number': 803, 
+              'road': 'Green Lane', 
+              'unit': null, 
+              'level': null, 
+              'staircase': null, 
+              'entrance': null, 
+              'po_box': null, 
+              'postcode': null, 
+              'suburb': null, 
+              'city_district': null, 
+              'city': 'London', 
+              'island': null, 
+              'state_district': null, 
+              'state': null, 
+              'country_region': null, 
+              'country': 'UK', 
+              'world_region': null}}, 
+     'images': null, 
+     'picture': 'https://riminder-documents-eu-2019-12.s3-eu-west-1.amazonaws.com/picture.png',
+     'urls': [
+              {'type': 'from_resume', 'url': []}, 
+              {'type': 'linkedin', 'url': null}, 
+              {'type': 'twitter', 'url': null}, 
+              {'type': 'facebook', 'url': null}, 
+              {'type': 'github', 'url': null}],
+     'gender': 'male',
+     'driving_licence': null, 
+     'summary': 'Brief summary', 
+     'text': 'Profile s text' ,
+     'text_language': 'en'
+     'educations': [
+                    {'content_uid': 'content_uid',
+                     'title': 'Mathematicien'                     
+                     'school': 'University',
+                     'description': 'Education description',
+                     'date_start': {
+                                    'iso8601': '2016-01-01T00:00:00',
+                                    'text': '2016-01-01',
+                                    'timestamp': 1451602800},
+                     'date_end': {
+                                  'iso8601': '2018-01-01T00:00:00', 
+                                  'text': '2018-01-01', 
+                                  'timestamp': 1514761200},
+                     'location': {'geojson': {'category': null,
+                                          'city': null,
+                                          'city_district': null,
+                                          'country': null,
+                                          'country_region': null,
+                                          'entrance': null,
+                                          'house': null,
+                                          'house_number': null,
+                                          'island': null,
+                                          'level': null,
+                                          'near': null,
+                                          'po_box': null,
+                                          'postcode': null,
+                                          'road': null,
+                                          'staircase': null,
+                                          'state': null,
+                                          'state_district': null,
+                                          'suburb': null,
+                                          'unit': null,
+                                          'world_region': null},
+                              'lat': null,
+                              'lng': null,
+                              'text': null}}
+               ],
+     'educations_duration': 2,
+     'experiences': [
+                     {'content_uid': 'content_uid',
+                      'title': 'Data scientist'
+                      'company': 'Mathematic Departement',
+                      'description': 'Experience s description',
+                      'date_start': {'iso8601': '2018-01-01T00:00:00',
+                                     'text': '2018-01-01',
+                                     'timestamp': 1467324000},
+                      'date_end': {'iso8601': '2018-07-01T00:00:00',
+                                   'text': '2018-07-01',
+                                   'timestamp': 1530396000},
+                      'location': {'geojson': {'category': null,
+                                               'city': null,
+                                               'city_district': null,
+                                               'country': null,
+                                               'country_region': null,
+                                               'entrance': null,
+                                               'house': null,
+                                               'house_number': null,
+                                               'island': null,
+                                               'level': null,
+                                               'near': null,
+                                               'po_box': null,
+                                               'postcode': null,
+                                               'road': null,
+                                               'staircase': null,
+                                               'state': null,
+                                               'state_district': null,
+                                               'suburb': null,
+                                               'unit': null,
+                                               'world_region': null},
+                                   'lat': null,
+                                   'lng': null,
+                                   'text': null}
+                        }],
+     'experiences_duration': 0.7,
+     'skills': [{'name':'manual skill', 'type': 'hard', 'value': null},
+                {'name':'Creative spirit', 'type': 'soft','value': null}, 
+                {'name':'Writing skills', 'type': 'hard','value': null}, 
+                {'name':'Communication', 'type': 'soft','value': null}],
+     'languages': [{'name':'english', 'value': null}],
+     'interests': [{'name':'football', 'value': null}]
+ }
 ```
 {% endapi-method-response-example %}
 
@@ -330,7 +195,7 @@ Could not find a source matching this query.
 ```scheme
 {
     "code": 400,
-    "message": "Invalid source array"
+    "message": "Invalid source fields"
 }
 ```
 {% endapi-method-response-example %}
@@ -343,17 +208,13 @@ Invalid secret key.
 ```scheme
 {
     "code": 401,
-    "message": "Unauthorized. Invalid secret key: xxxxx "
+    "message": "Unauthorized. Invalid secret key: xxxxx for permission: all"
 }
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-{% hint style="info" %}
-One of key , reference or email parameters should be provided to identify the profile.
-{% endhint %}
 
 ### Example
 

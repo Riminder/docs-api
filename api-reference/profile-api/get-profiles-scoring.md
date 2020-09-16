@@ -1,5 +1,5 @@
 ---
-description: Retrieve profile's scoring given profile id and source_id.
+description: This endpoint allows you to score list of profiles against given job.
 ---
 
 # GET: /profiles/scoring
@@ -10,7 +10,7 @@ description: Retrieve profile's scoring given profile id and source_id.
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to score list of profiles against given job.
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -27,130 +27,127 @@ User's email.
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="board\_key" type="string" required=true %}
-Board key
+Board's key containing the giving job.
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="job\_key" type="string" required=true %}
-Job key
+Job' s key
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="source\_keys" type="array" required=true %}
-List of source keys
+List of source keys in which profiles will be scored
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="use\_agent" type="array" required=false %}
-Use agent or not \(ie. 0 or 1\)  
-default is 1
+Use agent or not \(ie. 0 or 1\), default value is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="stage" type="string" required=false %}
-Stage \(ie. 'new', 'yes', 'later', 'no'\)  
-Default is 'new'
+Stage \(ie. 'new', 'yes', 'later', 'no'\), default value is 'new'
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Total profiles to score  
-Default is 12
+Total profiles to score, default value is 30
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
-API page offset  
-Default is 1
+API page offset, default value is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="order\_by" type="string" required=false %}
-order by \(ie. asc, desc\)  
-Default is "desc"
+order by \(ie. asc, desc\), default value is "desc"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sort\_by" type="string" required=false %}
-sort by \(ie. scoring, searching, date\)  
-Default is "date"
+sort by \(ie. scoring, searching, date\), default value is "created\_at"
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at\_min" type="string" required=false %}
-start date as  iso string date
+start date in iso datetime
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at\_max" type="string" required=false %}
-end date as iso string date 
+end date in iso datetime
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=false %}
-Profile's name
+Filter by Profile's name
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="email" type="string" required=false %}
-Profile's email
+Filter by Profile's email
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_geopoint" type="object" required=false %}
-Location's latitude and longitude   
+Filter by location's latitude and longitude   
 \(ie. {"lat":35.7516600, "lng":10.7110900} \)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="integer" required=false %}
-Max radius
+Max radius to set in the query
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="summary\_keywords" type="array" required=false %}
-Keywords in a summary
+Filter by keywords that can exist in a summary
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="text\_keywords" type="array" required=false %}
-Keyword in a text
+Filter by text keywords
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="experience\_keywords" type="array" required=false %}
-Experience keywords
+Filter by experience keywords
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="experience\_location\_geopoint" type="object" required=false %}
-Experience location's latitude and longitude
+Filter by experience location's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="experiences\_duration\_min" type="integer" required=false %}
-Experience duration min
+Filter by minimum seniority
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="experiences\_duration\_max" type="integer" required=false %}
-Experience duration max
+Filter by maximum seniority
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="education\_keywords" type="array" required=false %}
-Education keywords
+Filter by education keywords
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="education\_location\_geopoint" type="object" required=false %}
-Education's latitude and longitude
+Filter by education's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="education\_location\_distance" type="integer" required=false %}
-Education's location raduis 
+Filter by education's location raduis 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations\_duration\_min" type="integer" required=false %}
-Education duration min
+Filter by minimum education duration
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations\_duration\_max" type="integer" required=false %}
-Education duration max
+Filter by education maximum duration
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="skills" type="array" required=false %}
-List of skills \( ie. \[{ name: 'python', value: 0.9 }\] \)
+Filter by a list of skills  
+ \( ie. \[{ name: 'python', value: 0.9 }\] \)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="languages" type="array" required=false %}
-List of languages \( ie. \[{ name: 'english', value: 'fluent' }\] \) 
+Filter by a list of languages   
+\( ie. \[{ name: 'english', value: 'fluent' }\] \) 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags" type="array" required=false %}
-List of tags \(ie. \[{ name: 'active', value: true }\] \)
+Filter a List of tags \(ie. \[{ name: 'active', value: true }\] \)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="interests" type="array" required=false %}
-List of interests \(ie. \[{ name: 'football', value: null }\] \)
+Filter by a list of interests  
+ \(ie. \[{ name: 'football', value: null }\] \)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -306,7 +303,7 @@ $params = [
   'limit'             => 10,
   'page'              => 1,
   'order_by'          => 'asc',
-  'sort_by'           => 'date_reception',
+  'sort_by'           => 'created_at',
   'timestamp_start'   => 1569320033,
   'timestamp_end'     => 1586945633,
   'name'              => 'name',
@@ -345,7 +342,7 @@ client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 client.profile.scoring.list(source_keys=["source_key1", "source_key2"],
                             board_key="board_key", job_key="job_key", use_agent= 1,
                             stage="new", limit= 10, page= 1, order_by= 'asc',
-                            sort_by='date', created_at_min='2020-05-15T23:59:59.999Z',
+                            sort_by='created_at', created_at_min='2020-05-15T23:59:59.999Z',
                             created_at_max='2020-07-15T23:59:59.999Z', name='name',
                             email='exemple@exemple.com',
                             location_geopoint={

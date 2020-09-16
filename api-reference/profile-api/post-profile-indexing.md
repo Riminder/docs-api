@@ -1,5 +1,5 @@
 ---
-description: This endpoint allows you to index new Json profile to a given source.
+description: This endpoint allows you to index new Profile.
 ---
 
 # POST: /profile/indexing

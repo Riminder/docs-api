@@ -1,5 +1,5 @@
 ---
-description: This endpoint allows you to add new job to a given board.
+description: This endpoint allows you to add new Job to a given board.
 ---
 
 # POST: /job/indexing
