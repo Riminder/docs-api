@@ -74,6 +74,7 @@
   * [POST: /profile/indexing](api-reference/profile-api/post-profile-indexing.md)
   * [PUT: /profile/indexing](api-reference/profile-api/put-profile-indexing.md)
   * [GET: /profile/indexing](api-reference/profile-api/get-profile-indexing.md)
+  * [GET: /profile/indexing/attachment](api-reference/profile-api/get-profile-attachment.md)
   * [GET: /profile/embedding](api-reference/profile-api/get-profile-embedding.md)
   * [GET: /profile/revealing](api-reference/profile-api/get-profile-revealing.md)
   * [GET: /profiles/scoring](api-reference/profile-api/get-profiles-scoring.md)
