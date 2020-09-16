@@ -128,7 +128,7 @@ The API allows you to create, update and retrieve your profile.
 | key | Unique identifier for the object |
 | reference | The profile's reference, it must be unique for a given source |
 | archive | The date when a profile is archived, if the profile is not archived archive will be null |
-| consent\_algorithmic | The user's algorithmic consent, it tells the algorithm what permissions it has to use personal data |
+| consent\_algorithmic | The user's algorithmic consent, it tells to the algorithm what are the allowed actions in order to use personal data |
 | source | The source to which the profile belongs |
 | updated\_at | Time at which the object was last updated |
 | created\_at | Time at which the object was created |

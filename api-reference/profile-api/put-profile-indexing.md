@@ -106,7 +106,7 @@ The key of the Profile update
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="consent\_algorithmic" type="object" required=true %}
-The user's algorithmic consent, it tells the algorithm what permissions it has to use personal data
+The user's algorithmic consent, it tells to the algorithm what are the allowed actions in order to use personal data
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at" type="string" required=true %}

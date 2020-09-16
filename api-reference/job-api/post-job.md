@@ -322,7 +322,7 @@ client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 data = {
     "name": "Data Engineer",
     "agent_key": "agent_key",
-    "reference": "Job's reference abc",
+    "reference": "123",
     "url": "https://www.pole-emploi.ai/jobs/data_engineer",
     "summary": """As an engineer for the Data Engineering Infrastructure team, 
                 you will design, build, scale, and evolve our data engineering
@@ -396,8 +396,8 @@ const client = new Hrflow({
 
 client.job.indexing.addJosn("board_key", {
     "name": "Data Engineer",
-    "agent_key": "agent_key",
-    "reference": "Job's reference abc",
+    "agent_key": None, #Scoring engine
+    "reference": "123",
     "url": "https://www.pole-emploi.ai/jobs/data_engineer",
     "summary": "As an engineer for the Data Engineering Infrastructure team,
                 you will design, build, scale, and evolve our data engineering

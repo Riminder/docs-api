@@ -51,11 +51,11 @@ Sort by \(ie. created_at, updated_at, location, location_experience,
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at\_min" type="string" required=false %}
-Filter by minimum creation
+Filter by minimum creation date
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at\_max" type="string" required=false %}
-Filter by maximum creation
+Filter by maximum creation date
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=false %}
@@ -72,7 +72,7 @@ Filter by location's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="integer" required=false %}
-If location's latitude and longitude are present, you can set radius to in filter
+If location's latitude and longitude are present, you can set radius in filter
  query
 {% endapi-method-parameter %}
 
@@ -140,7 +140,7 @@ Filter by a list of interests
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags_included" type="array" required=false %}
-Filter by a List of tags to include \(ie. \[{ name: 'active', value: true }\] \)
+Filter by a List of tags to include \(ie. \[[{ name: 'active', value: true }\]] \),
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tags_excluded" type="array" required=false %}

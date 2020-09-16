@@ -42,7 +42,7 @@ The agent unique identifier
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="use\_agent" type="integer" required=false %}
-Use agent \(ie 0 or 1\), default value is 1
+In order to enable scoring engine you set this parameter to 1 otherwise it enables only searching engine
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
@@ -76,7 +76,7 @@ Filter by location's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="integer" required=false %}
-If location's latitude and longitude are present, you can set radius to in filter
+If location's latitude and longitude are present, you can set radius in filter
  query
 {% endapi-method-parameter %}
 
