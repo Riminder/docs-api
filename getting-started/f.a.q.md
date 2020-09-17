@@ -23,20 +23,10 @@ Example:
 Tags must be included at profile's creation.
 {% endhint %}
 
-## What is an item\_id and a profile\_id?
-
-An Item ID \[item\_id\] is an attribute used to identify all documents uploaded in hrflow \(either job's item or profile's item\).
-
-  
-A Profile ID \[profile\_id\] is a unique identifier for a **HrFlow Profile.**
-
-{% hint style="info" %}
-Profile Id and Source Id represent in a unique way HrFlow Profile
-{% endhint %}
 
 ## Profile unicity ?
 
-An  HrFlow profile is unique by its **profile\_id** and **source\_id**.
+An  HrFlow Profile/Parsing object is unique by its **key** and **source\_key**.
 
-The couple \(source\_id, profile\_id\) is mandotory to retreive Profile's parsing / embedding / metadata ...
+The couple \(source\_key, key\) is mandatory to retrieve Profile/Parsing object.
 

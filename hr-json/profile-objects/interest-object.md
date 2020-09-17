@@ -16,5 +16,5 @@ This object represents detected hobbies and interests.
 | name | description |
 | :--- | :--- |
 | name | The interest's name |
-| value | The interest's value |
+| value | The interest's value, it measures the confidence level of expertise |
 

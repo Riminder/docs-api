@@ -1,3 +1,7 @@
+---
+description: This endpoint allows you to generate text parsing from a full text input.
+---
+
 # POST : /document/parsing
 
 {% api-method method="post" host="https://api.hrflow.ai" path="/v1/document/parsing" %}
@@ -6,7 +10,6 @@ Post /document/parsing
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to generate text parsing from a full text input.
 {% endapi-method-description %}
 
 {% api-method-spec %}

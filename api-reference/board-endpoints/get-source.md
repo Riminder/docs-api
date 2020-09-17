@@ -1,5 +1,5 @@
 ---
-description: Retrieve a board info
+description: This endpoint allows you to retrieve a board info given a key.
 ---
 
 # GET: /board
@@ -10,7 +10,6 @@ Source
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to retrieve a board info given a key.
 {% endapi-method-description %}
 
 {% api-method-spec %}

@@ -1,3 +1,7 @@
+---
+description: This endpoint allows you to generate the revealing output from a full text input.
+---
+
 # POST: /document/revealing
 
 {% api-method method="post" host="https://api.hrflow.ai" path="/v1/document/revealing" %}
@@ -6,7 +10,6 @@ Post /document/revealing
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to generate the revealing output from a full text input.
 {% endapi-method-description %}
 
 {% api-method-spec %}

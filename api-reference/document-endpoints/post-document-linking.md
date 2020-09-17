@@ -1,3 +1,7 @@
+---
+description: This endpoint allows you to generate the linking output from a full text input.
+---
+
 # POST : /document/linking
 
 {% api-method method="post" host="https://api.hrflow.ai" path="/v1/document/linking" %}
@@ -6,7 +10,6 @@ Post /document/linking
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to generate the linking output from a full text input.
 {% endapi-method-description %}
 
 {% api-method-spec %}

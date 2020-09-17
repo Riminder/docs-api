@@ -1,6 +1,8 @@
 # Label object
 
-Label object represents a simple way to track all profile's application and their stage \(yes/no/later/new\). If no record is present, so all
+Label object contains information about profile stage, or rating for a given job,
+ stage's value is one of ['new', 'yes', 'no', 'later'] and ratings represents the user's assessment based on object
+  quality and performance
 
 ## The Label Object
 

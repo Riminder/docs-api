@@ -4,7 +4,7 @@
 
 This is a complete object containing **Parsing** results, it details all detected entities on a document.
 
-It helps data scientist to further in their studies and enhance the quality of their analysis.
+It helps data scientist to go further in their studies and enhance the quality of their analysis.
 
 | **ENDPOINTS** |
 | :--- |
@@ -165,11 +165,11 @@ It helps data scientist to further in their studies and enhance the quality of t
 | summary | The Profile's summary |
 | text | The Profile's text, it contains a long resume   of a profile, it is generated based on parsed text |
 | text language | The original language of the document |
-| educations | A list of [Education](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object |
+| educations | A list of [Educations](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object |
 | eductions\_duration | Education's duration |
-| experiences | A list of [Experience](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object |
+| experiences | A list of [Experiences](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object |
 | experiences\_duration | Experience's duration, it calculates profile's seniority |
-| skills | A list of profile's [Skill](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
-| languages | A list of profile's [Language](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
-| interests | A list of profile's [Interest](https://developers.hrflow.ai/hr-json/profile-objects/interest-object) object |
+| skills | A list of profile's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
+| languages | A list of profile's [Languages](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
+| interests | A list of profile's [Interests](https://developers.hrflow.ai/hr-json/profile-objects/interest-object) object |
 
