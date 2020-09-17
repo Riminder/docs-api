@@ -10,7 +10,7 @@
 
 First of all, the following diagram explains the basic use case of the API : uploading profiles and getting information back from the platform.
 
-![](.gitbook/assets/image.png)
+![](.gitbook/assets/api_sequence_diagram.png)
 
 ## Building with HrFlow.ai
 

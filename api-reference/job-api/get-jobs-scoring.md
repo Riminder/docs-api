@@ -77,8 +77,7 @@ Filter by location's latitude and longitude
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="location\_distance" type="integer" required=false %}
-If location's latitude and longitude are present, you can set radius in filter
- query
+If location's latitude and longitude are present, you can set radius in filter query
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="summary\_keywords" type="array" required=false %}

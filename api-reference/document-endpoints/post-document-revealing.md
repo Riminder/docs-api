@@ -1,5 +1,7 @@
 ---
-description: This endpoint allows you to generate the revealing output from a full text input.
+description: >-
+  This endpoint allows you to generate the revealing output from a full text
+  input.
 ---
 
 # POST: /document/revealing
@@ -10,6 +12,7 @@ Post /document/revealing
 {% endapi-method-summary %}
 
 {% api-method-description %}
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -120,10 +123,7 @@ client.document.revealing.post("text").then(response => {
     console.log(response);
     // ...
 });
-
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

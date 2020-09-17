@@ -1,5 +1,7 @@
 ---
-description: This endpoint allows you to generate the linking output from a full text input.
+description: >-
+  This endpoint allows you to generate the linking output from a full text
+  input.
 ---
 
 # POST : /document/linking
@@ -10,6 +12,7 @@ Post /document/linking
 {% endapi-method-summary %}
 
 {% api-method-description %}
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -30,7 +33,7 @@ A text to calculate most similar token
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="top\_n" type="string" required=false %}
-The n most similar word to a given text   
+The n most similar word to a given text  
 \( Default value is 5\)
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -96,8 +99,6 @@ Text can't be null
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-
 
 {% tabs %}
 {% tab title="Python" %}

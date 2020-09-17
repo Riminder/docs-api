@@ -10,6 +10,7 @@ Source
 {% endapi-method-summary %}
 
 {% api-method-description %}
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -127,10 +128,7 @@ client.board.get('board_key').then(response => {
     console.log(response);
     // ...
 });
-
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

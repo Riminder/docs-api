@@ -4,13 +4,13 @@ description: HrFlow SDK for Python
 
 # Python
 
-Our Python library is an open source,  production-ready and a Python Wrapper API. It is an easy way to access HrFlow API features  .
+Our Python library is an open source, production-ready and a Python Wrapper API. It is an easy way to access HrFlow API features .
 
 This library is open-source, so you can [check it out on GitHub](https://github.com/Riminder/python-hrflow-api).
 
 ## Install
 
- Install`hrflow`client using [pip](https://pypi.org/project/pip/):
+Install`hrflow`client using [pip](https://pypi.org/project/pip/):
 
 ```text
 pip3 install hrflow
@@ -24,7 +24,7 @@ You can keep the API client up to date by checking [GitHub release page](https:/
 
 To authenticate against the API, get your API SECRET KEY from your HrFlow dashboard!
 
-To begin you adventure with HrFlow,  you will need to initialize the client. In order to do this you will need your **API SECRET KEY**. You can retrieve it from [HrFlow Dashboard](https://developers.hrflow.ai/getting-started/authentication)
+To begin you adventure with HrFlow, you will need to initialize the client. In order to do this you will need your **API SECRET KEY**. You can retrieve it from [HrFlow Dashboard](https://developers.hrflow.ai/getting-started/authentication)
 
 ```python
 from hrflow import Hrflow
