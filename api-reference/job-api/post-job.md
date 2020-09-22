@@ -9,7 +9,7 @@ Please find below an example of json job that you can upload.
 ```bash
 {
     "name": "Data Engineer",
-    "agent_key": "agent_key",
+    "agent_key": null,
     "reference": "Job's reference abc",
     "url": "https://www.pole-emploi.ai/jobs/data_engineer",
     "summary": "As an engineer for the Data Engineering Infrastructure team,
@@ -321,7 +321,7 @@ client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 data = {
     "name": "Data Engineer",
-    "agent_key": "agent_key",
+    "agent_key": None,
     "reference": "123",
     "url": "https://www.pole-emploi.ai/jobs/data_engineer",
     "summary": """As an engineer for the Data Engineering Infrastructure team, 
