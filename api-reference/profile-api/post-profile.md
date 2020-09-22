@@ -199,16 +199,6 @@ client.profile.parsing.add_file(source_key="source_key",
                         profile_file=profile_file,
                         profile_content_type='application/pdf',
                         reference='profile_reference',
-                        labels=[
-                          {
-                            "job_key": "job_key",
-                            "job_reference": "test",
-                            "stage": "yes",
-                            "stage_timestamp":1585662186,
-                            "rating":0.5,
-                            "stage_timestamp":1585662186
-                          }, 
-                        ],
                         tags=[{"name":"blacklist","value":true}],
                         metadatas=[{"name":"mail","value":"test@test.com"}, ...],
                         created_at: "2016-01-01T00:00:00",
