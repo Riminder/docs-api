@@ -319,7 +319,7 @@ from hrflow import Hrflow
 
 client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
-data = {
+job_json = {
     "name": "Data Engineer",
     "agent_key": None,
     "reference": "123",
@@ -382,7 +382,7 @@ data = {
                   }],
 }
 
-client.job.indexing.add_json(board_key="board_key", job_json=data)
+client.job.indexing.add_json(board_key="board_key", job_json=job_json)
 ```
 {% endtab %}
 
