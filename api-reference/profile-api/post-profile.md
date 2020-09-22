@@ -201,7 +201,7 @@ client.profile.parsing.add_file(source_key="source_key",
                         reference='profile_reference',
                         tags=[{"name":"blacklist","value":True}],
                         metadatas=[{"name":"mail","value":"test@test.com"}],
-                        created_at: "2020-01-01T00:00:00",
+                        created_at="2020-01-01T00:00:00",
                         sync_parsing=0,
                         sync_parsing_indexing=1,
                         webhook_parsing_sending=0)
