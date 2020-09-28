@@ -30,13 +30,6 @@ User's email.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="board\_key" type="string" required=true %}
-The key of the board in which the Job will be added
-{% endapi-method-parameter %}
-
-{% api-method-parameter name="key" type="string" required=true %}
-The Job's unique identifier
-{% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=true %}
 The Job's title
@@ -128,8 +121,8 @@ Job successfully updated
 
 ```python
 {
-    "code": 201,
-    "message": "Job created",
+    "code": 200,
+    "message": "Job edited",
     "data": {
         "id": 2954,
         "key": "job_key",
@@ -196,46 +189,9 @@ Job successfully updated
                 "value_max": "2020-09-15T21:59"
             }
         ],
-        "status": true,
-        "archive": false,
-        "members": [],
-        "notification": false,
-        "threshold": null,
-        "updated_at": "2020-05-27T16:21:23+0000",
-        "created_at": "2020-05-27T16:21:23+0000",
-        "agent": {
-            "id": "id",
-            "key": "agent_key",
-            "name": "test",
-            "description": "description",
-            "classifierVersion": "1584961482.484944",
-            "classifier": {
-                "id": "id",
-                "key": "a2e8f27d9a3fc6aeb4e61fa390ecfd2b7564f8d8",
-                "name": "General Model",
-                "description": "Trained with our custom datasets of resumes, the General Model computes matching scores between a given job and a given profile. This model reaches an AUC (Area Under the Curve) up to 92.7% and handles both many (profiles) to one (job) and one (profile) to many (jobs) scoring.",
-                "version": "1584961482.484944",
-                "metric": 0.93700000000000006,
-                "updated_at": null,
-                "created_at": "2020-03-23T15:56:05+0000"
-            },
-            "user": {
-                "id": 6,
-                "email": "user@mail.com",
-                "pseudo": "user",
-                "firstName": "User",
-                "lastName": "USER",
-                "avatarUrl": "../uploads/user/avatar/bbeffd9082fc796feee52b15c42bec5215e3313c.png",
-                "locale": "english",
-                "position": "Lead Software Engineer",
-                "phone": null
-            },
-            "archive": false,
-            "updated_at": "2020-05-14T17:43:22+0000",
-            "created_at": "2020-05-14T17:43:22+0000"
-        },
-        "query": []
-    }
+        "updated_at": "2020-05-14T17:43:22+0000",
+        "created_at": "2020-05-14T17:43:22+0000"
+        }
 }
 ```
 {% endapi-method-response-example %}
@@ -325,7 +281,7 @@ data = {
                   }],
 }
 
-client.job.indexing.add_json(board_key="board_key", key="job_key", job_json=data)
+client.job.indexing.edit(board_key="board_key", key="job_key", job_json=data)
 ```
 {% endtab %}
 
