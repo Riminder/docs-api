@@ -1,0 +1,1434 @@
+{
+	"info": {
+		"_postman_id": "50d2fe76-8bf8-42f8-ada7-d4e9d843549f",
+		"name": "hrflow",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Profile API",
+			"item": [
+				{
+					"name": "POST Profile (indexing) : json",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{write-x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"source_key\": \"souce_key\",\n  \n  \"consent_algorithmic\": {\n            \"owner\": {\n                \"parsing\": true,\n                \"revealing\": false,\n                \"embedding\": true,\n                \"searching\": false,\n                \"scoring\": true,\n                \"reasoning\": false\n            },\n            \"controller\": {\n                \"parsing\": true,\n                \"revealing\": false,\n                \"embedding\": true,\n                \"searching\": false,\n                \"scoring\": true,\n                \"reasoning\": false\n            }\n        },\n  \"info\" : {\n      \"full_name\":\"Harry Potter\",\n      \"first_name\": \"Harry\",\n      \"last_name\": \"Potter\",\n      \"email\":\"harry.potter@gmail.com\",\n      \"phone\":\"0202\",\n      \"gender\": null,\n      \"urls\": {\n          \"from_resume\": [],\n          \"linkedin\":\"\",\n          \"twitter\":\"\",\n          \"facebook\":\"\",\n          \"github\":\"\",\n          \"picture\":\"\"},\n      \"picture\":null,\n  \t  \"location\":{\"text\": null},\n  \t  \"summary\": \"Brief summary\"\n  },\n  \"summary\": \"test summary\",\n  \"text\": \"test text\",\n  \"experiences\": [{\n      \"date_start\": \"15/02/1900\",\n      \"date_end\": \"\",\n      \"title\": \"Lead\",\n      \"company\": \"Mathematic Departement\",\n      \"location\": {\"text\":\"Paris\"},\n      \"description\": \"Developping.\"\n      }],\n  \"experiences_duration\":5,\n  \"educations\": [{\n      \"date_start\": \"12540\",\n      \"date_end\": \"12550\",\n      \"title\": \"Mathematicien\",\n      \"school\": \"University\",\n      \"description\": \"Description\",\n      \"location\": {\"text\":\"Scotland\"}\n  }],\n  \"educations_duration\":4,\n  \"skills\": [{\"name\":\"manual skill\", \"value\": null}, {\"name\":\"Creative spirit\", \"value\": null}, {\"name\":\"Writing skills\", \"value\": null}, {\"name\":\"Communication\", \"value\": null}],\n  \"languages\" : [{\"name\":\"english\", \"value\": null}],\n  \"interests\": [{\"name\":\"football\", \"value\": null}],\n  \"tags\":[],\n  \"metadatas\":[],\n  \"labels\":[{\"stage\":\"yes\", \"job_id\":\"job_id\"}],\n  \"attachments\": []\n}"
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profile/indexing",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"indexing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Profile (parsing) : file",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "sync_parsing",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "sync_parsing_indexing",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "webhook_parsing_sending",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "source_key",
+									"value": "{{source_key}}",
+									"type": "text"
+								},
+								{
+									"key": "key",
+									"value": "",
+									"description": "Present if you want to reparse file of an existing Profile",
+									"type": "text"
+								},
+								{
+									"key": "reference",
+									"value": "",
+									"description": "Present if you want to reparse file of an existing Profile",
+									"type": "text"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": ""
+								},
+								{
+									"key": "labels",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "[{\"name\" : \"information\", \"value\": \"test_value\"}, {\"name\" : \"blacklist\", \"value\": True}, ,{\"name\" : \"test\", \"value\": [1,2]}]]",
+									"type": "text"
+								},
+								{
+									"key": "metadatas",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profile/parsing/file",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"parsing",
+								"file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Profile (parsing)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profile/parsing?source_key={{source_key}}&key={{key}}&reference&email",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"parsing"
+							],
+							"query": [
+								{
+									"key": "source_key",
+									"value": "{{source_key}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "reference",
+									"value": null
+								},
+								{
+									"key": "email",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Profile list (scoring)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profiles/scoring?source_keys={{source_keys}}&board_key={{board_key}}&job_key={{job_key}}&use_agent=1&stage=new&limit=10&page&order_by=desc&sort_by=created_at&create_at_min=2020-06-12T09:00:00&create_at_max=2020-06-12T12:00:00&name&email&location_geopoint&location_distance&summary_keywords&text_keywords&experience_keywords&experience_location_geopoint&experience_location_distance&experiences_duration_min=-1&experiences_duration_max=5&education_keywords=['']&education_location_geopoint={\"lat\":, \"lng\":}&education_location_distance=&educations_duration_min=-1&educations_duration_max=5&skills=[{\"name\": ,\"value\":}]&languages=[{\"name\": ,\"value\":}]&interests=[{\"name\": ,\"value\":}]&tags=[{\"name\": \"_archive\",\"value\":false}]",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profiles",
+								"scoring"
+							],
+							"query": [
+								{
+									"key": "source_keys",
+									"value": "{{source_keys}}"
+								},
+								{
+									"key": "board_key",
+									"value": "{{board_key}}"
+								},
+								{
+									"key": "job_key",
+									"value": "{{job_key}}"
+								},
+								{
+									"key": "use_agent",
+									"value": "1"
+								},
+								{
+									"key": "stage",
+									"value": "new"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "order_by",
+									"value": "desc"
+								},
+								{
+									"key": "sort_by",
+									"value": "created_at"
+								},
+								{
+									"key": "create_at_min",
+									"value": "2020-06-12T09:00:00"
+								},
+								{
+									"key": "create_at_max",
+									"value": "2020-06-12T12:00:00"
+								},
+								{
+									"key": "name",
+									"value": null
+								},
+								{
+									"key": "email",
+									"value": null
+								},
+								{
+									"key": "location_geopoint",
+									"value": null
+								},
+								{
+									"key": "location_distance",
+									"value": null
+								},
+								{
+									"key": "summary_keywords",
+									"value": null
+								},
+								{
+									"key": "text_keywords",
+									"value": null
+								},
+								{
+									"key": "experience_keywords",
+									"value": null
+								},
+								{
+									"key": "experience_location_geopoint",
+									"value": null
+								},
+								{
+									"key": "experience_location_distance",
+									"value": null
+								},
+								{
+									"key": "experiences_duration_min",
+									"value": "-1"
+								},
+								{
+									"key": "experiences_duration_max",
+									"value": "5"
+								},
+								{
+									"key": "education_keywords",
+									"value": "['']"
+								},
+								{
+									"key": "education_location_geopoint",
+									"value": "{\"lat\":, \"lng\":}"
+								},
+								{
+									"key": "education_location_distance",
+									"value": ""
+								},
+								{
+									"key": "educations_duration_min",
+									"value": "-1"
+								},
+								{
+									"key": "educations_duration_max",
+									"value": "5"
+								},
+								{
+									"key": "skills",
+									"value": "[{\"name\": ,\"value\":}]"
+								},
+								{
+									"key": "languages",
+									"value": "[{\"name\": ,\"value\":}]"
+								},
+								{
+									"key": "interests",
+									"value": "[{\"name\": ,\"value\":}]"
+								},
+								{
+									"key": "tags",
+									"value": "[{\"name\": \"_archive\",\"value\":false}]"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Profile list (searching)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/profiles/searching?source_keys={{source_keys}}&stage=new&limit=10&page&order_by=desc&sort_by=created_at&create_at_min=&create_at_max=&name&email&location_geopoint&location_distance&summary_keywords&text_keywords&experience_keywords&experience_location_geopoint&experience_location_distance&experiences_duration_min=&experiences_duration_max=&education_keywords&education_location_geopoint&education_location_distance&educations_duration_min=&educations_duration_max=&skills&languages&interests",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profiles",
+								"searching"
+							],
+							"query": [
+								{
+									"key": "source_keys",
+									"value": "{{source_keys}}"
+								},
+								{
+									"key": "stage",
+									"value": "new"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": null
+								},
+								{
+									"key": "order_by",
+									"value": "desc"
+								},
+								{
+									"key": "sort_by",
+									"value": "created_at"
+								},
+								{
+									"key": "create_at_min",
+									"value": ""
+								},
+								{
+									"key": "create_at_max",
+									"value": ""
+								},
+								{
+									"key": "name",
+									"value": null
+								},
+								{
+									"key": "email",
+									"value": null
+								},
+								{
+									"key": "location_geopoint",
+									"value": null
+								},
+								{
+									"key": "location_distance",
+									"value": null
+								},
+								{
+									"key": "summary_keywords",
+									"value": null
+								},
+								{
+									"key": "text_keywords",
+									"value": null
+								},
+								{
+									"key": "experience_keywords",
+									"value": null
+								},
+								{
+									"key": "experience_location_geopoint",
+									"value": null
+								},
+								{
+									"key": "experience_location_distance",
+									"value": null
+								},
+								{
+									"key": "experiences_duration_min",
+									"value": ""
+								},
+								{
+									"key": "experiences_duration_max",
+									"value": ""
+								},
+								{
+									"key": "education_keywords",
+									"value": null
+								},
+								{
+									"key": "education_location_geopoint",
+									"value": null
+								},
+								{
+									"key": "education_location_distance",
+									"value": null
+								},
+								{
+									"key": "educations_duration_min",
+									"value": ""
+								},
+								{
+									"key": "educations_duration_max",
+									"value": ""
+								},
+								{
+									"key": "skills",
+									"value": null
+								},
+								{
+									"key": "languages",
+									"value": null
+								},
+								{
+									"key": "interests",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Profile's attachments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"source_key\": \"711cbad98bc6be558ff742f3afbfe64c8f868de7\",\n  \"name\": \"Harry Potter\",\n  \"email\": \"harry.potter@gmail.com\",\n  \"address\": \"1 rue streeling\",\n  \"info\" : {\n      \"name\":\"Harry Potter\",\n      \"email\":\"harry.potter@gmail.com\",\n      \"phone\":\"0202\",\n      \"urls\": {\n          \"from_resume\": [],\n          \"linkedin\":\"\",\n          \"twitter\":\"\",\n          \"facebook\":\"\",\n          \"github\":\"\",\n          \"picture\":\"\"},\n      \"location\":{\"text\":\"\"}},\n  \"summary\": \"test summary\",\n  \"experiences\": [{\n      \"start\": \"15/02/1900\",\n      \"end\": \"\",\n      \"title\": \"Lead\",\n      \"company\": \"Mathematic Departement\",\n      \"location\": {\"text\":\"Paris\"},\n      \"description\": \"Developping.\"\n      }],\n  \"educations\": [{\n      \"start\": \"12540\",\n      \"end\": \"12550\",\n      \"title\": \"Mathematicien\",\n      \"school\": \"University\",\n      \"description\": \"Description\",\n      \"location\": {\"text\":\"Scotland\"}\n  }],\n  \"skills\": [\"manual skill\", \"Creative spirit\", \"Writing skills\", \"Communication\"],\n  \"languages\" : [\"english\"],\n  \"interests\": [\"football\"],\n  \"tags\":[],\n  \"metadatas\":[],\n  \"labels\":[\"stage\":\"yes\",\"job_id\":\"job_id\"]\n}"
+						},
+						"url": {
+							"raw": "http://api.hrflow.ai/v1/profile/indexing/attachments",
+							"protocol": "http",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"indexing",
+								"attachments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Profile (indexing)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.hrflow.ai/v1/profile/indexing?source_key={{source_key}}&key={{key}}&reference&email",
+							"protocol": "http",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"indexing"
+							],
+							"query": [
+								{
+									"key": "source_key",
+									"value": "{{source_key}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "reference",
+									"value": null
+								},
+								{
+									"key": "email",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Profile (indexing)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{write-x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"source_key\": \"0e97bea1315a8839f8485c6f3500f6f64b6641ff\",\n  \n  \"consent_algorithmic\": {\n            \"owner\": {\n                \"parsing\": true,\n                \"revealing\": false,\n                \"embedding\": true,\n                \"searching\": false,\n                \"scoring\": true,\n                \"reasoning\": false\n            },\n            \"controller\": {\n                \"parsing\": true,\n                \"revealing\": false,\n                \"embedding\": true,\n                \"searching\": false,\n                \"scoring\": true,\n                \"reasoning\": false\n            }\n        },\n  \"info\" : {\n      \"full_name\":\"Harry Potter\",\n      \"first_name\": \"Harry\",\n      \"last_name\": \"Potter\",\n      \"email\":\"harry.potter@gmail.com\",\n      \"phone\":\"0202\",\n      \"gender\": null,\n      \"urls\": {\n          \"from_resume\": [],\n          \"linkedin\":\"\",\n          \"twitter\":\"\",\n          \"facebook\":\"\",\n          \"github\":\"\",\n          \"picture\":\"\"},\n      \"picture\":null,\n  \t  \"location\":{\"text\": null},\n  \t  \"summary\": \"Brief summary\"\n  },\n  \"summary\": \"test summary\",\n  \"text\": \"test text\",\n  \"experiences\": [{\n      \"date_start\": \"15/02/1900\",\n      \"date_end\": \"\",\n      \"title\": \"Lead\",\n      \"company\": \"Mathematic Departement\",\n      \"location\": {\"text\":\"Paris\"},\n      \"description\": \"Developping.\"\n      }],\n  \"experiences_duration\":5,\n  \"educations\": [{\n      \"date_start\": \"12540\",\n      \"date_end\": \"12550\",\n      \"title\": \"Mathematicien\",\n      \"school\": \"University\",\n      \"description\": \"Description\",\n      \"location\": {\"text\":\"Scotland\"}\n  }],\n  \"educations_duration\":4,\n  \"skills\": [{\"name\":\"manual skill\", \"value\": null}, {\"name\":\"Creative spirit\", \"value\": null}, {\"name\":\"Writing skills\", \"value\": null}, {\"name\":\"Communication\", \"value\": null}],\n  \"languages\" : [{\"name\":\"english\", \"value\": null}],\n  \"interests\": [{\"name\":\"football\", \"value\": null}],\n  \"tags\":[],\n  \"metadatas\":[],\n  \"labels\":[{\"stage\":\"yes\", \"job_id\":\"job_id\"}],\n  \"attachments\": []\n}"
+						},
+						"url": {
+							"raw": "https://api.rimstaging.net/v1/profile/indexing",
+							"protocol": "https",
+							"host": [
+								"api",
+								"rimstaging",
+								"net"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"indexing"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Job API",
+			"item": [
+				{
+					"name": "PUT Job (indexing)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"board_key\": \"board_key\",\n    \"name\": \"Data Engineer\",\n    \"agent_key\": \"agent_key\",\n    \"reference\": \"123\",\n    \"url\": \"https://www.pole-emploi.ai/jobs/data_engineer\",\n    \"summary\": \"As an engineer for the Data Engineering Infrastructure team, you will design, build, scale, and evolve our data engineering platform, services and tooling. Your work will have a critical  impact on all areas of business: powering core data pipelines,  supporting detailed internal analytics, calculating customer  usage, securing our platform, and much more.\",\n    \"location\": {\n                  \"text\": \"Dampierre en Burly (45)\",\n                  \"geopoint\": {\n                      \"lat\": 47.7667,\n                      \"lon\": 2.5167\n                  }\n                 },\n    \"sections\": [{\n                    \"name\": \"profile\",\n                    \"title\": \"Searched Profile\",\n                    \"description\": \"Bac+5\"\n                  }\n                  ],\n    \"skills\": [{\n                  \"name\": \"python\",\n                  \"value\": null\n               },\n               {\n                  \"name\": \"spark\",\n                  \"value\": 0.9\n               }\n               ],\n    \"languages\": [{\n                     \"name\": \"english\",\n                     \"value\": 1\n                  },\n                 {  \n                     \"name\": \"french\",\n                     \"value\": 1\n                  }\n                  ],\n    \"tags\": [{\n                \"name\": \"archive\",\n                \"value\": true\n             },\n             {  \n                \"name\": \"tag example\",\n                \"value\": \"tag\"\n              }\n              ],\n    \"ranges_date\": [{\"name\": \"Dates\",\n                       \"value_min\": \"2020-05-18T21:59\",\n                       \"value_max\": \"2020-09-15T21:59\"\n                    }\n                    ],\n    \"ranges_float\": [{\n                       \"name\": \"salary\",\n                       \"value_min\": 30,\n                       \"value_max\": 50,\n                       \"unit\": \"eur\"\n                    }\n                    ],\n    \"metadatas\": [{\n                     \"name\": \"metadata example\",\n                     \"value\": \"metadata\"\n                  }\n                  ]\n}"
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/job/indexing",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"job",
+								"indexing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Job (indexing)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"board_key\": \"ac1502b2de580f4f1b404f0e50d1cc3cf084040c\",\n    \"name\": \"Data Engineer\",\n    \"agent_key\": \"agent_key\",\n    \"reference\": \"Job's reference abc\",\n    \"url\": \"https://www.pole-emploi.ai/jobs/data_engineer\",\n    \"summary\": \"As an engineer for the Data Engineering Infrastructure team, you will design, build, scale, and evolve our data engineering  platform, services and tooling. Your work will have a critical  impact on all areas of business:supporting detailed internal analytics, calculating customer usage, securing our platform, and much more.\",\n    \"location\": {\n                  \"text\": \"Dampierre en Burly (45)\",\n                  \"geopoint\": {\n                      \"lat\": 47.7667,\n                      \"lon\": 2.5167\n                  }\n                 },\n    \"sections\": [{\n                    \"name\": \"profile\",\n                    \"title\": \"Searched Profile\",\n                    \"description\": \"Bac+5\"\n                  }\n                  ],\n    \"skills\": [{\n                  \"name\": \"python\",\n                  \"value\": null\n               },\n               {\n                  \"name\": \"spark\",\n                  \"value\": 0.9\n               }\n               ],\n    \"languages\": [{\n                     \"name\": \"english\",\n                     \"value\": 1\n                  },\n                 {  \n                     \"name\": \"french\",\n                     \"value\": 1\n                  }\n                  ],\n    \"tags\": [{\n                \"name\": \"archive\",\n                \"value\": true\n             },\n             {  \n                \"name\": \"tag example\",\n                \"value\": \"tag\"\n              }\n              ],\n    \"ranges_date\": [{\n                       \"name\": \"Dates\",\n                       \"value_min\": \"2020-05-18T21:59\",\n                       \"value_max\": \"2020-09-15T21:59\"\n                    }\n                    ],\n    \"ranges_float\": [{\n                       \"name\": \"salary\",\n                       \"value_min\": 30,\n                       \"value_max\": 40,\n                       \"unit\": \"eur\"\n                    }\n                    ],\n    \"metadatas\": [{\n                     \"name\": \"metadata example\",\n                     \"value\": \"metadata\"\n                  }\n                  ]\n}"
+						},
+						"url": {
+							"raw": "http://api.hrflow.ai/v1/job/indexing",
+							"protocol": "http",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"job",
+								"indexing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Job (indexing)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://api.hrflow.ai/v1/job/indexing?board_key={{board_key}}&key={{key}}&reference={{reference}}",
+							"protocol": "http",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"job",
+								"indexing"
+							],
+							"query": [
+								{
+									"key": "board_key",
+									"value": "{{board_key}}"
+								},
+								{
+									"key": "key",
+									"value": "{{key}}"
+								},
+								{
+									"key": "reference",
+									"value": "{{reference}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Job List (scoring)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/jobs/scoring?board_keys=[\"cc93878516bf78ecb5663dc8a5b3c231c68d9be0\"]&source_key=d8f998d13ab809f7591e67ea29b5b06794da5e28&profile_key=16b173802ce6b93185348f3fd953ee213e45400a&use_agent=1&agent_key=78b4e984d17b783fe3b10d0be3c40d3b2159f684&limit=10&page=1&order_by=desc&sort_by=scoring&name=&location_geopoint={}&location_distance=30&summary_keywords&text_keywords=[%22symfony%22,%22bootstrap%22,%22graphisme%22,%22wordpress%22,%22pack%20office%22,%22html5%22,%22css3%22,%22jquery%22,%22allemand%22,%22anglais%22]&tags=[]&skills&languages&tags=&ranges_float&ranges_date",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"jobs",
+								"scoring"
+							],
+							"query": [
+								{
+									"key": "board_keys",
+									"value": "[\"cc93878516bf78ecb5663dc8a5b3c231c68d9be0\"]"
+								},
+								{
+									"key": "source_key",
+									"value": "d8f998d13ab809f7591e67ea29b5b06794da5e28"
+								},
+								{
+									"key": "profile_key",
+									"value": "16b173802ce6b93185348f3fd953ee213e45400a"
+								},
+								{
+									"key": "use_agent",
+									"value": "1"
+								},
+								{
+									"key": "agent_key",
+									"value": "78b4e984d17b783fe3b10d0be3c40d3b2159f684"
+								},
+								{
+									"key": "limit",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "order_by",
+									"value": "desc"
+								},
+								{
+									"key": "sort_by",
+									"value": "scoring"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "location_geopoint",
+									"value": "{}"
+								},
+								{
+									"key": "location_distance",
+									"value": "30"
+								},
+								{
+									"key": "summary_keywords",
+									"value": null
+								},
+								{
+									"key": "text_keywords",
+									"value": "[%22symfony%22,%22bootstrap%22,%22graphisme%22,%22wordpress%22,%22pack%20office%22,%22html5%22,%22css3%22,%22jquery%22,%22allemand%22,%22anglais%22]"
+								},
+								{
+									"key": "tags",
+									"value": "[]"
+								},
+								{
+									"key": "skills",
+									"value": null
+								},
+								{
+									"key": "languages",
+									"value": null
+								},
+								{
+									"key": "tags",
+									"value": ""
+								},
+								{
+									"key": "ranges_float",
+									"value": null
+								},
+								{
+									"key": "ranges_date",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Job List (searching)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/jobs/searching?board_keys={{board_keys}}&limit=1&page=1&order_by=desc&sort_by=scoring&name=&location_geopoint={}&location_distance=30&summary_keywords&text_keywords=[%22symfony%22,%22bootstrap%22,%22graphisme%22,%22wordpress%22,%22pack%20office%22,%22html5%22,%22css3%22,%22jquery%22,%22allemand%22,%22anglais%22]&tags=[]&skills&languages&tags=&ranges_float&ranges_date",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"jobs",
+								"searching"
+							],
+							"query": [
+								{
+									"key": "board_keys",
+									"value": "{{board_keys}}"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "order_by",
+									"value": "desc"
+								},
+								{
+									"key": "sort_by",
+									"value": "scoring"
+								},
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "location_geopoint",
+									"value": "{}"
+								},
+								{
+									"key": "location_distance",
+									"value": "30"
+								},
+								{
+									"key": "summary_keywords",
+									"value": null
+								},
+								{
+									"key": "text_keywords",
+									"value": "[%22symfony%22,%22bootstrap%22,%22graphisme%22,%22wordpress%22,%22pack%20office%22,%22html5%22,%22css3%22,%22jquery%22,%22allemand%22,%22anglais%22]"
+								},
+								{
+									"key": "tags",
+									"value": "[]"
+								},
+								{
+									"key": "skills",
+									"value": null
+								},
+								{
+									"key": "languages",
+									"value": null
+								},
+								{
+									"key": "tags",
+									"value": ""
+								},
+								{
+									"key": "ranges_float",
+									"value": null
+								},
+								{
+									"key": "ranges_date",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Job (indexing)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/job/parsing?board_key={{board_key}}&key={{job_key}}&reference",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"job",
+								"parsing"
+							],
+							"query": [
+								{
+									"key": "board_key",
+									"value": "{{board_key}}"
+								},
+								{
+									"key": "key",
+									"value": "{{job_key}}"
+								},
+								{
+									"key": "reference",
+									"value": null,
+									"description": "either job_key or job_reference is needed"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Source API",
+			"item": [
+				{
+					"name": "Get Sources",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/sources?name=folder&page=1&limit=1&sort_by=date&order_by=asc",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"sources"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "folder"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "sort_by",
+									"value": "date"
+								},
+								{
+									"key": "order_by",
+									"value": "asc",
+									"description": "desc (default value) or asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get source (info)",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/source?key={{source_key}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"source"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{source_key}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Board API",
+			"item": [
+				{
+					"name": "Get Boards",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/boards?name=folder&page=1&limit=1&sort_by=date&order_by=asc",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"boards"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "folder"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "1"
+								},
+								{
+									"key": "sort_by",
+									"value": "date"
+								},
+								{
+									"key": "order_by",
+									"value": "asc",
+									"description": "desc (default value) or asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Board (info)",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/board?key={{board_key }}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"board"
+							],
+							"query": [
+								{
+									"key": "key",
+									"value": "{{board_key }}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Document API",
+			"item": [
+				{
+					"name": "POST Document Parsing",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"text\": \"job description\"\n}"
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/document/parsing",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"document",
+								"parsing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Document Revealing",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"text\": \"python\"\n}"
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/document/revealing",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"document",
+								"revealing"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Document Linking",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{x-api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "x-user-email",
+								"value": "{{x-user-email}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"text\": \"python\",\n\t\"top_n\": 5\n}"
+						},
+						"url": {
+							"raw": "https://api.hrflow.ai/v1/document/linking",
+							"protocol": "https",
+							"host": [
+								"api",
+								"hrflow",
+								"ai"
+							],
+							"path": [
+								"v1",
+								"document",
+								"linking"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

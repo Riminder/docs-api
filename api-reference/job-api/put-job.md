@@ -30,7 +30,6 @@ User's email.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-
 {% api-method-parameter name="name" type="string" required=true %}
 The Job's title
 {% endapi-method-parameter %}
