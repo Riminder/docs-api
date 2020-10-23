@@ -1,4 +1,4 @@
-# AI Profile Embedding
+# Build Personalized AI HR models
 
 In this tutorial we will showcase our latest AI layer :  **Embedding API**.  
 This layer is specially designed for data scientists and developers working on HR data challenges.
@@ -8,7 +8,9 @@ We will go through a practical use case by building a simple machine learning mo
 
 {% embed url="https://www.youtube.com/watch?v=pfHzLefY3vs" %}
 
+The following Google Colab Tutorial will help you explore the different Profile API endpoints available and test them. It also provides an example for how to use embeddings to build customized models.
+
+{% embed url="https://colab.research.google.com/github/Riminder/python-hrflow-api/blob/master/examples/colab/ai\_profile\_embedding.ipynb" caption="" %}
 
 
-This [Google Colab Tutorial](https://colab.research.google.com/github/Riminder/python-hrflow-api/blob/master/examples/colab/ai_profile_embedding.ipynb) will help you explore the different Profile API endpoints available and test them.It also provides an example for how to use embeddings to build customized models.
 
