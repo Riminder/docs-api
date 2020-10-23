@@ -2,7 +2,7 @@
 
 HrFlow Python SDK is basically designed to handle simply and easily, complex HR integrations, helping programmers to increase their productivity by focusing on one complete tool.
 
-In this tutorial, we will setup the Hrflow Client and then we will discuss how HrFlow package can be used as springboards for many use cases: such as parsing, revealing, or even more advanced tasks like matching a set of profiles with a given job offer
+In this tutorial, we will setup the HrFlow Client and then we will discuss how HrFlow package can be used as springboards for many use cases: such as parsing, revealing, or even more advanced tasks like matching a set of profiles with a given job offer
 
 {% embed url="https://www.youtube.com/watch?v=DZdFlUqO8cU" %}
 
