@@ -8,9 +8,7 @@ We will go through a practical use case by building a simple machine learning mo
 
 {% embed url="https://www.youtube.com/watch?v=pfHzLefY3vs" %}
 
-The following Google Colab Tutorial will help you explore the different Profile API endpoints available and test them. It also provides an example for how to use embeddings to build customized models.
-
-{% embed url="https://colab.research.google.com/github/Riminder/python-hrflow-api/blob/master/examples/colab/ai\_profile\_embedding.ipynb" caption="" %}
+The following [Google Colab](https://colab.research.google.com/github/Riminder/python-hrflow-api/blob/master/examples/colab/build_personalized_ai_hr_models.ipynb) Tutorial will help you explore the different Profile API endpoints available and test them. It also provides an example for how to use embeddings to build customized models.
 
 
 
