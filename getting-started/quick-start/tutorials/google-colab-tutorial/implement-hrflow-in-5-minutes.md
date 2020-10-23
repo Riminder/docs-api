@@ -8,6 +8,3 @@ In this tutorial, we will setup the Hrflow Client and then we will discuss how H
 
 This [Google Colab Tutorial](https://colab.research.google.com/github/Riminder/python-hrflow-api/blob/master/examples/colab/implement_hrflow_in_5min.ipynb) will help you explore the different HrFlow features and test them.
 
-  
-[https://colab.research.google.com/github/Riminder/python-hrflow-api/blob/master/examples/colab/implement\_hrflow\_in\_5min.ipynb](https://colab.research.google.com/github/Riminder/python-hrflow-api/blob/master/examples/colab/implement_hrflow_in_5min.ipynb)
-
