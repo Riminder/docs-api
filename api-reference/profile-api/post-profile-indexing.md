@@ -395,6 +395,14 @@ Could not find a cake matching this query.
 {% endapi-method-spec %}
 {% endapi-method %}
 
+{% hint style="danger" %}
+**date\_start** and **date\_end** in Experience and  Education are objects, or conversely the [GET](https://developers.hrflow.ai/api-reference/profile-api/get-profile-indexing) endpoint sends you back **date\_start** and **date\_end** as **string**
+
+```python
+{"iso8601" : "2018-01-01T00:00:00"}
+```
+{% endhint %}
+
 ## Example
 
 {% tabs %}
