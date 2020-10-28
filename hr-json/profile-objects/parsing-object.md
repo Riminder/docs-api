@@ -58,7 +58,7 @@ It helps data scientist to go further in their studies and enhance the quality o
               {'type': 'facebook', 'url': null}, 
               {'type': 'github', 'url': null}],
      'gender': 'male',
-     'driving_licence': null, 
+     'driving_license': null, 
      'summary': 'Brief summary', 
      'text': 'Profile s text' ,
      'text_language': 'en'
@@ -161,7 +161,7 @@ It helps data scientist to go further in their studies and enhance the quality o
 | picture | The url of profile's picture |
 | urls | The urls for: linkedin / twitter / facebook / github if they exist |
 | gender | The Profile's gender |
-| driving licence | The Profile's driving licence if exits otherwise the default value is null |
+| driving license | The Profile's driving license if exits otherwise the default value is null |
 | summary | The Profile's summary |
 | text | The Profile's text, it contains a long resume   of a profile, it is generated based on parsed text |
 | text language | The original language of the document |
