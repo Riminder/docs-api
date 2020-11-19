@@ -44,6 +44,9 @@ Please find below an example of Json profile that could be submitted.
         "location":{"text": null},
         "summary": "Brief summary"
   },
+  "text": "Harry Potter harry.potter@gmail.com 0202 Brief summary \
+          Mathematic Departement Developping Mathematicien University Description \
+          manual skill Creative spirit Writing skills Communication english football",
   "experiences": [{
       "date_start": {"iso8601": "2016-01-01T00:00:00"},
       "date_end": {"iso8601": "2018-07-01T00:00:00"},
@@ -396,6 +399,10 @@ Could not find a cake matching this query.
 {% endapi-method %}
 
 {% hint style="danger" %}
+It is highly recommended to post the profile with a **text** field combining First Name / Last Name , Summary and education / experience 's description.
+{% endhint %}
+
+{% hint style="danger" %}
 **date\_start** and **date\_end** in Experience and  Education are objects, or conversely the [GET](https://developers.hrflow.ai/api-reference/profile-api/get-profile-indexing) endpoint sends you back **date\_start** and **date\_end** as **string**
 
 ```python
@@ -449,6 +456,7 @@ data = {
         "location":{"text": None},
         "summary": "Brief summary"
   },
+  "text": "Harry Potter harry.potter@gmail.com 0202 Brief summary Mathematic Departement Developping Mathematicien University Description manual skill Creative spirit Writing skills Communication english football",
   "experiences": [{
       "date_start":  {"iso8601": "2018-01-01T00:00:00"},
       "date_end": {"iso8601": "2018-07-01T00:00:00"},
@@ -528,6 +536,7 @@ const data = {
         'location':{'text': null},
         'summary': 'Brief summary'
   },
+  'text': 'Harry Potter harry.potter@gmail.com 0202 Brief summary Mathematic Departement Developping Mathematicien University Description manual skill Creative spirit Writing skills Communication english football',
   'experiences': [{
       'date_start':  {'iso8601': '2018-01-01T00:00:00'},
       'date_end': {'iso8601': '2018-07-01T00:00:00'},
