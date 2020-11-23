@@ -20,9 +20,8 @@ Please find below an example of json job that you can upload.
                 usage, securing our platform, and much more.",
     "location": {
                   "text": "Dampierre en Burly (45)",
-                  "geopoint": {
-                      "lat": 47.7667,
-                      "lon": 2.5167
+                  "lat": 47.7667,
+                  "lng": 2.5167
                   }
                  },
     "sections": [{
@@ -167,10 +166,8 @@ The Job's sections
 Job's location  
 \(ie. {  
 "text": "xx rue XXXX" ,  
-"geopoint": {  
 "lat":38.299637 ,  
 "lng": -122.657535  
-}  
 }\)
 {% endapi-method-parameter %}
 
@@ -332,10 +329,8 @@ job_json = {
                 usage, securing our platform, and much more.""",
     "location": {
                   "text": "Dampierre en Burly (45)",
-                  "geopoint": {
-                      "lat": 47.7667,
-                      "lon": 2.5167
-                  }
+                  "lat": 47.7667,
+                  "lng": 2.5167
                  },
     "sections": [{
                     "name": "profile",
@@ -407,10 +402,8 @@ client.job.indexing.addJosn("board_key", {
                 usage, securing our platform, and much more.",
     "location": {
                   "text": "Dampierre en Burly (45)",
-                  "geopoint": {
-                      "lat": 47.7667,
-                      "lon": 2.5167
-                  }
+                  "lat": 47.7667,
+                  "lng": 2.5167
                  },
     "sections": [{
                     "name": "profile",
