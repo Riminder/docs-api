@@ -229,8 +229,8 @@ Cake successfully retrieved.
 
 ```bash
 {
-    "code": 201,
-    "message": "Profile created",
+    "code": 200,
+    "message": "Profile edited",
     "data": {
         "id": id,
         "key": "profile_key",
