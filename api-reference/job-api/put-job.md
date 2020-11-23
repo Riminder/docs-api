@@ -65,11 +65,9 @@ The Job's sections
 {% api-method-parameter name="location" type="object" required=true %}
 Job's location  
 \(ie. {  
-"text": "xx rue XXXX" ,  
-"geopoint": {  
+"text": "xx rue XXXX" ,{  
 "lat":38.299637 ,  
 "lng": -122.657535  
-}  
 }\)
 {% endapi-method-parameter %}
 
@@ -231,10 +229,8 @@ data = {
                 usage, securing our platform, and much more.""",
     "location": {
                   "text": "Dampierre en Burly (45)",
-                  "geopoint": {
-                      "lat": 47.7667,
-                      "lon": 2.5167
-                  }
+                  "lat": 47.7667,
+                  "lng": 2.5167
                  },
     "sections": [{
                     "name": "profile",
@@ -305,10 +301,8 @@ client.job.indexing.edit("board_key", "job_key", {
                 usage, securing our platform, and much more.",
     "location": {
                   "text": "Dampierre en Burly (45)",
-                  "geopoint": {
-                      "lat": 47.7667,
-                      "lon": 2.5167
-                  }
+                  "lat": 47.7667,
+                  "lng": 2.5167
                  },
     "sections": [{
                     "name": "profile",
