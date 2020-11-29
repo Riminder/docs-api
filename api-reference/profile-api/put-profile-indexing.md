@@ -70,7 +70,16 @@ Please find below an example of Profile json to update.
   "interests": [{"name":"football", "value": null}],
   "tags":[{"name":"archive", "value": false}],
   "metadatas":[],
-  "labels":[{"stage":"yes", "job_key":"job_key"}],
+  "labels":[
+     {
+        "stage": "yes",
+        "job_key": job_key,
+        "board_key": board_key,
+        "date_stage": "2020-07-07T00:00:00",
+        "rating": 5,
+        "date_rating" : "2020-07-06T00:00:00"
+      }
+  ],
   "attachments": []
 }
 ```
@@ -201,6 +210,7 @@ The Profile's interests \[{"name": "e-sport", "value": 0.8},...\]
 The Profile's labels \[{  
 "stage": "yes",  
 "job\_key": job\_key,  
+"board\_key": board\_key,  
 "date\_stage": "2020-07-07T00:00:00",  
 "rating": 5,  
 "date\_rating" : "2020-07-06T00:00:00"},  
@@ -477,7 +487,16 @@ data = {
   "interests": [{"name":"football", "value": None}],
   "tags":[{"name":"archive", "value": False}],
   "metadatas":[],
-  "labels":[{"stage":"yes", "job_key":"job_key"}],
+  "labels":[
+     {
+        "stage": "yes",
+        "job_key": job_key,
+        "board_key": board_key,
+        "date_stage": "2020-07-07T00:00:00",
+        "rating": 5,
+        "date_rating" : "2020-07-06T00:00:00"
+      }
+  ],
   "attachments": []
 };
 
