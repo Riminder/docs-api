@@ -108,8 +108,7 @@ Profile object is successfully retrieved
                 "linkedin": "",
                 "twitter": "",
                 "facebook": "",
-                "github": "",
-                "picture": ""
+                "github": ""
             },
             "picture": null,
             "gender": "F",

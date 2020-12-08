@@ -38,11 +38,10 @@ Please find below an example of Profile json to update.
           "linkedin":"",
           "twitter":"",
           "facebook":"",
-          "github":"",
-          "picture":""},
+          "github":""},
       "picture":null,
-        "location":{"text": null},
-        "summary": "Brief summary"
+      "location":{"text": null},
+      "summary": "Brief summary"
   },
   "experiences": [{
       "date_start":  {"iso8601": "2018-01-01T00:00:00"},
@@ -455,11 +454,10 @@ data = {
           "linkedin":"",
           "twitter":"",
           "facebook":"",
-          "github":"",
-          "picture":""},
+          "github":""},
       "picture":None,
-        "location":{"text": None},
-        "summary": "Brief summary"
+      "location":{"text": None},
+      "summary": "Brief summary"
   },
   "experiences": [{
       "date_start":  {"iso8601": "2018-01-01T00:00:00"},
@@ -543,11 +541,10 @@ const data = {
           'linkedin': '',
           'twitter': '',
           'facebook': '',
-          'github': '',
-          'picture': ''},
+          'github': ''},
       'picture':null,
-        'location':{'text': null},
-        'summary': 'Brief summary'
+      'location':{'text': null},
+      'summary': 'Brief summary'
   },
   'experiences': [{
       'date_start':  {'iso8601': '2018-01-01T00:00:00'},

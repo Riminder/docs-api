@@ -38,11 +38,10 @@ Please find below an example of Json profile that could be submitted.
           "linkedin":"",
           "twitter":"",
           "facebook":"",
-          "github":"",
-          "picture":""},
+          "github":""},
       "picture":null,
-        "location":{"text": null},
-        "summary": "Brief summary"
+      "location":{"text": null},
+      "summary": "Brief summary"
   },
   "text": "Harry Potter harry.potter@gmail.com 0202 Brief summary \
           Mathematic Departement Developping Mathematicien University Description \
@@ -450,11 +449,10 @@ data = {
           "linkedin":"",
           "twitter":"",
           "facebook":"",
-          "github":"",
-          "picture":""},
+          "github":""},
       "picture":None,
-        "location":{"text": None},
-        "summary": "Brief summary"
+      "location":{"text": None},
+      "summary": "Brief summary"
   },
   "text": "Harry Potter harry.potter@gmail.com 0202 Brief summary Mathematic Departement Developping Mathematicien University Description manual skill Creative spirit Writing skills Communication english football",
   "experiences": [{
@@ -530,11 +528,10 @@ const data = {
           'linkedin': '',
           'twitter': '',
           'facebook': '',
-          'github': '',
-          'picture': ''},
+          'github': ''},
       'picture': null,
-        'location':{'text': null},
-        'summary': 'Brief summary'
+      'location':{'text': null},
+      'summary': 'Brief summary'
   },
   'text': 'Harry Potter harry.potter@gmail.com 0202 Brief summary Mathematic Departement Developping Mathematicien University Description manual skill Creative spirit Writing skills Communication english football',
   'experiences': [{
