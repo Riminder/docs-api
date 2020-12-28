@@ -190,7 +190,7 @@ The first 10 pages are parsed for documents with more than 10 pages.
 ```python
 from hrflow import Hrflow
 
-client = Hrflow(api_secret="Your API Key", api_user="Your API user email",=)
+client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 with open('/path/to/file.pdf','rb') as file:
     profile_file = file.read()

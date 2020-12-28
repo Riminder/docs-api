@@ -11,6 +11,7 @@ Please find below an example of json job that you can upload.
     "name": "Data Engineer",
     "agent_key": null,
     "reference": "Job's reference abc",
+    "created_at": "2020-12-24T09:32:11",
     "url": "https://www.pole-emploi.ai/jobs/data_engineer",
     "summary": "As an engineer for the Data Engineering Infrastructure team,
                 you will design, build, scale, and evolve our data engineering
@@ -320,6 +321,7 @@ job_json = {
     "name": "Data Engineer",
     "agent_key": None,
     "reference": "123",
+    "created_at": "2020-12-24T09:32:11",
     "url": "https://www.pole-emploi.ai/jobs/data_engineer",
     "summary": """As an engineer for the Data Engineering Infrastructure team, 
                 you will design, build, scale, and evolve our data engineering
@@ -393,6 +395,7 @@ client.job.indexing.addJosn("board_key", {
     "name": "Data Engineer",
     "agent_key": None, #Scoring engine
     "reference": "123",
+    "created_at": "2020-12-24T09:32:11",
     "url": "https://www.pole-emploi.ai/jobs/data_engineer",
     "summary": "As an engineer for the Data Engineering Infrastructure team,
                 you will design, build, scale, and evolve our data engineering
