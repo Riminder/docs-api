@@ -90,6 +90,28 @@ Invalid secret key
 {% endapi-method-spec %}
 {% endapi-method %}
 
+As output , this API sends you back all parsed entities with their label.
+
+There are 17 labels :
+
+* FirstName
+* LastName
+* Date
+* Duration
+* Location
+* Company
+* JobTitle
+* Task
+* School 
+* EduTitle
+* Course
+* Skill
+* Certification
+* Language
+* Interest
+* Email
+* Phone
+
 {% tabs %}
 {% tab title="Python" %}
 ```python
