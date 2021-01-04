@@ -90,7 +90,7 @@ Invalid secret key
 {% endapi-method-spec %}
 {% endapi-method %}
 
-As output , this API sends you back all parsed entities with their label.
+As output , this API sends you back all parsed entities.
 
 There are 17 labels :
 
