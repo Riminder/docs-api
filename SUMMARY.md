@@ -129,7 +129,7 @@
 
 * [Security](https://security.hrflow.ai)
 * [GDPR & Privacy](https://gdpr.hrflow.ai)
-* [Help center](https://support.hrflow.ai)
-* [Service status](https://status.hrflow.ai)
+* [Help Center](https://support.hrflow.ai)
+* [Service Status](https://status.hrflow.ai)
 * [Public Roadmap](https://updates.hrflow.ai)
 
