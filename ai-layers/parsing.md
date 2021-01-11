@@ -58,6 +58,8 @@ Generate your own augmented resume by trying: [https://labs.riminder.net/profile
 
 ### Job API
 
+In a more general case, here are the categories retrieved by our document parsing:
+
 | Category | Description | Example |
 | :--- | :--- | :--- |
 | FirstName | First name | John |
