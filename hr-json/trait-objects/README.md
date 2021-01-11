@@ -1,2 +1,2 @@
-# Trait objects
+# Trait Objects
 

@@ -40,7 +40,7 @@
 
 ## Hr Json
 
-* [Profile objects](hr-json/profile-objects/README.md)
+* [Profile Objects](hr-json/profile-objects/README.md)
   * [Parsing object](hr-json/profile-objects/parsing-object.md)
   * [Profile object](hr-json/profile-objects/profile-object.md)
   * [Person object](hr-json/profile-objects/person-object.md)
@@ -49,12 +49,12 @@
   * [Interest object](hr-json/profile-objects/interest-object.md)
   * [Date object](hr-json/profile-objects/date-object.md)
   * [Attachment object](hr-json/profile-objects/attachment-object.md)
-* [Job objects](hr-json/job-objects/README.md)
+* [Job Objects](hr-json/job-objects/README.md)
   * [Job object](hr-json/job-objects/job-object.md)
   * [Range Date object](hr-json/job-objects/range-date-object.md)
   * [Range Float object](hr-json/job-objects/range-float-object.md)
   * [Section object](hr-json/job-objects/section-object.md)
-* [Trait objects](hr-json/trait-objects/README.md)
+* [Trait Objects](hr-json/trait-objects/README.md)
   * [Location object](hr-json/trait-objects/location-object.md)
   * [Skill object](hr-json/trait-objects/skill-object.md)
   * [Language object](hr-json/trait-objects/language-object.md)

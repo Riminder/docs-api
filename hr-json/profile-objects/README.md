@@ -1,2 +1,2 @@
-# Profile objects
+# Profile Objects
 
