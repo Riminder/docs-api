@@ -4,13 +4,11 @@ description: Structure profile & job data across all media formats.
 
 # Parsing
 
-## Parsing Attributes
+### Profile API
 
 We combined cutting edge Deep Computer Vision and Deep Natural Language Processing algorithms to allow you automatically extract semantic entities from raw and complex layout documents \(PDF, DOCX, IMAGES and more\) to get a structured json format.
 
 ![Parsing attributes](../.gitbook/assets/screenshot-from-2020-03-01-19-32-31.png)
-
-### Profile API
 
 | **Sections** | Attributes | Description | Example |
 | :--- | :--- | :--- | :--- |
