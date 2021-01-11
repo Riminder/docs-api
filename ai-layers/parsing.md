@@ -10,6 +10,8 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 
 ![Parsing attributes](../.gitbook/assets/screenshot-from-2020-03-01-19-32-31.png)
 
+### Profile API
+
 | **Sections** | Attributes | Description | Example |
 | :--- | :--- | :--- | :--- |
 | info | First Name | First name | John |
@@ -48,8 +50,6 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 | certifications | Certifications | Certification associated to a skill or language | TOEIC - 750 |
 | interests | Interests | Centers of interest | Chess, Football, Cinema |
 
-### Profile API
-
 ![Example of Augmented Profile:Parsing attributes plotted on the original resume.](https://lh4.googleusercontent.com/LpKFFRl8MbJ561Q-fxFy88VB23ZK5I749ZW8Yzkl-WIqTPTkgY8espVLiKdxnimZcCydcB9XgQev4KSsee9RcyPw3dcTh7NqT6Xk8oNdExuPltvH92Y7jV-bdspZFbU7dYfOD5noeFw)
 
 {% hint style="info" %}
@@ -57,6 +57,27 @@ Generate your own augmented resume by trying: [https://labs.riminder.net/profile
 {% endhint %}
 
 ### Job API
+
+| Category | Description | Example |
+| :--- | :--- | :--- |
+| FirstName | First name | John |
+| LastName | Last name | Doe |
+| Phone | Phone, mobile or fax number | \(+33\)612345678 |
+| Location | Geographic location or address | 7 rue du Quatre Septembre, 75002 Paris, France |
+| Email | Email address | contact@riminder.net |
+| Date | Any kind of dates in any formats | 26/11/1991; 4th of July |
+| Certification | Administrative paper certifying a certain competency level for a skill | Permis B; TOEIC - 750 |
+| Duration | Duration \(e.g. of an experience or an education\) | 5 months; 2 ans |
+| Company | Company name | HrFlow.ai |
+| JobTitle | Job name of position occupied | Data Scientist |
+| Task | Assignment that represents an action to complete a given target | Management of office supplies and consumables |
+| School | School or any educational institution | Stanford University |
+| EduTitle | Title of a degree | BSc Applied Mathematics |
+| Course | Name of a course taught in an education institution | CS231n: Convolutional Neural Networks for Visual Recognition |
+| Skill | Either hard skill or soft skill | Machine Learning; C++ |
+| Language | Language name | English, French, Chinese |
+| Interest | Center of interest | Chess, Football, Cinema |
+| URL | Internet link | https://www.hrflow.ai |
 
 ![Example of Augmented Job:Parsing attributes plotted on the original job offer.](../.gitbook/assets/screenshot-from-2020-03-01-20-12-05.png)
 
