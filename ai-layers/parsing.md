@@ -74,7 +74,8 @@ In a more general case, here are the categories retrieved by our document parsin
 | School | School or any educational institution | Stanford University |
 | EduTitle | Title of a degree | BSc Applied Mathematics |
 | Course | Name of a course taught in an education institution | CS231n: Convolutional Neural Networks for Visual Recognition |
-| Skill | Either hard skill or soft skill | Machine Learning; C++ |
+| HardSkill | Technical attribute that enable someone to execute a task | Machine Learning; C++ |
+| SoftSkill | Personal attribute that enable someone to interact effectively and harmoniously with other people | Rigorous; Teamplayer |
 | Language | Language name | English, French, Chinese |
 | Interest | Center of interest | Chess, Football, Cinema |
 | URL | Internet link | https://www.hrflow.ai |
