@@ -18,19 +18,19 @@ This interactive flow can be simplified to three basic steps:
 
 ## 1\) Authentication :
 
-Enabling HrFlow in Talentsoft, you’ll be able to immediately either score your candidates for a given offer or score your offer for a given candidate.
+Enabling HrFlow.ai in Talentsoft, you’ll be able to immediately either score your candidates for a given offer or score your offer for a given candidate.
 
 But, before assisting to magic show the integration has to start somewhere, with a knock on the door to request entry.  
   
-Once you have your **Client Id / Client Secret / Client URL** , you will be able to create in your HrFlow workspace , a Talentsoft source / board , so HrFlow could index automatically existing profile / job.
+Once you have your **Client ID / Client Secret / Client URL**, you will be able to create in your HrFlow.ai workspace, a Talentsoft source / board, so HrFlow.ai could index automatically existing profile / job.
 
 ![](../../../.gitbook/assets/image%20%286%29.png)
 
 ## 2\) Indexation :
 
-By creating a Talentsoft Source / Board, and successfully authenticated, HrFlow will automatically pull and index all existing profiles / Jobs.
+By creating a Talentsoft Source / Board, and successfully authenticated, HrFlow.ai will automatically pull and index all existing profiles / Jobs.
 
-Our pulling system will incrementally send profiles / jobs to HrFlow Platform , in interval range of 5 minutes between every pull action.
+Our pulling system will incrementally send profiles / jobs to HrFlow.ai Platform, in an interval range of 5 minutes between every pull action.
 
 ## 3\) Scoring and Reasoning :
 
@@ -40,25 +40,39 @@ Our pulling system will incrementally send profiles / jobs to HrFlow Platform , 
 
 ![](../../../.gitbook/assets/image%20%2811%29.png)
 
-Filters aim to refine recruiter's search based on location, experience duration Reasoning Criteria are not mandatory , it comes as complementary information to highlight the reasons behind every match. ... 
+Filters aim to refine recruiter's search based on location, experience duration Reasoning Criteria are not mandatory, it comes as complementary information to highlight the reasons behind every match. ... 
 
 ### 3.2 Applied / Suggested Criteria :
 
 ![](../../../.gitbook/assets/image%20%2810%29.png)
 
-Criteria let recruiters to enhance the quality of their search experience and to help them getting insights about scoring results.
+Criteria let recruiters to enhance the quality of their search experience and to help them to get insights about scoring results.
 
-Initially HrFlow.ai did not apply any pre filter on the set of profiles / jobs.  
-Instead, there is suggested tags that could by applied in order to refine recruiter's search.
+Initially HrFlow.ai did apply \(profiles / jobs\) skills as filters.  
+In addition, there are suggested tags that could be applied in order to refine recruiter's search.
 
-HrFlow.ai consider 2 kinds of criteria: 
+HrFlow.ai consider 3 kinds of criteria: 
 
 * Boolean Criteria,
-* Reasoning Criteria
+* Date Criteria
+* \#ignore\_all Criteria
 
-Boolean criteria are basically the extracted skills after parsing a profile / job, while applying a boolean criteria, our search engine will send all profile / job that contains this criteria or a similar word \(.ie e-commerce / commerce / commercial ...\).
+1/ Boolean criteria are basically the extracted skills after parsing a profile / job  
+While applying boolean criteria, our search engine will send all profile / job that contains these criteria or a similar word \(.i.e. e-commerce / commerce / commercial ...\).
 
+2/ Date Criteria are a simple way to filter the subset of profiles based on their creation date.  
+The exhaustive list of tags is: 
 
+* **date\#1M :** Filter profiles created in period between today and one month ago
+* **date\#3M :** Filter profiles created in period between today and three months ago
+* **date\#6M :** Filter profiles created in period between today and six months ago
+* **date\#1Y :** Filter profiles created in period between today and one year ago
+* **date\#2Y :** Filter profiles created in period between today and two years ago
+
+  
+****By default, **date\#6M** will be applied while matching profiles for a given job will be done based 
+
+3/ **\#ignore\_all** Criteria is used whenever a user does not need to apply any of recommended tags.
 
 {% hint style="info" %}
 Same **process** is applied in both Matching Profiles and Jobs.
@@ -70,9 +84,9 @@ Same **process** is applied in both Matching Profiles and Jobs.
 
 To enhance recruiter experience, all applied criteria **should** appear in the matching profiles / jobs, so  recruiters could easily process their search without trying infinite possible combination to get what they are searching for.
 
-So profile / job will show up if they contain at least one of applied criteria.
+So profile / job will show up if they contain at least one of the applied criteria.
 
-Additional information are added in complementary information section, in the case of matching candidate HrFlow enrich Profile by its interests.
+Additional information are added in complementary information section, in the case of matching candidate HrFlow.ai enrich Profile by its interests.
 
 ### 3.4 Scores :
 
