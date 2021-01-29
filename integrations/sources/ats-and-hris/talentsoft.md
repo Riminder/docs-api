@@ -1,6 +1,6 @@
 # Talentsoft
 
-**Talentsoft** is an European leader in talent management, it is a cloud-based solution improving employees' professional growth at the heart of company's HR processes.
+**Talentsoft** is a European leader in talent management, it is a cloud-based solution improving employees' professional growth at the heart of company's HR processes.
 
 In this overview we'll explain the general flow of the integration between HrFlow.ai and Talentsoft. You'll learn about the different features that this integration can offer.
 
@@ -8,7 +8,7 @@ In this overview we'll explain the general flow of the integration between HrFlo
 
 ## Integration's flow :
 
-The integration between a TalentSoft user and HrFlow exists as part of a flow, a continuum of events that gets something done.
+The integration between a TalentSoft user and HrFlow.ai exists as part of a flow, a continuum of events that gets something done.
 
 This interactive flow can be simplified to three basic steps:
 
