@@ -69,8 +69,9 @@ The exhaustive list of tags is:
 * **date\#1Y :** Filter profiles created in period between today and one year ago
 * **date\#2Y :** Filter profiles created in period between today and two years ago
 
-  
-****By default, **date\#6M** will be applied while matching profiles for a given job will be done based 
+**Rules:**  
+- ****By default, **date\#6M** will be applied while matching profiles for a given job will be done based   
+- Only the oldest date will be applied in case of many date criteria are used.
 
 3/ **\#ignore\_all** Criteria is used whenever a user does not need to apply any of recommended tags.
 
