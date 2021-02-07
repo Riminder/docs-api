@@ -1,4 +1,8 @@
-# Configuration
+---
+description: Setting up your webhook integration.
+---
+
+# Webhook Configuration
 
 ## Signature
 

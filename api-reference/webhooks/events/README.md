@@ -4,7 +4,7 @@ description: >-
   account
 ---
 
-# Events
+# Webhook Events
 
 ## FORMAT
 
