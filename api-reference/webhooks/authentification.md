@@ -1,8 +1,8 @@
 ---
-description: Check webhook integration for given team account
+description: Check your webhook credentials
 ---
 
-# Authentication
+# Webhook Authentication
 
 {% api-method method="post" host="https://api.hrflow.ai/v1" path="/webhook/check " %}
 {% api-method-summary %}

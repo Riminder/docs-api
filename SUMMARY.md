@@ -22,7 +22,7 @@
 
 ## Getting Started
 
-* [Authentication](getting-started/authentication.md)
+* [API Authentication](getting-started/authentication.md)
 * [Errors](getting-started/errors.md)
 * [Installation](getting-started/installation/README.md)
   * [Javascript](getting-started/installation/javascript.md)
@@ -98,7 +98,7 @@
   * [POST: /document/embedding](api-reference/document-endpoints/post-document-embedding.md)
   * [POST : /document/linking](api-reference/document-endpoints/post-document-linking.md)
 * [Webhooks](api-reference/webhooks/README.md)
-  * [Authentication](api-reference/webhooks/authentification.md)
+  * [Webhook Authentication](api-reference/webhooks/authentification.md)
   * [Configuration](api-reference/webhooks/configuration.md)
   * [Events](api-reference/webhooks/events/README.md)
     * [profile.parsing](api-reference/webhooks/events/profile.parsing.md)

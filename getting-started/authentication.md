@@ -1,4 +1,10 @@
-# Authentication
+---
+description: >-
+  Accessing your API keys (read, write, read & write) to perform your API calls
+  and requests.
+---
+
+# API Authentication
 
 ## Accessing your API Keys
 
