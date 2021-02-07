@@ -1,8 +1,8 @@
 ---
-description: Go far beyond just keywords.
+description: 'Predict hard-skills, soft-skills and skills-likelihood.'
 ---
 
-# Revealing
+# Revealing API
 
 Get the full picture of your candidate’s real potential and derive insights from its career path. 
 

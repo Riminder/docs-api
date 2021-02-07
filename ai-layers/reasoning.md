@@ -1,4 +1,8 @@
-# Reasoning
+---
+description: Highlight experience-gap and skills-gap between a profiles and job offers.
+---
+
+# Reasoning API
 
 Meet the world’s first white-box matching technology. Get deep analytics and insights about every recommendation so that you make your decision. 
 

@@ -1,3 +1,7 @@
+---
+description: Learn about HrFlow.ai technology and platform.
+---
+
 # What does HrFlow.ai?
 
 ## System of Intelligence

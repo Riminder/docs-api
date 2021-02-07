@@ -1,8 +1,10 @@
 ---
-description: Structure profile & job data across all media formats.
+description: >-
+  Extract structured data from profile, job offer and hr documents across all
+  media formats.
 ---
 
-# Parsing
+# Parsing API
 
 ### Profile API
 

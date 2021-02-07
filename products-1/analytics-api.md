@@ -1,3 +1,7 @@
+---
+description: Build custom analytics dashboards with the data flowing through HrFlow.ai.
+---
+
 # Analytics API
 
 The Analytics API provide deep qualitative insights about career moves, academic and professional skills gap, market landscape and more, based on the analysis of external and internal profile and job data.

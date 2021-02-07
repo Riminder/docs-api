@@ -1,8 +1,8 @@
 ---
-description: Semantic scoring
+description: 'Powerful and fast search engine designed for profiles, job offers and HR data.'
 ---
 
-# Searching
+# Searching API
 
 The Searching \(or Semantic Scoring\) layer offers a multi-criteria semantic indexing and search for profiles or job offers.
 

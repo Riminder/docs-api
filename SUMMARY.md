@@ -13,12 +13,12 @@
 
 ## AI Layers
 
-* [Parsing](ai-layers/parsing.md)
-* [Embedding](ai-layers/embedding.md)
-* [Revealing](ai-layers/revealing.md)
-* [Searching](ai-layers/searching.md)
-* [Scoring](ai-layers/scoring.md)
-* [Reasoning](ai-layers/reasoning.md)
+* [Parsing API](ai-layers/parsing.md)
+* [Embedding API](ai-layers/embedding.md)
+* [Revealing API](ai-layers/revealing.md)
+* [Searching API](ai-layers/searching.md)
+* [Scoring API](ai-layers/scoring.md)
+* [Reasoning API](ai-layers/reasoning.md)
 
 ## Getting Started
 

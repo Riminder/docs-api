@@ -1,8 +1,10 @@
 ---
-description: ENDLESS POSSIBILITIES AT YOUR FINGERTIPS
+description: >-
+  Pre-trained vectors for profiles, jobs, HR documents and more to build quickly
+  your own HR AI models.
 ---
 
-# Embedding
+# Embedding API
 
 The ‘_**Profile & Job Embedding**_’ model analyzes the output of ‘Parsing’ and ‘Revealing’ layers and returns numerical vectors that represent a profile or job given as an input in a 1024-dimensional space. 
 
@@ -18,7 +20,7 @@ Now on, your AI experts Developers can focus on building great models instead of
 | Skills2vec | 1024 |
 | Job2vec | 1024 |
 
-Our Embedding API offers several different encoding levels, particularly when it comes to profiles, it can be a Profile Encoder _**Profile2vec**_ or an Encoder Section \(_**Experience2vec**_,  _**Education2vec**_, _**Skills2vec**_\).
+Our Embedding API offers several encoding levels, particularly when it comes to profiles, it can be a Profile Encoder _**Profile2vec**_ or an Encoder Section \(_**Experience2vec**_,  _**Education2vec**_, _**Skills2vec**_\).
 
 ![Example of Profile Encoder &quot;Profile2vec&quot; \(grouped by the profile job category\) ](https://lh3.googleusercontent.com/JXagdsThZxaEKwjE83-QrJXjB1r1tk2-KmdBzb94X_a238-5bNtwHuDi-PUA4_cVBkpaCie1uil6lPDNhdggpZhkgiZBYQGe4iKRRGo13XvyYgzuG9Vw_fv72LiYrg2am9MIrPnkwlQ)
 

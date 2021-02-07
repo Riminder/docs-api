@@ -1,4 +1,8 @@
-# Scoring
+---
+description: Most powerful recommendation engine of profiles and job offers.
+---
+
+# Scoring API
 
 Scoring technology helps you predict success and detect hidden gems. It allows you to score your profiles & jobs by relevance across all your pools. 
 
