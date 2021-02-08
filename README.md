@@ -6,7 +6,7 @@ description: Welcome to HrFlow.ai API documentation.
 
 ## Quick introduction
 
-![](https://lh4.googleusercontent.com/yUykuToiIJ39KfFM__pHadnwYJ4QVTENcfxxSoH5rWtfSEetRHJS3f_BAL0zWGEIU6U0xZzJObU91YsdMg_06nvDVRCkF4y862Xxih_KcgBqiLCXIOQvFBlQfgDUbNtNxfKZdvJmhPg)
+![](.gitbook/assets/labs.hrflow.ai-2-.png)
 
 [HrFlow.ai](https://hrflow.ai) is an API-first company that provides state-of-art AI Talent Cloud Solutions for HR Tech companies.
 
