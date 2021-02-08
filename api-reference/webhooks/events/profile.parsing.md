@@ -1,3 +1,7 @@
+---
+description: Webhook profile parsing events.
+---
+
 # profile.parsing
 
 | Field | Type | Description |
