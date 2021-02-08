@@ -1,4 +1,8 @@
-# Person object
+---
+description: Hrflow.ai person json object.
+---
+
+# Person JSON
 
 This object represents a name \(full name, first name, last name\) as it is detected in the document.
 

@@ -1,4 +1,8 @@
-# Metadata object
+---
+description: Hrflow.ai metadata JSON object.
+---
+
+# Metadata JSON
 
 Metadata is a set of extra-data attached to an object that gives additional information in order to include a more accurate description of the object.
 

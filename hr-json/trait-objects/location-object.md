@@ -1,4 +1,8 @@
-# Location object
+---
+description: Hrflow.ai location JSON object.
+---
+
+# Location JSON
 
 ## Location
 

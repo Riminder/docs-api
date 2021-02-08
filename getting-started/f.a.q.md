@@ -1,5 +1,5 @@
 ---
-description: Most frequently asked questions
+description: Most frequently asked questions.
 ---
 
 # F.A.Q

@@ -1,4 +1,8 @@
-# Profile object
+---
+description: Hrflow.ai profile JSON object.
+---
+
+# Profile JSON
 
 ## Profile
 

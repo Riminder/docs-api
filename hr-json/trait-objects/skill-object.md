@@ -1,6 +1,13 @@
-# Skill object
+---
+description: Hrflow.ai skill JSON object.
+---
 
-Skill describes a detected expertise. Our AI algorithm further tag the skill with a hard \(for hard skills\) or soft \(for soft skill\) type.
+# Skill JSON
+
+Skill describes a detected expertise. Our AI algorithms classify skills to two types:
+
+* **hard** for hard skills
+* **soft** for soft skill
 
 ## The Skill Object
 

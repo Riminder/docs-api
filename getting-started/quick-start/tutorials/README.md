@@ -1,5 +1,5 @@
 ---
-description: Getting Started with examples
+description: Getting Started with examples.
 ---
 
 # Tutorials

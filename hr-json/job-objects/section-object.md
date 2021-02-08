@@ -1,4 +1,8 @@
-# Section object
+---
+description: Hrflow.ai job section JSON object.
+---
+
+# Section JSON
 
 ## Section
 

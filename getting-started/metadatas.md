@@ -1,2 +1,6 @@
-# Metadatas support
+---
+description: Custom record examples.
+---
+
+# Metadata support
 

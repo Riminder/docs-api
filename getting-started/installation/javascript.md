@@ -1,8 +1,8 @@
 ---
-description: Hrflow SDK for Javascript
+description: HrFlow.ai Javascript installation guide.
 ---
 
-# Javascript
+# Javascript SDK
 
 Our Javascript library is an open source, production-ready and a Javascript wrapper API. It is an easy way to access Hrflow API features from a node js server or from the browser.
 

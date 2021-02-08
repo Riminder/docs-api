@@ -1,4 +1,8 @@
-# Attachment object
+---
+description: Hrflow.ai attachment JSON object.
+---
+
+# Attachment JSON
 
 This object represents an attachment \(resume or cover\).
 

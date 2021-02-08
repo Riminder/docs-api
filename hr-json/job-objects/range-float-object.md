@@ -1,4 +1,8 @@
-# Range Float object
+---
+description: Hrflow.ai job range of floats JSON object.
+---
+
+# Range Float JSON
 
 ## Range Float
 

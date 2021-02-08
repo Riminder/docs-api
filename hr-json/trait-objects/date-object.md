@@ -1,4 +1,8 @@
-# Date object
+---
+description: Hrflow.ai date JSON object.
+---
+
+# Date JSON
 
 This object contains datetime information in ISO8601 format with further timestamp and detected parsed date in text attribute.
 

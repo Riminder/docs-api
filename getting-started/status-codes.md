@@ -1,16 +1,12 @@
 ---
-description: Code Title Description
+description: List of HTTP status codes
 ---
 
-# Errors
-
-## HTTP Status codes
+# Status Codes
 
 Our API returns standard HTTP success or error status codes. 
 
-Code Title Description
-
-| Code  | Title  | Description |
+| Title  | Description |  |
 | :--- | :--- | :--- |
 | 200 | OK | The request was successful. |
 | 201 | Created | The resource was successfully created. |

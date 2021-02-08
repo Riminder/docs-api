@@ -1,4 +1,8 @@
-# Range Date object
+---
+description: Hrflow.ai job range of dates JSON object.
+---
+
+# Range Date JSON
 
 ## Range Date
 

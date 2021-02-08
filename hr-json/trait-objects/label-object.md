@@ -1,4 +1,8 @@
-# Label object
+---
+description: Hrflow.ai label JSON object.
+---
+
+# Label JSON
 
 Label object contains information about profile stage, or rating for a given job, stage's value is one of \['new', 'yes', 'no', 'later'\] and ratings represents the user's assessment based on object quality and performance
 

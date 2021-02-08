@@ -1,8 +1,8 @@
 ---
-description: HrFlow SDK for Python
+description: HrFlow.ai Python installation guide.
 ---
 
-# Python
+# Python SDK
 
 Our Python library is an open source, production-ready and a Python Wrapper API. It is an easy way to access HrFlow API features .
 

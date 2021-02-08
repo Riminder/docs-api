@@ -1,4 +1,8 @@
-# Interest object
+---
+description: Hrflow.ai interest JSON object.
+---
+
+# Interest JSON
 
 This object represents detected hobbies and interests.
 

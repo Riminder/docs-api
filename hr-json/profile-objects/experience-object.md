@@ -1,4 +1,8 @@
-# Experience object
+---
+description: Hrflow.ai profile experience JSON object.
+---
+
+# Experience JSON
 
 Experience is way to describe the profile's career path, it contains general information like location, date start/end and details information such as description / title.
 

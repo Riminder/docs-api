@@ -1,4 +1,8 @@
-# Parsing object
+---
+description: Hrflow.ai profile parsing JSON object.
+---
+
+# Parsing JSON
 
 ## Parsing
 

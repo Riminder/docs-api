@@ -1,8 +1,8 @@
 ---
-description: HrFlow SDK for PHP
+description: HrFlow.ai PHP installation guide.
 ---
 
-# PHP
+# PHP SDK
 
 Our PHP library is an open source,  production-ready and a PHP Wrapper API. It is an easy way to access HrFlow API features  .
 

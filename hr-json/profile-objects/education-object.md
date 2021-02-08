@@ -1,4 +1,8 @@
-# Education object
+---
+description: Hrflow.ai profile education JSON object.
+---
+
+# Education JSON
 
 Education is way to describe the profile's academic background, it contains general information like location, date start/end and details information such as description / title.
 

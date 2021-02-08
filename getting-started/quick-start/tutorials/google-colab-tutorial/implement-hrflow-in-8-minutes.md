@@ -1,3 +1,7 @@
+---
+description: HrFlow.ai installation tutorial in Python with a YouTube explanation video.
+---
+
 # Implement HrFlow in 8 minutes
 
 HrFlow Python SDK is basically designed to handle simply and easily, complex HR integrations, helping programmers to increase their productivity by focusing on one complete tool.

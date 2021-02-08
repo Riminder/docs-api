@@ -1,4 +1,8 @@
-# Job object
+---
+description: Hrflow.ai job JSON object.
+---
+
+# Job JSON
 
 ## Job
 

@@ -1,4 +1,8 @@
-# Language object
+---
+description: Hrflow.ai language JSON object.
+---
+
+# Language JSON
 
 This object holds language information.
 

@@ -1,3 +1,7 @@
+---
+description: HrFlow.ai Deep Learning Tutorial with a YouTube explanation video.
+---
+
 # Build Personalized AI HR models
 
 In this tutorial we will showcase our latest AI layer :  **Embedding API**.  

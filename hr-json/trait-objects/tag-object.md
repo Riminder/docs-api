@@ -1,4 +1,8 @@
-# Tag object
+---
+description: Hrflow.ai tag JSON object.
+---
+
+# Tag JSON
 
 Tag helps to mark objects \(profile/job\).
 
