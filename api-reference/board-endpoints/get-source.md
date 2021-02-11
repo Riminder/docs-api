@@ -89,13 +89,20 @@ Coulf not find a board matching this query
 
 {% api-method-response-example httpCode=401 %}
 {% api-method-response-example-description %}
-Invalid secret key
+Invalid secret key or unauthorized access
 {% endapi-method-response-example-description %}
 
 ```bash
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxxx "
+}
+
+OR
+
+{
+    "code": 401,
+    "message": "Unauthorized Access to board key: xxxxxx"
 }
 ```
 {% endapi-method-response-example %}

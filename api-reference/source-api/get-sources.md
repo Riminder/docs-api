@@ -177,7 +177,7 @@ Invalid secret key: xxxx
 ```javascript
 {
     "code": 401,
-    "message": "Unauthorized. Invalid secret key: xxxxx "
+    "message": "Unauthorized. Invalid secret key: xxxxx for permission: all"
 }
 ```
 {% endapi-method-response-example %}
