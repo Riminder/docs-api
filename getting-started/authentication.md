@@ -23,7 +23,7 @@ These keys will be available with various level of permissions:
 
 You can find your API credentials by clicking the `API > Keys`  tab in your setting section.
 
-![API keys section](../.gitbook/assets/screenshot-from-2020-03-01-22-48-16.png)
+![](../.gitbook/assets/api_key.png)
 
 ## Using your Key
 
