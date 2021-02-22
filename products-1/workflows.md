@@ -22,19 +22,19 @@ Content below is valid for **Python3.6** runtime.
 
 ### Catch setup
 
-The core of your **Catch** workflow is the `Function`  section. To execute your code you are expected to write a function with this signature `def workflow(body: Dict, settings: Dict) -> None`
+The core of your **Catch** workflow is the `Function`  section. To execute your code you are expected to write a function with this signature `def workflow(_request: Dict, settings: Dict) -> None`
 
 Two arguments are available to your code in this mode : 
 
-* `body` is a dictionary containing the body of the request that triggered the workflow execution
-* `settings` is a dictionary containing data that you defined in the **Environment Properties** section. It can also be used a way to store data that get persisted from one execution to another. Mind that both the key and value should **be natively JSON serializable**. For example, it won't work with `Python` `datetime.datetime.now()`
+* `_request` is a dictionary containing the **parsed** _body_ and the _headers_ of the request that triggered the workflow execution. For example `_request["Content-Type"]`should give you the _Content Type_  of the request  
+* `settings` is a dictionary containing data that you defined in the **Environment Properties** section. It can also be used as a way to store data that get persisted from one execution to another. Mind that both the key and value should **be natively JSON serializable**. For example, it won't work with `Python` `datetime.datetime.now()`
 
 To illustrate let's consider this example where you process the event sent by some third-party service to add a new file to your HrFlow profile database.  
 
 The main steps are :
 
 * Setting up the `Hrflow` client with credentials stored in `settings`
-* Parse the request `body` to retrieve relevant data
+* Parse the `_request` variable to retrieve relevant data
 * Notify some other internal service that a new profile was added to HrFlow
 
 ```python
@@ -42,10 +42,10 @@ import requests
 
 from hrflow import Hrflow
 
-def workflow(body, settings):
+def workflow(_request, settings):
     client = Hrflow(api_secret=settings["API_KEY"], api_user=settings["USER_EMAIL"])
     
-    file_url = body["file_url"]
+    file_url = _request["file_url"]
     file_content = requests.get(file_url, allow_redirects=True).content
     
     client.profile.parsing.add_file(
@@ -73,7 +73,11 @@ curl -X POST https://api-workflows.hrflow.ai/teams/XXX/YYY/python3.6/ZZZ \
 ```
 
 {% hint style="danger" %}
-**Important**: The endpoint provided expects to receive a **POST** request with a **valid JSON payload**. Using other HTTP methods or sending **multipart/form-data** won't work.
+**Important**: Only **POST** requests with one of the following three content types are accepted : 
+
+* `application/json`
+* `multipart/form-data`
+* `application/x-www-form-urlencoded`
 {% endhint %}
 
 ### Pull setup
@@ -81,7 +85,7 @@ curl -X POST https://api-workflows.hrflow.ai/teams/XXX/YYY/python3.6/ZZZ \
 The **Pull** setup is almost identical to the **Catch** one except for these two differences:
 
 * The execution is not triggered by a request to some endpoint. The code is run continuously at the rate of your choosing
-* Your function doesn't have access to a `body` argument. The expected signature is shorter `def workflow(settings: Dict) -> None:`
+* Your function doesn't have access to a `_request` argument. The expected signature is shorter `def workflow(settings: Dict) -> None:`
 
 Here is a workflow that uses a static endpoint to perform periodic fetching and storing of data in HrFlow. This example illustrates the storage capabilities of `settings`. 
 
