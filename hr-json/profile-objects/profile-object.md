@@ -61,7 +61,6 @@ The API allows you to create, update and retrieve your profile.
                        'from_resume': [],
                        'github': '',
                        'linkedin': '',
-                       'picture': '',
                        'twitter': ''}},
     'text': 'Profile s text',
     'text_language': 'en',
