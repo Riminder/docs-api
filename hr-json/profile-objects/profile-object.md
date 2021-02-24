@@ -57,11 +57,26 @@ The API allows you to create, update and retrieve your profile.
               'phone': '0202',
               'picture': null,
               'summary': 'Brief summary',
-              'urls': {'facebook': '',
-                       'from_resume': [],
-                       'github': '',
-                       'linkedin': '',
-                       'twitter': ''}},
+              'urls': {
+                        "type": "from_resume",
+                        "url": []
+                    },
+                    {
+                        "type": "linkedin",
+                        "url": null
+                    },
+                    {
+                        "type": "twitter",
+                        "url": null
+                    },
+                    {
+                        "type": "facebook",
+                        "url": null
+                    },
+                    {
+                        "type": "github",
+                        "url": null
+                    }],
     'text': 'Profile s text',
     'text_language': 'en',
     'educations': [{ 'key': 'education_key',
