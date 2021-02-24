@@ -57,7 +57,7 @@ The API allows you to create, update and retrieve your profile.
               'phone': '0202',
               'picture': null,
               'summary': 'Brief summary',
-              'urls': {
+              'urls': [{
                         "type": "from_resume",
                         "url": []
                     },
