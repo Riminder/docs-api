@@ -41,11 +41,9 @@ const client = new Hrflow({API_Key: "your api key"});
 | [Upload Profile](https://developers.hrflow.ai/api-reference/profile-api/post-profile) | You can upload either json or binary \(file\) Profile |
 | [Get Profile's searching](https://developers.hrflow.ai/api-reference/profile-api/get-profiles-searching) | Profile search engine |
 | [Get Profile's scoring](https://developers.hrflow.ai/api-reference/profile-api/get-profiles-scoring) | Retrieve Profile's scoring |
+| [Get Profile's indexing](../../api-reference/profile-api/get-profile-indexing.md) | Retrieve Profile's indexing JSON |
 | [Get Profile's parsing](https://developers.hrflow.ai/api-reference/profile-api/get-profile-parsing) | Retrieve Profile's parsing |
 | [Get Profile's embedding](https://developers.hrflow.ai/api-reference/profile-api/get-profile-embedding) | Retrieve Profile's embedding |
-| [Get Profile's attachment](https://developers.hrflow.ai/api-reference/profile-api/get-profile-attachments) | Retrieve Profile's document |
-| [Get Profile's tag](https://developers.hrflow.ai/api-reference/profile-api/get-profile-tags) | Retrieve Profile's tag |
-| [Get Profile's metadata](https://developers.hrflow.ai/api-reference/profile-api/get-profile-metadatas) | Retrieve Profile's metadata |
 | [Get Profile's revealing](https://developers.hrflow.ai/api-reference/profile-api/get-profile-revealing) | Retrieve Profile's revealing |
 | [Get Profile's reasoning](https://developers.hrflow.ai/api-reference/profile-api/get-profile-reasoning) | Retrieve Profile's reasoning |
 
@@ -54,6 +52,7 @@ const client = new Hrflow({API_Key: "your api key"});
 | List of methods |  |
 | :--- | :--- |
 | [Upload Job](https://developers.hrflow.ai/api-reference/job-api/post-job) | Uploading a job by specifying some information. |
+| [Get Job's indexing](../../api-reference/job-api/get-job.md) | Retrieve Job's indexing JSON |
 | [Get job's parsing](https://developers.hrflow.ai/api-reference/job-api/get-job-parsing) | Retrieve Job's parsing |
 | [Get job's embedding](https://developers.hrflow.ai/api-reference/job-api/get-job-embedding) | Retrieve Job's embedding for advanced analysis |
 | [Job searching](https://developers.hrflow.ai/api-reference/job-api/get-job-searching) | Job search engine |
