@@ -1,5 +1,5 @@
 ---
-description: Integration where the data will be sent from HrFlow.ai.
+description: List of outbound HR Data connectors.
 ---
 
 # Destinations
