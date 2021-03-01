@@ -56,7 +56,7 @@ Education is way to describe the profile's academic background, it contains gene
 | title | The education's title |
 | school | The education's school |
 | description | The education's description |
-| date\_start | The education's start date as [date](https://developers.hrflow.ai/hr-json/profile-objects/date-object) object |
-| date\_end | The education's end date as [date](https://developers.hrflow.ai/hr-json/profile-objects/date-object) object |
-| location | The education's location as [location](https://developers.hrflow.ai/hr-json/profile-objects/location-object) object |
+| date\_start | The education's start date as [date](../trait-objects/date-object.md) object |
+| date\_end | The education's end date as [date](../trait-objects/date-object.md) object |
+| location | The education's location as [location](../trait-objects/location-object.md) object |
 
