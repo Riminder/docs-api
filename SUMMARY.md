@@ -1,7 +1,7 @@
 # Table of contents
 
 * [What is HrFlow.ai?](README.md)
-* [What does HrFlow.ai?](why-use-hrflow.md)
+* [Why use HrFlow.ai?](why-use-hrflow.md)
 
 ## DEVELOPERS PRODUCTS <a id="products-1"></a>
 
