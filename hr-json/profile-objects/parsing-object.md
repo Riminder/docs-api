@@ -28,6 +28,24 @@ It helps data scientist to go further in their studies and enhance the quality o
                    'last_name': 'Potter'}],
       'emails': ['harry.potter@gmail.com'],
       'phones': ['0202'],
+      'birthdate': {
+                'iso8601': null,
+                'text': null,
+                'timestamp': null
+      },
+      'certifications': [
+                {
+                    'name': 'toeic',
+                    'value': '960'
+                }
+            ],
+      'courses': [],
+      'tasks': [
+                {
+                    'name': 'développement d’un système de recommandation',
+                    'value': null
+                }
+            ],
       'location': {
            'text': '803 Green Lane London N07 8MA',
            'lat': 51.581551, 
@@ -145,7 +163,9 @@ It helps data scientist to go further in their studies and enhance the quality o
                 {'name':'Writing skills', 'type': 'hard','value': null}, 
                 {'name':'Communication', 'type': 'soft','value': null}],
      'languages': [{'name':'english', 'value': null}],
-     'interests': [{'name':'football', 'value': null}]
+     'interests': [{'name':'football', 'value': null}],
+     'processed_pages': 1,
+     'total_pages': 1
  }
 ```
 
@@ -160,6 +180,10 @@ It helps data scientist to go further in their studies and enhance the quality o
 | persons | A list of all parsed [Persons](https://developers.hrflow.ai/hr-json/profile-objects/person-object) |
 | emails | This field records all existing emails in a document. |
 | phones | This field records all parsed phones from a document. |
+| birthdate | Parsed birthdate as Date object |
+| certifications | A list of Profile's certifications  |
+| courses | A list of followed courses  |
+| tasks | A list of Profile's tasks through every educations / experiences  |
 | location | The Profile's [Location](https://developers.hrflow.ai/hr-json/trait-objects/location-object) object |
 | images | A list of URLs for all detected images |
 | picture | The url of profile's picture |
@@ -176,4 +200,6 @@ It helps data scientist to go further in their studies and enhance the quality o
 | skills | A list of profile's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
 | languages | A list of profile's [Languages](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
 | interests | A list of profile's [Interests](https://developers.hrflow.ai/hr-json/profile-objects/interest-object) object |
+| processed\_pages | Number of processed pages |
+| total\_pages | Document total pages |
 

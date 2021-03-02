@@ -135,7 +135,11 @@ The API allows you to create, update and retrieve your profile.
                                   'lat': null,
                                   'lng': null,
                                   'text': 'Scotland'},
-                     'hard_skills': [],
+                     'hard_skills': [{
+                            "name": "etl",
+                            "type": "hard",
+                            "value": null
+                        }],
                      'soft_skills': []}],
     'educations_duration': 2,
     'experiences': [{ 'key': 'experience_key',
