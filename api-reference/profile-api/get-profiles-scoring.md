@@ -38,7 +38,7 @@ The Job's unique identifier
 Only Profiles in these sources will be scored
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="use\_agent" type="array" required=false %}
+{% api-method-parameter name="use\_agent" type="integer" required=false %}
 In order to enable scoring engine you set this parameter to 1 otherwise it enables only searching engine
 {% endapi-method-parameter %}
 
