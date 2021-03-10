@@ -47,7 +47,7 @@ Filter by Profile's stage \(ie. 'new', 'yes', 'later', 'no'\), default value is 
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="limit" type="integer" required=false %}
-Total profiles to score, default value is 30
+Total profiles to score per API page, default value is 30
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=false %}
@@ -63,11 +63,11 @@ Sort by \(ie. created\_at, updated\_at, location, location\_experience, location
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at\_min" type="string" required=false %}
-Filter by minimum creation
+Filter by minimum creation date
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="created\_at\_max" type="string" required=false %}
-Filter by maximum creation
+Filter by maximum creation date
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="name" type="string" required=false %}
