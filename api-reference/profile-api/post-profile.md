@@ -41,7 +41,7 @@ To enable sync parsing you set this value to 1 otherwise the value is 0
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="sync\_parsing\_indexing" type="integer" required=false %}
-This parameter is used when you are using sync parsing, it enables Profile indexing so this object will be available using search engine. The default value is 0
+This parameter is used when you are using sync parsing, it enables Profile indexing so this object will be available using search engine. The default value is 1
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="webhook\_parsing\_sending" type="integer" required=false %}
