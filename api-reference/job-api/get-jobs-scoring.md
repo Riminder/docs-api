@@ -26,6 +26,10 @@ User's email.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
+{% api-method-parameter name="names" type="array" required=false %}
+List of job' s title to include in the query
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="source\_key" type="string" required=true %}
 The source's unique identifier containing the given Profile.
 {% endapi-method-parameter %}

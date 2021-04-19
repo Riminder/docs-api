@@ -26,6 +26,10 @@ User's email.
 {% endapi-method-headers %}
 
 {% api-method-query-parameters %}
+{% api-method-parameter name="names" type="array" required=false %}
+List of job's title to include in the query
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="board\_keys" type="array" required=true %}
 Only Jobs in these boards will be scored
 {% endapi-method-parameter %}
