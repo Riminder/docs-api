@@ -47,8 +47,9 @@ The API allows you to create, update and retrieve your profile.
     'info': {'email': 'harry.potter@gmail.com',
               'first_name': 'Harry',
               'full_name': 'Harry Potter',
-              'gender': 'male',
               'last_name': 'Potter',
+              'birthdate': '1990-08-09T00:00:00+0000'
+              'gender': 'male',
               'location': {'fields': {
                                 "category": null,
                                 "city": "Paris",
@@ -77,7 +78,7 @@ The API allows you to create, update and retrieve your profile.
                            'lng': null,
                            'text': null},
               'phone': '0202',
-              'picture': null,
+              'picture': 'picture public url',
               'summary': 'Brief summary',
               'urls': [{
                         "type": "from_resume",
@@ -109,38 +110,50 @@ The API allows you to create, update and retrieve your profile.
                      'date_start': '2016-01-01T00:00:00',
                      'date_end': '2018-01-01T00:00:00',
                      'location': {'fields':  {
-                                        "category": null,
-                                        "city": "Paris",
-                                        "city_district": null,
-                                        "country": "FRA",
-                                        "country_region": null,
-                                        "entrance": null,
-                                        "house": null,
-                                        "house_number": null,
-                                        "island": null,
-                                        "level": null,
-                                        "near": null,
-                                        "po_box": null,
-                                        "postcode": "75001",
-                                        "road": null,
-                                        "staircase": null,
-                                        "state": "Ile-de-France",
-                                        "state_district": "Paris",
-                                        "suburb": null,
-                                        "text": "Paris, Ile-de-France, France",
-                                        "unit": null,
-                                        "world_region": null
+                                        'category': null,
+                                        'city': 'Paris',
+                                        'city_district': null,
+                                        'country': 'FRA',
+                                        'country_region': null,
+                                        'entrance': null,
+                                        'house': null,
+                                        'house_number': null,
+                                        'island': null,
+                                        'level': null,
+                                        'near': null,
+                                        'po_box': null,
+                                        'postcode': '75001',
+                                        'road': null,
+                                        'staircase': null,
+                                        'state': 'Ile-de-France',
+                                        'state_district': 'Paris',
+                                        'suburb': null,
+                                        'text': 'Paris, Ile-de-France, France',
+                                        'unit': null,
+                                        'world_region': null
                                   },
                                   'gmaps': null,
                                   'lat': null,
                                   'lng': null,
                                   'text': 'Scotland'},
-                     'hard_skills': [{
-                            "name": "etl",
-                            "type": "hard",
-                            "value": null
+                     'certifications': [{
+                            'name': 'certificate edu',
+                            'value': null
                         }],
-                     'soft_skills': []}],
+                     'courses': [{
+                            'name': 'cours edu',
+                            'value': null
+                        }],
+                     'tasks': [{
+                            'name': 'tache edu',
+                            'value': null
+                        }],
+                     'skills': [{
+                         'name': 'skill edu',
+                         'value': null,
+                         'type' : 'hard'
+                     }]
+    }],
     'educations_duration': 2,
     'experiences': [{ 'key': 'experience_key',
                       'title': 'Data scientist',
@@ -175,8 +188,24 @@ The API allows you to create, update and retrieve your profile.
                                    'lat': null,
                                    'lng': null,
                                    'text': 'Paris'},
-                      'hard_skills': [],
-                      'soft_skills': []}],
+                      'certifications': [{
+                            'name': 'certificate exp',
+                            'value': null
+                        }],
+                     'courses': [{
+                            'name': 'cours exp',
+                            'value': null
+                        }],
+                     'tasks': [{
+                            'name': 'tache exp',
+                            'value': null
+                        }],
+                     'skills': [{
+                         'name': 'skill exp',
+                         'value': null,
+                         'type' : 'hard'
+                     }]
+                     }],
     'experiences_duration': 0.7,
     'attachments': [{
                       'alt': 'alt_resume',
@@ -198,10 +227,24 @@ The API allows you to create, update and retrieve your profile.
                       'public_url': 'https://riminder-documents-eu-2019-12.s3-eu-west-1.amazonaws.com/original.pdf',
                       'type': 'original',
                       'updated_at': '2020-09-11T10:26:29+0000'}],
+    'certifications': [
+        {'name': 'certificate exp', 'value': null},
+        {'name': 'certificate edu', 'value': null}
+        ],
+    'courses': [
+        {'name': 'cours exp', 'value': null},
+        {'name': 'cours edu', 'value': null}
+        ],
+    'tasks': [
+        {'name': 'tache exp', 'value': null},
+        {'name': 'tache edu', 'value': null}
+        ],
     'skills': [{'name': 'manual skill', 'value': null, 'type': 'hard'},
                 {'name': 'Creative spirit', 'value': null, 'type': 'soft'},
                 {'name': 'Writing skills', 'value': null, 'type': 'hard'},
-                {'name': 'Communication', 'value': null, 'type': 'soft'}],
+                {'name': 'Communication', 'value': null, 'type': 'soft'}
+                {'name': 'skill edu', 'value': null, 'type': 'hard'}
+                {'name': 'skill exp', 'value': null, 'type': 'hard'}],
     'languages': [{'name': 'english', 'value': null}],
     'interests': [{'name': 'football', 'value': null}],
     'labels': [{'job_key': 'job_key', 'stage': 'yes'}],
@@ -221,7 +264,7 @@ The API allows you to create, update and retrieve your profile.
 | source | The source to which the profile belongs |
 | updated\_at | Time at which the object was last updated |
 | created\_at | Time at which the object was created |
-| info | The Profile's info, it contains all personal information such as first/last name email, phone |
+| info | The Profile's [info](https://developers.hrflow.ai/hr-json/profile-objects/info-object), it contains all personal information such as first/last name email, phone |
 | text | The Profile's text, it contains a long resume of a profile, it is generated based on parsed text |
 | text\_language | The original language of the document |
 | educations | A list of [Educations](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object, education is identified by a unique key |
@@ -229,6 +272,9 @@ The API allows you to create, update and retrieve your profile.
 | experiences | A list of [Experiences](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object, experience is identified by a unique key |
 | experiences\_duration | Experience's duration, it calculates the profile's seniority |
 | attachments | A list of profile's [Attachments](https://developers.hrflow.ai/hr-json/profile-objects/attachment-object) object |
+| certifications | A list of profile's [Certifications](https://developers.hrflow.ai/hr-json/trait-objects/certification-object) object |
+| courses | A list of profile's [Courses](https://developers.hrflow.ai/hr-json/trait-objects/course-object) object |
+| tasks | A list of profile's [Tasks](https://developers.hrflow.ai/hr-json/trait-objects/task-object) object |
 | skills | A list of profile's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
 | languages | A list of profile's [Languagse](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
 | interests | A list of profile's [Interests](https://developers.hrflow.ai/hr-json/trait-objects/interest-object) object |
