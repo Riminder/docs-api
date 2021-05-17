@@ -264,7 +264,7 @@ The API allows you to create, update and retrieve your profile.
 | source | The source to which the profile belongs |
 | updated\_at | Time at which the object was last updated |
 | created\_at | Time at which the object was created |
-| info | The Profile's [info](https://developers.hrflow.ai/hr-json/profile-objects/info-object), it contains all personal information such as first/last name email, phone |
+| info | The Profile's [Info](https://developers.hrflow.ai/hr-json/profile-objects/info-object) object, it contains all personal information such as first/last name email, phone |
 | text | The Profile's text, it contains a long resume of a profile, it is generated based on parsed text |
 | text\_language | The original language of the document |
 | educations | A list of [Educations](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object, education is identified by a unique key |
