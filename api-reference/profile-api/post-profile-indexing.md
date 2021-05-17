@@ -30,6 +30,7 @@ Please find below an example of Json profile that could be submitted.
       "full_name":"Harry Potter",
       "first_name": "Harry",
       "last_name": "Potter",
+      "birthdate": "1990-08-09T00:00:00+0000"
       "email":"harry.potter@gmail.com",
       "phone":"0202",
       "gender": null,
@@ -39,7 +40,7 @@ Please find below an example of Json profile that could be submitted.
           "twitter":"",
           "facebook":"",
           "github":""},
-      "picture":null,
+      "picture": "picture public url",
       "location":{"text": null},
       "summary": "Brief summary"
   },
@@ -51,8 +52,25 @@ Please find below an example of Json profile that could be submitted.
       "date_end": {"iso8601": "2018-07-01T00:00:00"},
       "title": "Lead",
       "company": "Mathematic Departement",
-      "location": {"text":"Paris"},
       "description": "Developping."
+      "location": {"text":"Paris"},
+      "certifications": [{
+            "name": "certificate exp",
+            "value": null
+        }],
+       "courses": [{
+            "name": "cours exp",
+            "value": null
+        }],
+       "tasks": [{
+            "name": "tache exp",
+            'value': null
+        }],
+       "skills": [{
+            "name": "skill exp",
+            "value": null,
+            "type" : "hard"
+        }]
       }],
   "experiences_duration":5,
   "educations": [{
@@ -61,13 +79,42 @@ Please find below an example of Json profile that could be submitted.
       "title": "Mathematicien",
       "school": "University",
       "description": "Description",
-      "location": {"text":"Scotland", "lat":"lat", "lng": "lng"}
+      "location": {"text":"Scotland", "lat":"lat", "lng": "lng"},
+      "certifications": [{
+            "name": "certificate edu",
+            "value": null
+        }],
+      "courses": [{
+            "name": "cours edu",
+            "value": null
+        }],
+      "tasks": [{
+            "name": "tache edu",
+            "value": null
+        }],
+      "skills": [{
+            "name": "skill edu",
+            "value": null,
+            "type" : "hard"
+        }]
   }],
   "educations_duration":4,
+  "certifications": [
+        {"name": "certificate exp", "value": null},
+        {"name": "certificate edu", "value": null}
+        ],
+  "courses": [
+        {"name": "cours exp", "value": null},
+        {"name": "cours edu", "value": null}],
+  "tasks": [
+        {"name": "tache exp", "value": null},
+        {"name": "tache edu", "value": null}],
   "skills": [{"name":"manual skill", "type": "hard", "value": null},
-               {"name":"Creative spirit", "type": "soft","value": null}, 
-               {"name":"Writing skills", "type": "hard","value": null}, 
-               {"name":"Communication", "type": "soft","value": null}],
+            {"name":"Creative spirit", "type": "soft", "value": null}, 
+            {"name":"Writing skills", "type": "hard", "value": null}, 
+            {"name":"Communication", "type": "soft", "value": null},
+            {"name": "skill edu", 'value': null, "type": "hard"}
+            {"name": "skill exp", 'value': null, "type": "hard"}],
   "languages" : [{"name":"english", "value": null}],
   "interests": [{"name":"football", "value": null}],
   "tags":[{"name":"archive", "value": false}],
@@ -265,6 +312,7 @@ Cake successfully retrieved.
             "full_name": "Harry Potter",
             "first_name": "Harry",
             "last_name": "Potter",
+            "birthdate": "1990-08-09T00:00:00+0000"
             "email": "harry.potter@gmail.com",
             "phone": "0202",
             "location": {
@@ -304,9 +352,24 @@ Cake successfully retrieved.
                 },
                 "date_start": "2018-01-01T00:00:00",
                 "date_end": "2018-07-01T00:00:00",
-                "hard_skills": null,
-                "soft_skills": null,
-                "company": "Mathematic Departement"
+                "company": "Mathematic Departement";
+                "certifications": [{
+                        "name": "certificate exp",
+                        "value": null
+                    }],
+                "courses": [{
+                        "name": "cours exp",
+                        "value": null
+                    }],
+                "tasks": [{
+                        "name": "tache exp",
+                        "value": null
+                    }],
+                "skills": [{
+                        "name": "skill exp",
+                        "value": null,
+                        "type" : "hard"
+                    }]         
             }
         ],
         "educations": [
@@ -323,34 +386,44 @@ Cake successfully retrieved.
                 },
                 "date_start": "2016-01-01T00:00:00",
                 "date_end": "2018-01-01T00:00:00",
-                "hard_skills": null,
-                "soft_skills": null,
-                "school": "University"
+                "school": "University",
+                "certifications": [{
+                        "name": "certificate edu",
+                        "value": null
+                    }],
+                "courses": [{
+                        "name": "cours edu",
+                        "value": null
+                    }],
+                "tasks": [{
+                        "name": "tache edu",
+                        'value': null
+                    }],
+                "skills": [{
+                        "name": "skill edu",
+                        "value": null,
+                        "type" : "hard"
+                    }]
             }
         ],
         "attachments": [],
+        "certifications": [
+                {"name": "certificate exp", "value": null},
+                {"name": "certificate edu", "value": null}
+                ],
+        "courses": [
+                {"name": "cours exp", "value": null},
+                {"name": "cours edu", "value": null}],
+        "tasks": [
+                {"name": "tache exp", "value": null},
+                {"name": "tache edu", "value": null}],
         "skills": [
-            {
-                "name": "manual skill",
-                "type": "hard",
-                "value": null
-            },
-            {
-                "name": "Creative spirit",
-                "type": "soft",
-                "value": null
-            },
-            {
-                "name": "Writing skills",
-                "type": "hard",
-                "value": null
-            },
-            {
-                "name": "Communication",
-                "type": "soft",
-                "value": null
-            }
-        ],
+                {"name":"manual skill", "type": "hard", "value": null},
+                {"name":"Creative spirit", "type": "soft", "value": null}, 
+                {"name":"Writing skills", "type": "hard", "value": null}, 
+                {"name":"Communication", "type": "soft", "value": null},
+                {"name": "skill edu", 'value': null, "type": "hard"}
+                {"name": "skill exp", 'value': null, "type": "hard"}],
         "languages": [
             {
                 "name": "english",
@@ -460,8 +533,25 @@ data = {
       "date_end": {"iso8601": "2018-07-01T00:00:00"},
       "title": "Lead",
       "company": "Mathematic Departement",
-      "location": {"text":"Paris"},
-      "description": "Developping."
+      "description": "Developping.",
+      "location": {"text":"Paris", "lat":"lat", "lng": "lng"},
+      "certifications": [{
+                "name": "certificate exp",
+                "value": None
+            }],
+      "courses": [{
+                "name": "cours exp",
+                "value": None
+            }],
+      "tasks": [{
+                "name": "tache exp",
+                "value": None
+            }],
+      "skills": [{
+                "name": "skill exp",
+                "value": None,
+                "type" : "hard"
+            }]         
       }],
   "experiences_duration":5,
   "educations": [{
@@ -470,13 +560,43 @@ data = {
       "title": "Mathematicien",
       "school": "University",
       "description": "Description",
-      "location": {"text":"Scotland", "lat":"lat", "lng": "lng"}
+      "location": {"text":"Scotland", "lat":"lat", "lng": "lng"},
+      "certifications": [{
+                "name": "certificate edu",
+                "value": None
+            }],
+      "courses": [{
+                "name": "cours edu",
+                "value": None
+            }],
+      "tasks": [{
+                "name": "tache edu",
+                "value": None
+            }],
+      "skills": [{
+                "name": "skill edu",
+                "value": None,
+                "type" : "hard"
+            }]
   }],
   "educations_duration":4,
-  "skills": [{"name":"manual skill", "type": "hard", "value": None},
-               {"name":"Creative spirit", "type": "soft","value": None}, 
-               {"name":"Writing skills", "type": "hard","value": None}, 
-               {"name":"Communication", "type": "soft","value": None}],
+  "certifications": [
+            {"name": "certificate exp", "value": None},
+            {"name": "certificate edu", "value": None}
+            ],
+  "courses": [
+            {"name": "cours exp", "value": None},
+            {"name": "cours edu", "value": None}],
+  "tasks": [
+            {"name": "tache exp", "value": None},
+            {"name": "tache edu", "value": None}],
+  "skills": [
+            {"name":"manual skill", "type": "hard", "value": None},
+            {"name":"Creative spirit", "type": "soft", "value": None}, 
+            {"name":"Writing skills", "type": "hard", "value": None}, 
+            {"name":"Communication", "type": "soft", "value": None},
+            {"name": "skill edu", 'value': None, "type": "hard"}
+            {"name": "skill exp", 'value': None, "type": "hard"}],
   "languages" : [{"name":"english", "value": None}],
   "interests": [{"name":"football", "value": None}],
   "tags":[{"name":"archive", "value": False}],
@@ -539,8 +659,25 @@ const data = {
       'date_end': {'iso8601': '2018-07-01T00:00:00'},
       'title': 'Lead',
       'company': 'Mathematic Departement',
-      'location': {'text':'Paris'},
-      'description': 'Developping.'
+      'description': 'Developping.',
+      'location': {'text':'Paris', "lat":"lat", "lng": "lng"},
+      'certifications': [{
+                'name': 'certificate exp',
+                'value': None
+            }],
+      'courses': [{
+                'name': 'cours exp',
+                'value': None
+            }],
+      'tasks': [{
+                'name': 'tache exp',
+                'value': None
+            }],
+      'skills': [{
+                'name': 'skill exp',
+                'value' : None,
+                'type' : 'hard'
+            }]  
       }],
   'experiences_duration':5,
   'educations': [{
@@ -549,13 +686,43 @@ const data = {
       'title': 'Mathematicien',
       'school': 'University',
       'description': 'Description',
-      'location': {'text':'Scotland', 'lat':'lat', 'lng': 'lng'}
+      'location': {'text':'Scotland', 'lat':'lat', 'lng': 'lng'},
+      'certifications': [{
+                'name': 'certificate edu',
+                'value': None
+            }],
+      'courses': [{
+                'name': 'cours edu',
+                'value': None
+            }],
+      'tasks': [{
+                'name': 'tache edu',
+                'value': None
+            }],
+      'skills': [{
+                'name': 'skill edu',
+                'value': None,
+                'type' : 'hard'
+            }]
   }],
   'educations_duration':4,
-  'skills': [{'name':'manual skill', 'type': 'hard', 'value': null},
-               {'name':'Creative spirit', 'type': 'soft','value': null}, 
-               {'name':'Writing skills', 'type': 'hard','value': null}, 
-               {'name':'Communication', 'type': 'soft','value': null}],
+  'certifications': [
+            {'name': 'certificate exp', 'value': None},
+            {'name': 'certificate edu', 'value': None}
+            ],
+  'courses': [
+            {'name': 'cours exp', 'value': None},
+            {'name': 'cours edu', 'value': None}],
+  'tasks': [
+            {'name': 'tache exp', 'value': None},
+            {'name': 'tache edu', 'value': None}],
+  'skills': [
+            {'name': 'manual skill', 'type': 'hard', 'value': None},
+            {'name': 'Creative spirit', "type": 'soft', 'value': None}, 
+            {'name': 'Writing skills', "type": 'hard', 'value': None}, 
+            {'name': 'Communication', 'type': 'soft', "value": None},
+            {'name': 'skill edu', 'value': None, 'type': "hard"}
+            {'name': 'skill exp', 'value': None, 'type': "hard"}],
   'languages' : [{'name':'english', 'value': null}],
   'interests': [{'name':'football', 'value': null}],
   'tags':[{'name':'archive', 'value': false}],
