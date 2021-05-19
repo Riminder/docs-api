@@ -23,7 +23,10 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 | info | Location Longitude | Location longitude | 2.3314779 |
 | info | Email | Email address | contact@riminder.net |
 | info | Date Birth | Date of birth | 26/11/1991 |
+| info | Gender | Gender | male or female |
+| info | Picture | Profile's public picture URL | https://myPicture.com |
 | info | Driving License | Driving license | Permis B |
+| info | Summary | Profile's summary | Data enthusiast |
 | experience, education, info | Date Start | Starting date | 2016 |
 | experience, education, info | Date End | Ending Date | 2020 |
 | experience, education, info | Duration | Duration of a given experience or education | 5 months |
