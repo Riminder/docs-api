@@ -2,7 +2,7 @@
 description: Hrflow.ai task JSON object.
 ---
 
-# Task JSON
+# Course JSON
 
 Task represents a piece of work done during experience or education for profiles or needed for a job position
 

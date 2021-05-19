@@ -79,4 +79,3 @@ Experience is way to describe the profile's career path, it contains general inf
 | tasks | A list of experience's [Tasks](https://developers.hrflow.ai/hr-json/trait-objects/task-object) object |
 | skills | A list of experience's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
 
-

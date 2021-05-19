@@ -22,7 +22,7 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 | info | Location Latitude | Location latitude | 48.8705093 |
 | info | Location Longitude | Location longitude | 2.3314779 |
 | info | Email | Email address | contact@riminder.net |
-| info | Birth Date | Date of birth | 26/11/1991 |
+| info | Date Birth | Date of birth | 26/11/1991 |
 | info | Driving License | Driving license | Permis B |
 | experience, education, info | Date Start | Starting date | 2016 |
 | experience, education, info | Date End | Ending Date | 2020 |

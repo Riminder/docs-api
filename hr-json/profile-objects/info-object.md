@@ -77,14 +77,15 @@ Profile's personal information.
 
 | name | description |
 | :--- | :--- |
-| full_name | Profile's full name |
-| first_name | Profile's first name |
-| last_name | Profile's last name |
+| full\_name | Profile's full name |
+| first\_name | Profile's first name |
+| last\_name | Profile's last name |
 | email | Profile's email |
 | phone | Profile's phone |
 | birthdate | Profile's birthdate |
 | location | The Profile's location as [location](../trait-objects/location-object.md) object |
 | urls | Profile's url |
 | picture | Profile's picture as public URL if it exists |
-| gender | Profile's gender (male, female, None) [Tasks] |
+| gender | Profile's gender \(male, female, None\) \[Tasks\] |
 | summary | Profile's summary |
+
