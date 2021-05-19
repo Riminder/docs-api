@@ -56,6 +56,9 @@ Parsing object successfully retrieved.
 
 ```scheme
 {
+    "code": 200,
+    "message": "Profile parsing",
+    "data": {
       'content_uid': 'content_uid', 
       'key': 'profile_key',
       'file_name': 'filename.pdf',
@@ -91,7 +94,7 @@ Parsing object successfully retrieved.
               'country': 'UK', 
               'world_region': null}}, 
      'images': null, 
-     'picture': 'https://riminder-documents-eu-2019-12.s3-eu-west-1.amazonaws.com/picture.png',
+     'picture': 'https://myPicture.com',
      'urls': [
               {'type': 'from_resume', 'url': []}, 
               {'type': 'linkedin', 'url': null}, 
@@ -138,8 +141,12 @@ Parsing object successfully retrieved.
                                           'world_region': null},
                               'lat': null,
                               'lng': null,
-                              'text': null}}
-               ],
+                              'text': null},
+                     'skills': [{'name': 'skill edu', 'value': null, 'type': 'hard'}],
+                     'courses': [{'name': 'course edu', 'value': null}],
+                     'certifications': [{'name': 'certificate edu', 'value': null}],
+                     'tasks': [{'name': 'task edu', 'value': null}]
+                              }],
      'educations_duration': 2,
      'experiences': [
                      {'content_uid': 'content_uid',
@@ -174,16 +181,29 @@ Parsing object successfully retrieved.
                                                'world_region': null},
                                    'lat': null,
                                    'lng': null,
-                                   'text': null}
+                                   'text': null},
+                        'skills': [{'name': 'skill exp', 'value': null, 'type': 'hard'}],
+                        'courses': [{'name': 'course exp', 'value': null}],
+                        'certifications': [{'name': 'certificate exp', 'value': null}],
+                        'tasks': [{'name': 'task exp', 'value': null}]
                         }],
      'experiences_duration': 0.7,
      'skills': [{'name':'manual skill', 'type': 'hard', 'value': null},
                 {'name':'Creative spirit', 'type': 'soft','value': null}, 
                 {'name':'Writing skills', 'type': 'hard','value': null}, 
-                {'name':'Communication', 'type': 'soft','value': null}],
+                {'name':'Communication', 'type': 'soft','value': null},
+                {'name':'skill edu', 'type': 'hard','value': null},
+                {'name':'skill edu', 'type': 'hard','value': null}],
+     'courses': [{'name': 'course exp', 'value': null},
+                 {'name': 'course edu', 'value': null}],
+     'certifications': [{'name': 'certificate exp', 'value': null},
+                        {'name': 'certificate edu', 'value': null}],
+     'tasks': [{'name': 'task exp', 'value': null},
+               {'name': 'task edu', 'value': null}]
      'languages': [{'name':'english', 'value': null}],
      'interests': [{'name':'football', 'value': null}]
- }
+    }
+}
 ```
 {% endapi-method-response-example %}
 

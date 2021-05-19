@@ -30,7 +30,7 @@ Please find below an example of Json profile that could be submitted.
       "full_name":"Harry Potter",
       "first_name": "Harry",
       "last_name": "Potter",
-      "birthdate": "1990-08-09T00:00:00+0000"
+      "date_birth": "1990-08-09T00:00:00+0000"
       "email":"harry.potter@gmail.com",
       "phone":"0202",
       "gender": null,
@@ -59,11 +59,11 @@ Please find below an example of Json profile that could be submitted.
             "value": null
         }],
        "courses": [{
-            "name": "cours exp",
+            "name": "course exp",
             "value": null
         }],
        "tasks": [{
-            "name": "tache exp",
+            "name": "task exp",
             'value': null
         }],
        "skills": [{
@@ -85,11 +85,11 @@ Please find below an example of Json profile that could be submitted.
             "value": null
         }],
       "courses": [{
-            "name": "cours edu",
+            "name": "course edu",
             "value": null
         }],
       "tasks": [{
-            "name": "tache edu",
+            "name": "task edu",
             "value": null
         }],
       "skills": [{
@@ -104,11 +104,11 @@ Please find below an example of Json profile that could be submitted.
         {"name": "certificate edu", "value": null}
         ],
   "courses": [
-        {"name": "cours exp", "value": null},
+        {"name": "course exp", "value": null},
         {"name": "cours edu", "value": null}],
   "tasks": [
-        {"name": "tache exp", "value": null},
-        {"name": "tache edu", "value": null}],
+        {"name": "task exp", "value": null},
+        {"name": "task edu", "value": null}],
   "skills": [{"name":"manual skill", "type": "hard", "value": null},
             {"name":"Creative spirit", "type": "soft", "value": null}, 
             {"name":"Writing skills", "type": "hard", "value": null}, 
@@ -165,31 +165,32 @@ Profile's reference, it is a unique for a given source
 {% api-method-parameter name="info" type="array" required=true %}
 Profile's related info :  
 {  
-"full\_name": XXX,  
-"first\_name": XXX,  
-"last\_name": XXX,  
-"email": XXX,  
-"phone": 20202020,  
-"gender": F,  
-"picture":  
-"location": {"text": null},  
-"summary": "Brief summary",  
-"urls" : {...}  
+    "full\_name": "XXX",  
+    "first\_name": "XXX",  
+    "last\_name": "XXX",
+    "date\_birth": "XX-XX-XXXXTXX:XX:XX",
+    "email": "XXX",  
+    "phone": "20202020",  
+    "gender": "female",  
+    "picture":  
+    "location": {"text": null},  
+    "summary": "Brief summary",  
+    "urls" : {...}  
 }
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations" type="array" required=true %}
 Profile's educations:  
 \[{  
-"title" : "EDU1",  
-"school": "HrFlow Academy",  
-"description": "Edu description",  
-"location": {  
-"text": "Paris",  
-"lat" : 48.8534,  
-"lng": 2.3488},  
-"date\_start": { "iso8601": "2016-01-01T00:00:00"},  
-"date\_end": {"iso8601": "2018-01-01T00:00:00"}  
+    "title" : "EDU1",  
+    "school": "HrFlow Academy",  
+    "description": "Edu description",  
+    "location": {  
+        "text": "Paris",  
+        "lat" : 48.8534,  
+        "lng": 2.3488},  
+    "date\_start": { "iso8601": "2016-01-01T00:00:00"},  
+    "date\_end": {"iso8601": "2018-01-01T00:00:00"}  
 },  
 ...\]
 {% endapi-method-parameter %}
@@ -201,15 +202,15 @@ The Education's duration
 {% api-method-parameter name="experiences" type="array" required=true %}
 Profile's experiences:  
 \[{  
-"title": "EXP1",  
-"company": "HrFlow"  
-"description": "Exp description",  
-"location": {  
-"text": "Paris",  
-"lat": 48.8534 ,  
-"lng": 2.3488},  
-"date\_start": {"iso8601": "2018-01-01T00:00:00"},  
-"date\_end": {"iso8601": "2018-07-01T00:00:00"}  
+    "title": "EXP1",  
+    "company": "HrFlow"  
+    "description": "Exp description",  
+    "location": {  
+        "text": "Paris",  
+        "lat": 48.8534 ,  
+        "lng": 2.3488},  
+    "date\_start": {"iso8601": "2018-01-01T00:00:00"},  
+    "date\_end": {"iso8601": "2018-07-01T00:00:00"}  
 },  
 ...\]
 {% endapi-method-parameter %}
@@ -226,11 +227,33 @@ A text to include with a Profile, it describes concisely each experience and edu
 The language of the original text, it is in ISO 639-1 format
 {% endapi-method-parameter %}
 
+{% api-method-parameter name="certifications" type="array" required=true %}
+Profile's certifications : \[{  
+    "name": "CCNA",  
+    "value": null},  
+...\]
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="courses" type="array" required=true %}
+Profile's courses : \[{  
+    "name": "Big Data",
+    "value": null},  
+...\]
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="tasks" type="array" required=true %}
+Profile's tasks : \[{  
+    "name": "task",  
+    "value": null},  
+...\]
+{% endapi-method-parameter %}
+
+
 {% api-method-parameter name="skills" type="array" required=true %}
 Profile's skills : \[{  
-"name": "Python",  
-"type": "hard",  
-"value": 0.6},  
+    "name": "Python",  
+    "type": "hard",  
+    "value": 0.6},  
 ...\]
 {% endapi-method-parameter %}
 
@@ -312,7 +335,7 @@ Cake successfully retrieved.
             "full_name": "Harry Potter",
             "first_name": "Harry",
             "last_name": "Potter",
-            "birthdate": "1990-08-09T00:00:00+0000"
+            "date_birth": "1990-08-09T00:00:00+0000"
             "email": "harry.potter@gmail.com",
             "phone": "0202",
             "location": {
@@ -514,6 +537,7 @@ data = {
       "full_name":"Harry Potter",
       "first_name": "Harry",
       "last_name": "Potter",
+      "birthdate": "1990-08-09T00:00:00+0000"
       "email":"harry.potter@gmail.com",
       "phone":"0202",
       "gender": None,
@@ -535,23 +559,10 @@ data = {
       "company": "Mathematic Departement",
       "description": "Developping.",
       "location": {"text":"Paris", "lat":"lat", "lng": "lng"},
-      "certifications": [{
-                "name": "certificate exp",
-                "value": None
-            }],
-      "courses": [{
-                "name": "cours exp",
-                "value": None
-            }],
-      "tasks": [{
-                "name": "tache exp",
-                "value": None
-            }],
-      "skills": [{
-                "name": "skill exp",
-                "value": None,
-                "type" : "hard"
-            }]         
+      "certifications": [{"name": "certificate exp", "value": None}],
+      "courses": [{"name": "cours exp", "value": None}],
+      "tasks": [{"name": "tache exp", "value": None}],
+      "skills": [{"name": "skill exp", "value": None, "type" : "hard"}]         
       }],
   "experiences_duration":5,
   "educations": [{
@@ -561,23 +572,10 @@ data = {
       "school": "University",
       "description": "Description",
       "location": {"text":"Scotland", "lat":"lat", "lng": "lng"},
-      "certifications": [{
-                "name": "certificate edu",
-                "value": None
-            }],
-      "courses": [{
-                "name": "cours edu",
-                "value": None
-            }],
-      "tasks": [{
-                "name": "tache edu",
-                "value": None
-            }],
-      "skills": [{
-                "name": "skill edu",
-                "value": None,
-                "type" : "hard"
-            }]
+      "certifications": [{"name": "certificate edu", "value": None}],
+      "courses": [{"name": "cours edu", "value": None}],
+      "tasks": [{"name": "tache edu", "value": None}],
+      "skills": [{"name": "skill edu", "value": None,"type" : "hard"}]
   }],
   "educations_duration":4,
   "certifications": [
@@ -640,6 +638,7 @@ const data = {
       'full_name':'Harry Potter',
       'first_name': 'Harry',
       'last_name': 'Potter',
+      'date_birth': '1990-08-09T00:00:00+0000',
       'email':'harry.potter@gmail.com',
       'phone':'0202',
       'gender': null,
@@ -661,23 +660,10 @@ const data = {
       'company': 'Mathematic Departement',
       'description': 'Developping.',
       'location': {'text':'Paris', "lat":"lat", "lng": "lng"},
-      'certifications': [{
-                'name': 'certificate exp',
-                'value': None
-            }],
-      'courses': [{
-                'name': 'cours exp',
-                'value': None
-            }],
-      'tasks': [{
-                'name': 'tache exp',
-                'value': None
-            }],
-      'skills': [{
-                'name': 'skill exp',
-                'value' : None,
-                'type' : 'hard'
-            }]  
+      'certifications': [{'name': 'certificate exp', 'value': null}],
+      'courses': [{'name': 'cours exp', 'value': null}],
+      'tasks': [{'name': 'tache exp', 'value': null}],
+      'skills': [{'name': 'skill exp', 'value' : null, 'type' : 'hard'}]  
       }],
   'experiences_duration':5,
   'educations': [{
@@ -687,42 +673,29 @@ const data = {
       'school': 'University',
       'description': 'Description',
       'location': {'text':'Scotland', 'lat':'lat', 'lng': 'lng'},
-      'certifications': [{
-                'name': 'certificate edu',
-                'value': None
-            }],
-      'courses': [{
-                'name': 'cours edu',
-                'value': None
-            }],
-      'tasks': [{
-                'name': 'tache edu',
-                'value': None
-            }],
-      'skills': [{
-                'name': 'skill edu',
-                'value': None,
-                'type' : 'hard'
-            }]
+      'certifications': [{'name': 'certificate edu', 'value': null}],
+      'courses': [{'name': 'cours edu', 'value': null}],
+      'tasks': [{'name': 'tache edu', 'value': null}],
+      'skills': [{'name': 'skill edu', 'value': null, 'type' : 'hard'}]
   }],
   'educations_duration':4,
   'certifications': [
-            {'name': 'certificate exp', 'value': None},
-            {'name': 'certificate edu', 'value': None}
+            {'name': 'certificate exp', 'value': null},
+            {'name': 'certificate edu', 'value': null}
             ],
   'courses': [
-            {'name': 'cours exp', 'value': None},
-            {'name': 'cours edu', 'value': None}],
+            {'name': 'cours exp', 'value': null},
+            {'name': 'cours edu', 'value': null}],
   'tasks': [
-            {'name': 'tache exp', 'value': None},
-            {'name': 'tache edu', 'value': None}],
+            {'name': 'tache exp', 'value': null},
+            {'name': 'tache edu', 'value': null}],
   'skills': [
-            {'name': 'manual skill', 'type': 'hard', 'value': None},
-            {'name': 'Creative spirit', "type": 'soft', 'value': None}, 
-            {'name': 'Writing skills', "type": 'hard', 'value': None}, 
-            {'name': 'Communication', 'type': 'soft', "value": None},
-            {'name': 'skill edu', 'value': None, 'type': "hard"}
-            {'name': 'skill exp', 'value': None, 'type': "hard"}],
+            {'name': 'manual skill', 'type': 'hard', 'value': null},
+            {'name': 'Creative spirit', "type": 'soft', 'value': null}, 
+            {'name': 'Writing skills', "type": 'hard', 'value': null}, 
+            {'name': 'Communication', 'type': 'soft', "value": null},
+            {'name': 'skill edu', 'value': null, 'type': "hard"}
+            {'name': 'skill exp', 'value': null, 'type': "hard"}],
   'languages' : [{'name':'english', 'value': null}],
   'interests': [{'name':'football', 'value': null}],
   'tags':[{'name':'archive', 'value': false}],

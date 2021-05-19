@@ -89,7 +89,7 @@ Profile successfully Created using sync parsing.
 ```scheme
 {
     "code": 201,
-    "message": "Profile parsed successfully. Profile extraction finished : 7.279723644256592 seconds.",
+    "message": "Profile parsed successfully. Profile extraction finished : 2.5263 seconds.",
     "data": {
         "parsing": {...},
         "profile": {...}
