@@ -38,8 +38,6 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 | experience | Location Longitude | Location longitude | -122.1486833 |
 | experience | Location Geocoder | Location geocoder info  | Geocoder Object |
 | experience | Description | Description  | Solving unemployment with Deep Learning |
-| experience | Date start | Date start | 2018-01-01T00:00:00 |
-| experience | Date end | Date end | 2018-07-01T00:00:00 |
 | experience | Certifications | Certifications owned in an experience | TOEIC - 750 |
 | experience | Courses | Course taught in an experience | Big Data - Les fondamentaux |
 | experience | Task | Assignment that have been given through an experience | Management of office supplies and consumables |
@@ -51,8 +49,6 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 | education | Location Longitude | Location longitude | -137.8396479 |
 | education | Location Geocoder | Location geocoder info of the education | Geocoder Object |
 | education | Description | Description | Upper second-class honors |
-| education | Date start | Date start | 2016-01-01T00:00:00 |
-| education | Date end | Date end | 2018-01-01T00:00:00 |
 | education | Certifications | Certifications owned in an education | Machine Learning Professional Certificate |
 | education | Courses | Course taught in an education | CS231n: Convolutional Neural Networks for Visual Recognition |
 | education | Tasks | Tasks done in an education | Develop a Machine Learning model |
