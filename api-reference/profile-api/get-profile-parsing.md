@@ -68,6 +68,11 @@ Parsing object successfully retrieved.
                    'last_name': 'Potter'}],
       'emails': ['harry.potter@gmail.com'],
       'phones': ['0202'],
+      'date_birth': {
+            'iso8601': '1990-08-09T00:00:00',
+            'text': '08/09/1990",
+            'timestamp': 650160000
+        },
       'location': {
            'text': '803 Green Lane London N07 8MA',
            'lat': 51.581551, 
@@ -102,7 +107,7 @@ Parsing object successfully retrieved.
               {'type': 'facebook', 'url': null}, 
               {'type': 'github', 'url': null}],
      'gender': 'male',
-     'driving_licence': null, 
+     'driving_license': null, 
      'summary': 'Brief summary', 
      'text': 'Profile s text' ,
      'text_language': 'en'
@@ -142,10 +147,10 @@ Parsing object successfully retrieved.
                               'lat': null,
                               'lng': null,
                               'text': null},
-                     'skills': [{'name': 'skill edu', 'value': null, 'type': 'hard'}],
-                     'courses': [{'name': 'course edu', 'value': null}],
                      'certifications': [{'name': 'certificate edu', 'value': null}],
+                     'courses': [{'name': 'course edu', 'value': null}],
                      'tasks': [{'name': 'task edu', 'value': null}]
+                     'skills': [{'name': 'skill edu', 'type': 'hard', 'value': null}]
                               }],
      'educations_duration': 2,
      'experiences': [
@@ -182,10 +187,10 @@ Parsing object successfully retrieved.
                                    'lat': null,
                                    'lng': null,
                                    'text': null},
-                        'skills': [{'name': 'skill exp', 'value': null, 'type': 'hard'}],
-                        'courses': [{'name': 'course exp', 'value': null}],
                         'certifications': [{'name': 'certificate exp', 'value': null}],
+                        'courses': [{'name': 'course exp', 'value': null}],
                         'tasks': [{'name': 'task exp', 'value': null}]
+                        'skills': [{'name': 'skill exp', 'type': 'hard', 'value': null}]
                         }],
      'experiences_duration': 0.7,
      'skills': [{'name':'manual skill', 'type': 'hard', 'value': null},
@@ -201,7 +206,9 @@ Parsing object successfully retrieved.
      'tasks': [{'name': 'task exp', 'value': null},
                {'name': 'task edu', 'value': null}]
      'languages': [{'name':'english', 'value': null}],
-     'interests': [{'name':'football', 'value': null}]
+     'interests': [{'name':'football', 'value': null}],
+     'total_pages': 1,
+     'processed_pages': 1
     }
 }
 ```

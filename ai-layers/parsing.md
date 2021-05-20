@@ -38,7 +38,12 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 | experience | Location Longitude | Location longitude | -122.1486833 |
 | experience | Location Geocoder | Location geocoder info  | Geocoder Object |
 | experience | Description | Description  | Solving unemployment with Deep Learning |
+| experience | Date start | Date start | 2018-01-01T00:00:00 |
+| experience | Date end | Date end | 2018-07-01T00:00:00 |
+| experience | Certifications | Certifications owned in an experience | TOEIC - 750 |
+| experience | Courses | Course taught in an experience | Big Data - Les fondamentaux |
 | experience | Task | Assignment that have been given through an experience | Management of office supplies and consumables |
+| experience | Skills | List of hard/soft skills | C++, Creativity |
 | education | School | School or educational institution | Stanford University |
 | education | Title | Degree | BSc Applied Mathematics |
 | education | Location Text | Location address | 450 Serra Mall, Stanford, CA 94305, United States |
@@ -46,11 +51,18 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 | education | Location Longitude | Location longitude | -137.8396479 |
 | education | Location Geocoder | Location geocoder info of the education | Geocoder Object |
 | education | Description | Description | Upper second-class honors |
-| education | Course | Course taught in an education | CS231n: Convolutional Neural Networks for Visual Recognition |
+| education | Date start | Date start | 2016-01-01T00:00:00 |
+| education | Date end | Date end | 2018-01-01T00:00:00 |
+| education | Certifications | Certifications owned in an education | Machine Learning Professional Certificate |
+| education | Courses | Course taught in an education | CS231n: Convolutional Neural Networks for Visual Recognition |
+| education | Tasks | Tasks done in an education | Develop a Machine Learning model |
+| education | Skills | List of hard/soft skills | Machine Learning, Leadership |
+| certifications | Certifications | Certification associated to a skill or language | TOEIC - 750 |
+| courses | Courses | Courses | CS231n: Convolutional Neural Networks for Visual Recognition |
+| tasks | Tasks | Tasks | Develop a Machine Learning model |
 | skills | Hard Skills | List of hard skills | Machine Learning, C++ |
 | skills | Soft Skills | List of soft skills | Creativity, Leadership, Teamplayer |
 | languages | Languages | List of languages | English, French, Chinese |
-| certifications | Certifications | Certification associated to a skill or language | TOEIC - 750 |
 | interests | Interests | Centers of interest | Chess, Football, Cinema |
 
 ![Example of Augmented Profile:Parsing attributes plotted on the original resume.](https://lh4.googleusercontent.com/LpKFFRl8MbJ561Q-fxFy88VB23ZK5I749ZW8Yzkl-WIqTPTkgY8espVLiKdxnimZcCydcB9XgQev4KSsee9RcyPw3dcTh7NqT6Xk8oNdExuPltvH92Y7jV-bdspZFbU7dYfOD5noeFw)
