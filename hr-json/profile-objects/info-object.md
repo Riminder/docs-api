@@ -6,7 +6,7 @@ description: Hrflow.ai profile info JSON object.
 
 Profile's personal information.
 
-## The Experience Object
+## The Info Object
 
 ```python
 {

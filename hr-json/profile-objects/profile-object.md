@@ -44,11 +44,11 @@ The API allows you to create, update and retrieve your profile.
             'type': 'api'},
     'updated_at': '2020-09-11T10:26:36+0000',
     'created_at': '2020-08-06T10:09:47+0000',
-    'info': {'email': 'harry.potter@gmail.com',
+    'info': { 'email': 'harry.potter@gmail.com',
               'first_name': 'Harry',
               'full_name': 'Harry Potter',
               'last_name': 'Potter',
-              'birthdate': '1990-08-09T00:00:00+0000'
+              'date_birth': '1990-08-09T00:00:00+0000'
               'gender': 'male',
               'location': {'fields': {
                                 "category": null,
@@ -136,23 +136,10 @@ The API allows you to create, update and retrieve your profile.
                                   'lat': null,
                                   'lng': null,
                                   'text': 'Scotland'},
-                     'certifications': [{
-                            'name': 'certificate edu',
-                            'value': null
-                        }],
-                     'courses': [{
-                            'name': 'cours edu',
-                            'value': null
-                        }],
-                     'tasks': [{
-                            'name': 'tache edu',
-                            'value': null
-                        }],
-                     'skills': [{
-                         'name': 'skill edu',
-                         'value': null,
-                         'type' : 'hard'
-                     }]
+                     'certifications': [{'name': 'certificate edu', 'value': null}],
+                     'courses': [{'name': 'course edu', 'value': null}],
+                     'tasks': [{'name': 'task edu', 'value': null}],
+                     'skills': [{'name': 'skill edu', 'type' : 'hard', 'value': null}]
     }],
     'educations_duration': 2,
     'experiences': [{ 'key': 'experience_key',
@@ -188,24 +175,11 @@ The API allows you to create, update and retrieve your profile.
                                    'lat': null,
                                    'lng': null,
                                    'text': 'Paris'},
-                      'certifications': [{
-                            'name': 'certificate exp',
-                            'value': null
-                        }],
-                     'courses': [{
-                            'name': 'cours exp',
-                            'value': null
-                        }],
-                     'tasks': [{
-                            'name': 'tache exp',
-                            'value': null
-                        }],
-                     'skills': [{
-                         'name': 'skill exp',
-                         'value': null,
-                         'type' : 'hard'
-                     }]
-                     }],
+                      'certifications': [{'name': 'certificate exp', 'value': null}],
+                     'courses': [{'name': 'course exp', 'value': null}],
+                     'tasks': [{'name': 'task exp', 'value': null}],
+                     'skills': [{'name': 'skill exp', 'type' : 'hard', 'value': null}]
+    }],
     'experiences_duration': 0.7,
     'attachments': [{
                       'alt': 'alt_resume',
@@ -232,12 +206,12 @@ The API allows you to create, update and retrieve your profile.
         {'name': 'certificate edu', 'value': null}
         ],
     'courses': [
-        {'name': 'cours exp', 'value': null},
-        {'name': 'cours edu', 'value': null}
+        {'name': 'course exp', 'value': null},
+        {'name': 'course edu', 'value': null}
         ],
     'tasks': [
-        {'name': 'tache exp', 'value': null},
-        {'name': 'tache edu', 'value': null}
+        {'name': 'task exp', 'value': null},
+        {'name': 'task edu', 'value': null}
         ],
     'skills': [{'name': 'manual skill', 'value': null, 'type': 'hard'},
                 {'name': 'Creative spirit', 'value': null, 'type': 'soft'},
