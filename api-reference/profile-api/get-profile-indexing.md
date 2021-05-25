@@ -163,21 +163,18 @@ Profile object is successfully retrieved
         ],
         "attachments": [],
         "certifications": [
-                {"name": "certificate exp", "value": null},
-                {"name": "certificate edu", "value": null}
+                {"name": "certificate", "value": null}
                 ],
         "courses": [
-                {"name": "course exp", "value": null},
-                {"name": "cours edu", "value": null}],
+                {"name": "course", "value": null}
+                ],
         "tasks": [
-                {"name": "task exp", "value": null},
-                {"name": "task edu", "value": null}],
+                {"name": "task", "value": null}
+                ],
         "skills": [{"name":"manual skill", "type": "hard", "value": null},
                     {"name":"Creative spirit", "type": "soft", "value": null}, 
                     {"name":"Writing skills", "type": "hard", "value": null}, 
-                    {"name":"Communication", "type": "soft", "value": null},
-                    {"name": "skill edu", "type": "hard", "value": null}
-                    {"name": "skill exp", "type": "hard", "value": null}],
+                    {"name":"Communication", "type": "soft", "value": null}],
         "languages": [],
         "interests": [],
         "labels": [],

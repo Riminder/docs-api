@@ -202,23 +202,18 @@ The API allows you to create, update and retrieve your profile.
                       'type': 'original',
                       'updated_at': '2020-09-11T10:26:29+0000'}],
     'certifications': [
-        {'name': 'certificate exp', 'value': null},
-        {'name': 'certificate edu', 'value': null}
+        {'name': 'certificate', 'value': null}
         ],
     'courses': [
-        {'name': 'course exp', 'value': null},
-        {'name': 'course edu', 'value': null}
+        {'name': 'course', 'value': null}
         ],
     'tasks': [
-        {'name': 'task exp', 'value': null},
-        {'name': 'task edu', 'value': null}
+        {'name': 'task', 'value': null}}
         ],
     'skills': [{'name': 'manual skill', 'value': null, 'type': 'hard'},
                 {'name': 'Creative spirit', 'value': null, 'type': 'soft'},
                 {'name': 'Writing skills', 'value': null, 'type': 'hard'},
-                {'name': 'Communication', 'value': null, 'type': 'soft'}
-                {'name': 'skill edu', 'value': null, 'type': 'hard'}
-                {'name': 'skill exp', 'value': null, 'type': 'hard'}],
+                {'name': 'Communication', 'value': null, 'type': 'soft'}],
     'languages': [{'name': 'english', 'value': null}],
     'interests': [{'name': 'football', 'value': null}],
     'labels': [{'job_key': 'job_key', 'stage': 'yes'}],
