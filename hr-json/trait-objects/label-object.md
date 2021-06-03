@@ -10,12 +10,15 @@ Label object contains information about profile stage, or rating for a given job
 
 ```python
 {
-    'job_key':'job_key',
-    'job_reference': 'ref1',
-    'stage':'yes',
+
+    'job_key': 'job_key',
+    'job_reference': 'job_reference'
+    'board_key': 'board_key',
+    'stage': 'yes',
+    'date_stage': 1622728952213,
     'rating': 0.6,
-    'date_stage':'2020-09-15T21:59',
-    'date_rating': '2020-10-15T21:59',
+    'date_rating': 1622728952213,
+
 }
 ```
 
