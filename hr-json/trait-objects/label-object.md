@@ -13,7 +13,6 @@ Label object contains information about profile stage, or rating for a given job
 
     'job_key': 'job_key',
     'job_reference': 'job_reference'
-    'board_key': 'board_key',
     'stage': 'yes',
     'date_stage': 1622728952213,
     'rating': 0.6,
