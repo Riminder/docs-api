@@ -24,20 +24,20 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 | info | Email | Email address | contact@riminder.net |
 | info | Date Birth | Date of birth | 26/11/1991 |
 | info | Gender | Gender | male or female |
-| info | Picture | Profile's public picture URL | https://myPicture.com |
+| info | Picture | Profile's public picture URL | [https://myPicture.com](https://myPicture.com) |
 | info | Driving License | Driving license | Permis B |
 | info | Summary | Profile's summary | Data enthusiast |
 | experience, education, info | Date Start | Starting date | 2016 |
 | experience, education, info | Date End | Ending Date | 2020 |
 | experience, education, info | Duration | Duration of a given experience or education | 5 months |
-| experience, education, info | URL | Internet Link | https://www.hrflow.ai |
+| experience, education, info | URL | Internet Link | [https://www.hrflow.ai](https://www.hrflow.ai) |
 | experience | Company | Company Name | HrFlow.ai |
 | experience | Title | Job title | Data Scientist |
 | experience | Location Text | Location address | 2627 Hanover St, Palo Alto, CA 94304, United States |
 | experience | Location Latitude | Location latitude | 37.4180666 |
 | experience | Location Longitude | Location longitude | -122.1486833 |
-| experience | Location Geocoder | Location geocoder info  | Geocoder Object |
-| experience | Description | Description  | Solving unemployment with Deep Learning |
+| experience | Location Geocoder | Location geocoder info | Geocoder Object |
+| experience | Description | Description | Solving unemployment with Deep Learning |
 | experience | Certifications | Certifications owned in an experience | TOEIC - 750 |
 | experience | Courses | Course taught in an experience | Big Data - Les fondamentaux |
 | experience | Task | Assignment that have been given through an experience | Management of office supplies and consumables |
@@ -64,7 +64,7 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 ![Example of Augmented Profile:Parsing attributes plotted on the original resume.](https://lh4.googleusercontent.com/LpKFFRl8MbJ561Q-fxFy88VB23ZK5I749ZW8Yzkl-WIqTPTkgY8espVLiKdxnimZcCydcB9XgQev4KSsee9RcyPw3dcTh7NqT6Xk8oNdExuPltvH92Y7jV-bdspZFbU7dYfOD5noeFw)
 
 {% hint style="info" %}
-Parse a Reume here: [https://labs.hrflow.ai/profile-analytics/parsing](https://labs.hrflow.ai/profile-analytics/parsing) 
+Parse a Reume here: [https://labs.hrflow.ai/profile-analytics/parsing](https://labs.hrflow.ai/profile-analytics/parsing)
 {% endhint %}
 
 ### Job API
@@ -91,12 +91,12 @@ In a more general case, here are the categories retrieved by our document parsin
 | SoftSkill | Personal attribute that enable someone to interact effectively and harmoniously with other people | Rigorous; Teamplayer |
 | Language | Language name | English, French, Chinese |
 | Interest | Center of interest | Chess, Football, Cinema |
-| URL | Internet link | https://www.hrflow.ai |
+| URL | Internet link | [https://www.hrflow.ai](https://www.hrflow.ai) |
 
 ![Example of Augmented Job:Parsing attributes plotted on the original job offer.](../.gitbook/assets/screenshot-from-2020-03-01-20-12-05.png)
 
 {% hint style="info" %}
-Parse a Reume here: [https://labs.hrflow.ai/job-analytics/parsing](https://labs.hrflow.ai/job-analytics/parsing) 
+Parse a Reume here: [https://labs.hrflow.ai/job-analytics/parsing](https://labs.hrflow.ai/job-analytics/parsing)
 {% endhint %}
 
 ## Why you should choose our Parsing?

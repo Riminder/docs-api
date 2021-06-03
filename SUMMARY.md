@@ -2,6 +2,7 @@
 
 * [What is HrFlow.ai?](README.md)
 * [Why use HrFlow.ai?](why-use-hrflow.md)
+* [HrFlow.ai Certification](certification.md)
 
 ## DEVELOPERS PRODUCTS <a id="products-1"></a>
 

@@ -165,32 +165,30 @@ Profile's reference, it is a unique for a given source
 {% api-method-parameter name="info" type="array" required=true %}
 Profile's related info :  
 {  
-    "full\_name": "XXX",  
-    "first\_name": "XXX",  
-    "last\_name": "XXX",
-    "date\_birth": "XX-XX-XXXXTXX:XX:XX",
-    "email": "XXX",  
-    "phone": "20202020",  
-    "gender": "female",  
-    "picture":  
-    "location": {"text": null},  
-    "summary": "Brief summary",  
-    "urls" : {...}  
+"full\_name": "XXX",  
+"first\_name": "XXX",  
+"last\_name": "XXX", "date\_birth": "XX-XX-XXXXTXX:XX:XX", "email": "XXX",  
+"phone": "20202020",  
+"gender": "female",  
+"picture":  
+"location": {"text": null},  
+"summary": "Brief summary",  
+"urls" : {...}  
 }
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="educations" type="array" required=true %}
 Profile's educations:  
 \[{  
-    "title" : "EDU1",  
-    "school": "HrFlow Academy",  
-    "description": "Edu description",  
-    "location": {  
-        "text": "Paris",  
-        "lat" : 48.8534,  
-        "lng": 2.3488},  
-    "date\_start": { "iso8601": "2016-01-01T00:00:00"},  
-    "date\_end": {"iso8601": "2018-01-01T00:00:00"}  
+"title" : "EDU1",  
+"school": "HrFlow Academy",  
+"description": "Edu description",  
+"location": {  
+"text": "Paris",  
+"lat" : 48.8534,  
+"lng": 2.3488},  
+"date\_start": { "iso8601": "2016-01-01T00:00:00"},  
+"date\_end": {"iso8601": "2018-01-01T00:00:00"}  
 },  
 ...\]
 {% endapi-method-parameter %}
@@ -202,15 +200,15 @@ The Education's duration
 {% api-method-parameter name="experiences" type="array" required=true %}
 Profile's experiences:  
 \[{  
-    "title": "EXP1",  
-    "company": "HrFlow"  
-    "description": "Exp description",  
-    "location": {  
-        "text": "Paris",  
-        "lat": 48.8534 ,  
-        "lng": 2.3488},  
-    "date\_start": {"iso8601": "2018-01-01T00:00:00"},  
-    "date\_end": {"iso8601": "2018-07-01T00:00:00"}  
+"title": "EXP1",  
+"company": "HrFlow"  
+"description": "Exp description",  
+"location": {  
+"text": "Paris",  
+"lat": 48.8534 ,  
+"lng": 2.3488},  
+"date\_start": {"iso8601": "2018-01-01T00:00:00"},  
+"date\_end": {"iso8601": "2018-07-01T00:00:00"}  
 },  
 ...\]
 {% endapi-method-parameter %}
@@ -229,31 +227,29 @@ The language of the original text, it is in ISO 639-1 format
 
 {% api-method-parameter name="certifications" type="array" required=true %}
 Profile's certifications : \[{  
-    "name": "CCNA",  
-    "value": null},  
+"name": "CCNA",  
+"value": null},  
 ...\]
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="courses" type="array" required=true %}
 Profile's courses : \[{  
-    "name": "Big Data",
-    "value": null},  
+"name": "Big Data", "value": null},  
 ...\]
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="tasks" type="array" required=true %}
 Profile's tasks : \[{  
-    "name": "task",  
-    "value": null},  
+"name": "task",  
+"value": null},  
 ...\]
 {% endapi-method-parameter %}
 
-
 {% api-method-parameter name="skills" type="array" required=true %}
 Profile's skills : \[{  
-    "name": "Python",  
-    "type": "hard",  
-    "value": 0.6},  
+"name": "Python",  
+"type": "hard",  
+"value": 0.6},  
 ...\]
 {% endapi-method-parameter %}
 
