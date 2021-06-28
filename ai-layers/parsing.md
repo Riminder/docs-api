@@ -64,7 +64,7 @@ We combined cutting edge Deep Computer Vision and Deep Natural Language Processi
 ![Example of Augmented Profile:Parsing attributes plotted on the original resume.](https://lh4.googleusercontent.com/LpKFFRl8MbJ561Q-fxFy88VB23ZK5I749ZW8Yzkl-WIqTPTkgY8espVLiKdxnimZcCydcB9XgQev4KSsee9RcyPw3dcTh7NqT6Xk8oNdExuPltvH92Y7jV-bdspZFbU7dYfOD5noeFw)
 
 {% hint style="info" %}
-Parse a Resume here: [https://labs.hrflow.ai/profile-analytics/parsing](https://labs.hrflow.ai/profile-analytics/parsing)
+Parse a Resume here: [https://labs.hrflow.ai/profile-analysis/parsing](https://labs.hrflow.ai/profile-analysis/parsing/)
 {% endhint %}
 
 ### Job API
