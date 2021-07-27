@@ -174,7 +174,7 @@ client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 client.job.scoring.list(board_keys=["board_key1", "board_key2"],
                           source_key="source_key", profile_key="profile_key", 
-                          agent_key="agent_key", use_agent=1
+                          agent_key="agent_key", use_agent=1,
                           name="data scientist", page=1, limit=10, 
                           order_by="asc", sort_by="created_at",
                           text_keywords=["engineer", "python"],
