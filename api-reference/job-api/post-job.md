@@ -4,7 +4,7 @@ description: This endpoint allows you to add new Job to a given board.
 
 # POST: /job/indexing
 
-Please find below an example of json job that you can upload.
+Please find below an example of JSON job that you can upload.
 
 ```bash
 {
