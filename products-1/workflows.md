@@ -20,6 +20,10 @@ Once created your workflow must be configured by clicking on it from the main **
 Content below is valid for **Python3.6** runtime. 
 {% endhint %}
 
+{% hint style="info" %}
+For use cases that need to white list IPs you can add this IP **54.220.170.79** to properly integrate your workflows
+{% endhint %}
+
 ### Catch setup
 
 The core of your **Catch** workflow is the `Function`  section. To execute your code you are expected to write a function with this signature `def workflow(_request: Dict, settings: Dict) -> Union[None, Dict]`
@@ -74,6 +78,7 @@ def workflow(_request, settings):
         headers={"Content-Type": "application/json"},
         body=json.dumps({"id": id})
     )
+
 ```
 
 ![](../.gitbook/assets/screen-shot-2020-09-09-at-18.10.29.png)
@@ -85,6 +90,7 @@ Once this is done you are all set! The **Catch** hook Url is ready to be used.
 ![](../.gitbook/assets/screen-shot-2020-09-04-at-09.26.38.png)
 
 ```bash
+
 curl -X POST https://api-workflows.hrflow.ai/teams/XXX/YYY/python3.6/ZZZ \
     -H Content-Type:application/json \
     -d '{"file_url": "https://company.storage.fr/file/profile_1.doc"}'
