@@ -126,6 +126,7 @@ User's email.
 {% endapi-method-parameter %}
 {% endapi-method-headers %}
 
+{% api-method-body-parameters %}
 
 {% api-method-parameter name="board\_key" type="string" required=true %}
 The key of the board in which the Job will be added
@@ -209,7 +210,6 @@ The Job's ranges date
 'value\_min': '2020-05-18T21:59'}...\]\)
 {% endapi-method-parameter %}
 
-{% api-method-body-parameters %}
 {% api-method-parameter name="tasks" type="array" required=false %}
 Tasks required in the job : \[{"name": "Ensure product delivery time", "value": null"}\]
 {% endapi-method-parameter %}
