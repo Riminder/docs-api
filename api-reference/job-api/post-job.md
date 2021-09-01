@@ -127,7 +127,6 @@ User's email.
 {% endapi-method-headers %}
 
 {% api-method-body-parameters %}
-
 {% api-method-parameter name="board\_key" type="string" required=true %}
 The key of the board in which the Job will be added
 {% endapi-method-parameter %}
@@ -219,11 +218,9 @@ Courses related to the job : \[{"name": "Statistics", "value": null"}\]
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="certifications" type="array" required=false %}
-Certifications mentionned in the job : \[{"name": "CCNA",   
+Certifications mentionned in the job : \[{"name": "CCNA",  
 "value": null}\]
 {% endapi-method-parameter %}
-
-
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
@@ -350,7 +347,7 @@ Invalid secret key.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -371,7 +368,7 @@ Invalid secret key.
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="courses" type="array" required=false %}
- \[{"name": "Statistics", "value": null"}\]
+\[{"name": "Statistics", "value": null"}\]
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -382,7 +379,7 @@ Invalid secret key.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -403,7 +400,7 @@ Invalid secret key.
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="courses" type="array" required=false %}
- \[{"name": "Statistics", "value": null"}\]
+\[{"name": "Statistics", "value": null"}\]
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -414,7 +411,7 @@ Invalid secret key.
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -449,7 +446,7 @@ Profile's certifications : \[{
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
@@ -484,7 +481,7 @@ Profile's certifications : \[{
 
 {% endapi-method-response-example-description %}
 
-```
+```text
 
 ```
 {% endapi-method-response-example %}
