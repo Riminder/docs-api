@@ -1,5 +1,5 @@
 ---
-description: Watch useful tutorials to become proficient in using HrFlow.ai
+description: All what you must know in video to become proficient in using HrFlow.ai
 ---
 
 # HrFlow.ai Certification
