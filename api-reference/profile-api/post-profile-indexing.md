@@ -511,6 +511,7 @@ from hrflow import Hrflow
 client = Hrflow(api_secret="Your API Key", api_user="Your API user email")
 
 data = {
+    "reference" : "my_profile",
   "consent_algorithmic": {
             "owner": {
                 "parsing": True,
@@ -530,72 +531,88 @@ data = {
             }
         },
   "info" : {
-      "full_name":"Harry Potter",
-      "first_name": "Harry",
-      "last_name": "Potter",
-      "birthdate": "1990-08-09T00:00:00+0000"
-      "email":"harry.potter@gmail.com",
-      "phone":"0202",
-      "gender": None,
+      "full_name":"John Doe",
+      "first_name": "John",
+      "last_name": "Doe",
+      "date_birth": "1990-08-09T00:00:00+0000",
+      "email":"john.doe@gmail.com",
+      "phone":"0212787656",
+      "gender": "Male",
       "urls": {
           "from_resume": [],
           "linkedin":"",
           "twitter":"",
           "facebook":"",
           "github":""},
-      "picture":None,
+      "picture": "picture public url",
       "location":{"text": None},
       "summary": "Brief summary"
   },
-  "text": "Harry Potter harry.potter@gmail.com 0202 Brief summary Mathematic Departement Developping Mathematicien University Description manual skill Creative spirit Writing skills Communication english football",
+  "text": "In this section should be the bulk text of the \
+          whole profile with all the sections",
   "experiences": [{
-      "date_start":  {"iso8601": "2018-01-01T00:00:00"},
+      "date_start": {"iso8601": "2016-01-01T00:00:00"},
       "date_end": {"iso8601": "2018-07-01T00:00:00"},
-      "title": "Lead",
-      "company": "Mathematic Departement",
-      "description": "Developping.",
-      "location": {"text":"Paris", "lat":"lat", "lng": "lng"},
-      "certifications": [{"name": "certificate exp", "value": None}],
-      "courses": [{"name": "cours exp", "value": None}],
-      "tasks": [{"name": "tache exp", "value": None}],
-      "skills": [{"name": "skill exp", "value": None, "type" : "hard"}]         
+      "title": "Lead software engineer",
+      "company": "HrFlow.ai",
+      "description": "Developping backend web apps using Python and Django framework.",
+      "location": {"text":"Paris"},
+      "certifications": [{
+            "name": "AWS cloud certification",
+            "value": None
+        }],
+       "courses": [],
+       "tasks": [{
+            "name": "Continuous integration",
+            'value': None
+        }],
+       "skills": [{
+            "name": "Django",
+            "value": None,
+            "type" : "hard"
+        }]
       }],
-  "experiences_duration":5,
+  "experiences_duration":2.5,
   "educations": [{
       "date_start": {"iso8601": "2016-01-01T00:00:00"},
       "date_end": {"iso8601": "2018-01-01T00:00:00"},
-      "title": "Mathematicien",
-      "school": "University",
-      "description": "Description",
-      "location": {"text":"Scotland", "lat":"lat", "lng": "lng"},
-      "certifications": [{"name": "certificate edu", "value": None}],
-      "courses": [{"name": "cours edu", "value": None}],
-      "tasks": [{"name": "tache edu", "value": None}],
-      "skills": [{"name": "skill edu", "value": None,"type" : "hard"}]
+      "title": "Msc in software engineering",
+      "school": "Ecole Centrale Paris",
+      "description": "Education description text",
+      "location": {"text":"Paris"},
+      "certifications": [{
+            "name": "certificate edu",
+            "value": None
+        }],
+      "courses": [{
+            "name": "Python programming",
+            "value": None
+        }],
+      "tasks": [],
+      "skills": []
   }],
-  "educations_duration":4,
+  "educations_duration": 2,
   "certifications": [
-            {"name": "certificate exp", "value": None},
-            {"name": "certificate edu", "value": None}
-            ],
+        {"name": "certificate exp", "value": None},
+        {"name": "certificate edu", "value": None}
+        ],
   "courses": [
-            {"name": "cours exp", "value": None},
-            {"name": "cours edu", "value": None}],
+        {"name": "course exp", "value": None},
+        {"name": "cours edu", "value": None}],
   "tasks": [
-            {"name": "tache exp", "value": None},
-            {"name": "tache edu", "value": None}],
-  "skills": [
-            {"name":"manual skill", "type": "hard", "value": None},
+        {"name": "task exp", "value": None},
+        {"name": "task edu", "value": None}],
+  "skills": [{"name":"manual skill", "type": "hard", "value": None},
             {"name":"Creative spirit", "type": "soft", "value": None}, 
             {"name":"Writing skills", "type": "hard", "value": None}, 
             {"name":"Communication", "type": "soft", "value": None},
-            {"name": "skill edu", 'value': None, "type": "hard"}
+            {"name": "skill edu", 'value': None, "type": "hard"},
             {"name": "skill exp", 'value': None, "type": "hard"}],
   "languages" : [{"name":"english", "value": None}],
   "interests": [{"name":"football", "value": None}],
-  "tags":[{"name":"archive", "value": False}],
+  "tags":[{"name":"job_reference", "value": "external_id"}],
   "metadatas":[],
-  "labels":[{"stage":"yes", "job_key":"job_key"}],
+  "labels":[],
   "attachments": []
 };
 
