@@ -51,10 +51,10 @@ The folder structure of a scoring training dataset must look like this:
     └── status.json
 ```
 
-* the subfolder _jobs_ contains [job objects](https://developers.hrflow.ai/hr-json/job-objects/job-object) stored as JSON files
 * the subfolder _resumes_ contains:
   * Resume in any supported extension \(pdf, docx, image and more\). They are save in the following format: &lt;resume\_id&gt;.&lt;resume\_ext&gt; 
   * Any relevant additional information \(metadata\) about the resume \(e.g. category of the resume if it has been categorized\), stored in JSON format as &lt;resume\_id&gt;.json
+* the subfolder _jobs_ contains [job objects](https://developers.hrflow.ai/hr-json/job-objects/job-object) stored as JSON files
 * The _hiring\_process.&lt;ext&gt;_  **fully describes the various statuses** of an application. Furthermore, a **diagram emphasizing how application statuses are linked to each other** is essential. 
 * The _status.json_ links the relationship between the resumes and the job offers.  Given the following textbook case of recruitment process: screening -&gt; interview -&gt; hiring, the _status.json_ might look something similar to this_:_
 
