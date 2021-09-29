@@ -61,9 +61,9 @@ The folder structure of a scoring training dataset must look like this:
 ```text
 [
     {"job_id": "00", "resume_id": "00", "status": "screening"},
-    {"job_id": "00", "resume_id": "01", "status": "discared_after_screening"},
+    {"job_id": "00", "resume_id": "01", "status": "discarded_after_screening"},
     {"job_id": "00", "resume_id": "02", "status": "interview"},
-    {"job_id": "00", "resume_id": "03", "status": "discared_after_interview"},
+    {"job_id": "00", "resume_id": "03", "status": "discarded_after_interview"},
     {"job_id": "00", "resume_id": "04", "status": "hired"},
     ...
 ]
