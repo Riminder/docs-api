@@ -82,11 +82,11 @@ In order to successfuly retrain an unbiased scoring engine, the requirements are
 * Provide all the relevant side informations about the jobs, they should be available in the job objects \(metadatas\)
 * Provide enough diversity of data with regards to all the side informations available
 
-In addition, in the scope of retraining a scoring engine, at least:
+In addition, in the scope of retraining a scoring engine, a minimum of:
 
 * 10k unique candidates
 * 20k unique jobs
 * 3k applications in hired status
 
-are needed.
+is highly recommended.
 
