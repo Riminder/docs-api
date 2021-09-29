@@ -29,7 +29,7 @@ We developed a fair-by-design technology that leverages external benchmark, mark
 
 ## Training Data for Scoring
 
-The scoring dataset plays a key role in the success of the scoring API retraining. Here are some requirements on its form and content.
+The scoring dataset plays a key role in the success of a scoring engine retraining. Here are some requirements on its form and content.
 
 ### Format of the Training Data
 
