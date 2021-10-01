@@ -37,7 +37,10 @@
     * [Postman Collection](getting-started/quick-start/tutorials/postman-collection.md)
   * [Case studies: Flows](getting-started/quick-start/flows.md)
 * [Metadata support](getting-started/metadatas.md)
-* [F.A.Q](getting-started/f.a.q.md)
+* [F.A.Q](getting-started/f.a.q/README.md)
+  * [How to attach a job application to a profile ?](getting-started/f.a.q/how-to-attach-a-job-application-to-a-profile.md)
+  * [Profile unicity ?](getting-started/f.a.q/profile-unicity.md)
+  * [What are profile tags, and how should I use them ?](getting-started/f.a.q/what-are-profile-tags-and-how-should-i-use-them.md)
 
 ## Hr Json
 
