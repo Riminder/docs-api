@@ -124,177 +124,373 @@ Please find below an example of Profile json to update.
 }
 ```
 
-{% api-method method="put" host="https://api.hrflow.ai" path="/v1/profile/indexing" %}
-{% api-method-summary %}
-/profile/indexing
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/profile/indexing" method="put" summary="/profile/indexing" %}
+{% swagger-description %}
 This endpoint allows you to put Json Profile.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER\_EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER_EMAIL" type="string" %}
 User's email
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="source\_key" type="string" required=true %}
+{% swagger-parameter in="body" name="source_key" type="string" %}
 The key of the source in which the Profile will be added
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="key" type="string" required=true %}
+{% swagger-parameter in="body" name="key" type="string" %}
 The key of the Profile update
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="consent\_algorithmic" type="object" required=false %}
+{% swagger-parameter in="body" name="consent_algorithmic" type="object" %}
 The user's algorithmic consent, it tells to the algorithm what are the allowed actions in order to use personal data
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="created\_at" type="string" required=true %}
+{% swagger-parameter in="body" name="created_at" type="string" %}
 The Creation datetime in iso format
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="reference" type="string" required=false %}
+{% swagger-parameter in="body" name="reference" type="string" %}
 Profile's reference, it is a unique for a given source
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="info" type="array" required=true %}
-Profile's related info :  
-{  
-"full\_name": "XXX",  
-"first\_name": "XXX",  
-"last\_name": "XXX", "date\_birth": "XX-XX-XXXXTXX:XX:XX", "email": "XXX",  
-"phone": "20202020",  
-"gender": "female",  
-"picture":  
-"location": {"text": null},  
-"summary": "Brief summary",  
-"urls" : {...}  
+{% swagger-parameter in="body" name="info" type="array" %}
+Profile's related info :
+
+\
+
+
+{
+
+\
+
+
+"full_name": "XXX",
+
+\
+
+
+"first_name": "XXX",
+
+\
+
+
+"last_name": "XXX", "date_birth": "XX-XX-XXXXTXX:XX:XX", "email": "XXX",
+
+\
+
+
+"phone": "20202020",
+
+\
+
+
+"gender": "female",
+
+\
+
+
+"picture":
+
+\
+
+
+"location": {"text": null},
+
+\
+
+
+"summary": "Brief summary",
+
+\
+
+
+"urls" : {...}
+
+\
+
+
 }
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="educations" type="array" required=true %}
-Profile's educations:  
-\[{  
-"title" : "EDU1",  
-"school": "HrFlow Academy",  
-"description": "Edu description",  
-"location": {  
-"text": "Paris",  
-"lat" : 48.8534,  
-"lng": 2.3488},  
-"date\_start": { "iso8601": "2016-01-01T00:00:00"},  
-"date\_end": {"iso8601": "2018-01-01T00:00:00"}  
-},  
-...\]
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="educations" type="array" %}
+Profile's educations:
 
-{% api-method-parameter name="educations\_duration" type="number" required=true %}
+\
+
+
+\[{
+
+\
+
+
+"title" : "EDU1",
+
+\
+
+
+"school": "HrFlow Academy",
+
+\
+
+
+"description": "Edu description",
+
+\
+
+
+"location": {
+
+\
+
+
+"text": "Paris",
+
+\
+
+
+"lat" : 48.8534,
+
+\
+
+
+"lng": 2.3488},
+
+\
+
+
+"date_start": { "iso8601": "2016-01-01T00:00:00"},
+
+\
+
+
+"date_end": {"iso8601": "2018-01-01T00:00:00"}
+
+\
+
+
+},
+
+\
+
+
+...]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="educations_duration" type="number" %}
 The Education's duration
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="experiences" type="array" required=true %}
-Profile's experiences:  
-\[{  
-"title": "EXP1",  
-"company": "HrFlow"  
-"description": "Exp description",  
-"location": {  
-"text": "Paris",  
-"lat": 48.8534 ,  
-"lng": 2.3488},  
-"date\_start": {"iso8601": "2018-01-01T00:00:00"},  
-"date\_end": {"iso8601": "2018-07-01T00:00:00"}  
-},  
-...\]
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="experiences" type="array" %}
+Profile's experiences:
 
-{% api-method-parameter name="experiences\_duration" type="number" required=true %}
+\
+
+
+\[{
+
+\
+
+
+"title": "EXP1",
+
+\
+
+
+"company": "HrFlow"
+
+\
+
+
+"description": "Exp description",
+
+\
+
+
+"location": {
+
+\
+
+
+"text": "Paris",
+
+\
+
+
+"lat": 48.8534 ,
+
+\
+
+
+"lng": 2.3488},
+
+\
+
+
+"date_start": {"iso8601": "2018-01-01T00:00:00"},
+
+\
+
+
+"date_end": {"iso8601": "2018-07-01T00:00:00"}
+
+\
+
+
+},
+
+\
+
+
+...]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="experiences_duration" type="number" %}
 The profile's seniority.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="text" type="string" required=true %}
+{% swagger-parameter in="body" name="text" type="string" %}
 A text to include with a Profile, it describes concisely each experience and education.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="text\_language" type="string" required=true %}
+{% swagger-parameter in="body" name="text_language" type="string" %}
 The language of the original text, it is in ISO 639-1 format
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="certifications" type="array" required=true %}
-Profile's certifications : \[{  
-"name": "CCNA",  
-"value": null},  
-...\]
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="certifications" type="array" %}
+Profile's certifications : [{
 
-{% api-method-parameter name="courses" type="array" required=true %}
-Profile's courses : \[{  
-"name": "Big Data", "value": null},  
-...\]
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="tasks" type="array" required=true %}
-Profile's tasks : \[{  
-"name": "task",  
-"value": null},  
-...\]
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="skills" type="array" required=true %}
-Profile's skills : \[{  
-"name": "Python",  
-"type": "hard",  
-"value": 0.6},  
-...\]
-{% endapi-method-parameter %}
+"name": "CCNA",
 
-{% api-method-parameter name="languages" type="array" required=true %}
-The Profile's languages \[{"name": "english", "value":1}, ...\]
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="interests" type="array" required=true %}
-The Profile's interests \[{"name": "e-sport", "value": 0.8},...\]
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="labels" type="array" required=true %}
-The Profile's labels \[{  
-"stage": "yes",  
-"job\_key": job\_key,  
-"date\_stage": "2020-07-07T00:00:00",  
-"rating": 5,  
-"date\_rating" : "2020-07-06T00:00:00"},  
-...\]
-{% endapi-method-parameter %}
+"value": null},
 
-{% api-method-parameter name="tags" type="array" required=true %}
-The Profile's tags \[{"name": "archive", "value": true}, ...\]
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="metadatas" type="array" required=true %}
-Profile's metadatas \[{"name": "meta", "value": "file"}, ...\]
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="attachments" type="array" required=true %}
+...]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="courses" type="array" %}
+Profile's courses : [{
+
+\
+
+
+"name": "Big Data", "value": null},
+
+\
+
+
+...]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="tasks" type="array" %}
+Profile's tasks : [{
+
+\
+
+
+"name": "task",
+
+\
+
+
+"value": null},
+
+\
+
+
+...]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="skills" type="array" %}
+Profile's skills : [{
+
+\
+
+
+"name": "Python",
+
+\
+
+
+"type": "hard",
+
+\
+
+
+"value": 0.6},
+
+\
+
+
+...]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="languages" type="array" %}
+The Profile's languages [{"name": "english", "value":1}, ...]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="interests" type="array" %}
+The Profile's interests [{"name": "e-sport", "value": 0.8},...]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="labels" type="array" %}
+The Profile's labels [{
+
+\
+
+
+"stage": "yes",
+
+\
+
+
+"job_key": job_key,
+
+\
+
+
+"date_stage": "2020-07-07T00:00:00",
+
+\
+
+
+"rating": 5,
+
+\
+
+
+"date_rating" : "2020-07-06T00:00:00"},
+
+\
+
+
+...]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="tags" type="array" %}
+The Profile's tags [{"name": "archive", "value": true}, ...]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="metadatas" type="array" %}
+Profile's metadatas [{"name": "meta", "value": "file"}, ...]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="attachments" type="array" %}
 Profile's attachments
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=201 %}
-{% api-method-response-example-description %}
-Profile is sucessfully edited.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="201" description="Profile is sucessfully edited." %}
 ```bash
 {
     "code": 200,
@@ -442,23 +638,17 @@ Profile is sucessfully edited.
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Could not find a cake matching this query.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Could not find a cake matching this query." %}
 ```bash
 {
     "code": 400,
     "message": "Invalid source fields"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="danger" %}
 **date\_start** and **date\_end** in Experience and Education are objects, or conversely the [GET](https://developers.hrflow.ai/api-reference/profile-api/get-profile-indexing) endpoint sends you back **date\_start** and **date\_end** as **string**
@@ -676,4 +866,3 @@ client.profile.indexing.edit(
 ```
 {% endtab %}
 {% endtabs %}
-

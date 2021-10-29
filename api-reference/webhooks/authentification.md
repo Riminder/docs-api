@@ -4,40 +4,24 @@ description: Check your webhook credentials
 
 # Webhook Authentication
 
-{% api-method method="post" host="https://api.hrflow.ai/v1" path="/webhook/check " %}
-{% api-method-summary %}
-/webhook/check
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai/v1" path="/webhook/check " method="post" summary="/webhook/check" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="url" type="string" required=false %}
+{% swagger-parameter in="body" name="url" type="string" %}
 Webhook callback url.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="type" type="string" required=false %}
+{% swagger-parameter in="body" name="type" type="string" %}
 Webhook type.
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Webhook successfully checked.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Webhook successfully checked." %}
 ```javascript
 {
     "code": 200,
@@ -50,23 +34,17 @@ Webhook successfully checked.
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Invalid secret token.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Invalid secret token." %}
 ```java
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxxx "
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ### Example
 
@@ -92,4 +70,3 @@ $client->webhooks->check($data) ;
 ```
 {% endtab %}
 {% endtabs %}
-

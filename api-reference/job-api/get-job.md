@@ -4,48 +4,32 @@ description: This endpoint allows you to retrieve an existing Job.
 
 # GET: /job/indexing
 
-{% api-method method="get" host="https://api.hrflow.ai" path="/v1/job/indexing" %}
-{% api-method-summary %}
-Get Job
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/job/indexing" method="get" summary="Get Job" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER-EMAIL" type="string" %}
 User's email.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="board\_key" type="string" required=true %}
+{% swagger-parameter in="query" name="board_key" type="string" %}
 Board key
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="key" type="string" required=true %}
+{% swagger-parameter in="query" name="key" type="string" %}
 Job' s key
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="reference" type="string" required=false %}
+{% swagger-parameter in="query" name="reference" type="string" %}
 Job's reference
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Job successfully retrieved
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Job successfully retrieved" %}
 ```python
 {
     "code": 200,
@@ -105,23 +89,17 @@ Job successfully retrieved
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Invalid secret key
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Invalid secret key" %}
 ```python
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxxx "
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% tabs %}
 {% tab title="Python" %}
@@ -153,4 +131,3 @@ client.job.indexing.get("board_key", {
 ```
 {% endtab %}
 {% endtabs %}
-

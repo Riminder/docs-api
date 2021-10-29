@@ -2,24 +2,8 @@
 
 * [What is HrFlow.ai?](README.md)
 * [Why use HrFlow.ai?](why-use-hrflow.md)
+* [Deploy HrFlow.ai in 8 min](implement-hrflow-in-8-minutes.md)
 * [HrFlow.ai Certification](certification.md)
-
-## DEVELOPERS PRODUCTS <a id="products-1"></a>
-
-* [Profile API](products-1/introduction.md)
-* [Job API](products-1/job-api.md)
-* [Document API](products-1/document-api.md)
-* [Analytics API](products-1/analytics-api.md)
-* [Workflows](products-1/workflows.md)
-
-## AI Layers
-
-* [Parsing API](ai-layers/parsing.md)
-* [Embedding API](ai-layers/embedding.md)
-* [Revealing API](ai-layers/revealing.md)
-* [Searching API](ai-layers/searching.md)
-* [Scoring API](ai-layers/scoring.md)
-* [Reasoning API](ai-layers/reasoning.md)
 
 ## Getting Started
 
@@ -29,46 +13,48 @@
   * [Javascript SDK](getting-started/installation/javascript.md)
   * [Python SDK](getting-started/installation/python.md)
   * [PHP SDK](getting-started/installation/php.md)
-* [Quick start](getting-started/quick-start/README.md)
-  * [Tutorials](getting-started/quick-start/tutorials/README.md)
-    * [Google Colab Tutorial](getting-started/quick-start/tutorials/google-colab-tutorial/README.md)
-      * [Implement HrFlow in 8 minutes](getting-started/quick-start/tutorials/google-colab-tutorial/implement-hrflow-in-8-minutes.md)
-      * [Build Personalized AI HR models](getting-started/quick-start/tutorials/google-colab-tutorial/profile-embedding-api-tutorial.md)
-    * [Postman Collection](getting-started/quick-start/tutorials/postman-collection.md)
-  * [Case studies: Flows](getting-started/quick-start/flows.md)
-* [Metadata support](getting-started/metadatas.md)
+* [Postman Collection](getting-started/postman-collection.md)
+* [HR Json](getting-started/hr-json/README.md)
+  * [Profile Objects](getting-started/hr-json/profile-objects/README.md)
+    * [Profile JSON](getting-started/hr-json/profile-objects/profile-object.md)
+    * [Parsing JSON](getting-started/hr-json/profile-objects/parsing-object.md)
+    * [Education JSON](getting-started/hr-json/profile-objects/education-object.md)
+    * [Experience JSON](getting-started/hr-json/profile-objects/experience-object.md)
+    * [Attachment JSON](getting-started/hr-json/profile-objects/attachment-object.md)
+    * [Info JSON](getting-started/hr-json/profile-objects/info-object.md)
+  * [Job Objects](getting-started/hr-json/job-objects/README.md)
+    * [Job JSON](getting-started/hr-json/job-objects/job-object.md)
+    * [Section JSON](getting-started/hr-json/job-objects/section-object.md)
+    * [Range Date JSON](getting-started/hr-json/job-objects/range-date-object.md)
+    * [Range Float JSON](getting-started/hr-json/job-objects/range-float-object.md)
+  * [Trait Objects](getting-started/hr-json/trait-objects/README.md)
+    * [Date JSON](getting-started/hr-json/trait-objects/date-object.md)
+    * [Person JSON](getting-started/hr-json/trait-objects/person-object.md)
+    * [Location JSON](getting-started/hr-json/trait-objects/location-object.md)
+    * [Certification JSON](getting-started/hr-json/trait-objects/certification-object.md)
+    * [Course JSON](getting-started/hr-json/trait-objects/course-object.md)
+    * [Task JSON](getting-started/hr-json/trait-objects/task-object.md)
+    * [Skill JSON](getting-started/hr-json/trait-objects/skill-object.md)
+    * [Language JSON](getting-started/hr-json/trait-objects/language-object.md)
+    * [Interest JSON](getting-started/hr-json/trait-objects/interest-object.md)
+    * [Label JSON](getting-started/hr-json/trait-objects/label-object.md)
+    * [Tag JSON](getting-started/hr-json/trait-objects/tag-object.md)
+    * [Metadata JSON](getting-started/hr-json/trait-objects/metadata-object.md)
 * [F.A.Q](getting-started/f.a.q/README.md)
   * [How to attach a job application to a profile ?](getting-started/f.a.q/how-to-attach-a-job-application-to-a-profile.md)
   * [Profile unicity ?](getting-started/f.a.q/profile-unicity.md)
   * [What are profile tags, and how should I use them ?](getting-started/f.a.q/what-are-profile-tags-and-how-should-i-use-them.md)
 
-## Hr Json
+## Tutorials <a href="ai-layers" id="ai-layers"></a>
 
-* [Profile Objects](hr-json/profile-objects/README.md)
-  * [Profile JSON](hr-json/profile-objects/profile-object.md)
-  * [Parsing JSON](hr-json/profile-objects/parsing-object.md)
-  * [Education JSON](hr-json/profile-objects/education-object.md)
-  * [Experience JSON](hr-json/profile-objects/experience-object.md)
-  * [Attachment JSON](hr-json/profile-objects/attachment-object.md)
-  * [Info JSON](hr-json/profile-objects/info-object.md)
-* [Job Objects](hr-json/job-objects/README.md)
-  * [Job JSON](hr-json/job-objects/job-object.md)
-  * [Section JSON](hr-json/job-objects/section-object.md)
-  * [Range Date JSON](hr-json/job-objects/range-date-object.md)
-  * [Range Float JSON](hr-json/job-objects/range-float-object.md)
-* [Trait Objects](hr-json/trait-objects/README.md)
-  * [Date JSON](hr-json/trait-objects/date-object.md)
-  * [Person JSON](hr-json/trait-objects/person-object.md)
-  * [Location JSON](hr-json/trait-objects/location-object.md)
-  * [Certification JSON](hr-json/trait-objects/certification-object.md)
-  * [Course JSON](hr-json/trait-objects/course-object.md)
-  * [Task JSON](hr-json/trait-objects/task-object.md)
-  * [Skill JSON](hr-json/trait-objects/skill-object.md)
-  * [Language JSON](hr-json/trait-objects/language-object.md)
-  * [Interest JSON](hr-json/trait-objects/interest-object.md)
-  * [Label JSON](hr-json/trait-objects/label-object.md)
-  * [Tag JSON](hr-json/trait-objects/tag-object.md)
-  * [Metadata JSON](hr-json/trait-objects/metadata-object.md)
+* [Workflows & Automations](ai-layers/workflows.md)
+* [Parsing API](ai-layers/parsing.md)
+* [Embedding API](ai-layers/embedding/README.md)
+  * [Build Personalized AI HR models](ai-layers/embedding/profile-embedding-api-tutorial.md)
+* [Revealing API](ai-layers/revealing.md)
+* [Searching API](ai-layers/searching.md)
+* [Scoring API](ai-layers/scoring.md)
+* [Reasoning API](ai-layers/reasoning.md)
 
 ## API Reference
 
@@ -112,22 +98,10 @@
     * [profile.parsing](api-reference/webhooks/events/profile.parsing.md)
     * [job.parsing](api-reference/webhooks/events/job.parsing.md)
 
-## ADVANCED INTEGRATIONS
-
-* [Sources](advanced-integrations/sources/README.md)
-  * [Talentsoft OEM](advanced-integrations/sources/talentsoft.md)
-  * [Dropzone Display & Data](advanced-integrations/sources/dropzone.md)
-  * [Cvbot Display & Data](advanced-integrations/sources/cvbot.md)
-  * [Email Tags & Metadatas](advanced-integrations/sources/email.md)
-* [Destinations](advanced-integrations/destinations/README.md)
-  * [Webhooks](advanced-integrations/destinations/webhook.md)
-  * [Zapier](advanced-integrations/destinations/zapier.md)
-
----
+***
 
 * [Security](https://security.hrflow.ai)
 * [GDPR & Privacy](https://gdpr.hrflow.ai)
 * [Help Center](https://help.hrflow.ai)
 * [Service Status](https://status.hrflow.ai)
 * [Public Roadmap](https://updates.hrflow.ai)
-

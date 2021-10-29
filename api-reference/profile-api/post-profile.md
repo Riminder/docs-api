@@ -6,86 +6,78 @@ description: This endpoint allows you to add new Profile using resume to a given
 
 Supported extensions for the parsing API are .pdf, .png, .jpg, .jpeg, .bmp, .doc, .docx, .odt, .rtf, .odp, ppt, and .pptx .
 
-{% api-method method="post" host="https://api.hrflow.ai" path="/v1/profile/parsing/file" %}
-{% api-method-summary %}
-Post /profile/parsing/file
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/profile/parsing/file" method="post" summary="Post /profile/parsing/file" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER-EMAIL" type="string" %}
 User's email
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-form-data-parameters %}
-{% api-method-parameter name="source\_key" type="string" required=true %}
+{% swagger-parameter in="body" name="source_key" type="string" %}
 The key of the source in which the Profile will be added
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="file" type="object" required=true %}
+{% swagger-parameter in="body" name="file" type="object" %}
 Profile's file resume in binary format
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="sync\_parsing" type="integer" required=false %}
+{% swagger-parameter in="body" name="sync_parsing" type="integer" %}
 To enable sync parsing you set this value to 1 otherwise the value is 0
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="sync\_parsing\_indexing" type="integer" required=false %}
+{% swagger-parameter in="body" name="sync_parsing_indexing" type="integer" %}
 This parameter is used when you are using sync parsing, it enables Profile indexing so this object will be available using search engine. The default value is 1
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="webhook\_parsing\_sending" type="integer" required=false %}
+{% swagger-parameter in="body" name="webhook_parsing_sending" type="integer" %}
 To enable the reception of webhook notification after parsing and before indexing, you set the value to 1. The default value is 0.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="content\_type" type="string" required=false %}
-Document content type \(ie application/pdf\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="content_type" type="string" %}
+Document content type (ie application/pdf)
+{% endswagger-parameter %}
 
-{% api-method-parameter name="key" type="string" required=false %}
-Profile's unique identifier, it is used when you want to  
+{% swagger-parameter in="body" name="key" type="string" %}
+Profile's unique identifier, it is used when you want to
+
+\
+
+
 override an existing Parsing object.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="reference" type="string" required=false %}
+{% swagger-parameter in="body" name="reference" type="string" %}
 Profile's reference, it is a unique value for a given source
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="created\_at" type="string" required=false %}
+{% swagger-parameter in="body" name="created_at" type="string" %}
 The Creation datetime in iso format
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="labels" type="array" required=false %}
-The Profile's labels to include with the object \(ie \[{"job\_key": "job\_key", "job\_reference": "test", "stage": "yes", "stage\_timestamp":1585662186, "rating":0.5, "stage\_timestamp":1585662186}, ...\]\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="labels" type="array" %}
+The Profile's labels to include with the object (ie [{"job_key": "job_key", "job_reference": "test", "stage": "yes", "stage_timestamp":1585662186, "rating":0.5, "stage_timestamp":1585662186}, ...])
+{% endswagger-parameter %}
 
-{% api-method-parameter name="tags" type="array" required=false %}
-The Profile's tags, aims to mark uploaded object \(ie \[{"name":"blacklist","value":true}, ...\]\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="tags" type="array" %}
+The Profile's tags, aims to mark uploaded object (ie [{"name":"blacklist","value":true}, ...])
+{% endswagger-parameter %}
 
-{% api-method-parameter name="metadatas" type="array" required=false %}
-The Profile's metadata  
-\(ie \[{"name":"mail","value":"test@test.com"}, ...\]\)
-{% endapi-method-parameter %}
-{% endapi-method-form-data-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="body" name="metadatas" type="array" %}
+The Profile's metadata
 
-{% api-method-response %}
-{% api-method-response-example httpCode=201 %}
-{% api-method-response-example-description %}
-Profile successfully Created using sync parsing.
-{% endapi-method-response-example-description %}
+\
 
+
+(ie [{"name":"mail","value":"test@test.com"}, ...])
+{% endswagger-parameter %}
+
+{% swagger-response status="201" description="Profile successfully Created using sync parsing." %}
 ```scheme
 {
     "code": 201,
@@ -96,13 +88,9 @@ Profile successfully Created using sync parsing.
      }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=202 %}
-{% api-method-response-example-description %}
-Profile successfully Created using async parsing.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="202" description="Profile successfully Created using async parsing." %}
 ```scheme
 {
     "code": 202,
@@ -110,36 +98,26 @@ Profile successfully Created using async parsing.
     "data": []
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Could not find a source matching this query.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Could not find a source matching this query." %}
 ```scheme
 {
     "code": 400,
     "message": "Invalid source fields"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Invalid secret key.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Invalid secret key." %}
 ```scheme
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxx for permission: write"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 While uploading a profile file you can use either **synchronous** or **asynchronous** parsing:
 
@@ -161,7 +139,7 @@ The default behavior uses asynchronous parsing.
 
 So as to Use Sync Parsing, you need to:
 
-* Create an API source \(HTTP / Python / PHP ...\),
+* Create an API source (HTTP / Python / PHP ...),
 * Enable `sync_parsing` for a given Source :
   * Your admin must activate `sync_parsing`  in source's configuration,
   * Send a request to HrFlow support team in order to enable this feature for you.
@@ -169,7 +147,7 @@ So as to Use Sync Parsing, you need to:
 
 ## What's a **profile\_key and how to retrieve it ?**
 
-A profile ID is a unique identifier for a **HrFlow Profile**. This information is mandatory, **`profile_key` guarantees the processing** of your profile \(parsing, revealing, embedding, etc\).
+A profile ID is a unique identifier for a **HrFlow Profile**. This information is mandatory, **`profile_key` guarantees the processing** of your profile (parsing, revealing, embedding, etc).
 
 **How to get a profile\_key**
 
@@ -241,4 +219,3 @@ client.profile.parsing.addFile('source_key',
 ```
 {% endtab %}
 {% endtabs %}
-

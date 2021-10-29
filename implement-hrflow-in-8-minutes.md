@@ -2,7 +2,7 @@
 description: HrFlow.ai installation tutorial in Python with a YouTube explanation video.
 ---
 
-# Implement HrFlow in 8 minutes
+# Deploy HrFlow.ai in 8 min
 
 HrFlow Python SDK is basically designed to handle simply and easily, complex HR integrations, helping programmers to increase their productivity by focusing on one complete tool.
 
@@ -10,9 +10,7 @@ In this tutorial, we will set up the HrFlow client, and then we will discuss how
 
 {% embed url="https://www.youtube.com/watch?v=DZdFlUqO8cU" %}
 
-The following [Google Colab Tutorial](https://colab.research.google.com/github/Riminder/python-hrflow-api/blob/master/examples/colab/implement_hrflow_in_5min.ipynb) will help you explore the different HrFlow.ai features and test them.
+The following [Google Colab Tutorial](https://colab.research.google.com/github/Riminder/python-hrflow-api/blob/master/examples/colab/implement\_hrflow\_in\_5min.ipynb) will help you explore the different HrFlow.ai features and test them.
 
-{% embed url="https://colab.research.google.com/github/Riminder/python-hrflow-api/blob/master/examples/colab/implement\_hrflow\_in\_5min.ipynb" %}
-
-
+{% embed url="https://colab.research.google.com/github/Riminder/python-hrflow-api/blob/master/examples/colab/implement_hrflow_in_5min.ipynb" %}
 

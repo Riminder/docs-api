@@ -6,45 +6,33 @@ description: >-
 
 # POST : /document/linking
 
-{% api-method method="post" host="https://api.hrflow.ai" path="/v1/document/linking" %}
-{% api-method-summary %}
-Post /document/linking
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/document/linking" method="post" summary="Post /document/linking" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER-EMAIL" type="string" %}
 User's email.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="text" type="string" required=true %}
+{% swagger-parameter in="body" name="text" type="string" %}
 A text to calculate most similar token
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="top\_n" type="string" required=false %}
-The n most similar word to a given text  
-\( Default value is 5\)
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="body" name="top_n" type="string" %}
+The n most similar word to a given text
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Top n most similar word for a given text retreived successfully
-{% endapi-method-response-example-description %}
+\
 
+
+( Default value is 5)
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Top n most similar word for a given text retreived successfully" %}
 ```bash
 {
     "code": 200,
@@ -69,36 +57,26 @@ Top n most similar word for a given text retreived successfully
     ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Invalid secret key.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Invalid secret key." %}
 ```bash
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxx for permission: write"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=404 %}
-{% api-method-response-example-description %}
-Text can't be null
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="404" description="Text can't be null" %}
 ```bash
 {
     "code": 400,
     "message": "Bad request. Text cannot be null"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% tabs %}
 {% tab title="Python" %}
@@ -126,4 +104,3 @@ client.document.linking.post("python", 20).then(response => {
 ```
 {% endtab %}
 {% endtabs %}
-

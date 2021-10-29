@@ -4,168 +4,168 @@ description: This endpoint allows you to score list of profiles against given jo
 
 # GET: /profiles/scoring
 
-{% api-method method="get" host="https://api.hrflow.ai" path="/v1/profiles/scoring" %}
-{% api-method-summary %}
-/profiles/scoring
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/profiles/scoring" method="get" summary="/profiles/scoring" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER-EMAIL" type="string" %}
 User's email.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="board\_key" type="string" required=true %}
+{% swagger-parameter in="query" name="board_key" type="string" %}
 The board's unique identifier containing the given Job.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="job\_key" type="string" required=true %}
+{% swagger-parameter in="query" name="job_key" type="string" %}
 The Job's unique identifier
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="source\_keys" type="array" required=true %}
+{% swagger-parameter in="query" name="source_keys" type="array" %}
 Only Profiles in these sources will be scored
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="use\_agent" type="integer" required=false %}
+{% swagger-parameter in="query" name="use_agent" type="integer" %}
 In order to enable scoring engine you set this parameter to 1 otherwise it enables only searching engine
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="stage" type="string" required=false %}
-Filter by Profile's stage \(ie. 'new', 'yes', 'later', 'no'\), default value is 'new'
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="stage" type="string" %}
+Filter by Profile's stage (ie. 'new', 'yes', 'later', 'no'), default value is 'new'
+{% endswagger-parameter %}
 
-{% api-method-parameter name="limit" type="integer" required=false %}
+{% swagger-parameter in="query" name="limit" type="integer" %}
 Total profiles to score per API page, default value is 30
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="page" type="integer" required=false %}
+{% swagger-parameter in="query" name="page" type="integer" %}
 API page offset, default value is 1
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="order\_by" type="string" required=false %}
-Order by \(ie. asc, desc\), default value is "desc"
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="order_by" type="string" %}
+Order by (ie. asc, desc), default value is "desc"
+{% endswagger-parameter %}
 
-{% api-method-parameter name="sort\_by" type="string" required=false %}
-Sort by \(ie. created\_at, updated\_at, location, location\_experience, location\_education, searching, scoring \)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="sort_by" type="string" %}
+Sort by (ie. created_at, updated_at, location, location_experience, location_education, searching, scoring )
+{% endswagger-parameter %}
 
-{% api-method-parameter name="created\_at\_min" type="string" required=false %}
+{% swagger-parameter in="query" name="created_at_min" type="string" %}
 Filter by minimum creation date
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="created\_at\_max" type="string" required=false %}
+{% swagger-parameter in="query" name="created_at_max" type="string" %}
 Filter by maximum creation date
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="name" type="string" required=false %}
+{% swagger-parameter in="query" name="name" type="string" %}
 Filter by Profile's name
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="email" type="string" required=false %}
+{% swagger-parameter in="query" name="email" type="string" %}
 Filter by Profile's email
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="location\_geopoint" type="object" required=false %}
-Filter by location's latitude and longitude  
-\(ie. {"lat":35.7516600, "lng":10.7110900} \)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="location_geopoint" type="object" %}
+Filter by location's latitude and longitude
 
-{% api-method-parameter name="location\_distance" type="integer" required=false %}
+\
+
+
+(ie. {"lat":35.7516600, "lng":10.7110900} )
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="location_distance" type="integer" %}
 If location's latitude and longitude are present, you can set radius in filter query
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="summary\_keywords" type="array" required=false %}
+{% swagger-parameter in="query" name="summary_keywords" type="array" %}
 Filter by keywords that can exist in a summary
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="text\_keywords" type="array" required=false %}
+{% swagger-parameter in="query" name="text_keywords" type="array" %}
 Filter by text keywords
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="experience\_keywords" type="array" required=false %}
+{% swagger-parameter in="query" name="experience_keywords" type="array" %}
 Filter by experience keywords
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="experience\_location\_geopoint" type="object" required=false %}
+{% swagger-parameter in="query" name="experience_location_geopoint" type="object" %}
 Filter by experience location's latitude and longitude
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="experience\_location\_distance" type="integer" required=false %}
+{% swagger-parameter in="query" name="experience_location_distance" type="integer" %}
 Set experience's location radius
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="experiences\_duration\_min" type="integer" required=false %}
+{% swagger-parameter in="query" name="experiences_duration_min" type="integer" %}
 Filter by minimum seniority
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="experiences\_duration\_max" type="integer" required=false %}
+{% swagger-parameter in="query" name="experiences_duration_max" type="integer" %}
 Filter by maximum seniority
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="education\_keywords" type="array" required=false %}
+{% swagger-parameter in="query" name="education_keywords" type="array" %}
 Filter by education keywords
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="education\_location\_geopoint" type="object" required=false %}
+{% swagger-parameter in="query" name="education_location_geopoint" type="object" %}
 Filter by education's latitude and longitude
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="education\_location\_distance" type="integer" required=false %}
+{% swagger-parameter in="query" name="education_location_distance" type="integer" %}
 Set education's location radius
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="educations\_duration\_min" type="integer" required=false %}
+{% swagger-parameter in="query" name="educations_duration_min" type="integer" %}
 Filter by minimum education duration
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="educations\_duration\_max" type="integer" required=false %}
+{% swagger-parameter in="query" name="educations_duration_max" type="integer" %}
 Filter by education maximum duration
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="skills" type="array" required=false %}
-Filter by a list of skills  
-\( ie. \[{ name: 'python', value: 0.9 }\] \)
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="skills" type="array" %}
+Filter by a list of skills
 
-{% api-method-parameter name="languages" type="array" required=false %}
-Filter by a list of languages  
-\( ie. \[{ name: 'english', value: 'fluent' }\] \)
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="interests" type="array" required=false %}
-Filter by a list of interests  
-\(ie. \[{ name: 'football', value: null }\] \)
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="tags\_included" type="array" required=false %}
-Filter by a List of tags to include \(ie. \[{ name: 'active', value: true }\] \)
-{% endapi-method-parameter %}
+( ie. [{ name: 'python', value: 0.9 }] )
+{% endswagger-parameter %}
 
-{% api-method-parameter name="tags\_excluded" type="array" required=false %}
-Filter by a List of tags to exclude \(ie. \[{ name: 'active', value: false }\] \)
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% swagger-parameter in="query" name="languages" type="array" %}
+Filter by a list of languages
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Profiles are successfully scored
-{% endapi-method-response-example-description %}
+\
 
+
+( ie. [{ name: 'english', value: 'fluent' }] )
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="interests" type="array" %}
+Filter by a list of interests
+
+\
+
+
+(ie. [{ name: 'football', value: null }] )
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="tags_included" type="array" %}
+Filter by a List of tags to include (ie. [{ name: 'active', value: true }] )
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="tags_excluded" type="array" %}
+Filter by a List of tags to exclude (ie. [{ name: 'active', value: false }] )
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Profiles are successfully scored" %}
 ```scheme
 {
     "code": 200,
@@ -267,36 +267,26 @@ Profiles are successfully scored
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Could not find a source matching this query.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Could not find a source matching this query." %}
 ```scheme
 {
     "code": 400,
     "message": "Bad Request. Invalid source ids"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Invalid secret key.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Invalid secret key." %}
 ```scheme
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxxx "
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ## Example
 
@@ -419,4 +409,3 @@ client.profile.scoring.list(['source_key1', 'source_key2'], "board_key",
 ```
 {% endtab %}
 {% endtabs %}
-

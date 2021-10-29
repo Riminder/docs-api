@@ -4,40 +4,24 @@ description: This endpoint allows you to retrieve a board info given a key.
 
 # GET: /board
 
-{% api-method method="get" host="https://api.hrflow.ai" path="/v1/board" %}
-{% api-method-summary %}
-Source
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/board" method="get" summary="Source" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER-EMAIL" type="string" %}
 User's email
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="key" type="string" required=true %}
+{% swagger-parameter in="query" name="key" type="string" %}
 Board key
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Board's info successfully retrieved.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Board's info successfully retrieved." %}
 ```bash
 {
     "code": 200,
@@ -72,26 +56,18 @@ Board's info successfully retrieved.
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Coulf not find a board matching this query
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Coulf not find a board matching this query" %}
 ```bash
 {
     "code": 400,
     "message": "Invalid board fields"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Invalid secret key or unauthorized access
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Invalid secret key or unauthorized access" %}
 ```bash
 {
     "code": 401,
@@ -105,10 +81,8 @@ OR
     "message": "Unauthorized Access to board key: xxxxxx"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ## Example
 
@@ -138,4 +112,3 @@ client.board.get('board_key').then(response => {
 ```
 {% endtab %}
 {% endtabs %}
-

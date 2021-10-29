@@ -6,40 +6,24 @@ description: >-
 
 # POST: /document/revealing
 
-{% api-method method="post" host="https://api.hrflow.ai" path="/v1/document/revealing" %}
-{% api-method-summary %}
-Post /document/revealing
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/document/revealing" method="post" summary="Post /document/revealing" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER-EMAIL" type="string" %}
 User's email
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="text" type="string" required=true %}
+{% swagger-parameter in="body" name="text" type="string" %}
 Text to reveal
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Revealing successfully generated.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Revealing successfully generated." %}
 ```bash
 {
     "code": 200,
@@ -64,36 +48,26 @@ Revealing successfully generated.
     ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Text can't be null.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Text can't be null." %}
 ```bash
 {
     "code": 400,
     "message": "Bad request. Text cannot be null"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Invalid secret key.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Invalid secret key." %}
 ```bash
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxx for permission: write"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 {% hint style="info" %}
 Max limit token is 512, if for a given text, this limit is exceeded, we will consider the first 512 tokens.
@@ -126,4 +100,3 @@ client.document.revealing.post("text").then(response => {
 ```
 {% endtab %}
 {% endtabs %}
-

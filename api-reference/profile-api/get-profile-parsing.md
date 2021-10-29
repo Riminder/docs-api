@@ -8,52 +8,36 @@ description: This endpoint allows you to get the Parsing object.
 One of key , reference or email parameters should be provided to identify the profile.
 {% endhint %}
 
-{% api-method method="get" host="https://api.hrflow.ai" path="/v1/profile/parsing" %}
-{% api-method-summary %}
-Get /profile/parsing
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/profile/parsing" method="get" summary="Get /profile/parsing" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER-EMAIL" type="string" %}
 User's email.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="source\_key" type="string" required=true %}
+{% swagger-parameter in="query" name="source_key" type="string" %}
 The source unique identifier
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="key" type="string" required=false %}
+{% swagger-parameter in="query" name="key" type="string" %}
 The profile unique identifier
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="reference" type="string" required=false %}
+{% swagger-parameter in="query" name="reference" type="string" %}
 The profile's reference
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="email" type="string" required=false %}
+{% swagger-parameter in="query" name="email" type="string" %}
 The profile's email
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Parsing object successfully retrieved.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Parsing object successfully retrieved." %}
 ```scheme
 {
     "code": 200,
@@ -212,36 +196,26 @@ Parsing object successfully retrieved.
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Could not find a source matching this query.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Could not find a source matching this query." %}
 ```scheme
 {
     "code": 400,
     "message": "Invalid source fields"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Invalid secret key.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Invalid secret key." %}
 ```scheme
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxxx for permission: all"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ## Example
 
@@ -282,4 +256,3 @@ client.profile.parsing.get('source_key', {
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -4,56 +4,48 @@ description: This endpoint allows you to fetch boards from your workspace.
 
 # GET: /boards
 
-{% api-method method="get" host="https://api.hrflow.ai" path="/v1/boards" %}
-{% api-method-summary %}
-Boards
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/boards" method="get" summary="Boards" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER-EMAIL" type="string" %}
 User's email.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="name" type="string" required=false %}
+{% swagger-parameter in="query" name="name" type="string" %}
 Filter by board's name
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="page" type="string" required=false %}
-API page offset, default value is **1**
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="page" type="string" %}
+API page offset, default value is 
 
-{% api-method-parameter name="limit" type="integer" required=false %}
-Max response size, default value is **30**
-{% endapi-method-parameter %}
+**1**
+{% endswagger-parameter %}
 
-{% api-method-parameter name="sort\_by" type="string" %}
-Sort by \(ie. date, job\), default value is **date.**
-{% endapi-method-parameter %}
+{% swagger-parameter in="query" name="limit" type="integer" %}
+Max response size, default value is 
 
-{% api-method-parameter name="order\_by" type="string" %}
-Order by \(ie asc, desc\), default value is **desc**
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+**30**
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Boards successfully retrieved.
-{% endapi-method-response-example-description %}
+{% swagger-parameter in="query" name="sort_by" type="string" %}
+Sort by (ie. date, job), default value is 
 
+**date.**
+{% endswagger-parameter %}
+
+{% swagger-parameter in="query" name="order_by" type="string" %}
+Order by (ie asc, desc), default value is 
+
+**desc**
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Boards successfully retrieved." %}
 ```bash
 {
     "code": 200,
@@ -165,23 +157,17 @@ Boards successfully retrieved.
     ]
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Invalid secret key: xxxx
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Invalid secret key: xxxx" %}
 ```bash
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxxx "
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ## Example
 
@@ -218,4 +204,3 @@ client.board.list(params).then(response => {
 ```
 {% endtab %}
 {% endtabs %}
-

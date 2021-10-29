@@ -4,40 +4,24 @@ description: This endpoint allows you to generate text parsing from a full text 
 
 # POST : /document/parsing
 
-{% api-method method="post" host="https://api.hrflow.ai" path="/v1/document/parsing" %}
-{% api-method-summary %}
-Post /document/parsing
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/document/parsing" method="post" summary="Post /document/parsing" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER-EMAIL" type="string" %}
 User's email.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="text" type="string" required=true %}
+{% swagger-parameter in="body" name="text" type="string" %}
 Text to be parsed
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Parsing is succuessfully generated
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Parsing is succuessfully generated" %}
 ```bash
 {
     "code": 200,
@@ -59,36 +43,26 @@ Parsing is succuessfully generated
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Text can't be null.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="Text can't be null." %}
 ```bash
 {
     "code": 400,
     "message": "Bad request. Text cannot be null"
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Invalid secret key
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Invalid secret key" %}
 ```bash
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxx for permission: write"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 As output , this API sends you back all parsed entities.
 
@@ -102,7 +76,7 @@ There are 17 labels :
 * Company
 * JobTitle
 * Task
-* School 
+* School&#x20;
 * EduTitle
 * Course
 * Skill
@@ -140,4 +114,3 @@ client.document.parsing.post("Harry Potter is a Python Enginner")
 ```
 {% endtab %}
 {% endtabs %}
-

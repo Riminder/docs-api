@@ -6,52 +6,36 @@ description: This endpoint allows to retrieve  the Profile object.
 
 One of key , reference or email parameters should be provided to identify the profile.
 
-{% api-method method="get" host="https://api.hrflow.ai" path="/v1/profile/indexing" %}
-{% api-method-summary %}
-/profile/indexing
-{% endapi-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/profile/indexing" method="get" summary="/profile/indexing" %}
+{% swagger-description %}
 
-{% api-method-description %}
+{% endswagger-description %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token.
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER-EMAIL" type="string" %}
 User's email
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="source\_key" type="string" required=true %}
+{% swagger-parameter in="query" name="source_key" type="string" %}
 The source unique identifier
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="key" type="string" required=false %}
+{% swagger-parameter in="query" name="key" type="string" %}
 The profile unique identifier
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="reference" type="string" required=false %}
+{% swagger-parameter in="query" name="reference" type="string" %}
 The profile's reference
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="email" type="string" required=false %}
+{% swagger-parameter in="query" name="email" type="string" %}
 The profile's email
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
+{% endswagger-parameter %}
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Profile object is successfully retrieved
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="200" description="Profile object is successfully retrieved" %}
 ```bash
 {
     "code": 200,
@@ -188,23 +172,17 @@ Profile object is successfully retrieved
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="400" description="" %}
 ```bash
 {
     "code": 400,
     "message": "Invalid source fields"
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
 ## Example
 
@@ -246,4 +224,3 @@ client.profile.indexing.get('source_key', {
 ```
 {% endtab %}
 {% endtabs %}
-
