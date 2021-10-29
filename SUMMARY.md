@@ -8,7 +8,8 @@
 ## Getting Started
 
 * [API Authentication](getting-started/authentication.md)
-* [Installation](getting-started/installation/README.md)
+* [API Calls](getting-started/installation/README.md)
+  * [Postman Collection](getting-started/installation/postman-collection.md)
   * [Javascript SDK](getting-started/installation/javascript.md)
   * [Python SDK](getting-started/installation/python.md)
   * [PHP SDK](getting-started/installation/php.md)
@@ -20,7 +21,6 @@
 * [Scoring API](getting-started/scoring.md)
 * [Reasoning API](getting-started/reasoning.md)
 * [Workflows](getting-started/workflows.md)
-* [Postman Collection](getting-started/quick-start/tutorials/postman-collection.md)
 * [F.A.Q](getting-started/f.a.q/README.md)
   * [How to attach a job application to a profile ?](getting-started/f.a.q/how-to-attach-a-job-application-to-a-profile.md)
   * [Profile unicity ?](getting-started/f.a.q/profile-unicity.md)
