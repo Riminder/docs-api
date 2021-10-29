@@ -20,9 +20,8 @@ A job's section can be presented as one structured object.
 
 ## Attributes
 
-| name | description |
-| :--- | :--- |
+| name        | description               |
+| ----------- | ------------------------- |
 | description | The section's description |
-| name | The section's name |
-| title | The section's title |
-
+| name        | The section's name        |
+| title       | The section's title       |

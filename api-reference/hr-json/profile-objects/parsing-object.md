@@ -10,9 +10,9 @@ This is a complete object containing **Parsing** results, it details all detecte
 
 It helps data scientist to go further in their studies and enhance the quality of their analysis.
 
-| **ENDPOINTS** |
-| :--- |
-| [**POST** /v1/profile/parsing/file](https://developers.hrflow.ai/api-reference/profile-api/post-profile) |
+| **ENDPOINTS**                                                                                             |
+| --------------------------------------------------------------------------------------------------------- |
+| [**POST** /v1/profile/parsing/file](https://developers.hrflow.ai/api-reference/profile-api/post-profile)  |
 | [**GET** /v1/profile/parsing](https://developers.hrflow.ai/api-reference/profile-api/get-profile-parsing) |
 
 ## The Parsing Object
@@ -171,35 +171,34 @@ It helps data scientist to go further in their studies and enhance the quality o
 
 ## Attributes
 
-| name | description |
-| :--- | :--- |
-| content\_uid | The object's content uid |
-| key | Unique identifier for the object |
-| file name | The original uploaded file name |
-| file size | The original uploaded file size |
-| persons | A list of all parsed [Persons](https://developers.hrflow.ai/hr-json/profile-objects/person-object) |
-| emails | This field records all existing emails in a document. |
-| phones | This field records all parsed phones from a document. |
-| birthdate | Parsed birthdate as Date object |
-| certifications | A list of Profile's certifications  |
-| courses | A list of followed courses  |
-| tasks | A list of Profile's tasks through every educations / experiences  |
-| location | The Profile's [Location](https://developers.hrflow.ai/hr-json/trait-objects/location-object) object |
-| images | A list of URLs for all detected images |
-| picture | The url of profile's picture |
-| urls | The urls for: linkedin / twitter / facebook / github if they exist |
-| gender | The Profile's gender |
-| driving license | The Profile's driving license if exits otherwise the default value is null |
-| summary | The Profile's summary |
-| text | The Profile's text, it contains a long resume   of a profile, it is generated based on parsed text |
-| text language | The original language of the document |
-| educations | A list of [Educations](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object |
-| eductions\_duration | Education's duration |
-| experiences | A list of [Experiences](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object |
-| experiences\_duration | Experience's duration, it calculates profile's seniority |
-| skills | A list of profile's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
-| languages | A list of profile's [Languages](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
-| interests | A list of profile's [Interests](https://developers.hrflow.ai/hr-json/profile-objects/interest-object) object |
-| processed\_pages | Number of processed pages |
-| total\_pages | Document total pages |
-
+| name                  | description                                                                                                  |
+| --------------------- | ------------------------------------------------------------------------------------------------------------ |
+| content\_uid          | The object's content uid                                                                                     |
+| key                   | Unique identifier for the object                                                                             |
+| file name             | The original uploaded file name                                                                              |
+| file size             | The original uploaded file size                                                                              |
+| persons               | A list of all parsed [Persons](https://developers.hrflow.ai/hr-json/profile-objects/person-object)           |
+| emails                | This field records all existing emails in a document.                                                        |
+| phones                | This field records all parsed phones from a document.                                                        |
+| birthdate             | Parsed birthdate as Date object                                                                              |
+| certifications        | A list of Profile's certifications                                                                           |
+| courses               | A list of followed courses                                                                                   |
+| tasks                 | A list of Profile's tasks through every educations / experiences                                             |
+| location              | The Profile's [Location](https://developers.hrflow.ai/hr-json/trait-objects/location-object) object          |
+| images                | A list of URLs for all detected images                                                                       |
+| picture               | The url of profile's picture                                                                                 |
+| urls                  | The urls for: linkedin / twitter / facebook / github if they exist                                           |
+| gender                | The Profile's gender                                                                                         |
+| driving license       | The Profile's driving license if exits otherwise the default value is null                                   |
+| summary               | The Profile's summary                                                                                        |
+| text                  | The Profile's text, it contains a long resume   of a profile, it is generated based on parsed text           |
+| text language         | The original language of the document                                                                        |
+| educations            | A list of [Educations](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object         |
+| eductions\_duration   | Education's duration                                                                                         |
+| experiences           | A list of [Experiences](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object       |
+| experiences\_duration | Experience's duration, it calculates profile's seniority                                                     |
+| skills                | A list of profile's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object         |
+| languages             | A list of profile's [Languages](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object   |
+| interests             | A list of profile's [Interests](https://developers.hrflow.ai/hr-json/profile-objects/interest-object) object |
+| processed\_pages      | Number of processed pages                                                                                    |
+| total\_pages          | Document total pages                                                                                         |

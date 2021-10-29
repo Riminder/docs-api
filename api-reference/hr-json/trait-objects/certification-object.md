@@ -17,8 +17,7 @@ Certification represents an official document attesting to a status or level of 
 
 ## Attributes
 
-| name | description |
-| :--- | :--- |
-| name | The Certification's name |
+| name  | description               |
+| ----- | ------------------------- |
+| name  | The Certification's name  |
 | value | The Certification's value |
-

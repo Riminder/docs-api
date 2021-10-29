@@ -18,9 +18,8 @@ This object contains datetime information in ISO8601 format with further timesta
 
 ## Attributes
 
-| name | description |
-| :--- | :--- |
-| iso8601 | The datetime in iso8601 format |
-| text | The parsed date as found in the document |
+| name      | description                                                     |
+| --------- | --------------------------------------------------------------- |
+| iso8601   | The datetime in iso8601 format                                  |
+| text      | The parsed date as found in the document                        |
 | timestamp | The date as timestamp. Measured in seconds since the Unix epoch |
-

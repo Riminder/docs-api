@@ -41,10 +41,9 @@ This object contains geolocation data.
 
 ## Attributes
 
-| name | description |
-| :--- | :--- |
-| text | The detected location information as found in the document |
-| lat | The location's latitude |
-| lng | The location's longitude |
+| name    | description                                                                               |
+| ------- | ----------------------------------------------------------------------------------------- |
+| text    | The detected location information as found in the document                                |
+| lat     | The location's latitude                                                                   |
+| lng     | The location's longitude                                                                  |
 | geojson | The geojson object gives more details about location : street number / city / country ... |
-

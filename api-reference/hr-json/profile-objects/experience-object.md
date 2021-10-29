@@ -65,17 +65,16 @@ Experience is way to describe the profile's career path, it contains general inf
 
 ## Attributes
 
-| name | description |
-| :--- | :--- |
-| content\_uid | The experience's content uid |
-| title | The experience's title |
-| company | The experience's school |
-| description | The experience's description |
-| date\_start | The education's start date as [date](../trait-objects/date-object.md) object |
-| date\_end | The experience's end date as [date](../trait-objects/date-object.md) object |
-| location | The experience's location as [location](../trait-objects/location-object.md) object |
+| name           | description                                                                                                             |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| content\_uid   | The experience's content uid                                                                                            |
+| title          | The experience's title                                                                                                  |
+| company        | The experience's school                                                                                                 |
+| description    | The experience's description                                                                                            |
+| date\_start    | The education's start date as [date](../trait-objects/date-object.md) object                                            |
+| date\_end      | The experience's end date as [date](../trait-objects/date-object.md) object                                             |
+| location       | The experience's location as [location](../trait-objects/location-object.md) object                                     |
 | certifications | A list of experience's [Certifications](https://developers.hrflow.ai/hr-json/trait-objects/certification-object) object |
-| courses | A list of experience's [Courses](https://developers.hrflow.ai/hr-json/trait-objects/course-object) object |
-| tasks | A list of experience's [Tasks](https://developers.hrflow.ai/hr-json/trait-objects/task-object) object |
-| skills | A list of experience's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
-
+| courses        | A list of experience's [Courses](https://developers.hrflow.ai/hr-json/trait-objects/course-object) object               |
+| tasks          | A list of experience's [Tasks](https://developers.hrflow.ai/hr-json/trait-objects/task-object) object                   |
+| skills         | A list of experience's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object                 |

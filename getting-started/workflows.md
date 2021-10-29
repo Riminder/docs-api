@@ -2,7 +2,7 @@
 description: Build custom HR data processes with your own business logic.
 ---
 
-# Workflows & Automations
+# Workflows
 
 ## Overview
 

@@ -20,9 +20,8 @@ Range Dates can be treated using this object.
 
 ## Attributes
 
-| name | description |
-| :--- | :--- |
-| name | The range date's description |
-| value\_max | The range date's name |
-| value\_min | The range date's title |
-
+| name       | description                  |
+| ---------- | ---------------------------- |
+| name       | The range date's description |
+| value\_max | The range date's name        |
+| value\_min | The range date's title       |

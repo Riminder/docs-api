@@ -62,17 +62,16 @@ Education is way to describe the profile's academic background, it contains gene
 
 ## Attributes
 
-| name | description |
-| :--- | :--- |
-| content\_uid | The education's content uid |
-| title | The education's title |
-| school | The education's school |
-| description | The education's description |
-| date\_start | The education's start date as [date](../trait-objects/date-object.md) object |
-| date\_end | The education's end date as [date](../trait-objects/date-object.md) object |
-| location | The education's location as [location](../trait-objects/location-object.md) object |
+| name           | description                                                                                                            |
+| -------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| content\_uid   | The education's content uid                                                                                            |
+| title          | The education's title                                                                                                  |
+| school         | The education's school                                                                                                 |
+| description    | The education's description                                                                                            |
+| date\_start    | The education's start date as [date](../trait-objects/date-object.md) object                                           |
+| date\_end      | The education's end date as [date](../trait-objects/date-object.md) object                                             |
+| location       | The education's location as [location](../trait-objects/location-object.md) object                                     |
 | certifications | A list of education's [Certifications](https://developers.hrflow.ai/hr-json/trait-objects/certification-object) object |
-| courses | A list of education's [Courses](https://developers.hrflow.ai/hr-json/trait-objects/course-object) object |
-| tasks | A list of education's [Tasks](https://developers.hrflow.ai/hr-json/trait-objects/task-object) object |
-| skills | A list of education's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
-
+| courses        | A list of education's [Courses](https://developers.hrflow.ai/hr-json/trait-objects/course-object) object               |
+| tasks          | A list of education's [Tasks](https://developers.hrflow.ai/hr-json/trait-objects/task-object) object                   |
+| skills         | A list of education's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object                 |

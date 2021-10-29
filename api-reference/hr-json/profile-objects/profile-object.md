@@ -12,11 +12,11 @@ It is a faster / readable data structure helping developers to cover many Hr use
 
 The API allows you to create, update and retrieve your profile.
 
-| **ENDPOINTS** |
-| :--- |
+| **ENDPOINTS**                                                                                                 |
+| ------------------------------------------------------------------------------------------------------------- |
 | [**POST** /v1/profile/indexing](https://developers.hrflow.ai/api-reference/profile-api/post-profile-indexing) |
-| [**PUT** /v1/profile/indexing](https://developers.hrflow.ai/api-reference/profile-api/put-profile-indexing) |
-| [**GET** /v1/profile/indexing](https://developers.hrflow.ai/api-reference/profile-api/get-profile-indexing) |
+| [**PUT** /v1/profile/indexing](https://developers.hrflow.ai/api-reference/profile-api/put-profile-indexing)   |
+| [**GET** /v1/profile/indexing](https://developers.hrflow.ai/api-reference/profile-api/get-profile-indexing)   |
 
 ## The Profile Object
 
@@ -223,31 +223,30 @@ The API allows you to create, update and retrieve your profile.
 
 ## Attributes
 
-| name | description |
-| :--- | :--- |
-| id | The object's id |
-| key | Unique identifier for the object |
-| reference | The profile's reference, it must be unique for a given source |
-| archive | The date when a profile is archived, if the profile is not archived archive will be null |
-| consent\_algorithmic | The user's algorithmic consent, it tells to the algorithm what are the allowed actions in order to use personal data |
-| source | The source to which the profile belongs |
-| updated\_at | Time at which the object was last updated |
-| created\_at | Time at which the object was created |
-| info | The Profile's [Info](https://developers.hrflow.ai/hr-json/profile-objects/info-object) object, it contains all personal information such as first/last name email, phone |
-| text | The Profile's text, it contains a long resume of a profile, it is generated based on parsed text |
-| text\_language | The original language of the document |
-| educations | A list of [Educations](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object, education is identified by a unique key |
-| educations\_duration | Education's duration |
-| experiences | A list of [Experiences](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object, experience is identified by a unique key |
-| experiences\_duration | Experience's duration, it calculates the profile's seniority |
-| attachments | A list of profile's [Attachments](https://developers.hrflow.ai/hr-json/profile-objects/attachment-object) object |
-| certifications | A list of profile's [Certifications](https://developers.hrflow.ai/hr-json/trait-objects/certification-object) object |
-| courses | A list of profile's [Courses](https://developers.hrflow.ai/hr-json/trait-objects/course-object) object |
-| tasks | A list of profile's [Tasks](https://developers.hrflow.ai/hr-json/trait-objects/task-object) object |
-| skills | A list of profile's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object |
-| languages | A list of profile's [Languagse](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object |
-| interests | A list of profile's [Interests](https://developers.hrflow.ai/hr-json/trait-objects/interest-object) object |
-| labels | A list of [Labels](https://developers.hrflow.ai/hr-json/profile-objects/label-object) object that you can attach to an object |
-| tags | A list of [Tags](https://developers.hrflow.ai/hr-json/trait-objects/tag-object) object that you can include with an object. This can be helpful in attaching tags to a profile |
-| metadatas | A list of [Metadata](https://developers.hrflow.ai/hr-json/trait-objects/metadata-object) object that you can include with an object. This can be useful for storing additional information about the object in a structured format |
-
+| name                  | description                                                                                                                                                                                                                        |
+| --------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| id                    | The object's id                                                                                                                                                                                                                    |
+| key                   | Unique identifier for the object                                                                                                                                                                                                   |
+| reference             | The profile's reference, it must be unique for a given source                                                                                                                                                                      |
+| archive               | The date when a profile is archived, if the profile is not archived archive will be null                                                                                                                                           |
+| consent\_algorithmic  | The user's algorithmic consent, it tells to the algorithm what are the allowed actions in order to use personal data                                                                                                               |
+| source                | The source to which the profile belongs                                                                                                                                                                                            |
+| updated\_at           | Time at which the object was last updated                                                                                                                                                                                          |
+| created\_at           | Time at which the object was created                                                                                                                                                                                               |
+| info                  | The Profile's [Info](https://developers.hrflow.ai/hr-json/profile-objects/info-object) object, it contains all personal information such as first/last name email, phone                                                           |
+| text                  | The Profile's text, it contains a long resume of a profile, it is generated based on parsed text                                                                                                                                   |
+| text\_language        | The original language of the document                                                                                                                                                                                              |
+| educations            | A list of [Educations](https://developers.hrflow.ai/hr-json/profile-objects/education-object) object, education is identified by a unique key                                                                                      |
+| educations\_duration  | Education's duration                                                                                                                                                                                                               |
+| experiences           | A list of [Experiences](https://developers.hrflow.ai/hr-json/profile-objects/experience-object) object, experience is identified by a unique key                                                                                   |
+| experiences\_duration | Experience's duration, it calculates the profile's seniority                                                                                                                                                                       |
+| attachments           | A list of profile's [Attachments](https://developers.hrflow.ai/hr-json/profile-objects/attachment-object) object                                                                                                                   |
+| certifications        | A list of profile's [Certifications](https://developers.hrflow.ai/hr-json/trait-objects/certification-object) object                                                                                                               |
+| courses               | A list of profile's [Courses](https://developers.hrflow.ai/hr-json/trait-objects/course-object) object                                                                                                                             |
+| tasks                 | A list of profile's [Tasks](https://developers.hrflow.ai/hr-json/trait-objects/task-object) object                                                                                                                                 |
+| skills                | A list of profile's [Skills](https://developers.hrflow.ai/hr-json/trait-objects/skill-object) object                                                                                                                               |
+| languages             | A list of profile's [Languagse](https://developers.hrflow.ai/hr-json/trait-objects/language-object) object                                                                                                                         |
+| interests             | A list of profile's [Interests](https://developers.hrflow.ai/hr-json/trait-objects/interest-object) object                                                                                                                         |
+| labels                | A list of [Labels](https://developers.hrflow.ai/hr-json/profile-objects/label-object) object that you can attach to an object                                                                                                      |
+| tags                  | A list of [Tags](https://developers.hrflow.ai/hr-json/trait-objects/tag-object) object that you can include with an object. This can be helpful in attaching tags to a profile                                                     |
+| metadatas             | A list of [Metadata](https://developers.hrflow.ai/hr-json/trait-objects/metadata-object) object that you can include with an object. This can be useful for storing additional information about the object in a structured format |

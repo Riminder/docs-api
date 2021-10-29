@@ -17,8 +17,7 @@ This object holds language information.
 
 ## Attributes
 
-| name | description |
-| :--- | :--- |
-| name | The language's name |
+| name  | description                                           |
+| ----- | ----------------------------------------------------- |
+| name  | The language's name                                   |
 | value | The language's value, measuring language's expertise' |
-
