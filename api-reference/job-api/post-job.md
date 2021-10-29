@@ -59,11 +59,11 @@ Please find below an example of JSON job that you can upload.
                   .
                   ],
     "tags": [{
-                "name": "archive",
+                "name": "tag example",
                 "value": true
              },
              {  
-                "name": "tag example",
+                "name": "tag2 example",
                 "value": "tag"
               },
               .
@@ -105,131 +105,207 @@ You can include complementary information such as :
 * job's tags,
 * job's metadata.
 
-{% api-method method="post" host="https://api.hrflow.ai" path="/v1/job/indexing" %}
-{% api-method-summary %}
-Post /job/indexing
-{% endapi-method-summary %}
-
-{% api-method-description %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/job/indexing" method="post" summary="Post /job/indexing" %}
+{% swagger-description %}
 This endpoint allows you to post job json.
-{% endapi-method-description %}
+{% endswagger-description %}
 
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-headers %}
-{% api-method-parameter name="X-API-KEY" type="string" required=true %}
+{% swagger-parameter in="header" name="X-API-KEY" type="string" %}
 Authentication token
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="X-USER-EMAIL" type="string" required=true %}
+{% swagger-parameter in="header" name="X-USER-EMAIL" type="string" %}
 User's email.
-{% endapi-method-parameter %}
-{% endapi-method-headers %}
+{% endswagger-parameter %}
 
-{% api-method-body-parameters %}
-{% api-method-parameter name="board\_key" type="string" required=true %}
+{% swagger-parameter in="body" name="board_key" type="string" %}
 The key of the board in which the Job will be added
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="name" type="string" required=true %}
+{% swagger-parameter in="body" name="name" type="string" %}
 The Job's title
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="agent\_key" type="string" required=false %}
+{% swagger-parameter in="body" name="agent_key" type="string" %}
 The Agent unique identifier to attach to this Job
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="reference" type="string" required=true %}
+{% swagger-parameter in="body" name="reference" type="string" %}
 The Job's reference, it is unique for a given board
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="created\_at" type="string" required=true %}
+{% swagger-parameter in="body" name="created_at" type="string" %}
 The creation date in iso Format
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="url" type="string" required=true %}
+{% swagger-parameter in="body" name="url" type="string" %}
 The Job's url
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="summary" type="string" required=true %}
+{% swagger-parameter in="body" name="summary" type="string" %}
 A brief summary to describe missions and context of the Job
-{% endapi-method-parameter %}
+{% endswagger-parameter %}
 
-{% api-method-parameter name="sections" type="array" required=true %}
-The Job's sections  
-\(ie. \[{  
-"name": "section\_name",  
-"title": "section\_title",  
-"description": "section\_description"}...\]\)
-{% endapi-method-parameter %}
+{% swagger-parameter in="body" name="sections" type="array" %}
+The Job's sections
 
-{% api-method-parameter name="location" type="object" required=true %}
-Job's location  
-\(ie. {  
-"text": "xx rue XXXX" ,  
-"lat":38.299637 ,  
-"lng": -122.657535  
-}\)
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="skills" type="array" required=true %}
-The Job's required skills  
-\(ie. \[{"name": "skill", "type":"hard or soft", "value":0.8}, ...\]\)
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="languages" type="array" required=true %}
-The Job's required languages  
-\(ie. \[{"name": "language", "value": 0.7}, ...\]\)
-{% endapi-method-parameter %}
+(ie. [{
 
-{% api-method-parameter name="tags" type="array" required=true %}
-The Job's tags to include with the Job  
-\(ie. \[{"name": "tag", "value":"tag\_value"}, ...\]\)
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="metadatas" type="array" required=true %}
-The Job's metadata  
-\(ie. \[{"name": "meta", "value":"meta\_value"}, ...\]\)
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="ranges\_float" type="array" required=true %}
-The Job's ranges float  
-\(ie. \[{  
-'name': 'salary',  
-'unit': 'eur',  
-'value\_max': 50,  
-'calue\_min': 30} ...\]\)
-{% endapi-method-parameter %}
+"name": "section_name",
 
-{% api-method-parameter name="ranges\_date" type="array" required=true %}
-The Job's ranges date  
-\(ie. \[{  
-'name': 'dates',  
-'value\_max': '2020-09-15T21:59',  
-'value\_min': '2020-05-18T21:59'}...\]\)
-{% endapi-method-parameter %}
+\
 
-{% api-method-parameter name="tasks" type="array" required=false %}
-Tasks required in the job : \[{"name": "Ensure product delivery time", "value": null"}\]
-{% endapi-method-parameter %}
 
-{% api-method-parameter name="courses" type="array" required=false %}
-Courses related to the job : \[{"name": "Statistics", "value": null"}\]
-{% endapi-method-parameter %}
+"title": "section_title",
 
-{% api-method-parameter name="certifications" type="array" required=false %}
-Certifications mentionned in the job : \[{"name": "CCNA",  
-"value": null}\]
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
+\
 
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-Job successfully created.
-{% endapi-method-response-example-description %}
 
+"description": "section_description"}...])
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="location" type="object" %}
+Job's location
+
+\
+
+
+(ie. {
+
+\
+
+
+"text": "xx rue XXXX" ,
+
+\
+
+
+"lat":38.299637 ,
+
+\
+
+
+"lng": -122.657535
+
+\
+
+
+})
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="skills" type="array" %}
+The Job's required skills
+
+\
+
+
+(ie. [{"name": "skill", "type":"hard or soft", "value":0.8}, ...])
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="languages" type="array" %}
+The Job's required languages
+
+\
+
+
+(ie. [{"name": "language", "value": 0.7}, ...])
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="tags" type="array" %}
+The Job's tags to include with the Job
+
+\
+
+
+(ie. [{"name": "tag", "value":"tag_value"}, ...])
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="metadatas" type="array" %}
+The Job's metadata
+
+\
+
+
+(ie. [{"name": "meta", "value":"meta_value"}, ...])
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="ranges_float" type="array" %}
+The Job's ranges float
+
+\
+
+
+(ie. [{
+
+\
+
+
+'name': 'salary',
+
+\
+
+
+'unit': 'eur',
+
+\
+
+
+'value_max': 50,
+
+\
+
+
+'calue_min': 30} ...])
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="ranges_date" type="array" %}
+The Job's ranges date
+
+\
+
+
+(ie. [{
+
+\
+
+
+'name': 'dates',
+
+\
+
+
+'value_max': '2020-09-15T21:59',
+
+\
+
+
+'value_min': '2020-05-18T21:59'}...])
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="tasks" type="array" %}
+Tasks required in the job : [{"name": "Ensure product delivery time", "value": null"}]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="courses" type="array" %}
+Courses related to the job : [{"name": "Statistics", "value": null"}]
+{% endswagger-parameter %}
+
+{% swagger-parameter in="body" name="certifications" type="array" %}
+Certifications mentionned in the job : [{"name": "CCNA",
+
+\
+
+
+"value": null}]
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="Job successfully created." %}
 ```scheme
 {
     "code": 201,
@@ -305,189 +381,122 @@ Job successfully created.
     }
 }
 ```
-{% endapi-method-response-example %}
+{% endswagger-response %}
 
-{% api-method-response-example httpCode=401 %}
-{% api-method-response-example-description %}
-Invalid secret key.
-{% endapi-method-response-example-description %}
-
+{% swagger-response status="401" description="Invalid secret key." %}
 ```bash
 {
     "code": 401,
     "message": "Unauthorized. Invalid secret key: xxxxx "
 }
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="post" host="https://api.hrflow.ai" path="/v1/job/indexing" %}
-{% api-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/job/indexing" method="post" summary="" %}
+{% swagger-description %}
 
-{% endapi-method-summary %}
+{% endswagger-description %}
 
-{% api-method-description %}
+{% swagger-parameter in="body" name="courses" type="array" %}
+\[{"name": "Statistics", "value": null"}]
+{% endswagger-parameter %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="courses" type="array" required=false %}
-\[{"name": "Statistics", "value": null"}\]
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
-
+{% swagger-response status="200" description="" %}
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="post" host="https://api.hrflow.ai" path="/v1/job/indexing" %}
-{% api-method-summary %}
-
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="courses" type="array" required=false %}
-\[{"name": "Statistics", "value": null"}\]
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
-
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="post" host="https://api.hrflow.ai" path="/v1/job/indexing" %}
-{% api-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/job/indexing" method="post" summary="" %}
+{% swagger-description %}
 
-{% endapi-method-summary %}
+{% endswagger-description %}
 
-{% api-method-description %}
+{% swagger-parameter in="body" name="courses" type="array" %}
+\[{"name": "Statistics", "value": null"}]
+{% endswagger-parameter %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="courses" type="array" required=false %}
-\[{"name": "Statistics", "value": null"}\]
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
-
+{% swagger-response status="200" description="" %}
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="post" host="https://api.hrflow.ai" path="/v1/profile/indexing" %}
-{% api-method-summary %}
-
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="certifications" type="array" required=true %}
-Profile's certifications : \[{  
-"name": "CCNA",  
-"value": null},  
-...\]
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
-
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+{% endswagger-response %}
+{% endswagger %}
 
-{% api-method method="post" host="https://api.hrflow.ai" path="/v1/profile/indexing" %}
-{% api-method-summary %}
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/job/indexing" method="post" summary="" %}
+{% swagger-description %}
 
-{% endapi-method-summary %}
+{% endswagger-description %}
 
-{% api-method-description %}
+{% swagger-parameter in="body" name="courses" type="array" %}
+\[{"name": "Statistics", "value": null"}]
+{% endswagger-parameter %}
 
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="certifications" type="array" required=true %}
-Profile's certifications : \[{  
-"name": "CCNA",  
-"value": null},  
-...\]
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```text
-
+{% swagger-response status="200" description="" %}
 ```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/profile/indexing" method="post" summary="" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="body" name="certifications" type="array" %}
+Profile's certifications : [{
+
+\
+
+
+"name": "CCNA",
+
+\
+
+
+"value": null},
+
+\
+
+
+...]
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```
+```
+{% endswagger-response %}
+{% endswagger %}
+
+{% swagger baseUrl="https://api.hrflow.ai" path="/v1/profile/indexing" method="post" summary="" %}
+{% swagger-description %}
+
+{% endswagger-description %}
+
+{% swagger-parameter in="body" name="certifications" type="array" %}
+Profile's certifications : [{
+
+\
+
+
+"name": "CCNA",
+
+\
+
+
+"value": null},
+
+\
+
+
+...]
+{% endswagger-parameter %}
+
+{% swagger-response status="200" description="" %}
+```
+```
+{% endswagger-response %}
+{% endswagger %}
 
 {% tabs %}
 {% tab title="Python" %}
@@ -534,11 +543,11 @@ job_json = {
                      "value": 1
                   }],
     "tags": [{
-                "name": "archive",
+                "name": "tag example",
                 "value": True
              },
              {  
-                "name": "tag example",
+                "name": "tag2 example",
                 "value": "tag"
               }],
     "ranges_date": [{
@@ -635,4 +644,3 @@ client.job.indexing.addJosn("board_key", {
 ```
 {% endtab %}
 {% endtabs %}
-
